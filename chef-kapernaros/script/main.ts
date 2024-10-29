@@ -136,27 +136,27 @@ document.getElementById('myForm')?.addEventListener('submit', function(event) {
 
 // ******* Popup logic ******* \\
 
-const bobbyLink = document.getElementById('clickToPics') as HTMLElement
-const bobbyFlay = document.getElementById('bobbyFlay') as HTMLElement
-const closingPopup = document.getElementById('closingPopup') as HTMLElement
-const openCompetitions = () => {
-    window.location.href = './pages/media.html';
-    localStorage.setItem('loading_competions', 'true')
-    localStorage.setItem('hide_landing_popup', 'true')
-    bobbyFlay.classList.add('hide')
-}
-if (bobbyLink) {
-    bobbyLink.addEventListener('click', openCompetitions)
-}
-if (localStorage.getItem('hide_landing_popup') !== 'true' ) {
-    bobbyFlay.classList.remove('hide')
-    closingPopup.addEventListener('click', () => {
-        localStorage.setItem('hide_landing_popup', 'true')
-        bobbyFlay.classList.add('hide')
-    })
-} else {
-    bobbyFlay.classList.add('hide')
-}
+// const bobbyLink = document.getElementById('clickToPics') as HTMLElement
+// const bobbyFlay = document.getElementById('bobbyFlay') as HTMLElement
+// const closingPopup = document.getElementById('closingPopup') as HTMLElement
+// const openCompetitions = () => {
+//     window.location.href = './pages/media.html';
+//     localStorage.setItem('loading_competions', 'true')
+//     localStorage.setItem('hide_landing_popup', 'true')
+//     bobbyFlay.classList.add('hide')
+// }
+// if (bobbyLink) {
+//     bobbyLink.addEventListener('click', openCompetitions)
+// }
+// if (localStorage.getItem('hide_landing_popup') !== 'true' ) {
+//     bobbyFlay.classList.remove('hide')
+//     closingPopup.addEventListener('click', () => {
+//         localStorage.setItem('hide_landing_popup', 'true')
+//         bobbyFlay.classList.add('hide')
+//     })
+// } else {
+//     bobbyFlay.classList.add('hide')
+// }
 
 // Setting a cookie with SameSite=Lax
 document.cookie = "key=value; SameSite=Lax";
