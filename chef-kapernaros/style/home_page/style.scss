@@ -444,7 +444,7 @@ $primaryColorLight: #00000090;
 		position: relative;
 		height: 100%;
 		margin-top: 2%;
-		img{
+		img {
 			position: absolute;
 			height: 40%;
 			box-shadow: 6px 6px 6px #C3C3C3;
@@ -992,7 +992,7 @@ $primaryColorLight: #00000090;
 	
 				&.in-view{
 					&#card-2, &#card-4{
-						margin-left:10px;
+						// margin-left:10px;
 					}
 				}
 			}
@@ -1078,24 +1078,24 @@ $primaryColorLight: #00000090;
 	.landingPage{
 		padding: 0px 0px !important;
 		background-position-x: 87.5%;
-		.signature{
+		.signature {
 			width: 100% !important;
-			img{
+			img {
 				width: 70%;
 			}
 			background-color: #ffffff69 !important;
 			margin-top: 0px !important;
 		}
-		.chefQuote{
+		.chefQuote {
 			width: 100% !important;
 			padding: 20px 0px !important;
 			background-color: #ffffff69 !important;
 		}
-		i{ font-size: 20px !important; }
+		i { font-size: 20px !important; }
 		.dwnLine {
 			margin: 0px !important;
 		}
-		p{
+		p {
 			font-size: 25px !important;
 			span{ font-size: 28px !important}
 		}
@@ -1169,6 +1169,7 @@ $primaryColorLight: #00000090;
 		align-items: start;
 		height: fit-content;
 		width: 100%;
+
 		.allAchvmText{
 			width: 90%;
 			padding: 0px !important;
@@ -1185,6 +1186,19 @@ $primaryColorLight: #00000090;
 					}
 				}
 			}
+			.card45Cont {
+				.btnWrap {
+					width: 100% !important;
+					padding-left: 10px !important;
+					margin-right: 0px !important;
+					.btnPrimary {
+						// width: 80% !important;
+						margin: 0px !important;
+						box-sizing: border-box !important;
+						left: 0px !important;
+					}
+				}
+			}
 			#chef-corps-logo{
 				max-width: 120px !important;
 				right: 15px !important;
@@ -1198,11 +1212,13 @@ $primaryColorLight: #00000090;
 				width: 100% !important;
 				margin-left: 0%;
 				margin-top: 20px !important;
-				justify-content: start !important;
+				justify-content: center !important;
+
 				#card-1{
 					margin-top: 15px !important;
 					font-size: 17px !important;
-					text-align: left !important;
+					text-align: center !important;
+					justify-self: center !important;
 				}
 			}
 			#card-2{
@@ -1216,6 +1232,8 @@ $primaryColorLight: #00000090;
 			}
 			#card-5{
 				font-size: 20px !important;
+				margin-right: 0px !important;
+				margin-left: 0px !important;
 			}
 			.achCards{
 				max-width: 80% !important;
@@ -1435,7 +1453,7 @@ $primaryColorLight: #00000090;
 				width: 100% !important;
 				margin-left: 0%;
 				margin-top: 20px !important;
-				justify-content: start !important;
+				justify-content: center !important;
 				#card-1{
 					margin-top: 15px !important;
 					font-size: 17px !important;

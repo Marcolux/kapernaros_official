@@ -272,15 +272,6 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1727106224/Niko/competitions/Action___Bobby_Flay_w22uvp.webp", caption: 'Chef Jet Tila' },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_5_b9cztz.webp", caption: 'Chef Jet Tila & Amanda Kloots' },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_4_u0abbm.webp", caption: 'Bobby Flay' },
-
-
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1000/q_auto/f_auto/v1730227636/Niko/competitions/Fox-Kapernaros2_hgowaq.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1000/q_auto/f_auto/v1730227635/Niko/competitions/Fox_Kapernaros3_pl74s1.jpg", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1000/q_auto/f_auto/v1730227635/Niko/competitions/Fox_kapernaros1_yq6jxm.jpg", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1000/q_auto/f_auto/v1730227635/Niko/competitions/Chopped_Kapernaros1_j4snrm.jpg", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1000/q_auto/f_auto/v1730227635/Niko/competitions/Chopped_Kapernaros2_ywpbeg.jpg", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1000/q_auto/f_auto/v1730227635/Niko/competitions/Chopped_Kapernaros_txab9i.jpg", caption: null },
-
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619837/Niko/competitions/c_s_8_a7ucnk.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619857/Niko/competitions/c_s_10_cgzqss.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715043709/viber_image_2024-05-01_23-12-10-266_s3fepo.webp", caption: null },
