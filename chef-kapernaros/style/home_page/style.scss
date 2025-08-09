@@ -1,374 +1,59 @@
+@import '../settings/common_style/website_variables';
+
 html, body {
     height: 100%;
     margin: 0;
 }
 
-$navBackGroundColor: #ffffff00;
-$navBarTextColor: #000;
-$navBtnBackGround: #C4B980;
-$navBtnBackGroundDK: #000;
-$navFont: normal normal 500 17px 'Merriweather';
-$primaryColor: #897400;
-$primaryColorLight: #00000090;
-
-// font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
-
-// NAVIGATION BAR ============
-
-.navBar {
-	background-color: $navBackGroundColor;
-    font: $navFont;
-	color: $navBarTextColor;
-	#landingAd{
-		color: #000000;
-		font-weight: bold;
-		display: flex;
-		font-family: "Ledger";
-		// box-shadow: 4px 4px 4px #00000063;
-		border: 1px solid #000;
-		// position: absolute;
-		// top: 0vh;
-		// right: 0%;
-		#DuckImg, #KaperImg{
-			background-color: #2f2f2f59;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position-y: center;
-			height: 52px;
-			width: 52px;
-			// border: 1px solid #000;
-			// box-shadow: 6px 6px 6px #00000063;
-		}
-		#DuckImg{
-			background-image: url('./../../images/Dulk_1.png');
-			// margin-top: 1px;
-			
-		}
-		#KaperImg{
-			background-image: url('./../../images/Kapernaros_1.png');
-			
-		}
-		#eventTextBox{
-			background-color: #2f2f2f59;
-			padding: 5px 10px;
-			font-size: 12px;
-			align-items: center;
-			justify-content: center;
-			// box-shadow: 6px 6px 6px #00000063;
-			
-			// text-shadow: 0.5px 0.5px 0px rgba(158, 0, 13, 0.846),
-			// 0.5px -0.5px 0px rgba(158, 0, 13, 0.846),
-			// -0.5px -0.5px 0px rgba(158, 0, 13, 0.846),
-			// -0.5px 0.5px 0px rgba(158, 0, 13, 0.846);
-
-			a{
-				background-color: #B59A07;
-				padding: 0px 5px;
-				color: #000000;
-				// text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.846),
-				// 0.5px -0.5px 0px rgba(0, 0, 0, 0.846),
-				// -0.5px -0.5px 0px rgba(0, 0, 0, 0.846),
-				// -0.5px 0.5px 0px rgba(0, 0, 0, 0.846);
-				margin-right: 0px !important;
-				&:hover{
-					scale: 1.1;
-					margin-left: -5px;
-					margin-right: 10px;
-				}
-			}
-			.shadowGold{
-				// text-shadow: 0.5px 0.5px 0px rgba(158, 0, 13, 0.846),
-				// 0.5px -0.5px 0px rgba(158, 0, 13, 0.846),
-				// -0.5px -0.5px 0px rgba(158, 0, 13, 0.846),
-				// -0.5px 0.5px 0px rgba(158, 0, 13, 0.846);
-				font-size: 14px;
-			}
-		}
-	}
-	#socialMedia a:not(.logoNav){
-		i{
-			font-size: 25px !important;
-		}
-		&:hover::before {
-	
-			display: flex;
-			height: 0% !important;
-			width: 0% !important;
-		
-		}
-	}
-	&.scrolled{
-		
-		&.biggerScreen{
-			transition: all 0.3s ease;
-			background-color: #ffffff;
-			border-bottom: 1px solid #00000049;
-			filter: drop-shadow(5px 5px 8px #0000003d) !important;
-			.linkContainer{
-				border-bottom: 0px !important;
-				padding-bottom: 0px !important;
-				justify-content: left !important;
-			}
-			.logoNav{
-				img{
-					height: 6vh !important;
-					&:hover{
-						filter: drop-shadow(1px 1px 1px #0000007c) !important;
-					}
-					&.activePage{
-						filter: drop-shadow(1px 1px 1px $primaryColor) !important;
-					}
-				}
-			}
-			#logoNavIndexPage{
-				img{
-					height: 6vh !important;
-					&:hover{
-						filter: drop-shadow(1px 1px 1px #0000007c) !important;
-					}
-					&.activePage{
-						filter: drop-shadow(1px 1px 1px $primaryColorLight) !important;
-					}
-				}
-			}
-		}
-	}
-
-	&.mobileView {
-		max-width: 50px;
-		width: 100vw;
-		height: 50px;
-		display: flex;
-		flex-direction: column;
-		position: fixed;
-		right: 10px;
-		top: 10px;
-		border: 2px solid $navBtnBackGroundDK;
-		border-radius: 40px;
-		transition: max-width 0.4s ease, height 0.4s ease, border-radius 0.6s ease; 
-		z-index: 9999;
-		background-color: #ffffffa7;
-		&.expand {
-			max-width: 99%;
-			height: 99.4%;
-			border-radius: 0px;
-			border-inline: -12px;
-			background-color:#ffffffce;
+#homePage {
+	.linkContainer {
+		align-items: end;
+		border-bottom: 1px solid #000;
+		font: var( --navFont);
+		justify-content: right !important;
+		width: fit-content;
+		&.homePageLinks {
+			position: absolute;
+			z-index: 10;
 			right: 0px;
-			top: 0px;
-			#navMenu{
-				padding: 0px !important;
-			}
-		}
-		#navBgScn{
-			display: none;
-		}
-	
-        a:not(.logoNav) {
-            text-decoration: none;
-            text-align: center;
-            align-items: center;
-            padding: 10px;
-            font-size: 25px;
-            color: $navBarTextColor; 
-            margin-top: 10px;
-            margin-bottom: 10px;
-            max-width: 0px;
-            opacity: 0;
-            transition: max-width 1s ease;
-            position: relative;
-            &::before{
-                content: '';
-                position: absolute;
-                bottom: 20% ;
-                left: 25%;
-                width: 0%;
-                height: 5%;
-                background-color: $navBtnBackGround;
-                transition: width 0.2s ease, height 0.2s ease;
-                border-radius: 0px;
-                pointer-events: none;
-                z-index: -1;
-            }
-            &:hover::before {
-                height: 5%;
-                width: 50%;
-            }
-            &:active {
-                text-shadow: 0px 0px 10px #000; 
-                            
-                &::before {
-                    width: 50%;
-                    height: 90%;
-                    bottom: 10%; 
-                    border-radius: 0;
-                }
-            }
-        }
-		.hambContainer {
-			padding: 10px;
-			border-radius: 0px;
-			display: flex;
-			justify-content: end;
-	
-			.hamburger-menu {
-				cursor: pointer;
-				width: 30px;
-				height: 30px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-around;
-				padding: 1px 0px;
-	
-				.bar {
-					height: 4px;
-					border-radius: 10px;
-					width: 95%;
-					background-color: $navBtnBackGroundDK;
-					border-radius: 10px;
-					transition: all 0.4s ease;	
-				}
-				&.openHam{
-					.bar {
-						&#bar1 {
-							transform: rotate(45deg) translate(0px, 10px);
-							width: 120%;
-						}
-						&#bar2 {
-							transform: translate(-100px, 25px);
-							width: 400%;
-							height: 2px;
-							margin-right: 30px;
-							display: none;
-						}
-						&#bar3 {
-							transform: rotate(-45deg) translate(0px, -10px);
-							width: 120%;
-						}
-					}
-				}
-			}
-		}
-		#navMenu {
-			overflow-x: hidden;
-			overflow-y: hidden;
-			height: 100%;
-			width: 0vw;
-			flex-direction: column;
-			padding-bottom: 20px;
-			justify-content: center;
-			align-items: center;
-			transition: max-width 0.5s ease;
-			img{
-				height: 0vh;
-				margin-bottom: 40px;
-				transition: height 0.5s ease;
-				filter: drop-shadow(1px 1px 1px #0000007c) !important;
-			}
-
-			&.show{
-				width: 100%;
-				a {
-					width: 80%;
-					max-width: 100%;
-					opacity: 1;
-				}
-				img{
-					height: 18vw;
-				}
-			} 
-		}
-		#landingAd{
-			border: 1px solid #000;
-			background-color: #aba4a4;
-			justify-self: end;
-			#DuckImg, #KaperImg{
-				background-color: #2f2f2f;
-				height: 52px !important;
-				width: 52px !important;
-				display: flex !important;
-			}
-			#eventTextBox{
-				background-color: #aba4a4;
+			top: 50%;
+			a:not(.socialLinks) {
+				background-color: #ffffff;
+				color: #000;
+				margin-right: 0px;
+				max-width: 400px;
 				padding: 5px 10px;
-				font-size: 10px !important;
-				#eventLink{
-					font-size: 12px;
-					width: fit-content !important;
-					margin: 0px;
-				}
-	
-				.shadowGold{
-					font-size: 12px !important;
-				}
-			}
-		}
-	}
-	&.biggerScreen{
-		position: fixed;
-		top: 0px;
-		display: flex;
-		width: 100%;
-		padding-top: 1vh;
-		padding-bottom: 1vh;
-		z-index: 9999;
-		div#hambContainer,nav#navMenu{
-			display: none;
-		}
-		#navBgScn {
-			display: flex;
-			width: 100%;
-			justify-content: left;
-			align-items: center;
-			img{
-				height: 12vh;
-				margin-left: 3vw;
-				margin-right: 5vw;
-				filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
-				&:hover{
-					filter: drop-shadow(1px 1px 1px #0000007c);
-					cursor: pointer;
-				}
-				&.activePage{
-					filter: drop-shadow(5px 5px 5px $primaryColorLight);
-					&:hover{
-						filter: drop-shadow(5px 5px 5px $primaryColorLight);
-						cursor: auto;
-					}
-				}
-			}
-            .linkContainer{
-                border-bottom: 1px solid #000;
-				align-items: baseline;
-            }
-			a:not(.logoNav){
-				color: $navBarTextColor;
-				margin-right: 3vw;
-				text-decoration: none !important;
 				position: relative;
+				text-align: end;
+				text-decoration: none !important;
+				text-transform: uppercase;
+				width: fit-content;
 				z-index: 0;
+				&:not(:last-child) { margin-bottom: 5px; }
+				&#bioLink {	width: 200px; }
+				&#mediaLink { width: 135px; }
+				&#chefTLink { width: 285px; }
+				&#contactLink {	width: 175px; }
 				&:hover, &:active{
 					text-shadow: #000;
+					color: #ffffff;
 				}
 				&::before{
-					content: '';
-					position: absolute;
-					bottom: 0% ;
-					left: -10%;
-					width: 0%;
-					height: 50%;
-					background-color: $navBtnBackGround;
-					transition: width 0.2s ease, height 0.1s ease;
+					background-color: var(--secondaryColor);
 					border-radius: 0px;
+					bottom: 0% ;
+					content: '';
+					height: 100%;
+					left: 0%;
 					pointer-events: none;
+					position: absolute;
+					transition: width 0.2s ease, height 0.1s ease;
+					width: 3px;
 					z-index: -1;
 				}
-				&:hover::before {
-					width: 120%;
-				}
+				&:hover::before { width: 100%; }
 				&:active {
-					text-shadow: 0px 0px 10px #ffffff; 
-			
+					text-shadow: 0px 0px 10px #ffffff;
 					&::before {
 						height: 100%;
 						bottom: 0%; 
@@ -376,291 +61,262 @@ $primaryColorLight: #00000090;
 					}
 				}
 			}
+			a.socialLinks {
+				color: #C3C3C3;
+				margin-top: 20px;
+				margin-right: 20px;
+				font-size: 22px;
+				&:hover {
+					color: var(--secondaryColor);
+				}
+			}
 		}
 	}
-}
-
-// LANDING PAGE ========
-.landingPage{
-    background-image: url('https://res.cloudinary.com/drdrs6pdq/image/upload/v1709553929/Niko/Home_Page_Chef_Kapernaros_img_HQ_1_q0nf2f.webp');
-    background-size: cover;
-    background-position: right;
-    height: 100%;
-
-	.picCpt{
-		position: absolute; 
-		bottom: 0px; 
-		right: 20px; 
-		color: #FFFFFF; 
-		font-size: 14px !important;
-		text-shadow:     
-		-1px -1px 1px #000000,
-		1px -1px 1px #000000,
-		-1px 1px 1px #000000,
-		1px 1px 1px #000000;
-	}
-    .chefQuote{
-        p{
-			margin: 0px;
-        }
-        .upLine{
-			font-size: 63px;
-			position: relative;
-			i{
-				position: absolute;
-				left: -40px;
-			}
-            span{
-				font-size: 55px;
-            }
-        }
-        .dwnLine{
-			font-size: 55px;
-			position: relative;
-			i{
-				position: absolute;
-			}
-            span{
-                font-size: 58px;
-            }
-        }
-    }
-    img{
-        transform: rotate(-2deg);
-    }
-}
-
-.middlePic{
-	background-color: #F5F5F5;
-	img{
-		object-fit: cover;
-		aspect-ratio: 1/1.2;
-		width: 33%;
-	}
-}
-.bioLanding{
-	height: 70vh;
-	.bioLandingPicContainer{
+	.landingPage{
+		background-color: #000;
+		height: 100vh;
 		position: relative;
-		height: 100%;
-		margin-top: 2%;
-		img {
-			position: absolute;
-			height: 40%;
-			box-shadow: 6px 6px 6px #C3C3C3;
-			aspect-ratio: 1/1.1;
-			object-fit: cover;
-			object-position: center;
-			opacity: 0;
-			scale: 0.5;
-			transition: all 0.5s ease;
-			&#pic1{
-				top: 0%;
-				left: 35%;
-				z-index: 4;
-				transition-delay: 0s;
-			}
-			&#pic2{
-				top: 22%;
-				left: 55%;
-				z-index: 3;
-				transition-delay: 0.2s;
-			}
-			&#pic3{
-				top: 55%;
-				left: 35%;
-				z-index: 2;
-				transition-delay: 0.4s;
-			}
-			&#pic4{
-				top: 32%;
-				left: 15%;
-				z-index: 1;
-				transition-delay: 0.6s;
-			}
-			&.in-view{
-				scale: 1;
-				opacity: 1;
-			}
-		}
-	}
-	.bioLandingTextContainer{
-		.textBioLanding{
-			font-family: 'Ledger';
-			text-align: justify;
-			text-justify: inter-word;
-			padding-right: 60px;
-		}
-	}
-}
-.charityLanding{
-	height: 70vh;
-	flex-direction: row-reverse;
-	.charityLandingPicContainer{
-		position: relative;
-		height: 100%;
-		margin-top: 2%;
-
-		img{
-			position: absolute;
-			height: 40%;
-			box-shadow: 6px 6px 6px #C3C3C3;
-			aspect-ratio: 1/1.1;
-			object-fit: cover;
-			object-position: center;
-			opacity: 0;
-			scale: 0;
-			transition: all 0.6s ease;
-
-			&#pic1{
-				top: 0%;
-				left: 35%;
-				z-index: 4;
-				transition-delay: 0s;
-			}
-			&#pic2{
-				top: 22%;
-				left: 55%;
-				z-index: 3;
-				transition-delay: 0.2s;
-			}
-			&#pic3{
-				top: 55%;
-				left: 35%;
-				z-index: 2;
-				transition-delay: 0.4s;
-			}
-			&#pic4{
-				top: 32%;
-				left: 15%;
-				z-index: 1;
-				transition-delay: 0.6s;
-			}
-			&.in-view{
-				scale: 1;
-				opacity: 1;
-			}
-		}
-	}
-	.charityLandingTextContainer{
-		padding-left: 80px;
-		.textCharityLanding{
-			font-family: 'Ledger';
-			text-align: justify;
-			text-justify: inter-word;
-		}
-	}
-}
-.achievementLanding{
-	min-height: 820px;
-	height: 88vh;
-	background-color: #EAEAEA;
-	.allAchvmText{
-		position: relative;
-		img{
-			position: absolute;
-			right: 40px;
-			top: 40px;
-		}
-		p:not(.titlesChef){
-			margin-top: 0px !important;		
-			margin-bottom: 25px !important;		
-		}
-		.achCards{
-			background-color: #2F2F2F;
-			color: #e1e0d3;
-			box-shadow:  6px 6px 6px #00000059;
-			padding: 25px 25px;
-			margin-top: 0px;
-			transform: translatex(-300px);
-			scale: 0;
-			transition: all 0.6s ease;
-			height: fit-content;
-
-			&#card-1{
-				transition-delay: 0s;
-				right: 30%;
-			}
-			&#card-2{
-				transition-delay: 0.1s;
-			}
-			&#card-3{
-				transition-delay: 0.2s;
-			}
-			&#card-4{
-				transition-delay: 0.3s;
-			}
-			&#card-5{
-				transition-delay: 0.4s;
-			}
-			&.in-view{
-				transform: translatex(0%);
-				scale: 1;
-			}
-		}
-	}
-	.imgAchvm{
-		img{
+		#landingPicBox {
 			height: 100%;
-			object-fit: cover;
-			object-position: top;
-			aspect-ratio: 1/1.5;
+			width: 55%;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+		img#logoLanding {
+			height: 250px;
+			position: absolute;
+			top: 15%;
+			right: 10%;
+		}
+		img#signatureLanding {
+			width: 45%;
+			position: absolute;
+			bottom: 50px;
+			right: 17%;
+		}
+	
+	}
+	.middlePic{
+		background-color: #000000;
+		.middleImgWrapper {
+			background-color: #ffffff;
+			border: 3px solid var(--secondaryColor);
+			gap: 15px;
+			width: 70%;
+			img {
+				aspect-ratio: 1/.9;
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
+	}
+	.bioLandingPicContainer {
+		box-sizing: border-box;
+		display: flex;
+		height: 80vh;
+		justify-content: center;
+		min-height: 550px;
+		max-height: 700px;
+		padding: 30px 80px; 
+		width: 100%;
+		.bioLandingTextWrapper {
+			display: flex;
+			flex-direction: column;
+			font-family: 'Ledger';
+			font-size: 18px;
+			font-weight: 400;
+			justify-content: center;
+			letter-spacing: 0.05px;
+			line-height: 25px;
+			text-align: left;
+			&.homePageTextWrapper {
+				border: 1px solid var(--secondaryColor);
+				height: fit-content;
+				padding: 30px;
+				position: relative;
+				width: 40%;
+				.btnPrimary {
+					bottom: -22px;
+					position: absolute;
+					right: 40px;
+				}
+			}
+		}
+	}
+
+	.animatedPicWrapper {
+		height: 100%;
+		width: 550px;
+		padding: 30px;
+		// background-color: white;
+		
+		.picSubWr {
+			position: relative;
+			height: 100%;
+			&::after {
+				content: '';
+				height: 70%;
+				width: 5px;
+				background-color: var(--secondaryColor);
+				position: absolute;
+				right: -25px;
+				top: 15%;
+				margin: 0px 30px;
+			}
+			
+			&::before {
+				content: '';
+				height: 70%;
+				width: 5px;
+				margin: 0px 30px;
+				background-color: var(--secondaryColor);
+				position: absolute;
+				left: -25px;
+				top: 15%;
+			}
+			img {
+				aspect-ratio: 1/1.1;
+				width: 35%;
+				// height: 34%;
+				// min-height: 150px;
+				object-fit: cover;
+				object-position: center;
+				opacity: 0;
+				position: absolute;
+				scale: 0.5;
+				transition: all 0.5s ease;
+				&#pic1 {
+					left: 30%;
+					top: 5%;
+					transition-delay: 0s;
+					z-index: 4;
+				}
+				&#pic2 {
+					right: 50px;
+					top: 35%;
+					transition-delay: 0.2s;
+					z-index: 3;
+				}
+				&#pic3 {
+					left: 25%;
+					top: 60%;
+					transition-delay: 0.4s;
+					z-index: 2;
+				}
+				&#pic4 {
+					left: 30px;
+					top: 27%;
+					transition-delay: 0.6s;
+					z-index: 1;
+				}
+				&.in-view {
+					opacity: 1;
+					scale: 1;
+				}
+			}
+		}
+	}
+	#bioSection {
+		.bioImgContainer {
+			min-width: 35%;
+			position: relative;
+			img {
+				aspect-ratio: 1/1.1;
+				height: 120%;
+				object-fit: cover;
+				object-position: center;
+				opacity: 0;
+				scale: 0.5;
+				transition: all 0.5s ease;
+				position: absolute;
+				bottom: -20%;
+				&#bioChefImg {
+					aspect-ratio: 1/1.3;
+					border: 1px solid #ffffff;
+					border-radius: 20px;
+					transition-delay: 0s;
+					z-index: 4;
+				}
+				&.in-view{
+					opacity: 1;
+					scale: 1;
+				}
+			}
+		}
+		#bioTextContainer {
+			margin-right: -50px;
+			width: 50%;
+			z-index: 10;
+			position: relative;
+			#logoBtnWrapper {
+				.btnPrimary {
+					width: fit-content;
+					margin-right: 15%;
+				}
+				img#logoMidPage {
+					aspect-ratio: 1/2;
+					height: 126px;
+					left: -100px;
+					width: 215px;
+				}
+			}
+		}
+	}
+	#mediaSection {
+		background: url('../../images/mediaBg.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: bottom;
+
+		#mediaSectionTextContainer {
+			color: #ffffff;
+		}
+		.picSubWr {
+			// margin-right: 30px;
+			// padding-right: 10px;
+			&::before { width: 0px; margin: 0px !important;}
+			// &::after { margin-left: 40px !important; margin-right: 0px;}
+		}
+	}
+	#chefTableSec {
+		.picSubWr {
+			// margin-left: 30px;
+			&::after { width: 0px; margin: 0px;}
+			// &::before { margin-right: 40px !important; margin-left: 0px; }
+			#pic1 { left: 40% !important; }
+			#pic2 { left: 65% !important; }
+			#pic3 { left: 35% !important; }
+			#pic4 { left: 40px !important; }
 		}
 	}
 }
-.titlesChef { 
-	color: #001489;
-    text-align: justify;
-	font: $navFont;
-	font-size: 27px;
-    line-height: normal;
-	position: relative;
-	margin-left: 15px;
+
+
+.titlesChef {
+	font-family: 'Prata';
+	font-size: 35px;
 	font-weight: 500;
+	margin-left: 15px;
+	position: relative;
+	width: fit-content;
+	z-index: 5;
 	&::before{
 		content: '';
 		position: absolute;
-		bottom: 5px ;
-		left: -20px;
-		width: 6px;
-		height: 100%;
-		background-color: $primaryColor;
+		bottom: -2px;
+		left: -5px;
+		width: calc(100% + 15px);
+		height: 45%;
+		background-color: var(--secondaryColor);
+		opacity: 0.5;
+		z-index: -1;
 	}
 }
-.btnPrimary {
-	border: 1px solid $primaryColor;
-	color: $primaryColor;
-	font-family: 'Ledger';
-	text-decoration: none;
-	padding: 10px 25px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	width: fit-content;
-	min-width: 85px;
-	font-size: 16px;
-	background-color: transparent;
-	font-weight: 600;
-	transition: all 0.3s ease;
-	&:hover{
-		filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.45));
-		// box-shadow: inset 2px 2px 4px rgba(25, 25, 25, 0.25),
-		// 			inset -2px -2px 4px rgba(25, 25, 25, 0.25);
-		border-radius: 4px;
-		cursor: pointer;
-	}
-	&:active{
-		filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-		box-shadow: inset 3px 3px 5px rgba(25, 25, 25, 0.15),
-					inset -3px -3px 5px rgba(25, 25, 25, 0.15);
-	}
-	a{
-		text-decoration: none;
-		color: $primaryColor;
-	}
 
-}
 
 #bobbyFlay{
 	position: fixed;
@@ -771,6 +427,15 @@ $primaryColorLight: #00000090;
 }
 
 // Break Points 
+@media only screen and (min-width: 1500px) {
+	.bioLanding {
+		.bioLandingPicContainer { right: 18% !important; }
+		.bioLandingTextContainer {
+			left: 18% !important;
+			width: 40% !important;
+		} 
+	}
+}
 @media only screen and (min-width: 1368px) and (max-width: 1400px) {
 	.chefQuote{
 		width: 60%;
@@ -822,29 +487,14 @@ $primaryColorLight: #00000090;
 			bottom: 30px;
 			left: 20px;
 		}
-		.imgAchvm img {
-			height: 97% !important;
-
-		}
+		.imgAchvm img { height: 97% !important; }
 	}
-	.achCards{
-		&.in-view{
-			&#card-1{
-				right: 30%;
-			}
-			&#card-2{
-				font-size: 22px !important;
-			}
-			&#card-3{
-				font-size: 20px !important;
-			}
-			&#card-4{
-				font-size: 17px !important;
-			}
-			&#card-5{
-				font-size: 25px !important;
-			}
-		}
+	.bioLanding {
+		.bioLandingPicContainer { right: 10% !important; }
+		.bioLandingTextContainer {
+			left: 10% !important;
+			width: 52% !important;
+		} 
 	}
 }
 @media only screen and (min-width: 771px) and (max-width: 1050px)  {
@@ -855,7 +505,7 @@ $primaryColorLight: #00000090;
 	}
 	.linkContainer{
 		width: 50%;
-		a{
+		a {
 			font-size: 15px !important;
 		}
 	}
@@ -931,43 +581,32 @@ $primaryColorLight: #00000090;
 		}
 	}
 }
-@media only screen and (min-width: 771px) and (max-width: 1300px) {
+@media only screen and (min-width: 771px) and (max-width: 1350px) {
 	
 	.chefQuote{
 		width: 60%;
-		p{
-			font-size: 40px !important;
-		}
-		.fontSize40{
-			font-size: 28px !important;
-		}
-		.fontSize58{
-			font-size: 40px !important;
-		}
+		p { font-size: 40px !important; }
+		.fontSize40 { font-size: 28px !important; }
+		.fontSize58 { font-size: 40px !important; }
 	}
-	.middlePic{
-		>div{
-			width: 70% !important;
+	.middlePic {
+		>div {
 			justify-content: center;
-			img{
-				width: 30% !important;
-
-			}
+			width: 70% !important;
+			img { width: 30% !important; }
 		}
 	}
 	.achievementLanding{
 		align-items: start;
 		height: fit-content;
 		width: 100%;
-
 		.allAchvmText{
-			width: 90%;
-			padding: 0px !important;
 			height: fit-content;
-			.cardsLine{
-				// flex-wrap: wrap;
+			padding: 0px !important;
+			width: 90%;
+			.cardsLine {
 				width: 100% !important;
-				.btnWrap{
+				.btnWrap {
 					height: fit-content !important;
 					margin-top: 30px;
 					.btnPrimary{
@@ -976,12 +615,12 @@ $primaryColorLight: #00000090;
 					}
 				}
 			}
-			#chef-corps-logo{
+			#chef-corps-logo {
 				max-width: 200px !important;
 				right: 25px !important;
 				top: 80px !important;
 			}
-			p:not(.titlesChef){
+			p:not(.titlesChef) {
 				margin-top: 0px !important;		
 				margin-bottom: 25px !important;		
 			}
@@ -989,67 +628,36 @@ $primaryColorLight: #00000090;
 				width: 100% !important;
 				height: fit-content;
 				text-align: center;
-	
-				&.in-view{
-					&#card-2, &#card-4{
-						// margin-left:10px;
-					}
-				}
 			}
 		}
 		.imgAchvm{
 			display: flex;
 			height: 50%;
-			width: 60%;
-			margin-left: 0px !important;
 			justify-content: center;
-			img{
-				width: 80%;
-				max-height: 50% !important;
+			margin-left: 0px !important;
+			width: 60%;
+			img {
 				display: flex;
+				max-height: 50% !important;
+				width: 80%;
 			}
 		}
 		.btnPrimary{
-			position: absolute;
 			bottom: -40px;
 			left: 20px;
+			position: absolute;
 		}
 	}
-	.bioLanding{
+
+	.charityLanding {
 		flex-direction: column-reverse;
 		height: fit-content !important;
 		width: 100%;
-		.bioLandingPicContainer{
+		.charityLandingPicContainer {
 			width: 80%;
 			display: flex;
 			justify-content: space-around;
-			img{
-				position: relative !important;
-				top: 0px !important;
-				left: 0px !important;
-				transform: translateX(0px);
-				width: 23%;
-				height: 75%;
-			}
-	
-		}
-		.bioLandingTextContainer{
-			width: 80%;
-			margin-bottom: 30px;
-			.textBioLanding{
-				padding-right: 0px !important;
-			}
-		} 
-	}
-	.charityLanding{
-		flex-direction: column-reverse;
-		height: fit-content !important;
-		width: 100%;
-		.charityLandingPicContainer{
-			width: 80%;
-			display: flex;
-			justify-content: space-around;
-			img{
+			img {
 				position: relative !important;
 				top: 0px !important;
 				left: 0px !important;
@@ -1262,7 +870,7 @@ $primaryColorLight: #00000090;
 	footer{
 		padding-bottom: 80px !important;
 		#webcraftLink{
-			a{
+			a {
 				font-size: 12px !important;
 				text-align: start;
 			}
@@ -1496,7 +1104,7 @@ $primaryColorLight: #00000090;
 	footer{
 		padding-bottom: 80px !important;
 		#webcraftLink{
-			a{
+			a {
 				font-size: 12px !important;
 				text-align: start;
 			}
@@ -1545,7 +1153,7 @@ footer{
 		justify-content: center;
 		font-size: 14px !important;
 		box-sizing: border-box;
-		a{
+		a {
 			text-align: center;
 		}
 	}

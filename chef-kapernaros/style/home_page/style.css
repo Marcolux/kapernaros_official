@@ -1,532 +1,340 @@
+:root {
+  --primary-font-color: #000000;
+  --page-primary-backgroung: #d5daf6;
+  --white-text: #ffffff;
+  /*==== GENERAL ====*/
+  --padding-xs: 5px;
+  --padding-sm: 10px;
+  --padding-md: 20px;
+  --padding-lg: 30px;
+  --padding-xl: 40px;
+  --h-100: 100;
+  /*==== NAVIGATION BAR ====*/
+  --navbar-height: 75px;
+  --navbar-background: #1d364c;
+  --navbar-color: #ffffff;
+  --navbar-fontsize: 22px;
+  --navbar-fontsize-smMenu: 25px;
+  --navbar-fontFamily: 'Merriweather';
+  --navbar-fontWeight: 600;
+  --navbar-before-color: #CDAA7F;
+  /*==== BODY ====*/
+  --body-App-fontFamily: 'Prata';
+  /*==== FOOTER ====*/
+  --footer-height: 60px;
+  --navBackGroundColor: #ffffff00;
+  --navBarTextColor: #000;
+  --navBtnBackGround: #C4B980;
+  --navBtnBackGroundDK: #000;
+  --navFont: normal normal 500 17px 'Merriweather';
+  --primaryColor: #897400;
+  --primaryColorLight: #00000090;
+  --secondaryColor: #B59A07;
+}
+
 html, body {
   height: 100%;
   margin: 0;
 }
 
-.navBar {
-  background-color: #ffffff00;
-  font: normal normal 500 17px "Merriweather";
-  color: #000;
-}
-
-.navBar #landingAd {
-  color: #000000;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: "Ledger";
-  border: 1px solid #000;
-}
-
-.navBar #landingAd #DuckImg, .navBar #landingAd #KaperImg {
-  background-color: #2f2f2f59;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  height: 52px;
-  width: 52px;
-}
-
-.navBar #landingAd #DuckImg {
-  background-image: url("./../../images/Dulk_1.png");
-}
-
-.navBar #landingAd #KaperImg {
-  background-image: url("./../../images/Kapernaros_1.png");
-}
-
-.navBar #landingAd #eventTextBox {
-  background-color: #2f2f2f59;
-  padding: 5px 10px;
-  font-size: 12px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.navBar #landingAd #eventTextBox a {
-  background-color: #B59A07;
-  padding: 0px 5px;
-  color: #000000;
-  margin-right: 0px !important;
-}
-
-.navBar #landingAd #eventTextBox a:hover {
-  scale: 1.1;
-  margin-left: -5px;
-  margin-right: 10px;
-}
-
-.navBar #landingAd #eventTextBox .shadowGold {
-  font-size: 14px;
-}
-
-.navBar #socialMedia a:not(.logoNav) i {
-  font-size: 25px !important;
-}
-
-.navBar #socialMedia a:not(.logoNav):hover::before {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 0% !important;
-  width: 0% !important;
-}
-
-.navBar.scrolled.biggerScreen {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  background-color: #ffffff;
-  border-bottom: 1px solid #00000049;
-  -webkit-filter: drop-shadow(5px 5px 8px #0000003d) !important;
-          filter: drop-shadow(5px 5px 8px #0000003d) !important;
-}
-
-.navBar.scrolled.biggerScreen .linkContainer {
-  border-bottom: 0px !important;
-  padding-bottom: 0px !important;
-  -webkit-box-pack: left !important;
-      -ms-flex-pack: left !important;
-          justify-content: left !important;
-}
-
-.navBar.scrolled.biggerScreen .logoNav img {
-  height: 6vh !important;
-}
-
-.navBar.scrolled.biggerScreen .logoNav img:hover {
-  -webkit-filter: drop-shadow(1px 1px 1px #0000007c) !important;
-          filter: drop-shadow(1px 1px 1px #0000007c) !important;
-}
-
-.navBar.scrolled.biggerScreen .logoNav img.activePage {
-  -webkit-filter: drop-shadow(1px 1px 1px #897400) !important;
-          filter: drop-shadow(1px 1px 1px #897400) !important;
-}
-
-.navBar.scrolled.biggerScreen #logoNavIndexPage img {
-  height: 6vh !important;
-}
-
-.navBar.scrolled.biggerScreen #logoNavIndexPage img:hover {
-  -webkit-filter: drop-shadow(1px 1px 1px #0000007c) !important;
-          filter: drop-shadow(1px 1px 1px #0000007c) !important;
-}
-
-.navBar.scrolled.biggerScreen #logoNavIndexPage img.activePage {
-  -webkit-filter: drop-shadow(1px 1px 1px #00000090) !important;
-          filter: drop-shadow(1px 1px 1px #00000090) !important;
-}
-
-.navBar.mobileView {
-  max-width: 50px;
-  width: 100vw;
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  border: 2px solid #000;
-  border-radius: 40px;
-  -webkit-transition: max-width 0.4s ease, height 0.4s ease, border-radius 0.6s ease;
-  transition: max-width 0.4s ease, height 0.4s ease, border-radius 0.6s ease;
-  z-index: 9999;
-  background-color: #ffffffa7;
-}
-
-.navBar.mobileView.expand {
-  max-width: 99%;
-  height: 99.4%;
-  border-radius: 0px;
-  border-inline: -12px;
-  background-color: #ffffffce;
-  right: 0px;
-  top: 0px;
-}
-
-.navBar.mobileView.expand #navMenu {
-  padding: 0px !important;
-}
-
-.navBar.mobileView #navBgScn {
-  display: none;
-}
-
-.navBar.mobileView a:not(.logoNav) {
-  text-decoration: none;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-  font-size: 25px;
-  color: #000;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  max-width: 0px;
-  opacity: 0;
-  -webkit-transition: max-width 1s ease;
-  transition: max-width 1s ease;
-  position: relative;
-}
-
-.navBar.mobileView a:not(.logoNav)::before {
-  content: '';
-  position: absolute;
-  bottom: 20%;
-  left: 25%;
-  width: 0%;
-  height: 5%;
-  background-color: #C4B980;
-  -webkit-transition: width 0.2s ease, height 0.2s ease;
-  transition: width 0.2s ease, height 0.2s ease;
-  border-radius: 0px;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.navBar.mobileView a:not(.logoNav):hover::before {
-  height: 5%;
-  width: 50%;
-}
-
-.navBar.mobileView a:not(.logoNav):active {
-  text-shadow: 0px 0px 10px #000;
-}
-
-.navBar.mobileView a:not(.logoNav):active::before {
-  width: 50%;
-  height: 90%;
-  bottom: 10%;
-  border-radius: 0;
-}
-
-.navBar.mobileView .hambContainer {
-  padding: 10px;
-  border-radius: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-
-.navBar.mobileView .hambContainer .hamburger-menu {
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 1px 0px;
-}
-
-.navBar.mobileView .hambContainer .hamburger-menu .bar {
-  height: 4px;
-  border-radius: 10px;
-  width: 95%;
-  background-color: #000;
-  border-radius: 10px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.navBar.mobileView .hambContainer .hamburger-menu.openHam .bar#bar1 {
-  -webkit-transform: rotate(45deg) translate(0px, 10px);
-          transform: rotate(45deg) translate(0px, 10px);
-  width: 120%;
-}
-
-.navBar.mobileView .hambContainer .hamburger-menu.openHam .bar#bar2 {
-  -webkit-transform: translate(-100px, 25px);
-          transform: translate(-100px, 25px);
-  width: 400%;
-  height: 2px;
-  margin-right: 30px;
-  display: none;
-}
-
-.navBar.mobileView .hambContainer .hamburger-menu.openHam .bar#bar3 {
-  -webkit-transform: rotate(-45deg) translate(0px, -10px);
-          transform: rotate(-45deg) translate(0px, -10px);
-  width: 120%;
-}
-
-.navBar.mobileView #navMenu {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 100%;
-  width: 0vw;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-bottom: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: max-width 0.5s ease;
-  transition: max-width 0.5s ease;
-}
-
-.navBar.mobileView #navMenu img {
-  height: 0vh;
-  margin-bottom: 40px;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
-  -webkit-filter: drop-shadow(1px 1px 1px #0000007c) !important;
-          filter: drop-shadow(1px 1px 1px #0000007c) !important;
-}
-
-.navBar.mobileView #navMenu.show {
-  width: 100%;
-}
-
-.navBar.mobileView #navMenu.show a {
-  width: 80%;
-  max-width: 100%;
-  opacity: 1;
-}
-
-.navBar.mobileView #navMenu.show img {
-  height: 18vw;
-}
-
-.navBar.mobileView #landingAd {
-  border: 1px solid #000;
-  background-color: #aba4a4;
-  -ms-grid-column-align: end;
-      justify-self: end;
-}
-
-.navBar.mobileView #landingAd #DuckImg, .navBar.mobileView #landingAd #KaperImg {
-  background-color: #2f2f2f;
-  height: 52px !important;
-  width: 52px !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.navBar.mobileView #landingAd #eventTextBox {
-  background-color: #aba4a4;
-  padding: 5px 10px;
-  font-size: 10px !important;
-}
-
-.navBar.mobileView #landingAd #eventTextBox #eventLink {
-  font-size: 12px;
-  width: -webkit-fit-content !important;
-  width: -moz-fit-content !important;
-  width: fit-content !important;
-  margin: 0px;
-}
-
-.navBar.mobileView #landingAd #eventTextBox .shadowGold {
-  font-size: 12px !important;
-}
-
-.navBar.biggerScreen {
-  position: fixed;
-  top: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  z-index: 9999;
-}
-
-.navBar.biggerScreen div#hambContainer, .navBar.biggerScreen nav#navMenu {
-  display: none;
-}
-
-.navBar.biggerScreen #navBgScn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navBar.biggerScreen #navBgScn img {
-  height: 12vh;
-  margin-left: 3vw;
-  margin-right: 5vw;
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-}
-
-.navBar.biggerScreen #navBgScn img:hover {
-  -webkit-filter: drop-shadow(1px 1px 1px #0000007c);
-          filter: drop-shadow(1px 1px 1px #0000007c);
-  cursor: pointer;
-}
-
-.navBar.biggerScreen #navBgScn img.activePage {
-  -webkit-filter: drop-shadow(5px 5px 5px #00000090);
-          filter: drop-shadow(5px 5px 5px #00000090);
-}
-
-.navBar.biggerScreen #navBgScn img.activePage:hover {
-  -webkit-filter: drop-shadow(5px 5px 5px #00000090);
-          filter: drop-shadow(5px 5px 5px #00000090);
-  cursor: auto;
-}
-
-.navBar.biggerScreen #navBgScn .linkContainer {
+#homePage .linkContainer {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   border-bottom: 1px solid #000;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  font: var(--navFont);
+  -webkit-box-pack: right !important;
+      -ms-flex-pack: right !important;
+          justify-content: right !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.navBar.biggerScreen #navBgScn a:not(.logoNav) {
+#homePage .linkContainer.homePageLinks {
+  position: absolute;
+  z-index: 10;
+  right: 0px;
+  top: 50%;
+}
+
+#homePage .linkContainer.homePageLinks a:not(.socialLinks) {
+  background-color: #ffffff;
   color: #000;
-  margin-right: 3vw;
-  text-decoration: none !important;
+  margin-right: 0px;
+  max-width: 400px;
+  padding: 5px 10px;
   position: relative;
+  text-align: end;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   z-index: 0;
 }
 
-.navBar.biggerScreen #navBgScn a:not(.logoNav):hover, .navBar.biggerScreen #navBgScn a:not(.logoNav):active {
-  text-shadow: #000;
+#homePage .linkContainer.homePageLinks a:not(.socialLinks):not(:last-child) {
+  margin-bottom: 5px;
 }
 
-.navBar.biggerScreen #navBgScn a:not(.logoNav)::before {
-  content: '';
-  position: absolute;
+#homePage .linkContainer.homePageLinks a:not(.socialLinks)#bioLink {
+  width: 200px;
+}
+
+#homePage .linkContainer.homePageLinks a:not(.socialLinks)#mediaLink {
+  width: 135px;
+}
+
+#homePage .linkContainer.homePageLinks a:not(.socialLinks)#chefTLink {
+  width: 285px;
+}
+
+#homePage .linkContainer.homePageLinks a:not(.socialLinks)#contactLink {
+  width: 175px;
+}
+
+#homePage .linkContainer.homePageLinks a:not(.socialLinks):hover, #homePage .linkContainer.homePageLinks a:not(.socialLinks):active {
+  text-shadow: #000;
+  color: #ffffff;
+}
+
+#homePage .linkContainer.homePageLinks a:not(.socialLinks)::before {
+  background-color: var(--secondaryColor);
+  border-radius: 0px;
   bottom: 0%;
-  left: -10%;
-  width: 0%;
-  height: 50%;
-  background-color: #C4B980;
+  content: '';
+  height: 100%;
+  left: 0%;
+  pointer-events: none;
+  position: absolute;
   -webkit-transition: width 0.2s ease, height 0.1s ease;
   transition: width 0.2s ease, height 0.1s ease;
-  border-radius: 0px;
-  pointer-events: none;
+  width: 3px;
   z-index: -1;
 }
 
-.navBar.biggerScreen #navBgScn a:not(.logoNav):hover::before {
-  width: 120%;
+#homePage .linkContainer.homePageLinks a:not(.socialLinks):hover::before {
+  width: 100%;
 }
 
-.navBar.biggerScreen #navBgScn a:not(.logoNav):active {
+#homePage .linkContainer.homePageLinks a:not(.socialLinks):active {
   text-shadow: 0px 0px 10px #ffffff;
 }
 
-.navBar.biggerScreen #navBgScn a:not(.logoNav):active::before {
+#homePage .linkContainer.homePageLinks a:not(.socialLinks):active::before {
   height: 100%;
   bottom: 0%;
   border-radius: 0;
 }
 
-.landingPage {
-  background-image: url("https://res.cloudinary.com/drdrs6pdq/image/upload/v1709553929/Niko/Home_Page_Chef_Kapernaros_img_HQ_1_q0nf2f.webp");
-  background-size: cover;
-  background-position: right;
+#homePage .linkContainer.homePageLinks a.socialLinks {
+  color: #C3C3C3;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+#homePage .linkContainer.homePageLinks a.socialLinks:hover {
+  color: var(--secondaryColor);
+}
+
+#homePage .landingPage {
+  background-color: #000;
+  height: 100vh;
+  position: relative;
+}
+
+#homePage .landingPage #landingPicBox {
   height: 100%;
+  width: 55%;
 }
 
-.landingPage .picCpt {
-  position: absolute;
-  bottom: 0px;
-  right: 20px;
-  color: #FFFFFF;
-  font-size: 14px !important;
-  text-shadow: -1px -1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, 1px 1px 1px #000000;
-}
-
-.landingPage .chefQuote p {
-  margin: 0px;
-}
-
-.landingPage .chefQuote .upLine {
-  font-size: 63px;
-  position: relative;
-}
-
-.landingPage .chefQuote .upLine i {
-  position: absolute;
-  left: -40px;
-}
-
-.landingPage .chefQuote .upLine span {
-  font-size: 55px;
-}
-
-.landingPage .chefQuote .dwnLine {
-  font-size: 55px;
-  position: relative;
-}
-
-.landingPage .chefQuote .dwnLine i {
-  position: absolute;
-}
-
-.landingPage .chefQuote .dwnLine span {
-  font-size: 58px;
-}
-
-.landingPage img {
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
-}
-
-.middlePic {
-  background-color: #F5F5F5;
-}
-
-.middlePic img {
+#homePage .landingPage #landingPicBox img {
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  aspect-ratio: 1/1.2;
-  width: 33%;
+  -o-object-position: center;
+     object-position: center;
 }
 
-.bioLanding {
-  height: 70vh;
+#homePage .landingPage img#logoLanding {
+  height: 250px;
+  position: absolute;
+  top: 15%;
+  right: 10%;
 }
 
-.bioLanding .bioLandingPicContainer {
+#homePage .landingPage img#signatureLanding {
+  width: 45%;
+  position: absolute;
+  bottom: 50px;
+  right: 17%;
+}
+
+#homePage .middlePic {
+  background-color: #000000;
+}
+
+#homePage .middlePic .middleImgWrapper {
+  background-color: #ffffff;
+  border: 3px solid var(--secondaryColor);
+  gap: 15px;
+  width: 70%;
+}
+
+#homePage .middlePic .middleImgWrapper img {
+  aspect-ratio: 1/.9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+#homePage .bioLandingPicContainer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 550px;
+  max-height: 700px;
+  padding: 30px 80px;
+  width: 100%;
+}
+
+#homePage .bioLandingPicContainer .bioLandingTextWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Ledger';
+  font-size: 18px;
+  font-weight: 400;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.05px;
+  line-height: 25px;
+  text-align: left;
+}
+
+#homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper {
+  border: 1px solid var(--secondaryColor);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  position: relative;
+  width: 40%;
+}
+
+#homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper .btnPrimary {
+  bottom: -22px;
+  position: absolute;
+  right: 40px;
+}
+
+#homePage .animatedPicWrapper {
+  height: 100%;
+  width: 550px;
+  padding: 30px;
+}
+
+#homePage .animatedPicWrapper .picSubWr {
   position: relative;
   height: 100%;
-  margin-top: 2%;
 }
 
-.bioLanding .bioLandingPicContainer img {
+#homePage .animatedPicWrapper .picSubWr::after {
+  content: '';
+  height: 70%;
+  width: 5px;
+  background-color: var(--secondaryColor);
   position: absolute;
-  height: 40%;
-  -webkit-box-shadow: 6px 6px 6px #C3C3C3;
-          box-shadow: 6px 6px 6px #C3C3C3;
+  right: -25px;
+  top: 15%;
+  margin: 0px 30px;
+}
+
+#homePage .animatedPicWrapper .picSubWr::before {
+  content: '';
+  height: 70%;
+  width: 5px;
+  margin: 0px 30px;
+  background-color: var(--secondaryColor);
+  position: absolute;
+  left: -25px;
+  top: 15%;
+}
+
+#homePage .animatedPicWrapper .picSubWr img {
   aspect-ratio: 1/1.1;
+  width: 35%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  opacity: 0;
+  position: absolute;
+  scale: 0.5;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#homePage .animatedPicWrapper .picSubWr img#pic1 {
+  left: 30%;
+  top: 5%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  z-index: 4;
+}
+
+#homePage .animatedPicWrapper .picSubWr img#pic2 {
+  right: 50px;
+  top: 35%;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  z-index: 3;
+}
+
+#homePage .animatedPicWrapper .picSubWr img#pic3 {
+  left: 25%;
+  top: 60%;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+  z-index: 2;
+}
+
+#homePage .animatedPicWrapper .picSubWr img#pic4 {
+  left: 30px;
+  top: 27%;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+  z-index: 1;
+}
+
+#homePage .animatedPicWrapper .picSubWr img.in-view {
+  opacity: 1;
+  scale: 1;
+}
+
+#homePage #bioSection .bioImgContainer {
+  min-width: 35%;
+  position: relative;
+}
+
+#homePage #bioSection .bioImgContainer img {
+  aspect-ratio: 1/1.1;
+  height: 120%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -535,273 +343,104 @@ html, body {
   scale: 0.5;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-}
-
-.bioLanding .bioLandingPicContainer img#pic1 {
-  top: 0%;
-  left: 35%;
-  z-index: 4;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-.bioLanding .bioLandingPicContainer img#pic2 {
-  top: 22%;
-  left: 55%;
-  z-index: 3;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-
-.bioLanding .bioLandingPicContainer img#pic3 {
-  top: 55%;
-  left: 35%;
-  z-index: 2;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-}
-
-.bioLanding .bioLandingPicContainer img#pic4 {
-  top: 32%;
-  left: 15%;
-  z-index: 1;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-}
-
-.bioLanding .bioLandingPicContainer img.in-view {
-  scale: 1;
-  opacity: 1;
-}
-
-.bioLanding .bioLandingTextContainer .textBioLanding {
-  font-family: 'Ledger';
-  text-align: justify;
-  text-justify: inter-word;
-  padding-right: 60px;
-}
-
-.charityLanding {
-  height: 70vh;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.charityLanding .charityLandingPicContainer {
-  position: relative;
-  height: 100%;
-  margin-top: 2%;
-}
-
-.charityLanding .charityLandingPicContainer img {
   position: absolute;
-  height: 40%;
-  -webkit-box-shadow: 6px 6px 6px #C3C3C3;
-          box-shadow: 6px 6px 6px #C3C3C3;
-  aspect-ratio: 1/1.1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  opacity: 0;
-  scale: 0;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  bottom: -20%;
 }
 
-.charityLanding .charityLandingPicContainer img#pic1 {
-  top: 0%;
-  left: 35%;
-  z-index: 4;
+#homePage #bioSection .bioImgContainer img#bioChefImg {
+  aspect-ratio: 1/1.3;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
+  z-index: 4;
 }
 
-.charityLanding .charityLandingPicContainer img#pic2 {
-  top: 22%;
-  left: 55%;
-  z-index: 3;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-
-.charityLanding .charityLandingPicContainer img#pic3 {
-  top: 55%;
-  left: 35%;
-  z-index: 2;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-}
-
-.charityLanding .charityLandingPicContainer img#pic4 {
-  top: 32%;
-  left: 15%;
-  z-index: 1;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-}
-
-.charityLanding .charityLandingPicContainer img.in-view {
-  scale: 1;
+#homePage #bioSection .bioImgContainer img.in-view {
   opacity: 1;
+  scale: 1;
 }
 
-.charityLanding .charityLandingTextContainer {
-  padding-left: 80px;
-}
-
-.charityLanding .charityLandingTextContainer .textCharityLanding {
-  font-family: 'Ledger';
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.achievementLanding {
-  min-height: 820px;
-  height: 88vh;
-  background-color: #EAEAEA;
-}
-
-.achievementLanding .allAchvmText {
+#homePage #bioSection #bioTextContainer {
+  margin-right: -50px;
+  width: 50%;
+  z-index: 10;
   position: relative;
 }
 
-.achievementLanding .allAchvmText img {
-  position: absolute;
-  right: 40px;
-  top: 40px;
+#homePage #bioSection #bioTextContainer #logoBtnWrapper .btnPrimary {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 15%;
 }
 
-.achievementLanding .allAchvmText p:not(.titlesChef) {
-  margin-top: 0px !important;
-  margin-bottom: 25px !important;
+#homePage #bioSection #bioTextContainer #logoBtnWrapper img#logoMidPage {
+  aspect-ratio: 1/2;
+  height: 126px;
+  left: -100px;
+  width: 215px;
 }
 
-.achievementLanding .allAchvmText .achCards {
-  background-color: #2F2F2F;
-  color: #e1e0d3;
-  -webkit-box-shadow: 6px 6px 6px #00000059;
-          box-shadow: 6px 6px 6px #00000059;
-  padding: 25px 25px;
-  margin-top: 0px;
-  -webkit-transform: translatex(-300px);
-          transform: translatex(-300px);
-  scale: 0;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+#homePage #mediaSection {
+  background: url("../../images/mediaBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
-.achievementLanding .allAchvmText .achCards#card-1 {
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  right: 30%;
+#homePage #mediaSection #mediaSectionTextContainer {
+  color: #ffffff;
 }
 
-.achievementLanding .allAchvmText .achCards#card-2 {
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+#homePage #mediaSection .picSubWr::before {
+  width: 0px;
+  margin: 0px !important;
 }
 
-.achievementLanding .allAchvmText .achCards#card-3 {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+#homePage #chefTableSec .picSubWr::after {
+  width: 0px;
+  margin: 0px;
 }
 
-.achievementLanding .allAchvmText .achCards#card-4 {
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+#homePage #chefTableSec .picSubWr #pic1 {
+  left: 40% !important;
 }
 
-.achievementLanding .allAchvmText .achCards#card-5 {
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+#homePage #chefTableSec .picSubWr #pic2 {
+  left: 65% !important;
 }
 
-.achievementLanding .allAchvmText .achCards.in-view {
-  -webkit-transform: translatex(0%);
-          transform: translatex(0%);
-  scale: 1;
+#homePage #chefTableSec .picSubWr #pic3 {
+  left: 35% !important;
 }
 
-.achievementLanding .imgAchvm img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  aspect-ratio: 1/1.5;
+#homePage #chefTableSec .picSubWr #pic4 {
+  left: 40px !important;
 }
 
 .titlesChef {
-  color: #001489;
-  text-align: justify;
-  font: normal normal 500 17px "Merriweather";
-  font-size: 27px;
-  line-height: normal;
-  position: relative;
-  margin-left: 15px;
+  font-family: 'Prata';
+  font-size: 35px;
   font-weight: 500;
+  margin-left: 15px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 5;
 }
 
 .titlesChef::before {
   content: '';
   position: absolute;
-  bottom: 5px;
-  left: -20px;
-  width: 6px;
-  height: 100%;
-  background-color: #897400;
-}
-
-.btnPrimary {
-  border: 1px solid #897400;
-  color: #897400;
-  font-family: 'Ledger';
-  text-decoration: none;
-  padding: 10px 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  min-width: 85px;
-  font-size: 16px;
-  background-color: transparent;
-  font-weight: 600;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.btnPrimary:hover {
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.45));
-          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.45));
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btnPrimary:active {
-  -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-          filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-  -webkit-box-shadow: inset 3px 3px 5px rgba(25, 25, 25, 0.15), inset -3px -3px 5px rgba(25, 25, 25, 0.15);
-          box-shadow: inset 3px 3px 5px rgba(25, 25, 25, 0.15), inset -3px -3px 5px rgba(25, 25, 25, 0.15);
-}
-
-.btnPrimary a {
-  text-decoration: none;
-  color: #897400;
+  bottom: -2px;
+  left: -5px;
+  width: calc(100% + 15px);
+  height: 45%;
+  background-color: var(--secondaryColor);
+  opacity: 0.5;
+  z-index: -1;
 }
 
 #bobbyFlay {
@@ -944,6 +583,16 @@ html, body {
       justify-self: center;
 }
 
+@media only screen and (min-width: 1500px) {
+  .bioLanding .bioLandingPicContainer {
+    right: 18% !important;
+  }
+  .bioLanding .bioLandingTextContainer {
+    left: 18% !important;
+    width: 40% !important;
+  }
+}
+
 @media only screen and (min-width: 1368px) and (max-width: 1400px) {
   .chefQuote {
     width: 60%;
@@ -991,20 +640,12 @@ html, body {
   .achievementLanding .imgAchvm img {
     height: 97% !important;
   }
-  .achCards.in-view#card-1 {
-    right: 30%;
+  .bioLanding .bioLandingPicContainer {
+    right: 10% !important;
   }
-  .achCards.in-view#card-2 {
-    font-size: 22px !important;
-  }
-  .achCards.in-view#card-3 {
-    font-size: 20px !important;
-  }
-  .achCards.in-view#card-4 {
-    font-size: 17px !important;
-  }
-  .achCards.in-view#card-5 {
-    font-size: 25px !important;
+  .bioLanding .bioLandingTextContainer {
+    left: 10% !important;
+    width: 52% !important;
   }
 }
 
@@ -1093,7 +734,7 @@ html, body {
   }
 }
 
-@media only screen and (min-width: 771px) and (max-width: 1300px) {
+@media only screen and (min-width: 771px) and (max-width: 1350px) {
   .chefQuote {
     width: 60%;
   }
@@ -1107,10 +748,10 @@ html, body {
     font-size: 40px !important;
   }
   .middlePic > div {
-    width: 70% !important;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 70% !important;
   }
   .middlePic > div img {
     width: 30% !important;
@@ -1125,11 +766,11 @@ html, body {
     width: 100%;
   }
   .achievementLanding .allAchvmText {
-    width: 90%;
-    padding: 0px !important;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    padding: 0px !important;
+    width: 90%;
   }
   .achievementLanding .allAchvmText .cardsLine {
     width: 100% !important;
@@ -1165,57 +806,23 @@ html, body {
     display: -ms-flexbox;
     display: flex;
     height: 50%;
-    width: 60%;
-    margin-left: 0px !important;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-left: 0px !important;
+    width: 60%;
   }
   .achievementLanding .imgAchvm img {
-    width: 80%;
-    max-height: 50% !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-height: 50% !important;
+    width: 80%;
   }
   .achievementLanding .btnPrimary {
-    position: absolute;
     bottom: -40px;
     left: 20px;
-  }
-  .bioLanding {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-    width: 100%;
-  }
-  .bioLanding .bioLandingPicContainer {
-    width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .bioLanding .bioLandingPicContainer img {
-    position: relative !important;
-    top: 0px !important;
-    left: 0px !important;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    width: 23%;
-    height: 75%;
-  }
-  .bioLanding .bioLandingTextContainer {
-    width: 80%;
-    margin-bottom: 30px;
-  }
-  .bioLanding .bioLandingTextContainer .textBioLanding {
-    padding-right: 0px !important;
+    position: absolute;
   }
   .charityLanding {
     -webkit-box-orient: vertical;

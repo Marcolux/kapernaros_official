@@ -14,6 +14,7 @@ if (hambMenu) {
         navBar.classList.toggle('expand')
     })
 }
+const newTest = () =>{}
 
 const navBarAdjToScreen = () => {
     
