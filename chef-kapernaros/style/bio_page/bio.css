@@ -1,137 +1,140 @@
-#carouselSec {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F5F5F5));
-  background: linear-gradient(#FFFFFF, #F5F5F5);
+#bioPage {
+  background-color: #F5F5F5;
 }
 
-#valueSec {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#FFFFFF));
-  background: linear-gradient(#F5F5F5, #FFFFFF);
+#bioPage #carouselSec {
+  height: calc(100vh - 14vh);
+  min-height: 550px;
 }
 
-.carouselContainer {
-  width: 100%;
-  height: 60%;
+#bioPage .carouselContainer {
+  height: calc(100% - 20px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: calc(100% - 40px);
 }
 
-.carouselContainer #carousel {
-  width: 100%;
-  height: 80%;
-  max-width: 1500px;
-  min-width: 900px;
-  min-height: 480px;
+#bioPage .carouselContainer #carousel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+  max-width: 1500px;
+  min-width: 900px;
+  min-height: 550px;
+  width: 100%;
 }
 
-.carouselContainer #carousel .singleCarouselSlide {
-  position: relative;
-  min-height: 480px;
-  max-height: 550px;
-  width: 90%;
+#bioPage .carouselContainer #carousel .singleCarouselSlide {
   -webkit-box-shadow: 6px 6px 6px #aeaeae;
           box-shadow: 6px 6px 6px #aeaeae;
-}
-
-.carouselContainer #carousel .singleCarouselSlide #slideDescription {
-  width: 40%;
+  height: 100%;
   min-height: 480px;
-  color: #FFFFFF;
+  position: relative;
+  width: 100%;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slideDescription i {
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slideDescription {
+  color: #FFFFFF;
+  min-height: 480px;
+  width: 40%;
+}
+
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slideDescription i {
   cursor: pointer;
   font-size: 68px !important;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slideDescription i:hover {
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slideDescription i:hover {
   font-size: 65px !important;
-  text-shadow: 3px 0px 2px #b59b07;
+  text-shadow: 3px 0px 2px var(--secondaryColor);
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slideDescription i:active {
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slideDescription i:active {
   font-size: 68px !important;
-  text-shadow: 0px 0px 0px #b59b07;
+  text-shadow: 0px 0px 0px var(--secondaryColor);
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slideDescription #prevSlide {
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slideDescription #prevSlide {
   position: absolute;
   top: 10px;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slideDescription #nextSlide {
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slideDescription #nextSlide {
   position: absolute;
   bottom: 10px;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slidePic {
-  width: 70%;
-  position: relative;
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slidePic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  width: 70%;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slidePic p {
-  position: absolute;
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slidePic p {
   bottom: 20px;
-  right: 20px;
   color: #f8f8f5;
-  font-weight: 600;
   font-size: 25px;
+  font-weight: 600;
+  position: absolute;
+  right: 20px;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slidePic #picNote {
-  text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px  1px 2px #000;
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slidePic #picNote {
   background-color: #00000093;
-  padding: 0px 10px;
   font-size: 20px !important;
+  padding: 0px 10px;
+  text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px  1px 2px #000;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slidePic #picNote:not(.note_0) {
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slidePic #picNote:not(.note_0) {
   opacity: 0;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slidePic #picNote.darker {
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slidePic #picNote.darker {
   opacity: 1 !important;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slideImg {
-  height: 480px;
-  width: 0%;
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slideImg {
+  min-height: 480px;
   -o-object-fit: cover !important;
      object-fit: cover !important;
   -o-object-position: center !important;
      object-position: center !important;
-  -webkit-transition: width 0.5s ease-in-out;
-  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  width: 0%;
 }
 
-.carouselContainer #carousel .singleCarouselSlide #slideText {
-  scale: 0;
-  -webkit-transition: scale 0.5s ease-in-out;
-  transition: scale 0.5s ease-in-out;
+#bioPage .carouselContainer #carousel .singleCarouselSlide #slideText {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 30px;
+  font-weight: 400;
+  scale: 0.5;
+  -webkit-transition: scale 0.4s ease-in-out;
+  transition: scale 0.4s ease-in-out;
 }
 
-.carouselContainer #timeline {
+#bioPage .carouselContainer #timeline {
   position: relative;
   padding-left: 40px;
 }
 
-.carouselContainer #timeline #lineWhite {
+#bioPage .carouselContainer #timeline #lineWhite {
   position: absolute;
-  background-color: white;
+  background-color: var(--secondaryColor);
   width: 1px;
   left: calc(50% + 20px);
 }
 
-.carouselContainer #timeline #circleWhite {
-  background-color: white;
+#bioPage .carouselContainer #timeline #circleWhite {
+  background-color: #ffffff;
   height: 20px;
   width: 20px;
   border-radius: 10px;
@@ -144,29 +147,32 @@
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.carouselContainer #timeline #circleWhite.position_0 {
+#bioPage .carouselContainer #timeline #circleWhite.position_0 {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   opacity: 1;
 }
 
-.carouselContainer #timeline #circleWhite:not(.circle_0).moveDown {
+#bioPage .carouselContainer #timeline #circleWhite:not(.circle_0).moveDown {
   -webkit-transform: translateY(-1150%);
           transform: translateY(-1150%);
 }
 
-.carouselContainer #timeline #circleWhite:not(.circle_6).moveUp {
+#bioPage .carouselContainer #timeline #circleWhite:not(.circle_6).moveUp {
   -webkit-transform: translateY(1150%);
           transform: translateY(1150%);
 }
 
-.cardsIntro {
-  width: 95%;
+#bioPage .cardsIntro {
+  border: 1px solid var(--secondaryColor);
+  background-color: #ffffff;
   text-align: justify;
 }
 
-#cardsContainer {
-  width: 80%;
+#bioPage #cardsContainer {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,52 +180,59 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
-#cardsContainer .singleCard {
-  width: 100%;
+#bioPage #cardsContainer .singleCard {
+  background-color: #ffffff;
+  -webkit-box-shadow: 6px 6px 6px #d8d8d89a;
+          box-shadow: 6px 6px 6px #d8d8d89a;
   max-width: 1400px;
+  padding: 20px;
+  width: 90%;
 }
 
-#cardsContainer .singleCard.reverse {
+#bioPage #cardsContainer .singleCard.reverse {
+  -ms-flex-item-align: self-end;
+      -ms-grid-row-align: self-end;
+      align-self: self-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-#cardsContainer .singleCard img {
-  width: 50%;
-  max-width: 400px;
-  max-height: 400px;
+#bioPage #cardsContainer .singleCard img {
+  aspect-ratio: 1.1/1;
+  max-width: 450px;
+  max-height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center 45%;
      object-position: center 45%;
-  aspect-ratio: 1.1/1;
+  width: 50%;
 }
 
-#cardsContainer .singleCard .cardDescr {
-  max-width: 550px;
-  text-align: justify;
+#bioPage #cardsContainer .singleCard .cardDescr {
+  font-family: 'Ledger';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
 }
 
-.maxWidth1500 {
+#bioPage .maxWidth1500 {
   max-width: 1500px !important;
 }
 
-.highlights {
+#bioPage .highlights {
   text-align: justify;
   text-justify: newspaper;
 }
 
-.slidePic {
+#bioPage .slidePic {
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-timing-function: ease-in-out;
@@ -230,20 +243,20 @@
   left: 0;
 }
 
-section#career-highlights {
+#bioPage section#career-highlights {
   background-color: #2F2F2F;
 }
 
-section#career-highlights .highlights {
+#bioPage section#career-highlights .highlights {
   padding: 25px 25px 25px 25px;
   list-style: none;
 }
 
-section#career-highlights .highlights ::marker {
-  color: #b59b07 !important;
+#bioPage section#career-highlights .highlights ::marker {
+  color: var(--secondaryColor) !important;
 }
 
-section#career-highlights .highlights li {
+#bioPage section#career-highlights .highlights li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -257,9 +270,9 @@ section#career-highlights .highlights li {
   z-index: 10;
 }
 
-section#career-highlights .highlights li::before {
+#bioPage section#career-highlights .highlights li::before {
   content: '';
-  background-color: #b59b07;
+  background-color: var(--secondaryColor);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,20 +285,20 @@ section#career-highlights .highlights li::before {
   transition: all .3s ease;
 }
 
-section#career-highlights .highlights li:hover {
+#bioPage section#career-highlights .highlights li:hover {
   z-index: 33;
   font-weight: 600;
 }
 
-section#career-highlights .highlights li:hover::before {
+#bioPage section#career-highlights .highlights li:hover::before {
   z-index: -1;
   width: 100%;
   left: 0px;
-  background-color: #b59b07;
+  background-color: var(--secondaryColor);
 }
 
-.animated-highlight {
-  color: #b59b07 !important;
+#bioPage .animated-highlight {
+  color: var(--secondaryColor) !important;
 }
 
 @media only screen and (min-width: 930px) and (max-width: 1170px) {

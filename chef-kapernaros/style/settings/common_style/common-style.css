@@ -107,7 +107,7 @@ html {
 }
 
 .textGold {
-  color: #B59A07 !important;
+  color: var(--secondaryColor) !important;
 }
 
 .textGold:active {

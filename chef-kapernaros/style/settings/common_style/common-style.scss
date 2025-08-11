@@ -44,7 +44,7 @@ html { letter-spacing: 0.009em; }
 .text-italic {font-style: italic;}
 .textWhite{color: #fff !important;}
 .textGold{
-	color: #B59A07 !important;
+	color: var(--secondaryColor) !important;
 	&:active{ color: #fff !important; }
 }
 .textDkGold{ color: #B59A07 !important; }
