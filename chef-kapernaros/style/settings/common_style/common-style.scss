@@ -60,7 +60,7 @@ html { letter-spacing: 0.009em; }
 	border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: #000000b1;
+	background-color: var(--secondaryColor);
 	border-radius: 3px;
 }
 
@@ -403,6 +403,9 @@ footer {
 	text-decoration: none !important;
 	transition: all 0.3s ease;
 	width: fit-content !important;
+	&.greyShadow {
+		filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.25));
+	}
 	&:hover{
 		border-radius: 0px;
 		cursor: pointer;

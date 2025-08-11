@@ -14,37 +14,25 @@ if (hambMenu) {
         navBar.classList.toggle('expand')
     })
 }
-const newTest = () =>{}
 
-const navBarAdjToScreen = () => {
-    
-    if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
-       
-        navBar.classList.add('mobileView')
-        navBar.classList.remove('biggerScreen')
-        spanToBreak.forEach(el => {
-            if (!el.firstChild || el.firstChild.nodeName !== 'BR') {
-                const brEl = document.createElement('br')
-                el.prepend(brEl)
-            }
-        })
-    } else if (window.innerWidth >= 750 && !navBar.classList.contains('biggerScreen')) {
-        
-        navBar.classList.remove('mobileView')
-        navBar.classList.add('biggerScreen')
-        spanToBreak.forEach(el => {
-            if (el.firstChild && el.firstChild.nodeName === 'BR') {
-                el.removeChild(el.firstChild)
-            }
-        })
+// The scrollable wrapper
+const SCROLL_SEL = 'body'
+const scrollEl = document.querySelector(SCROLL_SEL) || document // document => page scroll
+
+const getScrollTop = () => {
+    if (scrollEl === document) {
+      return window.scrollY || document.documentElement.scrollTop || 0
+    } else {
+      return (scrollEl as HTMLElement).scrollTop // safe cast
     }
 }
 
-const navScrolling = ()=>{
-    if (window.pageYOffset > 30) {
+const onScroll = () => {
+  const y = getScrollTop()
+  // navScrolling logic with y
+    if (y > 30) {
         navBar.classList.add('scrolled')
         if (socialMedia) socialMedia.classList.remove('hide')
-        
     } else {
         if (!navBar.classList.contains('scrolledAlways')) {
             navBar.classList.remove('scrolled')
@@ -53,49 +41,27 @@ const navScrolling = ()=>{
     }
 }
 
-const picAnimation = () => {
-    document.querySelectorAll('.bioLandingPicContainer img').forEach(img => {
-        if (window.pageYOffset >= 600) {
-            img.classList.add('in-view')
-        } else if (window.pageYOffset < 500) {
-            img.classList.remove('in-view')
-        }
-    })
-    document.querySelectorAll('.achCards').forEach(img => {
-        if (window.innerWidth < 770) {
-            if (window.pageYOffset > 1000) {
-                img.classList.add('in-view')
-            } else if (window.pageYOffset < 950) {
-                img.classList.remove('in-view')
-            }
+(scrollEl === document ? window : scrollEl).addEventListener('scroll', onScroll, { passive: true })
+onScroll() // run once on load
 
-        } else {
 
-            if (window.pageYOffset > 1250) {
-                img.classList.add('in-view')
-            } else if (window.pageYOffset < 1150) {
-                img.classList.remove('in-view')
-            }
-        }
-    })
-    document.querySelectorAll('.charityLandingPicContainer img').forEach(img => {
-        if (window.pageYOffset >= 1950) {
-            img.classList.add('in-view')
-        } else if (window.pageYOffset < 1850) {
-            img.classList.remove('in-view')
-        }
-    })
+const observeInView = (selectorClass: string, offset = 0) => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            })
+        },
+        { rootMargin: `${offset}px 0px` }
+    )
+    document.querySelectorAll(selectorClass).forEach(el => observer.observe(el))
 }
 
-window.addEventListener('resize',navBarAdjToScreen)
-navBarAdjToScreen()
-
-window.addEventListener('scroll',() => { 
-    navScrolling() 
-    picAnimation()
-})
-navScrolling()
-picAnimation()
+// Usage:
+observeInView('.bioLandingPicContainer img', -100)
+observeInView('#landingPicBox img', -100)
 
 const container = document.querySelector('#bigPic') as HTMLDivElement
 let allNotActiveTitles = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>

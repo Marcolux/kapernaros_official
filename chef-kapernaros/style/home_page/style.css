@@ -29,12 +29,55 @@
   --navFont: normal normal 500 17px 'Merriweather';
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
-  --secondaryColor: #B59A07;
+  --secondaryColor: #b19e47;
 }
 
-html, body {
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
   height: 100%;
   margin: 0;
+  overflow-y: hidden;
+}
+
+body {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+#homePage {
+  background: url("../../images/mediaBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+#homePage .titlesChef {
+  font-family: 'Prata';
+  font-size: 35px;
+  font-weight: 500;
+  margin-left: 15px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 5;
+}
+
+#homePage .titlesChef::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -5px;
+  width: calc(100% + 15px);
+  height: 45%;
+  background-color: var(--secondaryColor);
+  opacity: 0.5;
+  z-index: -1;
 }
 
 #homePage .linkContainer {
@@ -139,40 +182,6 @@ html, body {
   color: var(--secondaryColor);
 }
 
-#homePage .landingPage {
-  background-color: #000;
-  height: 100vh;
-  position: relative;
-}
-
-#homePage .landingPage #landingPicBox {
-  height: 100%;
-  width: 55%;
-}
-
-#homePage .landingPage #landingPicBox img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-#homePage .landingPage img#logoLanding {
-  height: 250px;
-  position: absolute;
-  top: 15%;
-  right: 10%;
-}
-
-#homePage .landingPage img#signatureLanding {
-  width: 45%;
-  position: absolute;
-  bottom: 50px;
-  right: 17%;
-}
-
 #homePage .middlePic {
   background-color: #000000;
 }
@@ -204,7 +213,7 @@ html, body {
           justify-content: center;
   min-height: 550px;
   max-height: 700px;
-  padding: 30px 80px;
+  padding: 30px 50px;
   width: 100%;
 }
 
@@ -217,13 +226,13 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: 'Ledger';
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   letter-spacing: 0.05px;
-  line-height: 25px;
+  line-height: 34px;
   text-align: left;
 }
 
@@ -234,7 +243,7 @@ html, body {
   height: fit-content;
   padding: 30px;
   position: relative;
-  width: 40%;
+  width: 45%;
 }
 
 #homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper .btnPrimary {
@@ -277,8 +286,8 @@ html, body {
 }
 
 #homePage .animatedPicWrapper .picSubWr img {
-  aspect-ratio: 1/1.1;
-  width: 35%;
+  aspect-ratio: 1/1.15;
+  width: 37%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -291,15 +300,15 @@ html, body {
 }
 
 #homePage .animatedPicWrapper .picSubWr img#pic1 {
-  left: 30%;
-  top: 5%;
+  right: 30%;
+  top: 0;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   z-index: 4;
 }
 
 #homePage .animatedPicWrapper .picSubWr img#pic2 {
-  right: 50px;
+  right: 47px;
   top: 35%;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
@@ -307,16 +316,16 @@ html, body {
 }
 
 #homePage .animatedPicWrapper .picSubWr img#pic3 {
-  left: 25%;
-  top: 60%;
+  left: 27%;
+  bottom: 0%;
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
   z-index: 2;
 }
 
 #homePage .animatedPicWrapper .picSubWr img#pic4 {
-  left: 30px;
-  top: 27%;
+  left: 0px;
+  bottom: 35%;
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
   z-index: 1;
@@ -327,6 +336,54 @@ html, body {
   scale: 1;
 }
 
+#homePage #landingSection {
+  background-color: #00000003;
+  height: 100vh;
+  position: relative;
+}
+
+#homePage #landingSection #landingPicBox {
+  height: 100%;
+  width: 55%;
+}
+
+#homePage #landingSection #landingPicBox img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  opacity: 2;
+  -webkit-transition: all 2.5s ease;
+  transition: all 2.5s ease;
+}
+
+#homePage #landingSection #landingPicBox img.in-view {
+  border-radius: 0px;
+  opacity: 2;
+}
+
+#homePage #landingSection img#logoLanding {
+  height: 300px;
+  position: absolute;
+  top: 15%;
+  right: 10%;
+}
+
+#homePage #landingSection img#signatureLanding {
+  width: 45%;
+  position: absolute;
+  bottom: 50px;
+  right: 17%;
+}
+
+#homePage #bioSection {
+  background-color: #ffffff;
+}
+
 #homePage #bioSection .bioImgContainer {
   min-width: 35%;
   position: relative;
@@ -334,17 +391,17 @@ html, body {
 
 #homePage #bioSection .bioImgContainer img {
   aspect-ratio: 1/1.1;
+  bottom: -20%;
   height: 120%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   opacity: 0;
+  position: absolute;
   scale: 0.5;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  position: absolute;
-  bottom: -20%;
 }
 
 #homePage #bioSection .bioImgContainer img#bioChefImg {
@@ -383,10 +440,8 @@ html, body {
 }
 
 #homePage #mediaSection {
-  background: url("../../images/mediaBg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  background-color: transparent;
+  height: 75vh;
 }
 
 #homePage #mediaSection #mediaSectionTextContainer {
@@ -396,6 +451,11 @@ html, body {
 #homePage #mediaSection .picSubWr::before {
   width: 0px;
   margin: 0px !important;
+}
+
+#homePage #chefTableSec {
+  background-color: #ffffff;
+  height: 75vh;
 }
 
 #homePage #chefTableSec .picSubWr::after {
@@ -419,28 +479,8 @@ html, body {
   left: 40px !important;
 }
 
-.titlesChef {
-  font-family: 'Prata';
-  font-size: 35px;
-  font-weight: 500;
-  margin-left: 15px;
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  z-index: 5;
-}
-
-.titlesChef::before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: -5px;
-  width: calc(100% + 15px);
-  height: 45%;
-  background-color: var(--secondaryColor);
-  opacity: 0.5;
-  z-index: -1;
+#homePage footer {
+  background-color: transparent;
 }
 
 #bobbyFlay {

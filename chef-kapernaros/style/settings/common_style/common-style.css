@@ -29,7 +29,7 @@
   --navFont: normal normal 500 17px 'Merriweather';
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
-  --secondaryColor: #B59A07;
+  --secondaryColor: #b19e47;
 }
 
 * {
@@ -146,7 +146,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000000b1;
+  background-color: var(--secondaryColor);
   border-radius: 3px;
 }
 
@@ -661,6 +661,11 @@ footer img {
   width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
+}
+
+.btnPrimary.greyShadow {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.25));
+          filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.25));
 }
 
 .btnPrimary:hover {
