@@ -65,6 +65,8 @@ var observeInView = function (selectorClass, offset) {
 // Usage:
 observeInView('.bioLandingPicContainer img', -100);
 observeInView('#landingPicBox img', -100);
+observeInView('.singleCard', -100);
+observeInView('#imgTransition', -100);
 var container = document.querySelector('#bigPic');
 var allNotActiveTitles = document.querySelectorAll('.secTitles');
 allNotActiveTitles.forEach(function (listEl) {

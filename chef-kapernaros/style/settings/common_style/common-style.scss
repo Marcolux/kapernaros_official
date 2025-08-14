@@ -1,7 +1,10 @@
 @import './website_variables';
 
 * { box-sizing: border-box; }
-html { letter-spacing: 0.009em; }
+html { 
+	letter-spacing: 0.009em; 
+	font-family: 'Ledger';
+}
 @font-face {
 	font-family: 'Ledger';
 	src: url('../../fonts/ledger/Ledger-Regular.ttf');

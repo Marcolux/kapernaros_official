@@ -62,6 +62,8 @@ const observeInView = (selectorClass: string, offset = 0) => {
 // Usage:
 observeInView('.bioLandingPicContainer img', -100)
 observeInView('#landingPicBox img', -100)
+observeInView('.singleCard', -100)
+observeInView('#imgTransition', -100)
 
 const container = document.querySelector('#bigPic') as HTMLDivElement
 let allNotActiveTitles = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>
