@@ -113,24 +113,89 @@
             
         </nav>
 
-        <section id="carouselSec" class="font-ledger flex flex-column flex-alignItems-center pb-30" style="margin-top: 14vh;">
+        <section id="carouselSec" class="font-ledger flex flex-column flex-alignItems-center" style="margin-top: 14vh;">
             <div class="flex carouselContainer flex-justifyContent-center">
                 <div id="carousel" class="flex flex-justifyContent-center"></div>
             </div>
         </section>
 
-        <section class="col-12" id="pageTransition"></section>
 
-        <section id="valueSec" class="col-12 font-ledger flex flex-column flex-alignItems-center flex-justifyContent-center">
-        
-            <div id="cardsIntro" class="col-11 p-20  maxWidth1500 flex flex-justifyContent-center">
-                <p class="fontSize20 valueIntro" >
-                    <span class="textGold fontSize22 text-bold ">Through every dish</span>, I weave my core beliefs of sustainability, excellence, and diversity, viewing them not merely as principles, but as the very soul of my culinary expression. 
-                    This section offers a glimpse into what fuels my passion and purpose in the kitchen; my family, team work, and dedication.
+        <section class="col-12" id="pageTransition">
+            <div id="cardsIntro" class="col-11 p-20 flex flex-column flex-justifyContent-center flex-alignItems-center">
+                <p class="flex flex-column" id="valuesIntro">
+                   <span class="titlesChef">What gives flavor to my craft </span> 
+                   <strong>is more than ingredients; it is the spirit of sustainability, the pursuit of excellence, and the embrace of diversity. </strong>
+                   These values are shaped by the love of my family, the strength of collaboration, and the discipline of dedication. 
+                   Together, they transform each dish into a reflection of both who I am and what I stand for.
                 </p>
             </div>
+        </section>
 
-            <div id="cardsContainer" class="px-20 pb-20 mt-30">
+        
+        <section id="valueSec" class="col-12 font-ledger flex flex-column flex-alignItems-center flex-justifyContent-center">
+        
+
+            <div class="cardContainer mt-40">
+
+                <article class="flip-card" tabindex="0" id="card1" aria-label="Card: Mountain">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="imgCont">
+                                <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1712186483/Niko/chef-kapernaros.family4_ffubuj.jpg" alt="chef Kapernaros family card pic">
+                                <h1 class="titlesChef mt-20 mb-0">Family</h1>
+                            </div>
+
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="cardText my-0 px-40">My family is my rock; the roots of my past and future combined in the present. 
+                                Family is my faith, my dedication, my patience, my love and understanding. 
+                                My family is who recharges me after my long days.</p>
+                        </div>
+                        <button class="flip-toggle" aria-expanded="false" aria-controls="card1">
+                            <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="44px" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="flip-card" tabindex="0" id="card2" aria-label="Card: Mountain">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="imgCont">
+                                <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1711574230/Niko/chef-kapernaros-team-work-card_gbakd0.webp" alt="chef Kapernaros team work card pic">
+                                <h1 class="titlesChef mt-20 mb-0"> Team Work</h1>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                           <p class="cardText my-0 px-40">The best cooks in the world do not succeed alone. 
+                            Teamwork is what characterizes me as a Chef; I lead my team with respect and integrity with the goal to create an environment for growth and success. 
+                            As a Chef, your team is your eyes, your hands, and even your second family.</p>
+                        </div>
+                        <button class="flip-toggle" aria-expanded="false" aria-controls="card2">
+                            <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="44px" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="flip-card" tabindex="0" id="card3" aria-label="Card: Mountain">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="imgCont">
+                                <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/f_auto,w_800/v1712192703/Niko/chef-hard-work_gz340i.webp" alt="chef Kapernaros hard work card pic">
+                                <h1 class="titlesChef mt-20 mb-0">Dedication</h1>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="cardText my-0 px-40">As I left for culinary school, my dad told me, “Show them who you are and let your hard work and ethics speak for you.” For 25 years, those words have driven me—through long hours, missed family moments, and time away from my wife and children. This dedication has opened doors to work with incredible chefs and gain invaluable experience that money can’t buy.</p>
+                        </div>
+                        <button class="flip-toggle" aria-expanded="false" aria-controls="card3">
+                            <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="44px" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- <div id="cardsContainer" class="px-20 pb-20 mt-30">
                 
                 <div class="singleCard flex">
                     <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1712186483/Niko/chef-kapernaros.family4_ffubuj.jpg" alt="chef Kapernaros family card pic">
@@ -159,7 +224,7 @@
                         <p class="cardText mt-20">As I left for culinary school, my dad told me, “Show them who you are and let your hard work and ethics speak for you.” For 25 years, those words have driven me—through long hours, missed family moments, and time away from my wife and children. This dedication has opened doors to work with incredible chefs and gain invaluable experience that money can’t buy.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section id="careerHighlightsSec" class=" col-12">

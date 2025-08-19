@@ -62,11 +62,12 @@ var observeInView = function (selectorClass, offset) {
     }, { rootMargin: "".concat(offset, "px 0px") });
     document.querySelectorAll(selectorClass).forEach(function (el) { return observer.observe(el); });
 };
-// Usage:
 observeInView('.bioLandingPicContainer img', -100);
 observeInView('#landingPicBox img', -100);
 observeInView('.singleCard', -100);
 observeInView('#imgTransition', -100);
+observeInView('.flip-icon', 0);
+observeInView('.flip-toggle ', 0);
 var container = document.querySelector('#bigPic');
 var allNotActiveTitles = document.querySelectorAll('.secTitles');
 allNotActiveTitles.forEach(function (listEl) {
@@ -77,6 +78,13 @@ allNotActiveTitles.forEach(function (listEl) {
             titleActive.classList.remove('active');
             listEl.classList.add('active');
         }
+    });
+});
+document.querySelectorAll('.flip-card').forEach(function (card) {
+    var btn = card.querySelector('.flip-toggle');
+    btn.addEventListener('click', function () {
+        var is = card.classList.toggle('is-flipped');
+        btn.setAttribute('aria-expanded', String(is));
     });
 });
 emailjs.init('0wA6kpUaumn2FNdbg');

@@ -59,11 +59,13 @@ const observeInView = (selectorClass: string, offset = 0) => {
     document.querySelectorAll(selectorClass).forEach(el => observer.observe(el))
 }
 
-// Usage:
+
 observeInView('.bioLandingPicContainer img', -100)
 observeInView('#landingPicBox img', -100)
 observeInView('.singleCard', -100)
 observeInView('#imgTransition', -100)
+observeInView('.flip-icon', 0)
+observeInView('.flip-toggle ', 0)
 
 const container = document.querySelector('#bigPic') as HTMLDivElement
 let allNotActiveTitles = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>
@@ -77,6 +79,14 @@ allNotActiveTitles.forEach( listEl => {
             titleActive.classList.remove('active')
             listEl.classList.add('active')
         }
+    })
+})
+
+document.querySelectorAll('.flip-card').forEach(card=>{
+    const btn = card.querySelector('.flip-toggle') as HTMLButtonElement
+    btn.addEventListener('click', ()=>{
+        const is = card.classList.toggle('is-flipped') 
+        btn.setAttribute('aria-expanded', String(is))
     })
 })
 
