@@ -208,8 +208,8 @@
 #bioPage #pageTransition #cardsIntro #valuesIntro {
   background-color: #F8F6F1;
   border-radius: 8px;
-  -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0 8px 30px #00000026;
+          box-shadow: 0 8px 30px #00000026;
   font-size: 20px;
   font-weight: 300;
   line-height: 1.9;
@@ -230,7 +230,7 @@
   content: '';
   background-color: var(--secondaryColor);
   bottom: 20px;
-  height: calc(100% - 10px);
+  height: calc(100% - 36px);
   left: -55px;
   opacity: 0.5;
   position: absolute;

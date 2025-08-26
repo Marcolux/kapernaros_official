@@ -22,6 +22,18 @@ if (hambMenu) {
         navBar.classList.toggle('expand');
     });
 }
+var navBarAdjToScreen = function () {
+    if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
+        navBar.classList.add('mobileView');
+        navBar.classList.remove('biggerScreen');
+    }
+    else if (window.innerWidth >= 750 && !navBar.classList.contains('biggerScreen')) {
+        navBar.classList.remove('mobileView');
+        navBar.classList.add('biggerScreen');
+    }
+};
+window.addEventListener('resize', function () { navBarAdjToScreen(); });
+navBarAdjToScreen();
 // The scrollable wrapper
 var SCROLL_SEL = 'body';
 var scrollEl = document.querySelector(SCROLL_SEL) || document; // document => page scroll

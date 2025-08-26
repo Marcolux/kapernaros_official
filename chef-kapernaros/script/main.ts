@@ -14,6 +14,17 @@ if (hambMenu) {
         navBar.classList.toggle('expand')
     })
 }
+const navBarAdjToScreen = function () {
+    if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
+        navBar.classList.add('mobileView')
+        navBar.classList.remove('biggerScreen')
+    } else if (window.innerWidth >= 750 && !navBar.classList.contains('biggerScreen')) {
+        navBar.classList.remove('mobileView')
+        navBar.classList.add('biggerScreen')
+    }
+}
+window.addEventListener('resize',() => {navBarAdjToScreen()})
+navBarAdjToScreen()
 
 // The scrollable wrapper
 const SCROLL_SEL = 'body'
@@ -40,7 +51,6 @@ const onScroll = () => {
         }
     }
 }
-
 (scrollEl === document ? window : scrollEl).addEventListener('scroll', onScroll, { passive: true })
 onScroll() // run once on load
 

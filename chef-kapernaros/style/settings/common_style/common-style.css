@@ -686,6 +686,6 @@ footer img {
 
 .btnPrimary a {
   text-decoration: none !important;
-  color: var(--primaryColor);
+  color: #fff;
 }
 /*# sourceMappingURL=common-style.css.map */
