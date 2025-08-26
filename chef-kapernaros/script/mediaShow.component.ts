@@ -64,8 +64,8 @@ class picCollection {
 function initPicCollection(newPicturesList: picCollection, collection: Picture[]) {
 
 
-    let bigPic = document.querySelector(`#bigPic`) as HTMLDivElement
-    let carouselElement = bigPic.querySelector(`#singlePicCont`) as HTMLDivElement
+    // let bigPic = document.querySelector(`#bigPic`) as HTMLDivElement
+    let carouselElement = document.querySelector(`#singlePicCont`) as HTMLDivElement
     carouselElement.innerHTML = ''
     let first = collection.shift() as Picture
 

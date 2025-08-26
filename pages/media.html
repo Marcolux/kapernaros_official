@@ -43,7 +43,7 @@
 
 </head>
 
-<body>
+<body id="mediaPage">
     <nav class="navBar flex biggerScreen">
         <div id="navBgScn">
             <a href="../index.html" class="logoNav">
@@ -114,59 +114,92 @@
         </div>
         
     </nav>
-    <section id="media_section" class="col-12">
-        <div class="p-40 maxWidth1500" id="mediaIntro">
+    <!-- <section id="media_section" class="col-12"> -->
+        <div class="p-40 maxWidth1500 mediaIntro">
             <p class="titlesChef">Culinary Media and Inspirations</p>
-            <p class="fontSize16 mb-0 font-ledger mediaIntro">
-                <strong>Below you will find a vibrant showcase of the most memorable moments of my culinary career.</strong>
+            <p class="fontSize16 mb-0 font-ledger">
+                <strong>Below a vibrant showcase of the most memorable moments of my culinary career.</strong>
                 <br>Follow along as I take you from my early days in prestigious kitchens around the globe, to exciting appearances on popular food shows, and even to encounters with celebrities. I share with you my proudest moments; each photo and video captures my deep passion and unwavering commitment to my career.
             </p>
         </div>
-        <div class="mt-20 mb-30" id="sectionPic">
-            <img id="logoMedia" src="../chef-kapernaros/images/logo-circled.svg" alt="Kapernaros Circled Logo">
+        <section class="mt-20" id="sectionPic">
+            <div class="flex col-12 flex-justifyContent-center" id="picFolderWrapper">
 
-            <div class="flex flex-column flex-justifyContent-center" id="mediaSelectorCont">
-                <div class="flex flex-alignItems-center flex-justifyContent-center p-20" id="mediaBlackBg">                
-                    <ul class="picSections">
+                <div class="flex flex-column flex-justifyContent-center" id="mediaSelectorCont">               
+                    <ul class="picSections p-15">
                         <li id="friendsCelebList" class="my-10 secTitles active">Chef Friends and Celebrities</li>
                         <!-- <li id="growingInGreeceList" class="my-10 secTitles">Growing Up in Greece</li> -->
                         <li id="charityEventsList" class="my-10 secTitles">Charity & Events</li>
                         <li id="competitionShows" class="my-10 secTitles">Competitions and Shows</li>
                         <li id="onThePass" class="my-10 secTitles">On The Pass</li>
                         <li id="chicagoChefsCookbookLaunch" class="my-10 secTitles">Chicago Chefs Cookbook Launch</li>
-                    </ul>         
+                        <li>
+                            <a class="" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
+                                Follow along on Instagram 
+                                <i class="ml-10 fa-brands fa-instagram noHighlight"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="flex flex-justifyContent-center" id="mediaContainer">       
+                    <div id="singlePicCont"></div>  
                 </div>
             </div>
+            
+        </section>
 
-            <div class="flex flex-justifyContent-center" id="mediaContainer">       
-                <div class="flex flex-column flex-alignItems-center" id="mediaShowCont">
-                    <div id="bigPic" class="flex">
-                        <div id="singlePicCont"></div>  
+        <section class="middlePic pt-50 pb-25 col-12 flex flex-alignItems-end flex-justifyContent-spaceAround middlePageBreak">
+            <img id="logoMedia" class="mt-50" src="../chef-kapernaros/images/new_golden_logo.svg" alt="Kapernaros Circled Logo">
+        </section>
+
+        <section class="chef-videos" id="videoSec" aria-labelledby="chef-videos-title">
+            <div class="cv-container">
+                <div class="col-12 flex flex-justifyContent-center">
+                    <div class="mediaIntro">
+                        <p class="titlesChef mt-0 mb-20">
+                            From the Kitchen to the Community
+                        </p>
+                        <p class="my-0">Watch Chef Kapernaros featured on TV and giving back.</p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div id="videoSec" class="col-11 flex flex-column px-30 pb-30">
-            <div class="maxWidth1500">
-                <p class="fontSize20 text-bold textGold font-ledger">From Kitchens to Causes: Watch the Videos</p>
+                <div class="cv-video-grid" role="list">
+                    <div class="cv-video" role="listitem" aria-label="Fox 32 segment">
+                        <iframe
+                            src="https://www.youtube.com/embed/7nTmh5Ipp7A?rel=0;controls=1;showinfo=0;modestbranding=0"
+                            title="Fox 32 Live News Chicago Chefs Cook for Earthquake Relief.  Chef Kapernaros  Nikolaos"
+                            loading="lazy"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="cv-video" role="listitem" aria-label="Mother’s Day special">
+                        <iframe
+                            src="https://www.youtube.com/embed/zoMCXuAw-ok?rel=0;controls=1;showinfo=0;modestbranding=0" 
+                            title="Mother's day special at WGN news"
+                            loading="lazy"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="cv-video" role="listitem" aria-label="Open TV interview">
+                        <iframe
+                            src="https://www.youtube.com/embed/RZBXKoBLAiw?rel=0;controls=1;showinfo=0;modestbranding=0"
+                            title="Μέρα Μεσημέρι Open tv Executive Chef Nikolaos Kapernaros"
+                            title="Open TV Interview"
+                            loading="lazy"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <a href="https://www.youtube.com/@nikolaoskapernaros4454/videos" class="btnPrimary" target="_blank">More videos</a>
             </div>
-            <div id="videoContainer" class="col-12 flex flex-alignItems-center flex-justifyContent-center my-30">
-                <div class="video-responsive">
-                    <iframe width="834" height="469" src="https://www.youtube.com/embed/7nTmh5Ipp7A?rel=0;controls=1;showinfo=0;modestbranding=0" title="Fox 32 Live News Chicago Chefs Cook for Earthquake Relief.  Chef Kapernaros  Nikolaos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="video-responsive mx-30">
-                    <iframe width="834" height="469" src="https://www.youtube.com/embed/zoMCXuAw-ok?rel=0;controls=1;showinfo=0;modestbranding=0" title="Mother&#39;s day special at WGN news" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="video-responsive">
-                    <iframe width="834" height="469" src="https://www.youtube.com/embed/RZBXKoBLAiw?rel=0;controls=1;showinfo=0;modestbranding=0" title="Μέρα Μεσημέρι Open tv Executive Chef Nikolaos Kapernaros" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-            <button class="btnPrimary ml-40"><a href="https://www.youtube.com/@nikolaoskapernaros4454/videos" target="_blank">More videos</a></button>
-        </div>
-    </section>
+        </section>
+
+    <!-- </section> -->
     
-    <footer class="flex flex-alignItems-center flex-justifyContent-spaceBetween px-40 py-20">
+    <footer class="col-12 flex flex-alignItems-center flex-justifyContent-spaceBetween px-40 pt-50 pb-20">
         <div class="flex flex-column flex-justifyContent-end" style="height: 100%;">
             <div class="flex mb-30">
                 <a class="mr-20" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">

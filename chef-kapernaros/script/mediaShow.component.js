@@ -46,8 +46,8 @@ var picCollection = /** @class */ (function () {
     return picCollection;
 }());
 function initPicCollection(newPicturesList, collection) {
-    var bigPic = document.querySelector("#bigPic");
-    var carouselElement = bigPic.querySelector("#singlePicCont");
+    // let bigPic = document.querySelector(`#bigPic`) as HTMLDivElement
+    var carouselElement = document.querySelector("#singlePicCont");
     carouselElement.innerHTML = '';
     var first = collection.shift();
     if (!newPicturesList.head) {

@@ -1,4 +1,7 @@
-#media_section {
+#mediaPage {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,19 +9,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 14vh;
+  padding-top: 14vh;
 }
 
-#media_section #logoMedia {
-  position: absolute;
-  right: 5vw;
-  top: 25%;
+#mediaPage #logoMedia {
+  height: 250px;
 }
 
-#media_section #mediaIntro {
+#mediaPage .mediaIntro {
   background-color: #F8F6F1;
   border-radius: 8px;
   -webkit-box-shadow: 10px 15px 20px 6px #00000017;
@@ -26,21 +24,21 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 1.9;
-  max-width: 950px;
+  max-width: 1000px;
   margin-bottom: -60px;
   padding: 30px 40px;
   text-align: left;
   z-index: 55;
 }
 
-#media_section #mediaIntro .titlesChef {
-  font-size: 36px;
+#mediaPage .mediaIntro .titlesChef {
+  font-size: clamp(1.8rem, 2.6vw, 3rem);
   font-weight: 600;
   letter-spacing: .01em;
   margin-bottom: 10px;
 }
 
-#media_section #mediaIntro .titlesChef::before {
+#mediaPage .mediaIntro .titlesChef::before {
   content: '';
   background-color: var(--secondaryColor);
   bottom: 20px;
@@ -52,44 +50,48 @@
   z-index: -1;
 }
 
-#media_section #mediaIntro strong {
+#mediaPage .mediaIntro strong {
   font-size: 22px;
   line-height: 1.7;
   margin-bottom: 8px;
 }
 
-#media_section #sectionPic {
+#mediaPage #sectionPic {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(var(--darkBlueColor)), to(#000000));
   background: linear-gradient(180deg, var(--darkBlueColor), #000000);
-  border: 1px solid #b59b07;
-  -webkit-box-shadow: 6px 6px 6px #aeaeae;
-          box-shadow: 6px 6px 6px #aeaeae;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 97vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100vh - 14vh);
+  min-height: calc(100vh - 14vh);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 100px 40px 80px 40px;
+  padding: 100px 40px 10px 40px;
   position: relative;
   width: 100% !important;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
-#media_section #mediaSelectorCont {
-  position: absolute;
-  left: 5vh;
-  top: 30%;
-  width: 390px;
+#mediaPage #sectionPic #picFolderWrapper {
+  height: 100%;
+  gap: 30px;
+}
+
+#mediaPage #sectionPic #picFolderWrapper #mediaSelectorCont {
+  width: 350px;
   z-index: 2;
-}
-
-#media_section #mediaSelectorCont #mediaBlackBg {
   background: #ffffff;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -97,14 +99,16 @@
   color: #000000;
   font-family: 'Ledger';
   border: 4px solid #b59b07;
+  -ms-flex-item-align: anchor-center;
+      -ms-grid-row-align: anchor-center;
+      align-self: anchor-center;
+}
+
+#mediaPage #sectionPic #picFolderWrapper #mediaSelectorCont .picSections {
   width: 100%;
 }
 
-#media_section #mediaSelectorCont #mediaBlackBg .picSections {
-  width: 100%;
-}
-
-#media_section #mediaSelectorCont #mediaBlackBg .picSections li {
+#mediaPage #sectionPic #picFolderWrapper #mediaSelectorCont .picSections li {
   font-size: 16px;
   text-decoration: none;
   list-style: none;
@@ -114,67 +118,38 @@
   letter-spacing: 0.03em;
 }
 
-#media_section #mediaSelectorCont #mediaBlackBg .picSections li:not(.active):hover {
+#mediaPage #sectionPic #picFolderWrapper #mediaSelectorCont .picSections li:not(.active):hover {
   cursor: pointer;
   font-weight: 600;
 }
 
-#media_section #mediaSelectorCont #mediaBlackBg .picSections li.active {
+#mediaPage #sectionPic #picFolderWrapper #mediaSelectorCont .picSections li.active {
   background: #b59b07;
   color: #000000;
   scale: 1;
 }
 
-#media_section #mediaContainer {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer {
   height: 100%;
-  margin-left: 25vw;
-  position: relative;
-  width: 65%;
+  width: calc(100% - 350px);
+  max-width: 1050px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#media_section #mediaContainer #brandLogo {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-#media_section #mediaContainer #mediaShowCont {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 100%;
-  width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   position: relative;
-  z-index: 2;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic {
-  background-color: #ffffff00;
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont {
   height: 100%;
   width: 100%;
   z-index: 55;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont {
-  height: 100%;
-  width: 100%;
-  z-index: 55;
-}
-
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing {
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing {
   height: 100%;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing button {
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -189,73 +164,61 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
   scale: 1;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   width: 50px;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing button:hover {
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing button:hover {
   scale: 1.1;
   cursor: pointer;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing .picDiv {
-  -ms-flex-item-align: anchor-center;
-      -ms-grid-row-align: anchor-center;
-      align-self: anchor-center;
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing .picDiv {
   overflow: hidden;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
   height: 100%;
-  max-width: 685px;
+  min-height: 100%;
+  width: 100%;
   min-width: 600px;
-  max-height: 685px;
-  padding: 20px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border: 4px solid #b59b07;
-  background-color: #ffffff;
-  -webkit-box-shadow: 6px 6px 10px #949494 inset, -6px -6px 10px #949494 inset;
-          box-shadow: 6px 6px 10px #949494 inset, -6px -6px 10px #949494 inset;
-  margin: 0px 20px;
+  margin: 0px 40px;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing .picDiv .picToEn {
-  border: 3px solid #ffffff;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  cursor: pointer;
-  border-radius: 30px;
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing .picDiv .picToEn {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--darkBlueColor)), to(#000000));
+  background: linear-gradient(180deg, var(--darkBlueColor), #000000);
   -webkit-box-shadow: 6px 6px 6px #aeaeae;
           box-shadow: 6px 6px 6px #aeaeae;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  border: 1px solid #b59b07;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing .picDiv .picToEn.show {
-  border-radius: 0px;
-  border: 0px solid #ffffff;
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing .picDiv .picToEn.show {
   -webkit-box-shadow: 0px 0px #aeaeae;
           box-shadow: 0px 0px #aeaeae;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing .picDiv .picToEn:hover {
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing .picDiv .picToEn:hover {
   border-radius: 10px;
   -webkit-box-shadow: 6px 6px 6px #aeaeae;
           box-shadow: 6px 6px 6px #aeaeae;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing .picDiv .mediaCaption {
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing .picDiv .mediaCaption {
   position: absolute;
   bottom: 5%;
+  padding: 5px;
   right: 87%;
   width: 60%;
   text-align: center;
@@ -264,63 +227,124 @@
   font-size: 20px;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing.fullscreen-mode .picToEn {
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing.fullscreen-mode .picToEn {
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic #singlePicCont #picShowing.fullscreen-mode button {
+#mediaPage #sectionPic #picFolderWrapper #mediaContainer #singlePicCont #picShowing.fullscreen-mode button {
   scale: 0;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic::-webkit-scrollbar {
-  height: 15px;
+#mediaPage #sectionPic a {
+  color: var(--secondaryColor);
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0.01em;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic::-webkit-scrollbar-track {
-  background-color: #b5b5b571;
-  width: 2px !important;
-  border-radius: 0px !important;
+#mediaPage #sectionPic a:hover {
+  color: #000000 !important;
 }
 
-#media_section #mediaContainer #mediaShowCont #bigPic::-webkit-scrollbar-thumb {
-  background-color: #b59b07;
-  opacity: 1;
-  border-radius: 0px !important;
+#mediaPage .middlePageBreak {
+  background-color: #000000;
 }
 
-#videoContainer .video-responsive {
-  overflow: hidden;
-  position: relative;
-  min-height: 30vw;
-  min-width: 30%;
-}
-
-#videoContainer .video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
+#mediaPage #videoSec {
+  background: #000;
+  padding: 72px 16px 56px;
   width: 100%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+#mediaPage #videoSec .mediaIntro {
+  margin-bottom: -30px;
+}
+
+#mediaPage #videoSec .cv-container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#mediaPage #videoSec .cv-container .titlesChef {
+  font-size: clamp(1.8rem, 2.6vw, 3rem);
+  line-height: 1.15;
+  text-align: center;
+  margin: 0;
+}
+
+#mediaPage #videoSec .cv-container .titlesChef::before {
+  bottom: 0px;
+  height: calc(100%);
+}
+
+#mediaPage #videoSec .cv-container .mediaIntro p {
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+
+#mediaPage #videoSec .cv-video-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  background-color: #ffffff;
+  padding: 104px 24px;
+  border: 3px solid var(--secondaryColor);
+}
+
+#mediaPage #videoSec .cv-video-grid .cv-video {
+  position: relative;
+  padding-top: calc(75% + 48px);
+  /* 16:9 aspect ratio */
+  border-radius: 14px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  background: #0e0e0e;
+}
+
+#mediaPage #videoSec .cv-video-grid .cv-video iframe {
   position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#mediaPage #videoSec .btnPrimary {
+  position: absolute;
+  bottom: 20px;
+  right: 10%;
+}
+
+@media only screen and (max-width: 980px) {
+  .cv-video-grid {
+    -ms-grid-columns: (minmax(0, 1fr))[2] !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .cv-video-grid {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
 }
 
 @media only screen and (min-width: 1551px) {
   #mediaSelectorCont {
-    left: 10vh !important;
+    width: 450px !important;
+    padding: 10px;
   }
-}
-
-@media only screen and (min-width: 1451px) and (max-width: 1650px) {
-  #logoMedia {
-    width: 200px;
-    right: 1vw !important;
-    top: 75% !important;
-  }
-}
-
-@media only screen and (max-width: 1450px) {
-  #logoMedia {
-    display: none;
+  #mediaContainer {
+    height: 100%;
+    width: calc(100% - 450px);
   }
 }
 
