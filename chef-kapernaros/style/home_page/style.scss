@@ -1162,24 +1162,6 @@ footer {
 	}
 }
 
-.currentTitle{
-	font-weight: 700 !important;
-	font-size: 20px;
-	pointer-events: none;
-	margin-right: 5px;
-	
-	&::before{
-		height: 6px !important;
-		width: 120% !important;
-		margin-left: -1px;
-	}	
-	&:hover{
-		&::before{
-			height: 50% !important;
-		}
-	}
-} 
-
 $--color-1: rgba(0, 0, 0, 0.7);
 $--color-2: rgba(0, 0, 0, 0.8);
 $--color-3: rgba(0, 0, 0, 0.9);

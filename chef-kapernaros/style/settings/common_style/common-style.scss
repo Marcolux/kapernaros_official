@@ -166,8 +166,6 @@ footer {
 			}
 		}
 	}
-	
-
 	&.mobileView {
 		background-color: #ffffffa7;
 		border: 2px solid var(--navBtnBackGroundDK);
@@ -371,15 +369,15 @@ footer {
 					border-radius: 0px;
 					bottom: 0% ;
 					content: '';
-					height: 50%;
-					left: -10%;
+					height: 3px;
+					left: 0px;
 					pointer-events: none;
 					position: absolute;
 					transition: width 0.2s ease, height 0.1s ease;
 					width: 0%;
 					z-index: -1;
 				}
-				&:hover::before { width: 120%; }
+				&:hover::before { width: 100%; }
 				&:active {
 					text-shadow: 0px 0px 10px #ffffff; 
 					&::before {
@@ -391,6 +389,18 @@ footer {
 			}
 		}
 	}
+	.currentTitle{
+		font-weight: 500 !important;
+		font-size: 20px;
+		pointer-events: none;
+		margin-right: 5px;
+		&::before{
+			height: 3px !important;
+			border-radius: 2px;
+			width: 100% !important;
+			margin-left: -1px;
+		}
+	} 
 }
 
 .btnPrimary {

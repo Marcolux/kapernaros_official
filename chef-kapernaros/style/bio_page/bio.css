@@ -220,8 +220,8 @@
 }
 
 #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef {
-  font-size: clamp(30px, 2.2vh, 36px);
-  font-weight: 600;
+  font-size: clamp(40px, 2.2vh, 47px);
+  font-weight: 500;
   letter-spacing: .01em;
   margin-bottom: 10px;
 }
@@ -238,15 +238,8 @@
   z-index: -1;
 }
 
-#bioPage #pageTransition #cardsIntro #valuesIntro strong {
-  font-size: 22px;
-  line-height: 1.7;
-  margin-bottom: 8px;
-}
-
 #bioPage #valueSec {
   background-color: #ffffff;
-  height: 100vh;
   padding: 100px 0px 50px 0px;
   margin-top: -120px;
   padding-top: 160px;
@@ -278,26 +271,6 @@
           perspective: 1000px;
 }
 
-#bioPage #valueSec .cardContainer .flip-card#card2 .flip-icon {
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
-}
-
-#bioPage #valueSec .cardContainer .flip-card#card2 .flip-toggle {
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
-}
-
-#bioPage #valueSec .cardContainer .flip-card#card3 .flip-icon {
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-}
-
-#bioPage #valueSec .cardContainer .flip-card#card3 .flip-toggle {
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-}
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner {
   aspect-ratio: 1.1/1.2;
   border-radius: 16px;
@@ -322,6 +295,60 @@
   inset: 0;
   position: absolute;
   -webkit-backface-visibility: hidden;
+}
+
+#bioPage #valueSec .cardContainer .flip-card .flip-card-inner .hoverWrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  bottom: 0px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+}
+
+#bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .hoverWrapper, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .hoverWrapper, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .hoverWrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0000008d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+#bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .hoverWrapper .titlesChef, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .hoverWrapper .titlesChef, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .hoverWrapper .titlesChef {
+  bottom: auto !important;
+  color: #fff !important;
+  left: auto !important;
+  scale: 1.7;
+}
+
+#bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .hoverWrapper .titlesChef::before, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .hoverWrapper .titlesChef::before, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .hoverWrapper .titlesChef::before {
+  background-color: #ffffff !important;
+  height: 0% !important;
+  left: 0px;
+}
+
+#bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .flip-toggle, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .flip-toggle, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .flip-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 2%;
+}
+
+#bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .flip-toggle .flip-icon, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .flip-toggle .flip-icon, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .flip-toggle .flip-icon {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 0.9;
 }
 
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-front {
@@ -349,7 +376,6 @@
   bottom: 20px;
   left: 10px;
   font-size: clamp(1.5rem, 2.2vw, 2.5rem);
-  position: absolute;
 }
 
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-front .imgCont .titlesChef::before {
@@ -388,25 +414,29 @@
 }
 
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle {
+  display: none;
   position: absolute;
   inset: auto 35px 20px auto;
   background-color: transparent;
-  border: none;
-  width: 15%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 50px;
   height: 50px;
   right: 50%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
-}
-
-#bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle.in-view {
-  right: 2%;
 }
 
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle .flip-icon {
   fill: #f1f1f1;
-  scale: 0.5;
+  stroke-width: 2px;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   -webkit-box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
@@ -414,21 +444,26 @@
   background-color: rgba(255, 255, 255, 0);
 }
 
-#bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle .flip-icon.in-view {
-  scale: 1.1;
-  background-color: var(--secondaryColor);
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  opacity: 0.9;
-}
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle:hover .flip-icon {
-  fill: #141414;
+  fill: var(--secondaryColor);
 }
 
 #bioPage #valueSec .cardContainer .flip-card.is-flipped .flip-card-inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+#bioPage #valueSec .cardContainer .flip-card.is-flipped .flip-card-inner .flip-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 2%;
+}
+
+#bioPage #valueSec .cardContainer .flip-card.is-flipped .flip-card-inner .flip-toggle .flip-icon {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 0.9;
 }
 
 #bioPage #valueSec .cardContainer .flip-card.is-flipped .flip-card-inner .flip-card-back {

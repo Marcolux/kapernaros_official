@@ -8,7 +8,7 @@ $shadowInset: #ffffff41;
     display: flex;
     flex-direction: column;
     padding-top: 14vh;
-    #logoMedia { height: 250px; }
+    #logoMedia { height: 250px; margin-left: 30px }
     .mediaIntro {
         background-color: #F8F6F1;
         border-radius: 8px;
@@ -22,8 +22,8 @@ $shadowInset: #ffffff41;
         text-align: left;
         z-index: 55;
         .titlesChef {
-            font-size: clamp(1.8rem, 2.6vw, 3rem);; 
-            font-weight: 600; 
+            font-size: clamp(40px, 2.6vw, 47px);; 
+            font-weight: 500; 
             letter-spacing: .01em;
             margin-bottom: 10px; 
             &::before {
@@ -37,11 +37,6 @@ $shadowInset: #ffffff41;
                 width: calc(100% + 15px);
                 z-index: -1;
             }
-        }
-        strong {
-            font-size: 22px; 
-            line-height: 1.7; 
-            margin-bottom: 8px;
         }
     }
     #sectionPic{
@@ -188,7 +183,7 @@ $shadowInset: #ffffff41;
             margin: 0 auto;
             position: relative;
             .titlesChef{
-                font-size: clamp(1.8rem, 2.6vw, 3rem);
+                font-size: clamp(40px, 2.6vw, 47px);
                 line-height: 1.15;
                 text-align: center;
                 margin: 0;
@@ -207,7 +202,7 @@ $shadowInset: #ffffff41;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 24px;       
             background-color: #ffffff;    
-            padding: 104px 24px; 
+            padding: 105px 24px 150px; 
             border: 3px solid var(--secondaryColor);
             .cv-video{
                 position: relative;
@@ -227,7 +222,7 @@ $shadowInset: #ffffff41;
         }
         .btnPrimary {
             position: absolute;
-            bottom: 20px;
+            bottom: 60px;
             right: 10%;
         }
     }    
@@ -481,9 +476,7 @@ $shadowInset: #ffffff41;
                             flex-direction: column-reverse;
                             justify-content: flex-end;
                             height: 380px !important;
-                            .emptyBox{
-                                display: none;
-                            }
+                            .emptyBox {  display: none; }
                             button{
                                 margin: 10px;
                                 position: absolute;
@@ -492,9 +485,7 @@ $shadowInset: #ffffff41;
                                     margin: 10px;
                                     left: 50%;
                                 }
-                                &#prevPicture{
-                                    left: 30%;
-                                }
+                                &#prevPicture{  left: 30%; }
                             }
                             .picDiv{
                                 overflow: hidden;

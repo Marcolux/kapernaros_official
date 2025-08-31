@@ -1,18 +1,18 @@
-var singlePic = /** @class */ (function () {
-    function singlePic(data) {
+"use strict";
+class singlePic {
+    constructor(data) {
         this.data = data;
         this.next = null;
     }
-    return singlePic;
-}());
-var picCollection = /** @class */ (function () {
-    function picCollection(id) {
+}
+class picCollection {
+    constructor(id) {
         this.head = null;
         this.tail = null;
         this.id = id;
     }
-    picCollection.prototype.append = function (data) {
-        var newSinglePic = new singlePic(data);
+    append(data) {
+        const newSinglePic = new singlePic(data);
         if (!this.head) {
             this.head = newSinglePic;
             this.tail = newSinglePic;
@@ -21,10 +21,10 @@ var picCollection = /** @class */ (function () {
             this.tail.next = newSinglePic;
             this.tail = newSinglePic;
         }
-    };
-    picCollection.prototype.getSinglePic = function (index) {
-        var currentSinglePic = this.head;
-        var count = 0;
+    }
+    getSinglePic(index) {
+        let currentSinglePic = this.head;
+        let count = 0;
         // if currentSinglePic === null means that the while loop reached the end of the list because it will replace the currentPicture with is next currentSinglePic = currentSinglePic.next
         while (currentSinglePic !== null) {
             if (count === index)
@@ -33,76 +33,112 @@ var picCollection = /** @class */ (function () {
             currentSinglePic = currentSinglePic.next;
         }
         return null;
-    };
-    picCollection.prototype.getLastIndex = function () {
-        var currentSinglePic = this.head;
-        var count = 0;
+    }
+    getLastIndex() {
+        let currentSinglePic = this.head;
+        let count = 0;
         while (currentSinglePic !== null) {
             count++;
             currentSinglePic = currentSinglePic.next;
         }
         return count - 1;
-    };
-    return picCollection;
-}());
+    }
+}
 function initPicCollection(newPicturesList, collection) {
     // let bigPic = document.querySelector(`#bigPic`) as HTMLDivElement
-    var carouselElement = document.querySelector("#singlePicCont");
+    let carouselElement = document.querySelector(`#singlePicCont`);
     carouselElement.innerHTML = '';
-    var first = collection.shift();
+    let first = collection.shift();
     if (!newPicturesList.head) {
-        collection.forEach(function (picture) { newPicturesList.append(picture); });
+        collection.forEach(picture => { newPicturesList.append(picture); });
     }
     function showPicture(index) {
         carouselElement.innerHTML = '';
-        var picture = newPicturesList.getSinglePic(index);
+        const picture = newPicturesList.getSinglePic(index);
         if (index < newPicturesList.getLastIndex() && index !== 0) {
-            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-end\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\" alt=\"Media Picture\">\n                        <p class=\"mediaCaption\">").concat(picture.caption, "</p>\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
+            carouselElement.innerHTML = `
+                <div id="picShowing" class="flex flex-alignItems-end">
+                    <button class="p-20" id="prevPicture">
+                        <i class="fa-solid fa-chevron-left fontSize40"></i>
+                    </button>
+                    <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
+                        <img class="picToEn" src="${picture.src}" alt="Media Picture">
+                        <p class="mediaCaption">${picture.caption}</p>
+                    </div>
+                    <button class="p-20" id="nextPicture">
+                        <i class="fa-solid fa-chevron-right fontSize40"></i>
+                    </button>
+                </div>
+            `;
         }
         else if (index === newPicturesList.getLastIndex()) {
-            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-end\">\n                    <button class=\"p-20\" id=\"prevPicture\">\n                        <i class=\"fa-solid fa-chevron-left fontSize40\"></i>\n                    </button>\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\" alt=\"Media Picture\">\n                        <p class=\"mediaCaption\">").concat(picture.caption, "</p>\n                    </div>\n\n                    <div class=\"p-20 emptyBox\"></div>\n                </div>\n            ");
+            carouselElement.innerHTML = `
+                <div id="picShowing" class="flex flex-alignItems-end">
+                    <button class="p-20" id="prevPicture">
+                        <i class="fa-solid fa-chevron-left fontSize40"></i>
+                    </button>
+                    <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
+                        <img class="picToEn" src="${picture.src}" alt="Media Picture">
+                        <p class="mediaCaption">${picture.caption}</p>
+                    </div>
+
+                    <div class="p-20 emptyBox"></div>
+                </div>
+            `;
         }
         else if (index === 0) {
-            carouselElement.innerHTML = "\n                <div id=\"picShowing\" class=\"flex flex-alignItems-end\">\n                    <div class=\"p-20 emptyBox\"></div>\n\n                    <div class=\"flex flex-justifyContent-center flex-alignItems-center picDiv\" >\n                        <img class=\"picToEn\" src=\"".concat(picture.src, "\" alt=\"Media Picture\">\n                        <p class=\"mediaCaption\">").concat(picture.caption, "</p>\n                    </div>\n                    <button class=\"p-20\" id=\"nextPicture\">\n                        <i class=\"fa-solid fa-chevron-right fontSize40\"></i>\n                    </button>\n                </div>\n            ");
+            carouselElement.innerHTML = `
+                <div id="picShowing" class="flex flex-alignItems-end">
+                    <div class="p-20 emptyBox"></div>
+
+                    <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
+                        <img class="picToEn" src="${picture.src}" alt="Media Picture">
+                        <p class="mediaCaption">${picture.caption}</p>
+                    </div>
+                    <button class="p-20" id="nextPicture">
+                        <i class="fa-solid fa-chevron-right fontSize40"></i>
+                    </button>
+                </div>
+            `;
         }
         if (!picture.caption) {
-            var nullCaption = carouselElement.querySelector('.mediaCaption');
+            const nullCaption = carouselElement.querySelector('.mediaCaption');
             nullCaption === null || nullCaption === void 0 ? void 0 : nullCaption.classList.add('hide');
         }
         if (picture.src === 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714608753/Niko/f_f_14_dulpgp.webp') {
-            var firstCaption = carouselElement.querySelector('.mediaCaption');
+            const firstCaption = carouselElement.querySelector('.mediaCaption');
             firstCaption.style.right = '88%';
         }
-        setTimeout(function () {
-            var imgs = carouselElement.querySelector('img');
-            var imgShowing = carouselElement.querySelector('#picShowing');
+        setTimeout(() => {
+            const imgs = carouselElement.querySelector('img');
+            const imgShowing = carouselElement.querySelector('#picShowing');
             imgs.classList.add('show');
             imgs.addEventListener('click', function () {
                 imgs.requestFullscreen();
                 imgShowing.classList.add('fullscreen-mode');
             });
-            document.addEventListener('fullscreenchange', function () {
+            document.addEventListener('fullscreenchange', () => {
                 if (!document.fullscreenElement) {
                     imgShowing.classList.remove('fullscreen-mode');
                 }
             });
         }, 150);
-        var prevButton = document.getElementById('prevPicture');
-        var nextButton = document.getElementById('nextPicture');
+        const prevButton = document.getElementById('prevPicture');
+        const nextButton = document.getElementById('nextPicture');
         if (prevButton) {
-            prevButton.addEventListener('click', function () { movePicture(-1); });
+            prevButton.addEventListener('click', () => { movePicture(-1); });
         }
         if (nextButton) {
-            nextButton.addEventListener('click', function () { movePicture(1); });
+            nextButton.addEventListener('click', () => { movePicture(1); });
         }
     }
     // initial Picture showing on first load defined by currentPictureIndex
     showPicture(0);
-    var currentPictureIndex = 0;
+    let currentPictureIndex = 0;
     function movePicture(n) {
         currentPictureIndex = currentPictureIndex + n;
         // Wrap the index if it goes out of bounds
-        var totalPictures = newPicturesList.getLastIndex();
+        const totalPictures = newPicturesList.getLastIndex();
         if (currentPictureIndex >= totalPictures) {
             currentPictureIndex = totalPictures;
         }
@@ -124,13 +160,13 @@ function initPicCollection(newPicturesList, collection) {
 }
 // Wait for the DOM to fully load before initializing the carousel
 document.addEventListener('DOMContentLoaded', function () {
-    var friendsCelebList = new picCollection('friendsCelebList');
+    const friendsCelebList = new picCollection('friendsCelebList');
     // const growingInGreeceList = new picCollection('growingInGreeceList')
-    var charityEventsList = new picCollection('charityEventsList');
-    var competitionShows = new picCollection('competitionShows');
-    var onThePass = new picCollection('onThePass');
-    var chicagoChefsCookbookLaunch = new picCollection('chicagoChefsCookbookLaunch');
-    var allLists = [
+    const charityEventsList = new picCollection('charityEventsList');
+    const competitionShows = new picCollection('competitionShows');
+    const onThePass = new picCollection('onThePass');
+    const chicagoChefsCookbookLaunch = new picCollection('chicagoChefsCookbookLaunch');
+    const allLists = [
         friendsCelebList,
         // growingInGreeceList,
         charityEventsList,
@@ -138,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
         onThePass,
         chicagoChefsCookbookLaunch
     ];
-    var friendsCelebList_src = [
+    const friendsCelebList_src = [
         { src: 'friendsCelebList', caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714608753/Niko/f_f_14_dulpgp.webp", caption: 'Jose Andres' },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714611082/Niko/f_f_16_i861kj.webp", caption: 'Tony Priolo, Eva Davidman & Darren Gest' },
@@ -208,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1300,h_900,c_fill/v1714614224/Niko/niko-growing%20greece/g_g_2_myfflq.webp", caption: null },
     //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714617566/Niko/niko-growing%20greece/g_g_16_jrjtzg.webp", caption: null },
     // ]
-    var charityEventsList_src = [
+    const charityEventsList_src = [
         { src: "charityEventsList", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618577/Niko/charity%20events/c_e_5_ybs4do.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618551/Niko/charity%20events/c_e_2_wnpmve.webp", caption: null },
@@ -228,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619460/Niko/competitions/c_s_2_tfjvel.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715043470/viber_image_2024-05-06_19-24-23-920_c1p4hs.webp", caption: null },
     ];
-    var competitionShows_src = [
+    const competitionShows_src = [
         { src: "competitionShows", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_3_pwamwn.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_2_flbrxf.webp", caption: null },
@@ -253,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715044484/viber_image_2024-05-06_20-13-56-208_gkkp0i.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715044520/viber_image_2024-05-06_20-14-21-324_ehbbdj.webp", caption: null },
     ];
-    var onThePass_src = [
+    const onThePass_src = [
         { src: "onThePass", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620128/Niko/on%20the%20pass/o_t_p_4_efmsmz.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620119/Niko/on%20the%20pass/o_t_p_3_wnefgs.webp", caption: null },
@@ -271,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620784/Niko/on%20the%20pass/o_t_p_13_bs7c0y.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714620795/Niko/on%20the%20pass/o_t_p_14_f2im1y.webp", caption: null },
     ];
-    var chicagoChefsCookbookLaunch_src = [
+    const chicagoChefsCookbookLaunch_src = [
         { src: "chicagoChefsCookbookLaunch", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715716400/Niko/Chicago%20Chefs%20Cookbook%20Launch/viber_image_2024-05-13_20-48-12-036_v6lv8n.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715716400/Niko/Chicago%20Chefs%20Cookbook%20Launch/viber_image_2024-05-13_20-48-12-160_cbwj6s.webp", caption: null },
@@ -295,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715716394/Niko/Chicago%20Chefs%20Cookbook%20Launch/viber_image_2024-05-13_20-48-09-888_arbo5h.webp", caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715716394/Niko/Chicago%20Chefs%20Cookbook%20Launch/viber_image_2024-05-13_20-48-09-943_moyknm.webp", caption: null },
     ];
-    var allSources = [
+    const allSources = [
         friendsCelebList_src,
         // growingInGreeceList_src, 
         charityEventsList_src,
@@ -303,16 +339,16 @@ document.addEventListener('DOMContentLoaded', function () {
         onThePass_src,
         chicagoChefsCookbookLaunch_src
     ];
-    var allNotActiveTi = document.querySelectorAll('.secTitles');
-    allNotActiveTi.forEach(function (listEl) {
-        listEl.addEventListener('click', function () {
+    let allNotActiveTi = document.querySelectorAll('.secTitles');
+    allNotActiveTi.forEach(listEl => {
+        listEl.addEventListener('click', () => {
             allNotActiveTi = document.querySelectorAll('.secTitles');
-            var picColl = allLists.filter(function (list) { return list.id === listEl.id; });
-            var picSource = allSources.filter(function (list) { return list[0].src === listEl.id; });
+            const picColl = allLists.filter(list => list.id === listEl.id);
+            const picSource = allSources.filter(list => list[0].src === listEl.id);
             initPicCollection(picColl[0], picSource[0]);
         });
     });
-    allNotActiveTi[3].addEventListener('click', function () {
+    allNotActiveTi[3].addEventListener('click', () => {
         if (localStorage.getItem('loading_competions') === 'true')
             localStorage.removeItem('loading_competions');
     });

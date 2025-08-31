@@ -14,6 +14,7 @@
 
 #mediaPage #logoMedia {
   height: 250px;
+  margin-left: 30px;
 }
 
 #mediaPage .mediaIntro {
@@ -32,8 +33,8 @@
 }
 
 #mediaPage .mediaIntro .titlesChef {
-  font-size: clamp(1.8rem, 2.6vw, 3rem);
-  font-weight: 600;
+  font-size: clamp(40px, 2.6vw, 47px);
+  font-weight: 500;
   letter-spacing: .01em;
   margin-bottom: 10px;
 }
@@ -48,12 +49,6 @@
   position: absolute;
   width: calc(100% + 15px);
   z-index: -1;
-}
-
-#mediaPage .mediaIntro strong {
-  font-size: 22px;
-  line-height: 1.7;
-  margin-bottom: 8px;
 }
 
 #mediaPage #sectionPic {
@@ -271,7 +266,7 @@
 }
 
 #mediaPage #videoSec .cv-container .titlesChef {
-  font-size: clamp(1.8rem, 2.6vw, 3rem);
+  font-size: clamp(40px, 2.6vw, 47px);
   line-height: 1.15;
   text-align: center;
   margin: 0;
@@ -294,7 +289,7 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   background-color: #ffffff;
-  padding: 104px 24px;
+  padding: 105px 24px 150px;
   border: 3px solid var(--secondaryColor);
 }
 
@@ -319,7 +314,7 @@
 
 #mediaPage #videoSec .btnPrimary {
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
   right: 10%;
 }
 

@@ -26,7 +26,7 @@
   --navBarTextColor: #000;
   --navBtnBackGround: #C4B980;
   --navBtnBackGroundDK: #000;
-  --navFont: normal normal 500 17px 'Merriweather';
+  --navFont: normal normal 500 20px 'Ledger';
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
   --secondaryColor: #b19e47;
@@ -622,8 +622,8 @@ footer img {
   border-radius: 0px;
   bottom: 0%;
   content: '';
-  height: 50%;
-  left: -10%;
+  height: 3px;
+  left: 0px;
   pointer-events: none;
   position: absolute;
   -webkit-transition: width 0.2s ease, height 0.1s ease;
@@ -633,7 +633,7 @@ footer img {
 }
 
 .navBar.biggerScreen #navBgScn a:not(.logoNav):hover::before {
-  width: 120%;
+  width: 100%;
 }
 
 .navBar.biggerScreen #navBgScn a:not(.logoNav):active {
@@ -644,6 +644,20 @@ footer img {
   border-radius: 0;
   bottom: 0%;
   height: 100%;
+}
+
+.navBar .currentTitle {
+  font-weight: 500 !important;
+  font-size: 20px;
+  pointer-events: none;
+  margin-right: 5px;
+}
+
+.navBar .currentTitle::before {
+  height: 3px !important;
+  border-radius: 2px;
+  width: 100% !important;
+  margin-left: -1px;
 }
 
 .btnPrimary {
