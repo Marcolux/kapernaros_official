@@ -83,6 +83,16 @@ html {
   src: url("../../fonts/Merriweather/Merriweather-Regular.ttf");
 }
 
+@font-face {
+  font-family: 'Bodoni';
+  src: url("../../fonts/Bodoni/BodoniModa-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+  font-family: 'Bodoni Libre';
+  src: url("../../fonts/Bodoni/LibreBodoni-VariableFont_wght.ttf");
+}
+
 .rotate180 {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);

@@ -1,54 +1,9 @@
-#tablePicContainer {
-  background-color: #2F2F2F;
+body#chefTablePage {
+  background-color: #f8f8f8;
 }
 
-#tablePicContainer .singlePicTable {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 23%;
-  margin-right: 15px;
-  margin-top: 15px;
-  border: 1.5px solid #b59b07;
-  -webkit-box-shadow: 5px 5px 5px #00000074;
-          box-shadow: 5px 5px 5px #00000074;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-#tablePicContainer .singlePicTable:hover {
-  scale: 1.05;
-  z-index: 5;
-}
-
-#tablePicContainer .singlePicTable:hover .noBG {
-  background-color: transparent !important;
-}
-
-#tablePicContainer .singlePicTable img {
+body#chefTablePage section#chefTableSec {
   width: 100%;
-  aspect-ratio: 1/0.8;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-#tablePicContainer .singlePicTable ul {
-  text-decoration: none !important;
-  list-style: none !important;
-}
-
-#tablePicContainer .singlePicTable .picDescr:not(.noBG) {
-  height: 0%;
-  width: 100%;
-  background-color: #000000b7;
-  color: #f8f8f5;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  position: absolute;
-  bottom: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,57 +11,279 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#tablePicContainer .singlePicTable .picDescr:not(.noBG) h3 {
+body#chefTablePage section#chefTableSec .chefTableIntro {
+  background-color: #F8F6F1;
+  border-radius: 8px;
+  -webkit-box-shadow: 10px 15px 20px 6px #00000017;
+          box-shadow: 10px 15px 20px 6px #00000017;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.9;
+  max-width: 1000px;
+  padding: 30px 40px;
+  text-align: left;
+  z-index: 55;
+}
+
+body#chefTablePage section#chefTableSec .chefTableIntro .titlesChef {
+  font-size: clamp(40px, 2.6vw, 47px);
+  font-weight: 500;
+  letter-spacing: .01em;
+  margin-bottom: 10px;
+}
+
+body#chefTablePage section#chefTableSec .chefTableIntro .titlesChef::before {
+  content: '';
+  background-color: var(--secondaryColor);
+  bottom: 20px;
+  height: calc(100% - 36px);
+  left: -55px;
+  opacity: 0.5;
+  position: absolute;
+  width: calc(100% + 15px);
+  z-index: -1;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer {
+  position: relative;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0px 0px 0px 25px;
-  font-size: 15px;
-  text-align: start;
-  background-color: #b59b07b7;
-  color: #000000 !important;
-  padding: 0px 5px !important;
-}
-
-#tablePicContainer .singlePicTable .picDescr:not(.noBG) ul {
-  font-size: 14px !important;
-  text-decoration: none;
-  list-style: none;
-  margin-left: 10px;
-  color: #fafafa;
-  text-shadow: -1px -1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, 1px 1px 1px #000000;
-}
-
-#tablePicContainer .singlePicTable .picDescr:not(.noBG) ul li {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-#tablePicContainer .singlePicTable .picDescr:not(.noBG) h3, #tablePicContainer .singlePicTable .picDescr:not(.noBG) ul {
-  padding: 0px;
-  scale: 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-#tablePicContainer .singlePicTable:hover .picDescr {
-  height: 100%;
+  gap: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
   width: 100%;
 }
 
-#tablePicContainer .singlePicTable:hover .picDescr h3, #tablePicContainer .singlePicTable:hover .picDescr ul {
-  scale: 1;
-  font-family: 'Ledger';
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card {
+  max-height: 500px;
+  max-width: 500px;
+  width: 31%;
+  outline: none;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner {
+  aspect-ratio: 1.1/1.2;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: -webkit-transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1), -webkit-transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: transform;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-card-front,
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-card-back {
+  backface-visibility: hidden;
+  inset: 0;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .hoverWrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  bottom: 0px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .hoverWrapper .titlesChef {
+  margin-left: 0px !important;
+  font-family: 'Bodoni Libre' !important;
+  padding: 4px 0px 1px;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:hover .hoverWrapper, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:active .hoverWrapper, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:focus .hoverWrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0000008d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:hover .hoverWrapper .titlesChef, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:active .hoverWrapper .titlesChef, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:focus .hoverWrapper .titlesChef {
+  bottom: auto !important;
+  color: #fff !important;
+  left: auto !important;
+  margin-left: 0px !important;
+  font-size: clamp(1.5rem, 2.2vw, 2rem) !important;
+  background-color: transparent !important;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:hover .hoverWrapper .titlesChef::before, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:active .hoverWrapper .titlesChef::before, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:focus .hoverWrapper .titlesChef::before {
+  background-color: #ffffff !important;
+  height: 0% !important;
+  left: 0px;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:hover .flip-toggle, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:active .flip-toggle, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:focus .flip-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 2%;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:hover .flip-toggle .flip-icon, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:active .flip-toggle .flip-icon, body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:focus .flip-toggle .flip-icon {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 0.9;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-card-front {
+  transform: rotateY(0deg) translateZ(0);
+  -webkit-transform: rotateY(0deg) translateZ(0);
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-card-front .imgCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-card-front .imgCont img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-card-front .imgCont .titlesChef {
+  color: #000000;
+  bottom: 20px;
+  padding-left: 10px;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  width: 100%;
+  text-align: left;
+  background-color: var(--secondaryColor);
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-card-front .imgCont .titlesChef::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 0%;
+  background-color: var(--secondaryColor);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-card-back {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0f172a), to(#1e293b));
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  padding: 18px;
+  place-content: center;
+  transform: rotateY(180deg) translateZ(1px);
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-card-back .cardText {
   font-size: 20px;
+  letter-spacing: 0.01em;
+  line-height: 30px;
+  text-align: left;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner:hover {
+  color: var(--secondaryColor);
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-toggle {
+  display: none;
+  position: absolute;
+  inset: auto 35px 20px auto;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  right: 50%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-toggle .flip-icon {
+  fill: #f1f1f1;
+  stroke-width: 2px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
+          box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-toggle:hover .flip-icon {
+  fill: var(--secondaryColor);
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card.is-flipped .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card.is-flipped .flip-card-inner .flip-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 2%;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card.is-flipped .flip-card-inner .flip-toggle .flip-icon {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 0.9;
+}
+
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card.is-flipped .flip-card-inner .flip-card-back {
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
 }
 
 @media only screen and (max-width: 700px) {

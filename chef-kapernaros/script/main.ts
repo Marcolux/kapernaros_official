@@ -94,10 +94,12 @@ allNotActiveTitles.forEach( listEl => {
 
 document.querySelectorAll('.flip-card').forEach(card=>{
     const btn = card.querySelector('.flip-toggle') as HTMLButtonElement
-    btn.addEventListener('click', ()=>{
-        const is = card.classList.toggle('is-flipped') 
-        btn.setAttribute('aria-expanded', String(is))
-    })
+    if (btn) {
+        btn.addEventListener('click', ()=>{
+            const is = card.classList.toggle('is-flipped') 
+            btn.setAttribute('aria-expanded', String(is))
+        })
+    }
 })
 
 // ******* Sending Email logic ******* \\
