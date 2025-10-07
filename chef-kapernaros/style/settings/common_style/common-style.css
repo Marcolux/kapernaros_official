@@ -15,18 +15,18 @@
   --navbar-color: #ffffff;
   --navbar-fontsize: 22px;
   --navbar-fontsize-smMenu: 25px;
-  --navbar-fontFamily: 'Merriweather';
+  --navbar-fontFamily: "Merriweather";
   --navbar-fontWeight: 600;
   --navbar-before-color: #CDAA7F;
   /*==== BODY ====*/
-  --body-App-fontFamily: 'Prata';
+  --body-App-fontFamily: "Prata";
   /*==== FOOTER ====*/
   --footer-height: 60px;
   --navBackGroundColor: #ffffff00;
   --navBarTextColor: #000;
   --navBtnBackGround: #C4B980;
   --navBtnBackGroundDK: #000;
-  --navFont: normal normal 500 20px 'Ledger';
+  --navFont: normal normal 500 20px "Ledger";
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
   --secondaryColor: #b19e47;
@@ -34,68 +34,56 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   letter-spacing: 0.009em;
-  font-family: 'Ledger';
+  font-family: "Ledger";
 }
 
 @font-face {
-  font-family: 'Ledger';
+  font-family: "Ledger";
   src: url("../../fonts/ledger/Ledger-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'Bebas Neue';
+  font-family: "Bebas Neue";
   src: url("../../fonts/Bebas_Neue/BebasNeue-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'Prata';
+  font-family: "Prata";
   src: url("../../fonts/Prata/Prata-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'Bison';
+  font-family: "Bison";
   src: url("../../fonts/Bison/Bison-Bold.ttf");
 }
-
 @font-face {
-  font-family: 'September Script';
+  font-family: "September Script";
   src: url("../../fonts/September_script/september-script.regular.ttf");
 }
-
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   src: url("../../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
 }
-
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   src: url("../../fonts/Inter/Inter-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'Merriweather';
+  font-family: "Merriweather";
   src: url("../../fonts/Merriweather/Merriweather-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'Bodoni';
+  font-family: "Bodoni";
   src: url("../../fonts/Bodoni/BodoniModa-VariableFont_opsz,wght.ttf");
 }
-
 @font-face {
-  font-family: 'Bodoni Libre';
+  font-family: "Bodoni Libre";
   src: url("../../fonts/Bodoni/LibreBodoni-VariableFont_wght.ttf");
 }
-
 .rotate180 {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .text-light {
@@ -121,7 +109,6 @@ html {
 .textGold {
   color: var(--secondaryColor) !important;
 }
-
 .textGold:active {
   color: #fff !important;
 }
@@ -139,8 +126,6 @@ html {
 }
 
 .show {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -153,7 +138,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #E3D7C84D;
+  background-color: rgba(227, 215, 200, 0.3019607843);
   border-radius: 20px;
 }
 
@@ -163,35 +148,35 @@ html {
 }
 
 .font-ledger {
-  font-family: 'Ledger' !important;
+  font-family: "Ledger" !important;
 }
 
 .font-bebas-neue {
-  font-family: 'Bebas Neue' !important;
+  font-family: "Bebas Neue" !important;
 }
 
 .font-prata {
-  font-family: 'Prata' !important;
+  font-family: "Prata" !important;
 }
 
 .font-bison {
-  font-family: 'Bison' !important;
+  font-family: "Bison" !important;
 }
 
 .font-september-script {
-  font-family: 'September Script' !important;
+  font-family: "September Script" !important;
 }
 
 .font-playfair-display {
-  font-family: 'Playfair Display' !important;
+  font-family: "Playfair Display" !important;
 }
 
 .font-inter {
-  font-family: 'Inter' !important;
+  font-family: "Inter" !important;
 }
 
 .font-merriweather {
-  font-family: 'Merriweather' !important;
+  font-family: "Merriweather" !important;
 }
 
 footer {
@@ -199,15 +184,12 @@ footer {
   height: 20vh;
   color: #fff;
 }
-
 footer i {
   color: #fff !important;
 }
-
 footer i::before {
   font-size: 25px;
 }
-
 footer img {
   height: 13vh;
 }
@@ -217,144 +199,106 @@ footer img {
   color: var(--navBarTextColor);
   font: var(--navFont);
 }
-
 .navBar #landingAd {
   border: 1px solid #000;
   color: #000000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-family: "Ledger";
   font-weight: bold;
 }
-
 .navBar #landingAd #DuckImg, .navBar #landingAd #KaperImg {
-  background-color: #2f2f2f59;
+  background-color: rgba(47, 47, 47, 0.3490196078);
   background-position-y: center;
   background-repeat: no-repeat;
   background-size: contain;
   height: 52px;
   width: 52px;
 }
-
 .navBar #landingAd #DuckImg {
   background-image: url("./../../images/Dulk_1.png");
 }
-
 .navBar #landingAd #KaperImg {
   background-image: url("./../../images/Kapernaros_1.png");
 }
-
 .navBar #landingAd #eventTextBox {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #2f2f2f59;
+  align-items: center;
+  background-color: rgba(47, 47, 47, 0.3490196078);
   font-size: 12px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 5px 10px;
 }
-
 .navBar #landingAd #eventTextBox a {
   background-color: var(--secondaryColor);
   color: #000000;
   margin-right: 0px !important;
   padding: 0px 5px;
 }
-
 .navBar #landingAd #eventTextBox a:hover {
   margin-left: -5px;
   margin-right: 10px;
   scale: 1.1;
 }
-
 .navBar #landingAd #eventTextBox .shadowGold {
   font-size: 14px;
 }
-
+.navBar #socialMedia a:not(.logoNav) {
+  transition: all 1s ease-in-out;
+}
 .navBar #socialMedia a:not(.logoNav) i {
   font-size: 25px !important;
 }
-
 .navBar #socialMedia a:not(.logoNav):hover::before {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 0% !important;
   width: 0% !important;
 }
-
 .navBar.scrolled:not(.homePageLinks).biggerScreen {
   background-color: #ffffff;
-  border-bottom: 1px solid #00000049;
-  -webkit-transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2862745098);
+  filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.2392156863)) !important;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
   transition: all 0.3s ease;
-  -webkit-filter: drop-shadow(5px 5px 8px #0000003d) !important;
-          filter: drop-shadow(5px 5px 8px #0000003d) !important;
 }
-
-.navBar.scrolled:not(.homePageLinks).biggerScreen .linkContainer {
-  border-bottom: 0px !important;
-  -webkit-box-pack: left !important;
-      -ms-flex-pack: left !important;
-          justify-content: left !important;
-  padding-bottom: 0px !important;
+.navBar.scrolled:not(.homePageLinks).biggerScreen #navBgScn {
+  height: 6vh;
 }
-
+.navBar.scrolled:not(.homePageLinks).biggerScreen .logoNav {
+  height: 6vh !important;
+  width: 6vh !important;
+}
 .navBar.scrolled:not(.homePageLinks).biggerScreen .logoNav img {
   height: 6vh !important;
 }
-
 .navBar.scrolled:not(.homePageLinks).biggerScreen .logoNav img:hover {
-  -webkit-filter: drop-shadow(1px 1px 1px #0000007c) !important;
-          filter: drop-shadow(1px 1px 1px #0000007c) !important;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4862745098)) !important;
 }
-
 .navBar.scrolled:not(.homePageLinks).biggerScreen .logoNav img.activePag {
-  -webkit-filter: drop-shadow(1px 1px 1px var(--primaryColor)) !important;
-          filter: drop-shadow(1px 1px 1px var(--primaryColor)) !important;
+  filter: drop-shadow(1px 1px 1px var(--primaryColor)) !important;
 }
-
-.navBar.scrolled:not(.homePageLinks).biggerScreen #logoNavIndexPage img {
-  height: 6vh !important;
-}
-
 .navBar.scrolled:not(.homePageLinks).biggerScreen #logoNavIndexPage img:hover {
-  -webkit-filter: drop-shadow(1px 1px 1px #0000007c) !important;
-          filter: drop-shadow(1px 1px 1px #0000007c) !important;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4862745098)) !important;
 }
-
 .navBar.scrolled:not(.homePageLinks).biggerScreen #logoNavIndexPage img.activePage {
-  -webkit-filter: drop-shadow(1px 1px 1px var(--primaryColorLight)) !important;
-          filter: drop-shadow(1px 1px 1px var(--primaryColorLight)) !important;
+  filter: drop-shadow(1px 1px 1px var(--primaryColorLight)) !important;
 }
-
 .navBar.mobileView {
-  background-color: #ffffffa7;
+  background-color: rgba(255, 255, 255, 0.6549019608);
   border: 2px solid var(--navBtnBackGroundDK);
   border-radius: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 50px;
   max-width: 50px;
   position: fixed;
   right: 10px;
   top: 10px;
-  -webkit-transition: max-width 0.4s ease, height 0.4s ease, border-radius 0.6s ease;
   transition: max-width 0.4s ease, height 0.4s ease, border-radius 0.6s ease;
   width: 100vw;
   z-index: 9999;
 }
-
 .navBar.mobileView.expand {
-  background-color: #ffffffce;
+  background-color: rgba(255, 255, 255, 0.8078431373);
   border-inline: -12px;
   border-radius: 0px;
   height: 99.4%;
@@ -362,19 +306,14 @@ footer img {
   right: 0px;
   top: 0px;
 }
-
 .navBar.mobileView.expand #navMenu {
   padding: 0px !important;
 }
-
 .navBar.mobileView #navBgScn {
   display: none;
 }
-
 .navBar.mobileView a:not(.logoNav) {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: var(--navBarTextColor);
   font-size: 25px;
   margin-bottom: 10px;
@@ -385,284 +324,215 @@ footer img {
   position: relative;
   text-decoration: none;
   text-align: center;
-  -webkit-transition: max-width 1s ease;
   transition: max-width 1s ease;
 }
-
 .navBar.mobileView a:not(.logoNav)::before {
   background-color: var(--navBtnBackGround);
   bottom: 20%;
   border-radius: 0px;
-  content: '';
+  content: "";
   height: 5%;
   left: 25%;
   pointer-events: none;
   position: absolute;
-  -webkit-transition: width 0.2s ease, height 0.2s ease;
   transition: width 0.2s ease, height 0.2s ease;
   width: 0%;
   z-index: -1;
 }
-
 .navBar.mobileView a:not(.logoNav):hover::before {
   height: 5%;
   width: 50%;
 }
-
 .navBar.mobileView a:not(.logoNav):active {
   text-shadow: 0px 0px 10px #000;
 }
-
 .navBar.mobileView a:not(.logoNav):active::before {
   border-radius: 0;
   bottom: 10%;
   height: 90%;
   width: 50%;
 }
-
 .navBar.mobileView .hambContainer {
   border-radius: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
   padding: 10px;
 }
-
 .navBar.mobileView .hambContainer .hamburger-menu {
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 30px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 1px 0px;
   width: 30px;
 }
-
 .navBar.mobileView .hambContainer .hamburger-menu .bar {
   background-color: var(--navBtnBackGroundDK);
   border-radius: 10px;
   height: 4px;
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   width: 95%;
 }
-
 .navBar.mobileView .hambContainer .hamburger-menu.openHam .bar#bar1 {
-  -webkit-transform: rotate(45deg) translate(0px, 10px);
-          transform: rotate(45deg) translate(0px, 10px);
+  transform: rotate(45deg) translate(0px, 10px);
   width: 120%;
 }
-
 .navBar.mobileView .hambContainer .hamburger-menu.openHam .bar#bar2 {
   display: none;
   height: 2px;
   margin-right: 30px;
-  -webkit-transform: translate(-100px, 25px);
-          transform: translate(-100px, 25px);
+  transform: translate(-100px, 25px);
   width: 400%;
 }
-
 .navBar.mobileView .hambContainer .hamburger-menu.openHam .bar#bar3 {
-  -webkit-transform: rotate(-45deg) translate(0px, -10px);
-          transform: rotate(-45deg) translate(0px, -10px);
+  transform: rotate(-45deg) translate(0px, -10px);
   width: 120%;
 }
-
 .navBar.mobileView #navMenu {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   overflow-x: hidden;
   overflow-y: hidden;
   padding-bottom: 20px;
-  -webkit-transition: max-width 0.5s ease;
   transition: max-width 0.5s ease;
   width: 0vw;
 }
-
 .navBar.mobileView #navMenu img {
-  -webkit-filter: drop-shadow(1px 1px 1px #0000007c) !important;
-          filter: drop-shadow(1px 1px 1px #0000007c) !important;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4862745098)) !important;
   height: 0vh;
   margin-bottom: 40px;
-  -webkit-transition: height 0.5s ease;
   transition: height 0.5s ease;
 }
-
 .navBar.mobileView #navMenu.show {
   width: 100%;
 }
-
 .navBar.mobileView #navMenu.show a {
   max-width: 100%;
   opacity: 1;
   width: 80%;
 }
-
 .navBar.mobileView #navMenu.show img {
   height: 18vw;
 }
-
 .navBar.mobileView #landingAd {
   border: 1px solid #000;
   background-color: #aba4a4;
-  -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
 }
-
 .navBar.mobileView #landingAd #DuckImg, .navBar.mobileView #landingAd #KaperImg {
   background-color: #2f2f2f;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
   height: 52px !important;
   width: 52px !important;
 }
-
 .navBar.mobileView #landingAd #eventTextBox {
   background-color: #aba4a4;
   font-size: 10px !important;
   padding: 5px 10px;
 }
-
 .navBar.mobileView #landingAd #eventTextBox #eventLink {
   font-size: 12px;
   margin: 0px;
-  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
-
 .navBar.mobileView #landingAd #eventTextBox .shadowGold {
   font-size: 12px !important;
 }
-
 .navBar.biggerScreen {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  padding-bottom: 1vh;
-  padding-top: 1vh;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
   position: fixed;
   top: 0px;
   width: 100%;
   z-index: 9999;
 }
-
 .navBar.biggerScreen div#hambContainer, .navBar.biggerScreen nav#navMenu {
   display: none;
 }
-
 .navBar.biggerScreen #navBgScn {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: end;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  justify-content: center;
   width: 100%;
+  position: relative;
+  height: 10vh;
 }
-
-.navBar.biggerScreen #navBgScn img {
-  height: 12vh;
-  margin-left: 3vw;
-  margin-right: 5vw;
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+.navBar.biggerScreen #navBgScn .logoNav {
+  align-items: center;
+  border: 1.5px solid var(--secondaryColor);
+  border-radius: 50%;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  overflow: visible;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  width: 10vh;
+  left: 12vw;
 }
-
-.navBar.biggerScreen #navBgScn img:hover {
+.navBar.biggerScreen #navBgScn .logoNav img {
+  height: 8vh;
+  margin-left: 10px;
+  margin-bottom: 3px;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+.navBar.biggerScreen #navBgScn .logoNav img:hover {
   cursor: pointer;
-  -webkit-filter: drop-shadow(1px 1px 1px #0000007c);
-          filter: drop-shadow(1px 1px 1px #0000007c);
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4862745098));
 }
-
-.navBar.biggerScreen #navBgScn img.activePage {
-  -webkit-filter: drop-shadow(5px 5px 5px var(--primaryColorLight));
-          filter: drop-shadow(5px 5px 5px var(--primaryColorLight));
+.navBar.biggerScreen #navBgScn .logoNav img.activePage {
+  filter: drop-shadow(5px 5px 5px var(--primaryColorLight));
 }
-
-.navBar.biggerScreen #navBgScn img.activePage:hover {
+.navBar.biggerScreen #navBgScn .logoNav img.activePage:hover {
   cursor: auto;
-  -webkit-filter: drop-shadow(5px 5px 5px var(--primaryColorLight));
-          filter: drop-shadow(5px 5px 5px var(--primaryColorLight));
+  filter: drop-shadow(5px 5px 5px var(--primaryColorLight));
 }
-
-.navBar.biggerScreen #navBgScn .linkContainer {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  border-bottom: 1px solid #000;
-}
-
 .navBar.biggerScreen #navBgScn a:not(.logoNav) {
   color: var(--navBarTextColor);
   margin-right: 3vw;
   position: relative;
   text-decoration: none !important;
+  display: flex;
+  justify-content: center;
   z-index: 0;
 }
-
 .navBar.biggerScreen #navBgScn a:not(.logoNav):hover, .navBar.biggerScreen #navBgScn a:not(.logoNav):active {
   text-shadow: #000;
 }
-
 .navBar.biggerScreen #navBgScn a:not(.logoNav)::before {
   background-color: var(--navBtnBackGround);
   border-radius: 0px;
   bottom: 0%;
-  content: '';
+  content: "";
   height: 3px;
-  left: 0px;
   pointer-events: none;
   position: absolute;
-  -webkit-transition: width 0.2s ease, height 0.1s ease;
   transition: width 0.2s ease, height 0.1s ease;
   width: 0%;
   z-index: -1;
 }
-
 .navBar.biggerScreen #navBgScn a:not(.logoNav):hover::before {
   width: 100%;
 }
-
 .navBar.biggerScreen #navBgScn a:not(.logoNav):active {
   text-shadow: 0px 0px 10px #ffffff;
 }
-
 .navBar.biggerScreen #navBgScn a:not(.logoNav):active::before {
   border-radius: 0;
   bottom: 0%;
   height: 100%;
 }
-
 .navBar .currentTitle {
   font-weight: 500 !important;
   font-size: 20px;
   pointer-events: none;
   margin-right: 5px;
 }
-
 .navBar .currentTitle::before {
   height: 3px !important;
   border-radius: 2px;
@@ -675,41 +545,29 @@ footer img {
   border: none;
   border-radius: 4px;
   color: #ffffff;
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.45));
-          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.45));
-  font-family: 'Ledger';
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.45));
+  font-family: "Ledger";
   font-size: 20px;
   font-weight: 500;
   padding: 8px 20px !important;
   text-decoration: none !important;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  width: -webkit-fit-content !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
-
 .btnPrimary.greyShadow {
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.25));
-          filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.25));
+  filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.25));
 }
-
 .btnPrimary:hover {
   border-radius: 0px;
   cursor: pointer;
-  -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-          filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 }
-
 .btnPrimary:active {
-  -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-          filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-  -webkit-box-shadow: inset 3px 3px 5px rgba(25, 25, 25, 0.15), inset -3px -3px 5px rgba(25, 25, 25, 0.15);
-          box-shadow: inset 3px 3px 5px rgba(25, 25, 25, 0.15), inset -3px -3px 5px rgba(25, 25, 25, 0.15);
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  box-shadow: inset 3px 3px 5px rgba(25, 25, 25, 0.15), inset -3px -3px 5px rgba(25, 25, 25, 0.15);
 }
-
 .btnPrimary a {
   text-decoration: none !important;
   color: #fff;
-}
-/*# sourceMappingURL=common-style.css.map */
+}/*# sourceMappingURL=common-style.css.map */

@@ -15,18 +15,18 @@
   --navbar-color: #ffffff;
   --navbar-fontsize: 22px;
   --navbar-fontsize-smMenu: 25px;
-  --navbar-fontFamily: 'Merriweather';
+  --navbar-fontFamily: "Merriweather";
   --navbar-fontWeight: 600;
   --navbar-before-color: #CDAA7F;
   /*==== BODY ====*/
-  --body-App-fontFamily: 'Prata';
+  --body-App-fontFamily: "Prata";
   /*==== FOOTER ====*/
   --footer-height: 60px;
   --navBackGroundColor: #ffffff00;
   --navBarTextColor: #000;
   --navBtnBackGround: #C4B980;
   --navBtnBackGroundDK: #000;
-  --navFont: normal normal 500 20px 'Ledger';
+  --navFont: normal normal 500 20px "Ledger";
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
   --secondaryColor: #b19e47;
@@ -51,19 +51,17 @@ body {
 }
 
 .titlesChef {
-  font-family: 'Prata';
+  font-family: "Prata";
   font-size: 35px;
   font-weight: 500;
   margin-left: 15px;
   position: relative;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   z-index: 5;
 }
-
 .titlesChef::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: -5px;
@@ -75,33 +73,28 @@ body {
 }
 
 #homePage {
-  background: url("../../images/mediaBg.png");
+  background: url("../../images/servicesBg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
 }
-
+#homePage #landingMenu {
+  z-index: 5;
+}
 #homePage .linkContainer {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
   border-bottom: 1px solid #000;
   font: var(--navFont);
-  -webkit-box-pack: right !important;
-      -ms-flex-pack: right !important;
-          justify-content: right !important;
-  width: -webkit-fit-content;
+  justify-content: right !important;
   width: -moz-fit-content;
   width: fit-content;
 }
-
 #homePage .linkContainer.homePageLinks {
   position: absolute;
   z-index: 10;
   right: 0px;
   top: 50%;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks) {
   background-color: #ffffff;
   color: #000;
@@ -112,160 +105,123 @@ body {
   text-align: end;
   text-decoration: none !important;
   text-transform: uppercase;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   z-index: 0;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks):not(:last-child) {
   margin-bottom: 5px;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks)#bioLink {
   width: 200px;
 }
-
-#homePage .linkContainer.homePageLinks a:not(.socialLinks)#mediaLink {
+#homePage .linkContainer.homePageLinks a:not(.socialLinks)#servicesLink {
   width: 135px;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks)#chefTLink {
   width: 285px;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks)#contactLink {
   width: 175px;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks):hover, #homePage .linkContainer.homePageLinks a:not(.socialLinks):active {
   text-shadow: #000;
   color: #ffffff;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks)::before {
   background-color: var(--secondaryColor);
   border-radius: 0px;
   bottom: 0%;
-  content: '';
+  content: "";
   height: 100%;
   left: 0%;
   pointer-events: none;
   position: absolute;
-  -webkit-transition: width 0.2s ease, height 0.1s ease;
   transition: width 0.2s ease, height 0.1s ease;
   width: 3px;
   z-index: -1;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks):hover::before {
   width: 100%;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks):active {
   text-shadow: 0px 0px 10px #ffffff;
 }
-
 #homePage .linkContainer.homePageLinks a:not(.socialLinks):active::before {
   height: 100%;
   bottom: 0%;
   border-radius: 0;
 }
-
 #homePage .linkContainer.homePageLinks a.socialLinks {
   color: #C3C3C3;
   margin-top: 20px;
   margin-right: 20px;
   font-size: 22px;
 }
-
 #homePage .linkContainer.homePageLinks a.socialLinks:hover {
   color: var(--secondaryColor);
 }
-
 #homePage .middlePic {
   background-color: #000000;
 }
-
 #homePage .middlePic .middleImgWrapper {
   background-color: #ffffff;
   border: 3px solid var(--secondaryColor);
   gap: 15px;
   width: 70%;
 }
-
 #homePage .middlePic .middleImgWrapper img {
-  aspect-ratio: 1/.9;
+  aspect-ratio: 1/0.9;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
 }
-
 #homePage .bioLandingPicContainer {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-sizing: border-box;
   display: flex;
   height: 80vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   min-height: 550px;
   max-height: 700px;
   padding: 30px 50px;
   width: 100%;
 }
-
 #homePage .bioLandingPicContainer .bioLandingTextWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: 'Ledger';
+  flex-direction: column;
+  font-family: "Ledger";
   font-size: 20px;
   font-weight: 400;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   letter-spacing: 0.05px;
   line-height: 34px;
   text-align: left;
 }
-
 #homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper {
   border: 1px solid var(--secondaryColor);
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 30px;
   position: relative;
   width: 45%;
 }
-
 #homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper .btnPrimary {
   bottom: -22px;
   position: absolute;
   right: 40px;
 }
-
 #homePage .animatedPicWrapper {
   height: 100%;
   width: 550px;
   padding: 30px;
 }
-
 #homePage .animatedPicWrapper .picSubWr {
   position: relative;
   height: 100%;
 }
-
 #homePage .animatedPicWrapper .picSubWr::after {
-  content: '';
+  content: "";
   height: 70%;
   width: 5px;
   background-color: var(--secondaryColor);
@@ -274,9 +230,8 @@ body {
   top: 15%;
   margin: 0px 30px;
 }
-
 #homePage .animatedPicWrapper .picSubWr::before {
-  content: '';
+  content: "";
   height: 70%;
   width: 5px;
   margin: 0px 30px;
@@ -285,7 +240,6 @@ body {
   left: -25px;
   top: 15%;
 }
-
 #homePage .animatedPicWrapper .picSubWr img {
   aspect-ratio: 1/1.15;
   width: 37%;
@@ -296,100 +250,89 @@ body {
   opacity: 0;
   position: absolute;
   scale: 0.5;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
 #homePage .animatedPicWrapper .picSubWr img#pic1 {
   right: 30%;
   top: 0;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+  transition-delay: 0s;
   z-index: 4;
 }
-
 #homePage .animatedPicWrapper .picSubWr img#pic2 {
   right: 47px;
   top: 35%;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
   z-index: 3;
 }
-
 #homePage .animatedPicWrapper .picSubWr img#pic3 {
   left: 27%;
   bottom: 0%;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  transition-delay: 0.4s;
   z-index: 2;
 }
-
 #homePage .animatedPicWrapper .picSubWr img#pic4 {
   left: 0px;
   bottom: 35%;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+  transition-delay: 0.6s;
   z-index: 1;
 }
-
 #homePage .animatedPicWrapper .picSubWr img.in-view {
   opacity: 1;
   scale: 1;
 }
-
 #homePage #landingSection {
-  background-color: #00000003;
-  height: 100vh;
   position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }
-
 #homePage #landingSection #landingPicBox {
-  height: 100%;
-  width: 55%;
+  position: relative;
+  z-index: 0;
+  width: 50vw;
+  height: 100vh;
 }
-
-#homePage #landingSection #landingPicBox img {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 100%;
-  aspect-ratio: 1/1;
+#homePage #landingSection #landingPicBox #heroLandingVideo {
+  position: absolute;
+  width: 50vw;
+  max-width: 650px;
+  min-width: 300px;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  opacity: 2;
-  -webkit-transition: all 2.5s ease;
-  transition: all 2.5s ease;
+  pointer-events: none;
+  z-index: 1;
 }
-
-#homePage #landingSection #landingPicBox img.in-view {
-  border-radius: 0px;
-  opacity: 2;
+#homePage #landingSection #heroLandingVideoBG {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4274509804);
+  z-index: 2;
 }
-
 #homePage #landingSection img#logoLanding {
   height: 300px;
   position: absolute;
   top: 15%;
   right: 10%;
+  z-index: 20;
 }
-
 #homePage #landingSection img#signatureLanding {
   width: 45%;
   position: absolute;
   bottom: 50px;
   right: 17%;
+  z-index: 20;
 }
-
 #homePage #bioSection {
   background-color: #ffffff;
 }
-
 #homePage #bioSection .bioImgContainer {
   min-width: 35%;
   position: relative;
 }
-
 #homePage #bioSection .bioImgContainer img {
   aspect-ratio: 1/1.1;
   bottom: -20%;
@@ -401,85 +344,67 @@ body {
   opacity: 0;
   position: absolute;
   scale: 0.5;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
 #homePage #bioSection .bioImgContainer img#bioChefImg {
   aspect-ratio: 1/1.3;
   border: 1px solid #ffffff;
   border-radius: 20px;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+  transition-delay: 0s;
   z-index: 4;
 }
-
 #homePage #bioSection .bioImgContainer img.in-view {
   opacity: 1;
   scale: 1;
 }
-
 #homePage #bioSection #bioTextContainer {
   margin-right: -50px;
   width: 50%;
   z-index: 10;
   position: relative;
 }
-
 #homePage #bioSection #bioTextContainer #logoBtnWrapper .btnPrimary {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-right: 15%;
 }
-
 #homePage #bioSection #bioTextContainer #logoBtnWrapper img#logoMidPage {
   aspect-ratio: 1/2;
   height: 126px;
   left: -100px;
   width: 215px;
 }
-
-#homePage #mediaSection {
+#homePage #servicesSection {
   background-color: transparent;
   height: 75vh;
 }
-
-#homePage #mediaSection #mediaSectionTextContainer {
+#homePage #servicesSection #servicesSectionTextContainer {
   color: #ffffff;
 }
-
-#homePage #mediaSection .picSubWr::before {
+#homePage #servicesSection .picSubWr::before {
   width: 0px;
   margin: 0px !important;
 }
-
 #homePage #chefTableSec {
   background-color: #ffffff;
   height: 75vh;
 }
-
 #homePage #chefTableSec .picSubWr::after {
   width: 0px;
   margin: 0px;
 }
-
 #homePage #chefTableSec .picSubWr #pic1 {
   left: 40% !important;
 }
-
 #homePage #chefTableSec .picSubWr #pic2 {
   left: 65% !important;
 }
-
 #homePage #chefTableSec .picSubWr #pic3 {
   left: 35% !important;
 }
-
 #homePage #chefTableSec .picSubWr #pic4 {
   left: 40px !important;
 }
-
 #homePage footer {
   background-color: transparent;
 }
@@ -490,19 +415,12 @@ body {
   height: 100%;
   min-width: 100%;
   z-index: 99999;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #2f2f2fca;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(47, 47, 47, 0.7921568627);
   pointer-events: none;
 }
-
 #bobbyFlay #bobbyFlayDiv {
   cursor: pointer;
   border: 10px solid #ffffff;
@@ -514,56 +432,42 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: -ms-grid;
   display: grid;
   position: relative;
 }
-
 #bobbyFlay #bobbyFlayDiv #closingPopup {
   pointer-events: all !important;
   position: absolute;
   right: 10px;
   top: 10px;
 }
-
 #bobbyFlay #bobbyFlayDiv #closingPopup::before {
   font-size: 35px !important;
   color: #2b2b2b;
 }
-
 #bobbyFlay #bobbyFlayDiv #closingPopup:hover {
   scale: 1.1;
 }
-
 #bobbyFlay #bobbyFlayDiv #highlightsBob {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 70%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: absolute;
   bottom: 15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   border-radius: 20px;
   background-color: #2F2F2F;
   color: #C3C3C3;
   padding: 10px;
   justify-self: center;
 }
-
 #bobbyFlay #bobbyFlayDiv #highlightsBob p {
   color: #C3C3C3 !important;
 }
-
 #bobbyFlay #bobbyFlayDiv #highlightsBob i::before {
   color: #bf1f2f;
   font-size: 25px;
 }
-
 #bobbyFlay #bobbyFlayDiv #clickToPics {
   background-color: #bf1f2f;
   border: none;
@@ -574,33 +478,20 @@ body {
   pointer-events: all !important;
   cursor: pointer;
 }
-
 #bobbyFlay #bobbyFlayDiv #clickToPics:hover {
-  -webkit-filter: brightness(0.9);
-          filter: brightness(0.9);
+  filter: brightness(0.9);
   scale: 1.05;
 }
-
 #bobbyFlay #bobbyFlayDiv #logoCont {
   width: 100%;
   height: 50%;
   position: absolute;
   top: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 #bobbyFlay #bobbyFlayDiv #logoCont #nikoForPopup {
   background-image: url("./../../images/NikoPopUp2.png");
   height: 35%;
@@ -608,10 +499,8 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
-
 #bobbyFlay #bobbyFlayDiv #logoCont #bobbyFlayLogo {
   background-image: url("./../../images/bfimagetrace.svg");
   height: 60%;
@@ -620,8 +509,7 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 @media only screen and (min-width: 1500px) {
@@ -633,7 +521,6 @@ body {
     width: 40% !important;
   }
 }
-
 @media only screen and (min-width: 1368px) and (max-width: 1400px) {
   .chefQuote {
     width: 60%;
@@ -671,7 +558,6 @@ body {
     width: 40% !important;
   }
 }
-
 @media only screen and (max-width: 1367px) {
   .achievementLanding .btnPrimary {
     position: absolute;
@@ -689,7 +575,6 @@ body {
     width: 52% !important;
   }
 }
-
 @media only screen and (min-width: 771px) and (max-width: 1050px) {
   #logoNavIndexPage .activePage {
     margin-right: 20px !important;
@@ -703,8 +588,7 @@ body {
   #landingAd {
     border: 1px solid #000;
     background-color: #aba4a4;
-    -ms-grid-column-align: end;
-        justify-self: end;
+    justify-self: end;
   }
   #landingAd #DuckImg, #landingAd #KaperImg {
     background-color: #2f2f2f;
@@ -721,7 +605,7 @@ body {
   }
   .chefQuote {
     width: 92% !important;
-    background-color: #ffffff69;
+    background-color: rgba(255, 255, 255, 0.4117647059);
   }
   .chefQuote p {
     font-size: 40px !important;
@@ -734,7 +618,7 @@ body {
   }
   .signature {
     width: 100% !important;
-    background-color: #ffffff69;
+    background-color: rgba(255, 255, 255, 0.4117647059);
     margin-top: 0px !important;
   }
   .achievementLanding {
@@ -752,9 +636,7 @@ body {
     position: absolute;
   }
   .card45Cont > div {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    justify-content: center !important;
   }
   .card45Cont #card-4 {
     max-width: 350px !important;
@@ -763,18 +645,14 @@ body {
     width: 0px !important;
   }
   .cardsLine {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: flex-start !important;
+    flex-wrap: nowrap;
+    justify-content: flex-start !important;
     width: 100% !important;
   }
   .cardsLine.cards23Cont {
     width: 90vw !important;
   }
 }
-
 @media only screen and (min-width: 771px) and (max-width: 1350px) {
   .chefQuote {
     width: 60%;
@@ -789,25 +667,19 @@ body {
     font-size: 40px !important;
   }
   .middlePic > div {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     width: 70% !important;
   }
   .middlePic > div img {
     width: 30% !important;
   }
   .achievementLanding {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    height: -webkit-fit-content;
+    align-items: start;
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
   }
   .achievementLanding .allAchvmText {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 0px !important;
@@ -817,7 +689,6 @@ body {
     width: 100% !important;
   }
   .achievementLanding .allAchvmText .cardsLine .btnWrap {
-    height: -webkit-fit-content !important;
     height: -moz-fit-content !important;
     height: fit-content !important;
     margin-top: 30px;
@@ -837,25 +708,18 @@ body {
   }
   .achievementLanding .allAchvmText .achCards {
     width: 100% !important;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     text-align: center;
   }
   .achievementLanding .imgAchvm {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     height: 50%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     margin-left: 0px !important;
     width: 60%;
   }
   .achievementLanding .imgAchvm img {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     max-height: 50% !important;
     width: 80%;
@@ -866,29 +730,21 @@ body {
     position: absolute;
   }
   .charityLanding {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    height: -webkit-fit-content !important;
+    flex-direction: column-reverse;
     height: -moz-fit-content !important;
     height: fit-content !important;
     width: 100%;
   }
   .charityLanding .charityLandingPicContainer {
     width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   .charityLanding .charityLandingPicContainer img {
     position: relative !important;
     top: 0px !important;
     left: 0px !important;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
     width: 23%;
     height: 75%;
   }
@@ -900,13 +756,11 @@ body {
     padding-right: 0px !important;
   }
 }
-
 @media only screen and (max-width: 870px) {
   #landingAd #DuckImg, #landingAd #KaperImg {
     display: none;
   }
 }
-
 @media only screen and (max-width: 770px) {
   .landingPage {
     padding: 0px 0px !important;
@@ -914,7 +768,7 @@ body {
   }
   .landingPage .signature {
     width: 100% !important;
-    background-color: #ffffff69 !important;
+    background-color: rgba(255, 255, 255, 0.4117647059) !important;
     margin-top: 0px !important;
   }
   .landingPage .signature img {
@@ -923,7 +777,7 @@ body {
   .landingPage .chefQuote {
     width: 100% !important;
     padding: 20px 0px !important;
-    background-color: #ffffff69 !important;
+    background-color: rgba(255, 255, 255, 0.4117647059) !important;
   }
   .landingPage i {
     font-size: 20px !important;
@@ -939,41 +793,31 @@ body {
   }
   .middlePic > div {
     width: 90% !important;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .middlePic > div img {
     width: 32% !important;
-    aspect-ratio: 1.1 / 1;
+    aspect-ratio: 1.1/1;
   }
   .middlePic > div img.mr-20 {
     margin-right: 10px !important;
   }
   .bioLanding {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    height: -webkit-fit-content !important;
+    flex-direction: column-reverse;
     height: -moz-fit-content !important;
     height: fit-content !important;
     width: 100%;
   }
   .bioLanding .bioLandingPicContainer {
     width: 95%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   .bioLanding .bioLandingPicContainer img {
     position: relative !important;
     top: 0px !important;
     left: 0px !important;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
     width: 24%;
   }
   .bioLanding .bioLandingTextContainer {
@@ -984,29 +828,21 @@ body {
     padding-right: 0px !important;
   }
   .charityLanding {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    height: -webkit-fit-content !important;
+    flex-direction: column-reverse;
     height: -moz-fit-content !important;
     height: fit-content !important;
     width: 100%;
   }
   .charityLanding .charityLandingPicContainer {
     width: 95%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   .charityLanding .charityLandingPicContainer img {
     position: relative !important;
     top: 0px !important;
     left: 0px !important;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
     width: 24%;
   }
   .charityLanding .charityLandingTextContainer {
@@ -1018,10 +854,7 @@ body {
     padding-right: 0px !important;
   }
   .achievementLanding {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    height: -webkit-fit-content;
+    align-items: start;
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
@@ -1029,21 +862,15 @@ body {
   .achievementLanding .allAchvmText {
     width: 90%;
     padding: 0px !important;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .achievementLanding .allAchvmText .cardsLine {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: column-reverse !important;
-            flex-direction: column-reverse !important;
+    flex-wrap: wrap;
+    flex-direction: column-reverse !important;
     width: 100% !important;
   }
   .achievementLanding .allAchvmText .cardsLine .btnWrap {
-    height: -webkit-fit-content !important;
     height: -moz-fit-content !important;
     height: fit-content !important;
     margin-top: 30px;
@@ -1058,8 +885,7 @@ body {
   }
   .achievementLanding .allAchvmText .card45Cont .btnWrap .btnPrimary {
     margin: 0px !important;
-    -webkit-box-sizing: border-box !important;
-            box-sizing: border-box !important;
+    box-sizing: border-box !important;
     left: 0px !important;
   }
   .achievementLanding .allAchvmText #chef-corps-logo {
@@ -1075,16 +901,13 @@ body {
     width: 100% !important;
     margin-left: 0%;
     margin-top: 20px !important;
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    justify-content: center !important;
   }
   .achievementLanding .allAchvmText .card-1Div #card-1 {
     margin-top: 15px !important;
     font-size: 17px !important;
     text-align: center !important;
-    -ms-grid-column-align: center !important;
-        justify-self: center !important;
+    justify-self: center !important;
   }
   .achievementLanding .allAchvmText #card-2 {
     font-size: 24px !important;
@@ -1104,8 +927,7 @@ body {
     max-width: 80% !important;
     width: 80% !important;
     text-align: center;
-    -webkit-transform: translatex(-130%);
-            transform: translatex(-130%);
+    transform: translatex(-130%);
     scale: 1 !important;
   }
   .achievementLanding .allAchvmText .achCards.in-view {
@@ -1131,12 +953,10 @@ body {
     text-align: start;
   }
   footer img {
-    -ms-flex-item-align: baseline;
-        align-self: baseline;
+    align-self: baseline;
     height: 11vh;
   }
 }
-
 @media only screen and (max-width: 450px) {
   #bobbyFlay {
     height: 100% !important;
@@ -1162,7 +982,6 @@ body {
     font-size: 18px;
   }
 }
-
 @media only screen and (max-width: 400px) {
   #landingAd #DuckImg, #landingAd #KaperImg {
     display: none !important;
@@ -1174,26 +993,22 @@ body {
     padding: 5px 10px;
     font-size: 12px !important;
     position: relative;
-    -webkit-box-shadow: 6px 6px 6px #0000003d;
-            box-shadow: 6px 6px 6px #0000003d;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2392156863);
   }
   #landingAd #eventTextBox #shadowGold {
     font-weight: bold !important;
   }
   #landingAd #eventTextBox #eventLink {
     font-size: 13px;
-    width: -webkit-fit-content !important;
     width: -moz-fit-content !important;
     width: fit-content !important;
     margin: 0px;
   }
   #landingAd #eventTextBox .linkWrap {
-    width: -webkit-fit-content !important;
     width: -moz-fit-content !important;
     width: fit-content !important;
   }
 }
-
 @media only screen and (max-height: 400px) {
   .landingPage {
     padding: 0px 0px !important;
@@ -1201,7 +1016,7 @@ body {
   }
   .landingPage .signature {
     width: 100% !important;
-    background-color: #ffffff69 !important;
+    background-color: rgba(255, 255, 255, 0.4117647059) !important;
     margin-top: 0px !important;
   }
   .landingPage .signature img {
@@ -1210,7 +1025,7 @@ body {
   .landingPage .chefQuote {
     width: 100% !important;
     padding: 20px 0px !important;
-    background-color: #ffffff69 !important;
+    background-color: rgba(255, 255, 255, 0.4117647059) !important;
   }
   .landingPage i {
     font-size: 20px !important;
@@ -1226,41 +1041,31 @@ body {
   }
   .middlePic > div {
     width: 90% !important;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .middlePic > div img {
     width: 32% !important;
-    aspect-ratio: 1.1 / 1;
+    aspect-ratio: 1.1/1;
   }
   .middlePic > div img.mr-20 {
     margin-right: 10px !important;
   }
   .bioLanding {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    height: -webkit-fit-content !important;
+    flex-direction: column-reverse;
     height: -moz-fit-content !important;
     height: fit-content !important;
     width: 100%;
   }
   .bioLanding .bioLandingPicContainer {
     width: 95%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   .bioLanding .bioLandingPicContainer img {
     position: relative !important;
     top: 0px !important;
     left: 0px !important;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
     width: 24%;
   }
   .bioLanding .bioLandingTextContainer {
@@ -1271,29 +1076,21 @@ body {
     padding-right: 0px !important;
   }
   .charityLanding {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    height: -webkit-fit-content !important;
+    flex-direction: column-reverse;
     height: -moz-fit-content !important;
     height: fit-content !important;
     width: 100%;
   }
   .charityLanding .charityLandingPicContainer {
     width: 95%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   .charityLanding .charityLandingPicContainer img {
     position: relative !important;
     top: 0px !important;
     left: 0px !important;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
     width: 24%;
   }
   .charityLanding .charityLandingTextContainer {
@@ -1305,10 +1102,7 @@ body {
     padding-right: 0px !important;
   }
   .achievementLanding {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    height: -webkit-fit-content;
+    align-items: start;
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
@@ -1316,21 +1110,15 @@ body {
   .achievementLanding .allAchvmText {
     width: 90%;
     padding: 0px !important;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .achievementLanding .allAchvmText .cardsLine {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: column-reverse !important;
-            flex-direction: column-reverse !important;
+    flex-wrap: wrap;
+    flex-direction: column-reverse !important;
     width: 100% !important;
   }
   .achievementLanding .allAchvmText .cardsLine .btnWrap {
-    height: -webkit-fit-content !important;
     height: -moz-fit-content !important;
     height: fit-content !important;
     margin-top: 30px;
@@ -1351,9 +1139,7 @@ body {
     width: 100% !important;
     margin-left: 0%;
     margin-top: 20px !important;
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    justify-content: center !important;
   }
   .achievementLanding .allAchvmText .card-1Div #card-1 {
     margin-top: 15px !important;
@@ -1399,8 +1185,7 @@ body {
     text-align: start;
   }
   footer img {
-    -ms-flex-item-align: baseline;
-        align-self: baseline;
+    align-self: baseline;
     height: 11vh;
   }
   #bobbyFlay {
@@ -1429,54 +1214,39 @@ body {
     font-size: 16px;
   }
 }
-
 footer {
   position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding-bottom: 50px !important;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 footer #webcraftLink {
   position: absolute;
   bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-size: 14px !important;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 footer #webcraftLink a {
   text-align: center;
 }
 
 .wrapper {
   line-height: 1.2;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
-
 .wrapper p {
   font-family: "Ledger";
   margin: auto;
   text-transform: uppercase;
-  background: linear-gradient(219deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.7) 11%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.8) 31%, black 60%, black 60%, rgba(0, 0, 0, 0.7) 80%);
+  background: linear-gradient(219deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.7) 11%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.8) 31%, rgb(0, 0, 0) 60%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0.7) 80%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-
 .wrapper .container {
   padding: 1.5rem;
   text-align: center;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

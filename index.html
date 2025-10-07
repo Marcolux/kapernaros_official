@@ -42,6 +42,7 @@
         <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/w_700/v1709720633/Niko/Chef_Kapernaros_charity_events_pic_4_swqkut.webp" as="image">
         <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/w_800/v1709720634/Niko/Chef_Kapernaros_charity_events_pic_1_diom0m.webp" as="image">
         <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709722273/Niko/Chef_Kapernaros_logo_white_no_BG_xik49g.webp" as="image">
+        <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,g_center,h_1100,q_auto,w_1150,x_50,y_200,f_auto/v1759769752/Niko/video-olive-field-3_r56pgc.mp4" as="video">
 
         <!-- preload chef table's pics -->
         <script>
@@ -63,10 +64,10 @@
 
     <body id="homePage">
 
-        <div class="flex flex-column col-5 flex-justifyContent-center linkContainer homePageLinks pb-10">
+        <div class="flex flex-column col-5 flex-justifyContent-center linkContainer homePageLinks pb-10" id="landingMenu">
             <a href="#bioSection" id="bioLink"><span>Bio</span></a>
-            <a href="#mediaSection" id="mediaLink"><span>Media</span></a>
-            <a href="#chefTableSec" id="chefTLink"><span>Chef Table</span></a>
+            <a href="#servicesSection" id="servicesLink"><span>Services</span></a>
+            <a href="#chefTableSec" id="chefTLink"><span>The Chef’s Table</span></a>
             <a href="./pages/contact-the-chef.html" id="contactLink"><span>Contact</span></a>
 
             <div id="socialMedia" class="col-5 flex flex-justifyContent-end flex-alignItems-center" >
@@ -108,7 +109,7 @@
                     <img class="ml-40" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" alt="Chef Kapernaros Nav Logo">
                 </a>
                 <a href="./pages/bio.html">Bio</a>
-                <a href="./pages/media.html">Media</a>
+                <a href="./pages/services.html">Services</a>
                 <a href="./pages/chef-table.html">The Chef's Table</a>
                 <a href="./pages/contact-the-chef.html">Contact</a>
 
@@ -130,8 +131,28 @@
 
         <section id="landingSection" class="flex flex-column flex-justifyContent-end" style="position: relative;" id="topPage">
             <div id="landingPicBox">
-                <img src="chef-kapernaros/images/chef_kap.png" alt="Chef Kapernaros Landing page">
+                <!-- <img src="chef-kapernaros/images/chef_kap.png" alt="Chef Kapernaros Landing page"> -->
+                <video  
+                autoplay
+                muted
+                playsinline
+loop
+                preload="auto"
+                id="heroLandingVideo" 
+                src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,g_center,h_1100,q_auto,w_1150,x_50,y_200/v1759769752/Niko/video-olive-field-3_r56pgc.mp4" type="video/mp4" -->
+                >
+                <!-- src="https://www.veed.io/view/9f99f4b7-d4e2-4260-86c4-4a35f7f83fa8?source=editor&panel=share" type="video/mp4" -->
+                <!-- src="./chef-kapernaros/images/video-olive-field-3.mp4" type="video/mp4" -->
+            </video>
+            <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,g_center,h_1100,q_auto,w_1150,x_50,y_200/v1759765710/Niko/video-olive-field-3_r56pgc.mp4" type="video/mp4"> -->
+                <!-- <video  id="heroLandingVideo" autoplay
+                        >
+                    <source src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,g_center,h_1100,q_auto,w_1150,x_50,y_200/v1759765710/Niko/video-olive-field-3_r56pgc.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/drdrs6pdq/video/upload/v1759768432/video-olive-field_bsirbd.mp4" type="video/mp4"> -->
+                    <!-- <source src="https://res.cloudinary.com/your_cloud/video/upload/c_fill,ar_16:9,g_auto,w_1920,q_auto:good,f_auto/video-olive-field.mp4" type="video/mp4">
+                </video> -->
             </div>
+            <div id="heroLandingVideoBG"></div>
             <img src="chef-kapernaros/images/new_golden_logo.svg" alt="Chef Kapernaros Landing page Logo" id="logoLanding">
             <img src="chef-kapernaros/images/Signature.svg" alt="Chef Kapernaros Landing page signature" id="signatureLanding">
         </section>
@@ -158,7 +179,7 @@
             </div>
         </section>
 
-        <section id="mediaSection" class="bioLandingPicContainer flex flex-alignItems-center flex-justifyContent-center">
+        <section id="servicesSection" class="bioLandingPicContainer flex flex-alignItems-center flex-justifyContent-center">
             <div class="animatedPicWrapper">
                 <div class="picSubWr">
                     <img id="pic1" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_600/v1709578128/Niko/Kapernaros_bio_landing_1_lprh8i.webp" alt=" Chef Kapernaros middle pics">
@@ -167,18 +188,18 @@
                     <img id="pic4" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709578127/Niko/Kapernaros_bio_landing_4_l6yclh.webp" alt=" Chef Kapernaros middle pics">
                 </div>
             </div>
-            <div id="mediaSectionTextContainer" class="col-6 bioLandingTextWrapper homePageTextWrapper">
-                <p class="titlesChef m-0">Media</p>
-                <p class="textMediaSection mt-20">
+            <div id="servicesSectionTextContainer" class="col-6 bioLandingTextWrapper homePageTextWrapper">
+                <p class="titlesChef m-0">Services</p>
+                <p class="textservicesSection mt-20">
                     Take a journey through pivotal moments in my culinary career: from my early days in Greece to appearances on renowned cooking shows, and memorable collaborations with fellow food enthusiasts and celebrities.
                 </p>
-                <a class="btnPrimary greyShadow" href="./pages/media.html">Read More</a>
+                <a class="btnPrimary greyShadow" href="./pages/services.html">Read More</a>
             </div>
         </section>
 
         <section id="chefTableSec" class="bioLandingPicContainer flex flex-justifyContent-center flex-alignItems-center">
             <div id="chefTableTextContainer" class="col-6 bioLandingTextWrapper homePageTextWrapper">
-                <p class="titlesChef m-0">Chef Table</p>
+                <p class="titlesChef m-0">The Chef’s Table</p>
                 <p class="textchefTable mt-20">
                     Delight in flavors that capture the essence of Greek cuisine, infused with the culmination of my global experiences and culinary expertise. Join me for an unforgettable dining experience that transcends borders and celebrates the art of food at The Chef’s Table.
                 </p>

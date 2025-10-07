@@ -5,86 +5,66 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 #bioPage .navBar {
   background-color: #f5f3f3;
 }
-
 #bioPage #carouselSec {
   background-color: #f5f3f3;
-  height: calc(100vh - 14vh + 50px);
+  height: calc(86vh + 50px);
   min-height: 550px;
   padding-bottom: 50px;
   position: relative;
 }
-
 #bioPage #carouselSec .carouselContainer {
   height: calc(100% - 20px);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: calc(100% - 40px);
 }
-
 #bioPage #carouselSec .carouselContainer #carousel {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100%;
   max-width: 1500px;
   min-width: 900px;
   min-height: 550px;
   width: 100%;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide {
-  -webkit-box-shadow: 6px 6px 6px #aeaeae;
-          box-shadow: 6px 6px 6px #aeaeae;
+  box-shadow: 6px 6px 6px #aeaeae;
   height: 100%;
   min-height: 480px;
   position: relative;
   width: 100%;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideDescription {
   color: #FFFFFF;
   min-height: 480px;
   width: 40%;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideDescription i {
   cursor: pointer;
   font-size: 68px !important;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideDescription i:hover {
   font-size: 65px !important;
   text-shadow: 3px 0px 2px var(--secondaryColor);
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideDescription i:active {
   font-size: 68px !important;
   text-shadow: 0px 0px 0px var(--secondaryColor);
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideDescription #prevSlide {
   position: absolute;
   top: 10px;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideDescription #nextSlide {
   position: absolute;
   bottom: 10px;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slidePic {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 70%;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slidePic p {
   bottom: 20px;
   color: #f8f8f5;
@@ -93,59 +73,47 @@
   position: absolute;
   right: 20px;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slidePic #picNote {
   background-color: var(--darkBlueColor);
   font-size: 20px !important;
   padding: 0px 10px;
-  text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px  1px 2px #000;
-  -webkit-transition: opacity 1s ease;
+  text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
   transition: opacity 1s ease;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slidePic #picNote:not(.note_0) {
   opacity: 0;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slidePic #picNote.darker {
   opacity: 1 !important;
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideImg {
   min-height: 480px;
   -o-object-fit: cover !important;
      object-fit: cover !important;
   -o-object-position: center !important;
      object-position: center !important;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   width: 100%;
-  -webkit-filter: blur(1.5px);
-          filter: blur(1.5px);
+  filter: blur(1.5px);
 }
-
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideText {
   font-size: 18px;
   letter-spacing: 0.03em;
   line-height: 30px;
   font-weight: 400;
   scale: 0.5;
-  -webkit-transition: scale 0.4s ease-in-out;
   transition: scale 0.4s ease-in-out;
 }
-
 #bioPage #carouselSec .carouselContainer #timeline {
   position: relative;
   padding-left: 40px;
 }
-
 #bioPage #carouselSec .carouselContainer #timeline #lineWhite {
   position: absolute;
   background-color: var(--secondaryColor);
   width: 1px;
   left: calc(50% + 20px);
 }
-
 #bioPage #carouselSec .carouselContainer #timeline #circleWhite {
   background-color: #ffffff;
   height: 20px;
@@ -154,62 +122,41 @@
   left: calc(50% + 10px);
   position: absolute;
   opacity: 0;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
-
 #bioPage #carouselSec .carouselContainer #timeline #circleWhite.position_0 {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  transform: translateY(0%);
   opacity: 1;
 }
-
 #bioPage #carouselSec .carouselContainer #timeline #circleWhite:not(.circle_0).moveDown {
-  -webkit-transform: translateY(-1150%);
-          transform: translateY(-1150%);
+  transform: translateY(-1150%);
 }
-
 #bioPage #carouselSec .carouselContainer #timeline #circleWhite:not(.circle_6).moveUp {
-  -webkit-transform: translateY(1150%);
-          transform: translateY(1150%);
+  transform: translateY(1150%);
 }
-
 #bioPage #pageTransition {
   height: 85vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: #aeaeae;
   background-color: rgba(20, 20, 20, 0.5);
   border-top: 3px solid var(--secondaryColor);
   border-bottom: 3px solid var(--secondaryColor);
   position: relative;
 }
-
 #bioPage #pageTransition #cardsIntro {
   position: relative;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  transform: translateY(50%);
   color: #000000;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   z-index: 15;
 }
-
 #bioPage #pageTransition #cardsIntro #valuesIntro {
   background-color: #F8F6F1;
   border-radius: 8px;
-  -webkit-box-shadow: 0 8px 30px #00000026;
-          box-shadow: 0 8px 30px #00000026;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1490196078);
   font-size: clamp(16px, 2.2vh, 20px);
   font-weight: 300;
   line-height: 1.9;
@@ -218,16 +165,14 @@
   padding: 30px 40px;
   text-align: left;
 }
-
 #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef {
   font-size: clamp(40px, 2.2vh, 47px);
   font-weight: 500;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
   margin-bottom: 10px;
 }
-
 #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef::before {
-  content: '';
+  content: "";
   background-color: var(--secondaryColor);
   bottom: 20px;
   height: calc(100% - 36px);
@@ -237,7 +182,6 @@
   width: calc(100% + 15px);
   z-index: -1;
 }
-
 #bioPage #valueSec {
   background-color: #ffffff;
   padding: 100px 0px 50px 0px;
@@ -245,50 +189,35 @@
   padding-top: 160px;
   position: relative;
 }
-
 #bioPage #valueSec .cardContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 25px;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex: auto;
+  justify-content: center;
   max-height: 70vh;
   padding: 20px;
   width: 100%;
 }
-
 #bioPage #valueSec .cardContainer .flip-card {
   max-height: 500px;
   max-width: 500px;
   width: 31%;
   outline: none;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  perspective: 1000px;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner {
   aspect-ratio: 1.1/1.2;
   border-radius: 16px;
-  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
   height: 100%;
   width: 100%;
   overflow: hidden;
   position: relative;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
-  transition: -webkit-transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
   transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
-  transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1), -webkit-transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
   will-change: transform;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-front,
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-back {
   backface-visibility: hidden;
@@ -296,90 +225,65 @@
   position: absolute;
   -webkit-backface-visibility: hidden;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .hoverWrapper {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   bottom: 0px;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   position: absolute;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .hoverWrapper, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .hoverWrapper, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .hoverWrapper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #0000008d;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5529411765);
   display: flex;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .hoverWrapper .titlesChef, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .hoverWrapper .titlesChef, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .hoverWrapper .titlesChef {
   bottom: auto !important;
   color: #fff !important;
   left: auto !important;
   scale: 1.7;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .hoverWrapper .titlesChef::before, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .hoverWrapper .titlesChef::before, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .hoverWrapper .titlesChef::before {
   background-color: #ffffff !important;
   height: 0% !important;
   left: 0px;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .flip-toggle, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .flip-toggle, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .flip-toggle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   right: 2%;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover .flip-toggle .flip-icon, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:active .flip-toggle .flip-icon, #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:focus .flip-toggle .flip-icon {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
   opacity: 0.9;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-front {
   transform: rotateY(0deg) translateZ(0);
   -webkit-transform: rotateY(0deg) translateZ(0);
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-front .imgCont {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   position: relative;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-front .imgCont img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-front .imgCont .titlesChef {
   color: #f1f1f1;
   bottom: 20px;
   left: 10px;
   font-size: clamp(1.5rem, 2.2vw, 2.5rem);
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-front .imgCont .titlesChef::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 5px;
   left: -30px;
@@ -389,30 +293,24 @@
   opacity: 0.9;
   z-index: -1;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-back {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0f172a), to(#1e293b));
   background: linear-gradient(180deg, #0f172a, #1e293b);
   color: #fff;
-  display: -ms-grid;
   display: grid;
   padding: 18px;
   place-content: center;
   transform: rotateY(180deg) translateZ(1px);
   -webkit-transform: rotateY(180deg) translateZ(1px);
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-card-back .cardText {
   font-size: 20px;
   letter-spacing: 0.01em;
   line-height: 30px;
   text-align: left;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover {
   color: var(--secondaryColor);
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle {
   display: none;
   position: absolute;
@@ -423,115 +321,68 @@
   width: 50px;
   height: 50px;
   right: 50%;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle .flip-icon {
   fill: #f1f1f1;
   stroke-width: 2px;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
-  -webkit-box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
-          box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
+  box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
   background-color: rgba(255, 255, 255, 0);
 }
-
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle:hover .flip-icon {
   fill: var(--secondaryColor);
 }
-
 #bioPage #valueSec .cardContainer .flip-card.is-flipped .flip-card-inner {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-
 #bioPage #valueSec .cardContainer .flip-card.is-flipped .flip-card-inner .flip-toggle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   right: 2%;
 }
-
 #bioPage #valueSec .cardContainer .flip-card.is-flipped .flip-card-inner .flip-toggle .flip-icon {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
   opacity: 0.9;
 }
-
 #bioPage #valueSec .cardContainer .flip-card.is-flipped .flip-card-inner .flip-card-back {
-  -webkit-backface-visibility: visible;
-          backface-visibility: visible;
+  backface-visibility: visible;
 }
-
 @media (prefers-reduced-motion: reduce) {
   #bioPage .flip-card-inner {
-    -webkit-transition: none;
     transition: none;
   }
 }
-
 #bioPage #careerHighlightsSec {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--darkBlueColor)), to(#000000));
+  align-items: center;
   background: linear-gradient(180deg, var(--darkBlueColor), #000000);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-top: -70px;
   padding: 150px 40px 0px 40px;
-  -webkit-box-shadow: inset 0px 0px 50px 0px #000000;
-          box-shadow: inset 0px 0px 50px 0px #000000;
+  box-shadow: inset 0px 0px 50px 0px #000000;
   /* Mobile: stack */
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .titlesChef {
   font-size: 47px;
   margin-bottom: 20px;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline {
   background-color: #ffffff;
   border: 1px solid #f1f1f1;
-  -webkit-box-shadow: 6px 6px 6px #d8d8d89a;
-          box-shadow: 6px 6px 6px #d8d8d89a;
-  display: -ms-grid;
+  box-shadow: 6px 6px 6px rgba(216, 216, 216, 0.6039215686);
   display: grid;
-  -ms-grid-columns: 150px 1fr;
-      grid-template-columns: 150px 1fr;
-  /* year column / events column */
+  grid-template-columns: 150px 1fr; /* year column / events column */
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__year {
   color: var(--secondaryColor);
   font-weight: 700;
@@ -540,11 +391,9 @@
   position: relative;
   text-align: center;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__year.bgEven {
   background-color: #f5f3f3;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__label {
   color: var(--secondaryColor);
   font-weight: 700;
@@ -555,30 +404,24 @@
   text-align: center;
   text-transform: uppercase;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__label.bgEven {
   background-color: #f5f3f3;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__events {
   border-left: 2px solid var(--secondaryColor);
   position: relative;
   padding-left: 18px;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__events.bgEven {
   background-color: #f5f3f3;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__events .event {
-  background: rgba(0, 0, 0, 0);
-  /* keep transparent; change if you want pills */
+  background: rgba(0, 0, 0, 0); /* keep transparent; change if you want pills */
   position: relative;
   font-size: 18px;
   letter-spacing: 0.01em;
   line-height: 30px;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__events .event::before {
   background: var(--secondaryColor);
   border: 1px solid var(--secondaryColor);
@@ -590,43 +433,32 @@
   top: calc(50% - 5px);
   width: 10px;
 }
-
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__events .event:hover {
   outline: none;
   text-shadow: 0.5px 0.5px 1.5px var(--secondaryColor);
 }
-
 @media (max-width: 720px) {
   #bioPage #careerHighlightsSec .timeline {
-    -ms-grid-columns: 5rem 1fr;
-        grid-template-columns: 5rem 1fr;
+    grid-template-columns: 5rem 1fr;
   }
 }
-
 #bioPage footer {
   background-color: #000;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: -webkit-fit-content;
+  box-sizing: border-box;
   height: -moz-fit-content;
   height: fit-content;
 }
-
 #bioPage .maxWidth1500 {
   max-width: 1500px !important;
 }
-
 #bioPage .slidePic {
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
 }
-
 #bioPage .animated-highlight {
   color: var(--secondaryColor) !important;
 }
@@ -642,13 +474,11 @@
     font-size: 15px !important;
   }
 }
-
 @media only screen and (max-width: 1200px) {
   #cardsContainer {
     width: 95% !important;
   }
 }
-
 @media only screen and (min-width: 701px) and (max-width: 930px) {
   body {
     width: 100% !important;
@@ -727,13 +557,12 @@
     min-width: 300px !important;
     max-height: 400px;
     min-height: 400px;
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--darkBlueColor)), to(#000000));
     background: linear-gradient(180deg, var(--darkBlueColor), #000000);
     padding-left: 10px;
     z-index: 11;
   }
   #carouselSec #carousel .singleCarouselSlide #slideDescription #slideText {
-    background-color: #000000a3;
+    background-color: rgba(0, 0, 0, 0.6392156863);
     padding: 10px !important;
     font-size: 14px;
   }
@@ -775,7 +604,6 @@
     font-size: 16px !important;
   }
 }
-
 @media only screen and (max-width: 700px) {
   .highlightsIntro, .valueIntro {
     text-align: justify;
@@ -853,12 +681,12 @@
     min-width: 300px !important;
     max-height: 400px;
     min-height: 400px;
-    background-color: #00000047 !important;
+    background-color: rgba(0, 0, 0, 0.2784313725) !important;
     padding-left: 10px;
     z-index: 11;
   }
   #carouselSec #carousel .singleCarouselSlide #slideDescription #slideText {
-    background-color: #000000a3;
+    background-color: rgba(0, 0, 0, 0.6392156863);
     padding: 10px !important;
     scale: 1;
   }
@@ -886,16 +714,10 @@
     display: none;
   }
   .singleCard {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .singleCard.reverse {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    flex-direction: column !important;
   }
   .singleCard img {
     width: 100%;
@@ -916,5 +738,4 @@
   .cardsIntro p.fontSize18 {
     font-size: 16px !important;
   }
-}
-/*# sourceMappingURL=bio.css.map */
+}/*# sourceMappingURL=bio.css.map */

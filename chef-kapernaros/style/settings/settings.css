@@ -1,7 +1,7 @@
 /* =============================================================================== */
 /* =============================================================================== */
 /* Margin & padding */
-@media (min-width: 1px) {
+@media (min-width:1px) {
   .m-0 {
     margin: 0px !important;
   }
@@ -3039,8 +3039,7 @@
     padding-bottom: 50px !important;
   }
 }
-
-@media (min-width: 1px) {
+@media (min-width:1px) {
   .m-0-xs {
     margin: 0px !important;
   }
@@ -6078,7 +6077,6 @@
     padding-bottom: 50px !important;
   }
 }
-
 @media (max-width: 767px) {
   .m-0-xs-down {
     margin: 0px !important;
@@ -9117,7 +9115,6 @@
     padding-bottom: 50px !important;
   }
 }
-
 @media (min-width: 768px) {
   .m-0-sm {
     margin: 0px !important;
@@ -12156,7 +12153,6 @@
     padding-bottom: 50px !important;
   }
 }
-
 @media (max-width: 999px) {
   .m-0-sm-down {
     margin: 0px !important;
@@ -15195,7 +15191,6 @@
     padding-bottom: 50px !important;
   }
 }
-
 @media (min-width: 1000px) {
   .m-0-md {
     margin: 0px !important;
@@ -18234,7 +18229,6 @@
     padding-bottom: 50px !important;
   }
 }
-
 @media (max-width: 1199px) {
   .m-0-md-down {
     margin: 0px !important;
@@ -21273,7 +21267,6 @@
     padding-bottom: 50px !important;
   }
 }
-
 @media (min-width: 1200px) {
   .m-0-lg {
     margin: 0px !important;
@@ -24312,7 +24305,6 @@
     padding-bottom: 50px !important;
   }
 }
-
 @media (max-width: 1399px) {
   .m-0-lg-down {
     margin: 0px !important;
@@ -27351,7 +27343,6 @@
     padding-bottom: 50px !important;
   }
 }
-
 @media (min-width: 1400px) {
   .m-0-xl {
     margin: 0px !important;
@@ -30389,5 +30380,4 @@
     padding-top: 50px !important;
     padding-bottom: 50px !important;
   }
-}
-/*# sourceMappingURL=settings.css.map */
+}/*# sourceMappingURL=settings.css.map */

@@ -124,7 +124,7 @@ var inputTextSelect = document.querySelectorAll('select.inputText');
 // const bobbyFlay = document.getElementById('bobbyFlay') as HTMLElement
 // const closingPopup = document.getElementById('closingPopup') as HTMLElement
 // const openCompetitions = () => {
-//     window.location.href = './pages/media.html';
+//     window.location.href = './pages/services.html';
 //     localStorage.setItem('loading_competions', 'true')
 //     localStorage.setItem('hide_landing_popup', 'true')
 //     bobbyFlay.classList.add('hide')
