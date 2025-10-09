@@ -8,7 +8,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     return to.concat(ar || Array.prototype.slice.call(from));
 };
 var _a;
-console.log('hello world');
+console.log('hello world 4');
 var hambMenu = document.querySelector('.hamburger-menu');
 var navMenu = document.getElementById('navMenu');
 var navBar = document.querySelector('.navBar');
@@ -74,12 +74,29 @@ var observeInView = function (selectorClass, offset) {
     }, { rootMargin: "".concat(offset, "px 0px") });
     document.querySelectorAll(selectorClass).forEach(function (el) { return observer.observe(el); });
 };
+var removeObserveInView = function (selectorClass, offset) {
+    if (offset === void 0) { offset = 0; }
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+                entry.target.classList.remove('in-view');
+            }
+        });
+    }, { rootMargin: "".concat(offset, "px 0px") });
+    document.querySelectorAll(selectorClass).forEach(function (el) { return observer.observe(el); });
+};
 observeInView('.bioLandingPicContainer img', -100);
 observeInView('#landingPicBox img', -100);
 observeInView('.singleCard', -100);
 observeInView('#imgTransition', -100);
 observeInView('.flip-icon', 0);
 observeInView('.flip-toggle ', 0);
+observeInView('.serviceTextBx ', 100);
+removeObserveInView('.serviceTextBx ', 100);
+observeInView('.singleServiceWrapper ', 0);
+removeObserveInView('.singleServiceWrapper ', 0);
+observeInView('#imgHero ', 100);
+removeObserveInView('#imgHero ', 0);
 var container = document.querySelector('#bigPic');
 var allNotActiveTitles = document.querySelectorAll('.secTitles');
 allNotActiveTitles.forEach(function (listEl) {

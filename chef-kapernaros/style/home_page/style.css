@@ -19,14 +19,14 @@
   --navbar-fontWeight: 600;
   --navbar-before-color: #CDAA7F;
   /*==== BODY ====*/
-  --body-App-fontFamily: "Prata";
+  --body-App-fontFamily: "Inter";
   /*==== FOOTER ====*/
   --footer-height: 60px;
   --navBackGroundColor: #ffffff00;
   --navBarTextColor: #000;
   --navBtnBackGround: #C4B980;
   --navBtnBackGroundDK: #000;
-  --navFont: normal normal 500 20px "Ledger";
+  --navFont: normal normal 500 20px var(--navbar-fontFamily);
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
   --secondaryColor: #b19e47;
@@ -81,9 +81,12 @@ body {
 #homePage #landingMenu {
   z-index: 5;
 }
+#homePage .navBar.biggerScreen {
+  padding-bottom: 0vh;
+  padding-top: 0vh;
+}
 #homePage .linkContainer {
   align-items: end;
-  border-bottom: 1px solid #000;
   font: var(--navFont);
   justify-content: right !important;
   width: -moz-fit-content;
@@ -190,7 +193,7 @@ body {
 #homePage .bioLandingPicContainer .bioLandingTextWrapper {
   display: flex;
   flex-direction: column;
-  font-family: "Ledger";
+  font-family: var(--body-App-fontFamily);
   font-size: 20px;
   font-weight: 400;
   justify-content: center;
@@ -1238,7 +1241,7 @@ footer #webcraftLink a {
   place-items: center;
 }
 .wrapper p {
-  font-family: "Ledger";
+  font-family: var(--body-App-fontFamily);
   margin: auto;
   text-transform: uppercase;
   background: linear-gradient(219deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.7) 11%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.8) 31%, rgb(0, 0, 0) 60%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0.7) 80%);

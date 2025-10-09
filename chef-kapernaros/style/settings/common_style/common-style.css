@@ -19,14 +19,14 @@
   --navbar-fontWeight: 600;
   --navbar-before-color: #CDAA7F;
   /*==== BODY ====*/
-  --body-App-fontFamily: "Prata";
+  --body-App-fontFamily: "Inter";
   /*==== FOOTER ====*/
   --footer-height: 60px;
   --navBackGroundColor: #ffffff00;
   --navBarTextColor: #000;
   --navBtnBackGround: #C4B980;
   --navBtnBackGroundDK: #000;
-  --navFont: normal normal 500 20px "Ledger";
+  --navFont: normal normal 500 20px var(--navbar-fontFamily);
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
   --secondaryColor: #b19e47;
@@ -39,12 +39,12 @@
 
 html {
   letter-spacing: 0.009em;
-  font-family: "Ledger";
+  font-family: var(--body-App-fontFamily);
 }
 
 @font-face {
-  font-family: "Ledger";
-  src: url("../../fonts/ledger/Ledger-Regular.ttf");
+  font-family: var(--body-App-fontFamily);
+  src: url("../../fonts/ledger/var(--body-App-fontFamily)-Regular.ttf");
 }
 @font-face {
   font-family: "Bebas Neue";
@@ -148,7 +148,7 @@ html {
 }
 
 .font-ledger {
-  font-family: "Ledger" !important;
+  font-family: var(--body-App-fontFamily) !important;
 }
 
 .font-bebas-neue {
@@ -203,7 +203,7 @@ footer img {
   border: 1px solid #000;
   color: #000000;
   display: flex;
-  font-family: "Ledger";
+  font-family: var(--body-App-fontFamily);
   font-weight: bold;
 }
 .navBar #landingAd #DuckImg, .navBar #landingAd #KaperImg {
@@ -443,6 +443,7 @@ footer img {
   font-size: 12px !important;
 }
 .navBar.biggerScreen {
+  background-color: #ffffff;
   display: flex;
   padding-bottom: 2vh;
   padding-top: 2vh;
@@ -546,7 +547,7 @@ footer img {
   border-radius: 4px;
   color: #ffffff;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.45));
-  font-family: "Ledger";
+  font-family: var(--body-App-fontFamily);
   font-size: 20px;
   font-weight: 500;
   padding: 8px 20px !important;

@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/settings/common_style/common-style.css" media="screen"/>
 
     <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/home_page/style.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/media_page/media_page.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/service_page/service_page.css" media="screen"/>
    
     <!-- Logo -->
     <!-- Standard favicon -->
@@ -114,23 +114,130 @@
         </div>
         
     </nav>
-    <!-- <section id="media_section" class="col-12"> -->
-        <div class="p-40 maxWidth1500">
-            <p class="titlesChef">Services</p>
-            <p class="mb-0 font-ledger">
-                <strong>Below a vibrant showcase of the most memorable moments of my culinary career.</strong>
-                <br>Follow along as I take you from my early days in prestigious kitchens around the globe, to exciting appearances on popular food shows, and even to encounters with celebrities. I share with you my proudest moments; each photo and video captures my deep passion and unwavering commitment to my career.
-            </p>
-        </div>
-        <section class="mt-20" id="sectionPic">
+    
+    <section class="font-ledger" id="sectionHero">
+        <div id="imgHero" style="background-image: url('https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1759880308/Niko/new_materials/chef-pic-19_upquxr.jpg')" alt="Kapernaros service hero"><div>
+    </section>
+    <section id="allServices" class="">
+        <!-- <p class="titlesChef textWhite">Services</p> -->
+        <article class="singleService" id="service_cooking_classes" style="padding-right: 150px;">
+            <div class="singleServiceWrapper">
 
+                <div class="serviceVideoContainer">
+                    <video 
+                        autoplay
+                        muted
+                        playsinline
+                        loop
+                        preload="auto"
+                        class="slowmo"
+                        style="filter: grayscale(1) sepia(2)"
+                        src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1920,h_1080,q_auto:best,vc_h264,f_mp4/v1759964303/videos/cooking_classes_3_lkhxug.mp4"
+                        ></video>
+                        <div class="serviceVideoBG"></div>
+                        <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/e_accelerate:0.5/v1759939573/videos/video-service_e3uqiq.mp4" -->
+                        <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1920,h_1080,q_auto:best,vc_h264,y_200/br_4000k/v1759964302/videos/cooking_classes_2_hppl4n.mp4" -->
+                        <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1280,h_720,q_auto:best,vc_h264,y_300/br_4000k/v1759939575/videos/video-service-6_vvbcq7" -->
+                </div>
+                <div class="serviceTextBx">
+                    <h6 class="serviceBxTitle">Cooking Classes</h6>
+                    <p class="serviceBxDescription">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <button class="serviceBxButton" id="service_cooking_classes_btn">Book it Now</button>
+                </div>
+            </div>
             
-        </section>
+        </article>
+        
+        <article class="singleService" id="service_consulting"  style="padding-left: 150px;">
+            <div class="singleServiceWrapper reverse">
+                <div class="serviceVideoContainer">
+                        <img 
+                            class="defaultImg"
+                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1759880308/Niko/new_materials/chef-pic-19_upquxr.jpg" 
+                            style="object-position: top;"
+                        ></img>
+                        <img 
+                            class="hoverImg"
+                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto:best/v1715129257/Niko/chef_table/viber_image_2024-01-11_23-56-08-596_blopq6.jpg"
+                        ></img>
+                    <div class="serviceVideoBG"></div>
+                </div>
+                <div class="serviceTextBx">
+                    <h6 class="serviceBxTitle">Consulting</h6>
+                    <p class="serviceBxDescription">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <button class="serviceBxButton" id="service_consulting_btn">Book it Now</button>
+                </div>
+            </div>
+            
+        </article>
 
+        <article class="singleService" id="service_chef_tbl_exp" style="padding-right: 150px;">
+            <div class="singleServiceWrapper">
+                <div class="serviceVideoContainer">
+                    <img 
+                        class="defaultImg"
+                        src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1715129209/Niko/chef_table/viber_image_2024-01-11_23-53-34-589_gfpojh.jpg" 
+                    ></img>
+                    <img 
+                        class="hoverImg"
+                        src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto:best/v1715129257/Niko/chef_table/viber_image_2024-01-11_23-56-08-596_blopq6.jpg"
+                    ></img>
+                    <div class="serviceVideoBG"></div>
+                </div>
+                <div class="serviceTextBx">
+                    <h6 class="serviceBxTitle">The Chef’s Table Experience</h6>
+                    <p class="serviceBxDescription">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <button class="serviceBxButton" id="service_chef_tbl_exp_btn">Book it Now</button>
+                </div>
+            </div>
+            
+        </article>
+        
+        
+        <article class="singleService" id="service_collaborations" style="padding-left: 150px;">
+            <div class="singleServiceWrapper reverse">
+                <div class="serviceVideoContainer">
+                    <div class="serviceVideoContainer" >
 
- 
+                        <img 
+                            class="defaultImg"
+                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1759880300/Niko/new_materials/chef-pic-9_t5cz3c.jpg" 
+                            style="object-position: top;"
+                        ></img>
+                        <img 
+                            class="hoverImg"
+                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto:best/v1715129257/Niko/chef_table/viber_image_2024-01-11_23-56-08-596_blopq6.jpg"
+                        ></img>
+                        <div class="serviceVideoBG"></div>
+                    </div>
+                    <div class="serviceVideoBG"></div>
+                </div>
+                <div class="serviceTextBx">
+                    <h6 class="serviceBxTitle">Collaborations</h6>
+                    <p class="serviceBxDescription">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <button class="serviceBxButton" id="service_collaborations_btn">Book it Now</button>
+                </div>
+            </div>
+            
+        </article>
+    </section>
 
-    <!-- </section> -->
     
     <footer class="col-12 flex flex-alignItems-center flex-justifyContent-spaceBetween px-40 pt-50 pb-20">
         <div class="flex flex-column flex-justifyContent-end" style="height: 100%;">
@@ -152,6 +259,16 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script defer type="text/javascript " src=../chef-kapernaros/script/main.js></script>
     <script src="../analytics.js"></script>
+    <!-- <script>
+        document.querySelectorAll('video.slowmo').forEach(v => {
+            const rate = 0.5               // 50% speed
+            v.defaultPlaybackRate = rate   // initial speed
+            v.playbackRate = rate
+
+            // Keep speed if the browser/user tries to change it
+            v.addEventListener('play', () => { v.playbackRate = rate; })
+        })
+    </script> -->
 
 </body>
 

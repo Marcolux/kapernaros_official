@@ -1,4 +1,4 @@
-console.log('hello world')
+console.log('hello world 4')
 
 const hambMenu = document.querySelector('.hamburger-menu') as HTMLElement
 const navMenu = document.getElementById('navMenu') as HTMLElement
@@ -68,6 +68,19 @@ const observeInView = (selectorClass: string, offset = 0) => {
     )
     document.querySelectorAll(selectorClass).forEach(el => observer.observe(el))
 }
+const removeObserveInView = (selectorClass: string, offset = 0) => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    entry.target.classList.remove('in-view');
+                }
+            })
+        },
+        { rootMargin: `${offset}px 0px` }
+    )
+    document.querySelectorAll(selectorClass).forEach(el => observer.observe(el))
+}
 
 
 observeInView('.bioLandingPicContainer img', -100)
@@ -76,6 +89,12 @@ observeInView('.singleCard', -100)
 observeInView('#imgTransition', -100)
 observeInView('.flip-icon', 0)
 observeInView('.flip-toggle ', 0)
+observeInView('.serviceTextBx ', 100)
+removeObserveInView('.serviceTextBx ', 100)
+observeInView('.singleServiceWrapper ', 0)
+removeObserveInView('.singleServiceWrapper ', 0)
+observeInView('#imgHero ', 100)
+removeObserveInView('#imgHero ', 0)
 
 const container = document.querySelector('#bigPic') as HTMLDivElement
 let allNotActiveTitles = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>

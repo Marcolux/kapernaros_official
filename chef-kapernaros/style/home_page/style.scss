@@ -8,7 +8,7 @@ html {
 body {
 	height: 100vh;
 	overflow-y: auto;
-	position: relative;
+	position: relative; 
 }
 
 .titlesChef {
@@ -36,13 +36,13 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom;
-	#landingMenu {
-		z-index: 5;
+	#landingMenu { z-index: 5; }
+	.navBar.biggerScreen {
+		padding-bottom: 0vh;
+		padding-top: 0vh;
 	}
-
 	.linkContainer {
 		align-items: end;
-		border-bottom: 1px solid #000;
 		font: var( --navFont);
 		justify-content: right !important;
 		width: fit-content;
@@ -133,7 +133,7 @@ body {
 		.bioLandingTextWrapper {
 			display: flex;
 			flex-direction: column;
-			font-family: 'Ledger';
+			font-family: var(--body-App-fontFamily);
 			font-size: 20px;
 			font-weight: 400;
 			justify-content: center;
@@ -1228,7 +1228,7 @@ $--color-5: #C4B980;
 	place-items: center;
   
   	p {
-		font-family: "Ledger";
+		font-family: var(--body-App-fontFamily);
 		margin: auto;
 		text-transform: uppercase;
 		background: 

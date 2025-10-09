@@ -55,7 +55,7 @@
   border-radius: 6px;
   position: absolute;
   top: 30vh;
-  font-family: "Ledger";
+  font-family: var(--body-App-fontFamily);
   font-size: 16px;
   color: #000000;
   border: 1px solid #b59b07;
@@ -64,7 +64,7 @@
 }
 #contactPage #chefForm #myForm input {
   height: 23px;
-  font-family: "Ledger";
+  font-family: var(--body-App-fontFamily);
   font-size: 16px;
   color: #000000;
   background-color: transparent;
@@ -78,7 +78,7 @@
 }
 #contactPage #chefForm #myForm select {
   height: 28px;
-  font-family: "Ledger";
+  font-family: var(--body-App-fontFamily);
   font-size: 16px;
   color: #000000;
   border: 1px solid #b59b07;
@@ -93,7 +93,7 @@
 }
 #contactPage #chefForm #myForm textarea {
   resize: none;
-  font-family: "Ledger";
+  font-family: var(--body-App-fontFamily);
   font-size: 16px;
   background-color: transparent;
   border: 1px solid #b59b07;
@@ -198,7 +198,7 @@
     height: -moz-fit-content;
     height: fit-content;
     background-color: rgba(255, 255, 255, 0.9803921569);
-    font-family: "Ledger";
+    font-family: var(--body-App-fontFamily);
     font-size: 16px;
     color: #b59b07;
     border: 1px solid rgba(114, 114, 114, 0.1333333333);
@@ -207,7 +207,7 @@
   }
   #contactPage #chefForm #myForm input {
     height: 25px;
-    font-family: "Ledger";
+    font-family: var(--body-App-fontFamily);
     font-size: 16px;
     color: #000000;
     background-color: transparent;
@@ -229,7 +229,7 @@
   }
   #contactPage #chefForm #myForm textarea {
     resize: none;
-    font-family: "Ledger";
+    font-family: var(--body-App-fontFamily);
     font-size: 16px;
     background-color: transparent;
     border: 1px solid #b59b07;

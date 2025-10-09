@@ -22,7 +22,7 @@
     --navbar-before-color: #CDAA7F;
 
     /*==== BODY ====*/
-    --body-App-fontFamily: 'Prata';
+    --body-App-fontFamily: 'Inter';
 
     /*==== FOOTER ====*/
     --footer-height: 60px;
@@ -31,7 +31,7 @@
     --navBarTextColor: #000;
     --navBtnBackGround: #C4B980;
     --navBtnBackGroundDK: #000;
-    --navFont: normal normal 500 20px 'Ledger';
+    --navFont: normal normal 500 20px var(--navbar-fontFamily);
     --primaryColor: #897400;
     --primaryColorLight: #00000090;
     // --secondaryColor: #B59A07;

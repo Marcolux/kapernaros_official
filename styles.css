@@ -34619,8 +34619,8 @@
 }
 /*# sourceMappingURL=settings.css.map */
 @font-face {
-  font-family: 'Ledger';
-  src: url("../../fonts/ledger/Ledger-Regular.ttf");
+  font-family: var(--body-App-fontFamily);
+  src: url("../../fonts/ledger/var(--body-App-fontFamily)-Regular.ttf");
 }
 
 @font-face {
@@ -34728,7 +34728,7 @@
 }
 
 .font-ledger {
-  font-family: 'Ledger' !important;
+  font-family: var(--body-App-fontFamily) !important;
 }
 
 .font-bebas-neue {
