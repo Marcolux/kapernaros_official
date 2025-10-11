@@ -39,6 +39,9 @@
   min-height: 480px;
   width: 40%;
 }
+#bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideDescription #slideText p {
+  color: #fff;
+}
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide #slideDescription i {
   cursor: pointer;
   font-size: 68px !important;
@@ -567,6 +570,9 @@
     background-color: rgba(0, 0, 0, 0.6392156863);
     padding: 10px !important;
     font-size: 14px;
+  }
+  #carouselSec #carousel .singleCarouselSlide #slideDescription #slideText p {
+    color: #fff !important;
   }
   #carouselSec #carousel .singleCarouselSlide #slideDescription i {
     font-size: 45px !important;

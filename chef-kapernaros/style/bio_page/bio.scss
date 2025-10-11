@@ -33,6 +33,11 @@ $primaryColor: #f8f8f5;
                         color: #FFFFFF;
                         min-height: 480px;
                         width: 40%;
+                        #slideText {
+                            p{
+                                color: #fff;
+                            }
+                        }
                         i {
                             cursor: pointer;
                             font-size: 68px !important;
@@ -555,6 +560,9 @@ $primaryColor: #f8f8f5;
                         background-color: #000000a3;
                         padding: 10px !important;
                         font-size: 14px;
+                        p {
+                            color: #fff !important;
+                        }
                     }
                     i{
                         font-size: 45px !important;
