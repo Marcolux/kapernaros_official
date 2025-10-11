@@ -1,0 +1,34 @@
+/* =============================================================================== */   
+$sm-min-breakpoint: 768px;
+$md-min-breakpoint: 1000px;
+$lg-min-breakpoint: 1200px;
+$xl-min-breakpoint: 1400px;
+$appHeader-height: 60px;
+$mobileKeyboardOpen-height: 150px;
+
+$xs-max-breakpoint: $sm-min-breakpoint - 1;
+$sm-max-breakpoint: $md-min-breakpoint - 1;
+$md-max-breakpoint: $lg-min-breakpoint - 1;
+$lg-max-breakpoint: $xl-min-breakpoint - 1;
+
+$directionlist: t b l r x y;
+
+$breakpointmap : (
+"": "min-width:1px",
+-xs: "min-width:1px",
+-xs-down: "max-width:"$xs-max-breakpoint,
+-sm: "min-width:"$sm-min-breakpoint,
+-sm-down: "max-width:"$sm-max-breakpoint,
+-md: "min-width:"$md-min-breakpoint,
+-md-down: "max-width:"$md-max-breakpoint,
+-lg: "min-width:"$lg-min-breakpoint,
+-lg-down: "max-width:"$lg-max-breakpoint,
+-xl: "min-width:"$xl-min-breakpoint
+);
+
+/* === Font Sizes From 8px to 50px === */
+@each $classlabel, $mediaquery in $breakpointmap {
+	@for $i from 8 through 50 {
+		.fontSize#{$i}#{$classlabel} {font-size: $i + px!important;}
+	}
+}

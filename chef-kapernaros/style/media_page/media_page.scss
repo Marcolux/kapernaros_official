@@ -8,9 +8,9 @@ $shadowInset: #949494;
     flex-direction: column;
     align-items: center;
     margin-top: 14vh;
-    // height: 75vh;
+    
     #sectionPic{
-        // border: 1px solid #aeaeae3b;
+        
         border: 1px solid $gold;
         display: flex;
         width: fit-content !important;
@@ -20,7 +20,7 @@ $shadowInset: #949494;
         align-items: center;
     }
     #mediaSelectorCont{
-        // box-shadow: 5px 5px $gold;
+        
         z-index: 2;
         height: 75vh;
         background-color: $background ;
@@ -28,28 +28,28 @@ $shadowInset: #949494;
             background: #ffffff;
             height: fit-content;
             color: #000000;
-            font-family: 'Inter';
-            // border: 1px solid #aeaeae65;
+            font-family: 'Ledger';
             border: 1px solid $gold;
             box-shadow:  6px 6px 10px $shadowInset inset,
                         -6px -6px 10px $shadowInset inset;
             .picSections{
                 width: fit-content;
                 li{
-                    font-size: 17px;
+                    font-size: 16px;
                     text-decoration: none;
                     list-style: none ;
                     transition: scale .3s ease;
                     
                     &:not(.active):hover{
                         cursor: pointer;
-                        scale: 1.1;
+                        scale: 1.02;
                         font-weight: 600;
                     }
                     &.active{
                         color: $gold;
                         font-weight: 600;
-                        scale: 1.1;
+                        scale: 1;
+                        letter-spacing: 0.03em;
                     }
                 }
             }
@@ -106,10 +106,8 @@ $shadowInset: #949494;
                         height: 65vh;
                         padding: 10px;
                         transition: all 0.3s ease-in-out;
-                        // border: 1px solid #aeaeae5a;
                         border: 1px solid $gold;
                         background-color: #ffffff;
-                        // box-shadow:  6px 6px 6px #aeaeae;
                         box-shadow:  6px 6px 10px $shadowInset inset,
                         -6px -6px 10px $shadowInset inset;
                         margin: 0px 20px;
@@ -134,6 +132,21 @@ $shadowInset: #949494;
                                 border-radius: 10px;
                                 box-shadow:  6px 6px 6px #aeaeae;
                             }
+                        }
+                        .mediaCaption{
+                            position: absolute;
+                            bottom: 5%;
+                            right: 87%;
+                            width: 73%;
+                            text-align: center;
+                            color: #f8f8f5;
+                            background-color: #b59b0792;
+                            font-size: 20px;
+                            // text-shadow:     
+                            // -1px -1px 1px #000000e4,
+                            // 1px -1px 1px #000000e4,
+                            // -1px 1px 1px #000000e4,
+                            // 1px 1px 1px #000000e4;
                         }
                     }
                     &.fullscreen-mode{
@@ -291,9 +304,15 @@ $shadowInset: #949494;
                                 width: 100%;
                                 padding: 0px;
                                 margin: 10px !important;
+
                                 .picToEn{
                                     max-width: 300px;
                                     max-height: 360px;
+                                }
+                                .mediaCaption{
+                                    bottom: 15%;
+                                    width: 100%;
+                                    right: 100%;
                                 }
                             }
                             &.fullscreen-mode{
@@ -323,6 +342,20 @@ $shadowInset: #949494;
 @media only screen and (max-width: 700px) {
     body{
         width: 100% !important;
+        .maxWidth1500{
+            padding: 0px !important;
+            margin-top: 30px !important;
+            p{
+                margin-top: 0px !important;
+                margin-bottom: 10px !important;
+                &.textGold {
+                    font-size: 20px !important;
+                }
+            }
+        }
+        .fontSize18{
+            font-size: 16px !important;
+        }
         #media_section{
      
             display: flex;
@@ -425,6 +458,12 @@ $shadowInset: #949494;
                                     max-width: 300px;
                                     max-height: 360px;
                                 }
+                                .mediaCaption{
+                                    bottom: 15%;
+                                    right: 0% !important;
+                                    width: 100%;
+                                    background-color: #000000bb;
+                                }
                             }
                             &.fullscreen-mode{
                                 .picToEn{ object-fit: contain; }
@@ -446,6 +485,9 @@ $shadowInset: #949494;
                 aspect-ratio: 1.5/1;
                 margin: 10px 0px !important;
             }
+        }
+        .btnPrimary {
+            margin-left: 0px !important;
         }
     }
 }

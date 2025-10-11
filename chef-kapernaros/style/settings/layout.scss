@@ -1,0 +1,156 @@
+/* =============================================================================== */ 
+/* =============================================================================== */   
+/* === LAYOUT RULES === */
+$sm-min-breakpoint: 768px;
+$md-min-breakpoint: 1000px;
+$lg-min-breakpoint: 1200px;
+$xl-min-breakpoint: 1400px;
+$appHeader-height: 60px;
+$mobileKeyboardOpen-height: 150px;
+
+$xs-max-breakpoint: $sm-min-breakpoint - 1;
+$sm-max-breakpoint: $md-min-breakpoint - 1;
+$md-max-breakpoint: $lg-min-breakpoint - 1;
+$lg-max-breakpoint: $xl-min-breakpoint - 1;
+
+$directionlist: t b l r x y;
+
+$breakpointmap : (
+"": "min-width:1px",
+-xs: "min-width:1px",
+-xs-down: "max-width:"$xs-max-breakpoint,
+-sm: "min-width:"$sm-min-breakpoint,
+-sm-down: "max-width:"$sm-max-breakpoint,
+-md: "min-width:"$md-min-breakpoint,
+-md-down: "max-width:"$md-max-breakpoint,
+-lg: "min-width:"$lg-min-breakpoint,
+-lg-down: "max-width:"$lg-max-breakpoint,
+-xl: "min-width:"$xl-min-breakpoint
+);
+/* ============================== */
+/* === FLEX === */
+
+@each $classlabel, $mediaquery in $breakpointmap {
+	@media(#{$mediaquery}) {
+		/* Orientation */
+		.flex-column#{$classlabel} {flex-direction: column !important; -webkit-flex-flow: column !important;}
+		.flex-columnReverse#{$classlabel} {flex-direction: column-reverse !important; -webkit-flex-flow: column-reverse !important;}
+		.flex-row#{$classlabel} {flex-direction: row !important; -webkit-flex-flow: row !important;}
+		.flex-rowReverse#{$classlabel} {flex-direction: row-reverse !important; -webkit-flex-flow: row-reverse !important;}
+
+		/* Justification */
+		.flex-justifyContent-start#{$classlabel} {justify-content: flex-start !important; -webkit-justify-content: flex-start !important;}
+		.flex-justifyContent-spaceAround#{$classlabel} {justify-content: space-around !important; -webkit-justify-content: space-around !important;}
+		.flex-justifyContent-spaceBetween#{$classlabel} {justify-content: space-between !important; -webkit-justify-content: space-between !important;}
+		.flex-justifyContent-center#{$classlabel} {justify-content: center !important; -webkit-justify-content: center !important;}
+		.flex-justifyContent-end#{$classlabel} {justify-content: flex-end !important; -webkit-justify-content: flex-end !important;}
+
+		/* Align Items (affects main-axis) */
+		.flex-alignItems-end#{$classlabel} {align-items: flex-end !important; -webkit-align-items: flex-end !important;}
+		.flex-alignItems-center#{$classlabel} {align-items: center !important; -webkit-align-items: center !important;}
+		.flex-alignItems-stretch#{$classlabel} {align-items: stretch !important; -webkit-align-items: stretch !important;}
+		.flex-alignItems-start#{$classlabel} {align-items:flex-start !important;}
+
+		/* Align Content (affects cross-axis i.e.overflow) */
+		.flex-alignContent-start#{$classlabel} {align-content:flex-start !important; -webkit-align-content:flex-start !important;}
+		.flex-alignContent-center#{$classlabel} {align-content:center !important; -webkit-align-content:center !important;}
+		.flex-alignContent-spaceBetween#{$classlabel} {align-content:space-between !important; -webkit-align-content:space-between !important;}
+		.flex-alignContent-spaceAround#{$classlabel} {align-content:space-around !important; -webkit-align-content:space-around !important;}
+		.flex-alignContent-stretch#{$classlabel} {align-content:stretch !important; -webkit-align-content:stretch !important;}
+		.flex-alignContent-end#{$classlabel} {align-content:flex-end !important; -webkit-align-content:flex-end !important;}
+
+
+		/* Misc */
+		/* flex-basis-100 note: Extra class can be used with flex-fillSpace to eliminate double scrollbars in IE in certain situations */
+		.flex-basis-100#{$classlabel} {-webkit-flex-basis: 100% !important; flex-basis: 100% !important;}
+		.flex-wrap#{$classlabel} {flex-wrap:wrap !important;}
+		.flex-noShrink#{$classlabel} {flex-shrink:0 !important; -webkit-flex-shrink:0 !important;}
+		.flex#{$classlabel} {display: -webkit-box; display: -ms-flexbox; display: flex;}
+		.flex-override#{$classlabel} {display: -webkit-box !important; display: -ms-flexbox !important; display: flex !important;}
+		.flex-fillSpace#{$classlabel} {-webkit-flex: 1 1 auto; flex: 1 1 auto;}
+
+		.flex-order-0#{$classlabel} {order:0;}
+		.flex-order-1#{$classlabel} {order:1;}
+		.flex-order-2#{$classlabel} {order:2;}
+		.flex-order-3#{$classlabel} {order:3;}
+		.flex-order-4#{$classlabel} {order:4;}
+		.flex-order-5#{$classlabel} {order:5;}
+		.flex-order-6#{$classlabel} {order:6;}
+
+		
+		*[class^='flex'].flex-column > .col#{$classlabel}-12 {
+			-ms-flex: 1 1 100%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-11 {
+			-ms-flex: 1 1 91.66666667%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-10 {
+			-ms-flex: 1 1 83.33333333%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-9 {
+			-ms-flex: 1 1 75%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-8 {
+			-ms-flex: 1 1 66.66666667%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-7 {
+			-ms-flex: 1 1 58.33333333%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-6 {
+			-ms-flex: 1 1 50%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-5 {
+			-ms-flex: 1 1 41.66666667%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-4 {
+			-ms-flex: 1 1 33.33333333%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-3 {
+			-ms-flex: 1 1 25%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-2 {
+			-ms-flex: 1 1 16.66666667%;
+		}
+		*[class^='flex'].flex-column > .col#{$classlabel}-1 {
+			-ms-flex: 1 1 8.33333333%;
+		}
+		
+		.col#{$classlabel}-12 {
+			width: 100%;
+		}
+		.col#{$classlabel}-11 {
+			width: 91.66666667%;
+		}
+		.col#{$classlabel}-10 {
+			width: 83.33333333%;
+		}
+		.col#{$classlabel}-9 {
+			width: 75%;
+		}
+		.col#{$classlabel}-8 {
+			width: 66.66666667%;
+		}
+		.col#{$classlabel}-7 {
+			width: 58.33333333%;
+		}
+		.col#{$classlabel}-6 {
+			width: 50%;
+		}
+		.col#{$classlabel}-5 {
+			width: 41.66666667%;
+		}
+		.col#{$classlabel}-4 {
+			width: 33.33333333%;
+		}
+		.col#{$classlabel}-3 {
+			width: 25%;
+		}
+		.col#{$classlabel}-2 {
+			width: 16.66666667%;
+		}
+		.col#{$classlabel}-1 {
+			width: 8.33333333%;
+		}
+
+	}
+}

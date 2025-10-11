@@ -1,0 +1,84 @@
+// Function to generate margin and padding classes
+/* =============================================================================== */  
+/* =============================================================================== */  
+/* Margin & padding */
+$sm-min-breakpoint: 768px;
+$md-min-breakpoint: 1000px;
+$lg-min-breakpoint: 1200px;
+$xl-min-breakpoint: 1400px;
+$appHeader-height: 60px;
+$mobileKeyboardOpen-height: 150px;
+
+$xs-max-breakpoint: $sm-min-breakpoint - 1;
+$sm-max-breakpoint: $md-min-breakpoint - 1;
+$md-max-breakpoint: $lg-min-breakpoint - 1;
+$lg-max-breakpoint: $xl-min-breakpoint - 1;
+
+$directionlist: t b l r x y;
+
+$breakpointmap : (
+"": "min-width:1px",
+-xs: "min-width:1px",
+-xs-down: "max-width:"$xs-max-breakpoint,
+-sm: "min-width:"$sm-min-breakpoint,
+-sm-down: "max-width:"$sm-max-breakpoint,
+-md: "min-width:"$md-min-breakpoint,
+-md-down: "max-width:"$md-max-breakpoint,
+-lg: "min-width:"$lg-min-breakpoint,
+-lg-down: "max-width:"$lg-max-breakpoint,
+-xl: "min-width:"$xl-min-breakpoint
+);
+
+@each $classlabel, $mediaquery in $breakpointmap {
+	@media (#{$mediaquery}) {
+		@for $i from 0 through 10 {
+			$directionExpanded: none;
+			
+			.m-#{$i * 5}#{$classlabel} {margin: $i * 5 + px!important;}
+			
+			@each $direction in $directionlist {
+				@if $direction == t {$directionExpanded: top;}
+				@if $direction == r {$directionExpanded: right;}
+				@if $direction == b {$directionExpanded: bottom;}
+				@if $direction == l {$directionExpanded: left;}
+				
+				@if $direction == x {
+					.m#{$direction}-#{$i * 5}#{$classlabel} {margin-left: $i * 5 + px!important; margin-right: $i * 5 + px!important;}
+					
+				} @else if $direction == y {
+					.m#{$direction}-#{$i * 5}#{$classlabel} {margin-top: $i * 5 + px!important; margin-bottom: $i * 5 + px!important;} 
+					
+				} @else {
+				.m#{$direction}-#{$i * 5}#{$classlabel} {margin-#{$directionExpanded}: $i * 5 + px!important;}
+				
+				}
+			} 
+		}
+
+		@for $i from 0 through 10 {
+			@for $i from 0 through 10 {
+			$directionExpanded: none;
+			
+			.p-#{$i * 5}#{$classlabel} {padding: $i * 5 + px!important;}
+			
+			@each $direction in $directionlist {
+				@if $direction == t {$directionExpanded: top;}
+				@if $direction == r {$directionExpanded: right;}
+				@if $direction == b {$directionExpanded: bottom;}
+				@if $direction == l {$directionExpanded: left;}
+				
+				@if $direction == x {
+					.p#{$direction}-#{$i * 5}#{$classlabel} {padding-left: $i * 5 + px!important; padding-right: $i * 5 + px!important;} 
+					
+				} @else if $direction == y {
+					.p#{$direction}-#{$i * 5}#{$classlabel} {padding-top: $i * 5 + px!important; padding-bottom: $i * 5 + px!important;} 
+					
+				} @else {
+				.p#{$direction}-#{$i * 5}#{$classlabel} {padding-#{$directionExpanded}: $i * 5 + px!important;} 
+				
+				}
+			} 
+		} 
+		}
+	}
+}

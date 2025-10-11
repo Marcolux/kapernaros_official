@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Chef Tables page for Chef Kapernaros website. Collections of Chef Nikolaos Kapernaros plates and description.">
+
+        <!-- Style -->
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/combined.min.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/settings/common_style/common-style.css" media="screen"/>
+
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/home_page/style.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/chef_table/chef_table.css" media="screen"/>
+    
+        <!-- Logo -->
+        <!-- Standard favicon -->
+        <link rel="icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="/chef-kapernaros/images/favicon/apple-touch-icon.png"> 
+        <link rel="icon" type="image/png" sizes="32x32" href="/chef-kapernaros/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/chef-kapernaros/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/chef-kapernaros/images/favicon/site.webmanifest">
+        
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="all">
+
+        <!-- Title -->
+        <title>Chef Kapernaros</title>
+
+    </head>
+
+    <body id="chefTablePage">
+        <nav class="navBar flex biggerScreen">
+            <div id="navBgScn">
+                <a href="../index.html" class="logoNav">
+                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_800/v1709549295/Niko/chef-logo_umssco.png" alt="Chef Kapernaros Nav Logo">
+                </a>
+                <div class="flex flex-justifyContent-start linkContainer">
+                    <a href="../pages/bio.html">Bio</a>
+                    <a href="../pages/services.html">Services</a>
+                    <a href="../pages/chef-table.html" class="currentTitle">The Chef's Table</a>
+                    <a href="../pages/events.html"><span>Events</span></a>
+                    <a href="../pages/contact-the-chef.html">Contact</a>
+                </div>
+            
+                <div id="socialMedia" class="flex flex-justifyContent-start flex-alignItems-center" >
+                    <div class="flex flex-alignItems-center flex-justifyContent-end">
+                        <a class="mr-20" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
+                            <i class="fa-brands fa-instagram noHighlight"></i>
+                        </a>
+                        <a class="mr-20" target="_blank" href="https://www.youtube.com/channel/UClMP5KSZc2fR8cqTkUV4CCw"  aria-label="Visit YouTube channel">
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-square-youtube fa-lg noHighlight"></i>
+                        </a>
+                        <!-- <div id="landingAd">
+                            <div id="DuckImg"></div>
+                                <div id="eventTextBox" class="flex flex-column">
+                                    <div class="flex mb-5">
+                                        <p class="my-0 shadowGold">Duck Sel x Chef Nikolaos Kapernaros</p>
+                                    </div>
+                                    <div class="flex flex-alignItems-center flex-justifyContent-center">
+                                        <a id="eventLink" href="https://www.exploretock.com/ducksel/event/502883/duck-sel-x-chef-nikolaos-kapernaros" target="_blank">Book Now</a>
+                                        <p class="my-0 ml-5">an exclusive dining experience</p>
+                                    </div>
+                                </div>
+                            <div id="KaperImg"></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hambContainer">
+                <div class="hamburger-menu">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </div>
+            </div>
+        
+            <div id="navMenu" class="hide pl-15 pr-20">
+                <a href="../index.html" class="logoNav flex col-12 flex-justifyContent-center">
+                    <img class="ml-40" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_800/v1709549295/Niko/chef-logo_umssco.png" alt="Chef Kapernaros Nav Logo">
+                </a>
+                <a href="../pages/bio.html">Bio</a>
+                <a href="../pages/services.html">Services</a>
+                <a href="../pages/chef-table.html">The Chef's Table</a>
+                <a href="../pages/events.html"><span>Events</span></a>
+                <a href="../pages/contact-the-chef.html">Contact</a>
+                <!-- <div id="landingAd">
+                    <div id="DuckImg"></div>
+                        <div id="eventTextBox" class="flex flex-column">
+                            <div class="flex mb-5">
+                                <p class="my-0 shadowGold">Duck Sel x Chef Nikolaos Kapernaros</p>
+                            </div>
+                            <div class="flex flex-alignItems-center linkWrap">
+                                <a id="eventLink" href="https://www.exploretock.com/ducksel/event/502883/duck-sel-x-chef-nikolaos-kapernaros" target="_blank">Book Now</a>
+                                <p class="my-0 ml-5">an exclusive dining experience</p>
+                            </div>
+                        </div>
+                    <div id="KaperImg"></div>
+                </div> -->
+            </div>
+            
+        </nav>
+        <section id="chefTableSec" style="margin-top: 15vh;">
+
+            <div class="p-40 maxWidth1500 chefTableIntro">
+                <p class="titlesChef">The Chef’s Table</p>
+                <p class="mb-0 font-ledger">
+                    <strong>Delight in flavors that capture the essence of Greek cuisine, infused with the culmination of my global experiences and culinary expertise.</strong>
+                    <br>Join me for an unforgettable dining experience that transcends borders and celebrates the art of food at The Chef’s Table.
+                </p>
+            </div>
+
+            <div class="col-12 flex flex-wrap" id="tablePicContainer">
+                <div class="flex p-30 col-12 flex flex-wrap flex-justifyContent-center cardContainer">
+
+                    <article class="flip-card" tabindex="0" id="card1" aria-label="Kapernaros Card: chef table card 1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129257/Niko/chef_table/viber_image_2024-01-11_23-56-08-695_uykxjr.webp" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="flip-card" tabindex="0" id="card2" aria-label="Kapernaros Card: chef table card 2">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129257/Niko/chef_table/viber_image_2024-01-11_23-56-08-645_krti6p.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">Lobster & Truffles Bubble</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Mushrooms Mousse,
+                                    Button Portabello King Trumpet Shiitake,
+                                    Lobster Orzo,
+                                    Lobster Medallion,
+                                    Black Truffles,
+                                    Extra Virgin Greek Olive Oil,
+                                    Parmesan
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card3" aria-label="Kapernaros Card: chef table card 3">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129257/Niko/chef_table/viber_image_2024-01-11_23-56-08-623_dmaj4p.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">From the Field & the Sea</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Poached Chilean Seabass,
+                                    Vanilla Risotto Cake,
+                                    Red Beets Mousse,
+                                    Mediterranean Brunoise,
+                                    Crispy Basil,
+                                    Chef's Greek Evoo
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card4" aria-label="Kapernaros Card: chef table card 4">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129257/Niko/chef_table/viber_image_2024-01-11_23-56-08-596_blopq6.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">Honey & Peppercorns</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Saute Fillet Mignon,
+                                    Pumpkin Puree,
+                                    Tomato Confit,
+                                    Honeycomb,
+                                    Sauce Au Poivre,
+                                    Micro Basil
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card5" aria-label="Kapernaros Card: chef table card 5">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129256/Niko/chef_table/viber_image_2024-01-11_23-53-34-954_xlo4ne.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card6" aria-label="Kapernaros Card: chef table card 6">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129253/Niko/chef_table/viber_image_2024-01-11_23-53-34-921_udqnv5.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card7" aria-label="Kapernaros Card: chef table card 7">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129221/Niko/chef_table/viber_image_2024-01-11_23-53-34-905_gjxng3.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card8" aria-label="Kapernaros Card: chef table card 8">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129212/Niko/chef_table/viber_image_2024-01-11_23-53-34-839_rohcs2.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card9" aria-label="Kapernaros Card: chef table card 9">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129212/Niko/chef_table/viber_image_2024-01-11_23-53-34-798_huzlv0.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">Classy</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Steak Tartare,
+                                    Prime Beef Fillet,
+                                    Housemade Cured Cucumber,
+                                    Onion,
+                                    Graviera,
+                                    Garlic,
+                                    Mustard,
+                                    Lemon,
+                                    Peppers,
+                                    Finochio,
+                                    Microgreens,
+                                    Chef's Extra Virgin Greek Olive Oil
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card10" aria-label="Kapernaros Card: chef table card 10">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129212/Niko/chef_table/viber_image_2024-01-11_23-53-34-759_l0hdcj.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card11" aria-label="Kapernaros Card: chef table card 11">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129213/Niko/chef_table/viber_image_2024-01-11_23-53-34-876_axt05t.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card12" aria-label="Kapernaros Card: chef table card 12">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129212/Niko/chef_table/viber_image_2024-01-11_23-53-34-649_ihor7w.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Forest</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Fillet of Lamb,
+                                    Trumpet,
+                                    Shitake,
+                                    Button Mushrooms
+                                    Potatoes,
+                                    Herbs,
+                                    Microgreens,
+                                    Metaxa Sauce
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card13" aria-label="Kapernaros Card: chef table card 13">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129212/Niko/chef_table/viber_image_2024-01-11_23-53-34-678_ds7nbq.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Sunset</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    King crab,
+                                    Red & Yellow Beets,
+                                    Fruits,
+                                    Pineapple Glazed Mayonnaise,
+                                    Berries,
+                                    Wasabi Lemon Vinaigrette,
+                                    Greek Yogurt,
+                                    Micro Cilantro
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card14" aria-label="Kapernaros Card: chef table card 14">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129210/Niko/chef_table/viber_image_2024-01-11_23-53-34-610_nb4wao.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">Feelings</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    King Crab,
+                                    Carpaccio Beets,
+                                    Fruits,
+                                    Pickled Berries,
+                                    Red Wine Vinegraite,
+                                    Herbs Powder,
+                                    Micro Cilantro
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card15" aria-label="Kapernaros Card: chef table card 15">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129209/Niko/chef_table/viber_image_2024-01-11_23-53-34-589_gfpojh.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Field</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Fillet of Pork,
+                                    Prosciutto,
+                                    Trahanoto,
+                                    Peas Puree,
+                                    Stifado Onions,
+                                    Feta Crouton,
+                                    Red Wine Sauce
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card16" aria-label="Kapernaros Card: chef table card 16">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129209/Niko/chef_table/viber_image_2024-01-11_23-53-34-566_byaaw8.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Dream</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Marinated Shrimp,
+                                    Ouzo,
+                                    Lemon,
+                                    Evoo,
+                                    Tabbouleh Salad,
+                                    Orange Gel,
+                                    Greek Wasabi Yogurt,
+                                    Chive's Oil,
+                                    Salmon Caviar,
+                                    Micro Cilantro
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card17" aria-label="Kapernaros Card: chef table card 17">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129209/Niko/chef_table/viber_image_2024-01-11_23-53-34-549_ifrpht.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card18" aria-label="Kapernaros Card: chef table card 18">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129209/Niko/chef_table/viber_image_2024-01-11_23-53-34-503_ktz2jt.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card19" aria-label="Kapernaros Card: chef table card 19">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129207/Niko/chef_table/viber_image_2024-01-11_23-53-34-475_xupabh.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card20" aria-label="Kapernaros Card: chef table card 20">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129207/Niko/chef_table/viber_image_2024-01-11_23-53-34-446_bjbazq.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card21" aria-label="Kapernaros Card: chef table card 21">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129207/Niko/chef_table/viber_image_2024-01-11_23-53-34-431_zo71uq.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card22" aria-label="Kapernaros Card: chef table card 22">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129206/Niko/chef_table/viber_image_2024-01-11_23-53-34-405_ccatfj.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">Under the Wave</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Saute Royal Scallop,
+                                    Spicy Corn Mousselin,
+                                    Peach Marmalade,
+                                    Salmon Caviar,
+                                    Crispy Prosciutto,
+                                    Jalapeños,
+                                    Chives Oil,
+                                    Micro Cilantro
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card23" aria-label="Kapernaros Card: chef table card 23">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129206/Niko/chef_table/viber_image_2024-01-11_23-53-34-295_nuuxza.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Land Met the Sea</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Ouzo Cured Salmon,
+                                    Spinach,
+                                    Mediterranean Mussels,
+                                    Pickled Fenel,
+                                    Tomatoes,
+                                    Greek Yogurt Mousse,
+                                    Micro Amaranth,
+                                    Orange Caramel
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card24" aria-label="Kapernaros Card: chef table card 24">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129205/Niko/chef_table/viber_image_2024-01-11_23-53-34-272_qko8t8.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Coral</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Marinated Shrimps,
+                                    Tabbouleh Salad
+                                    Beets,
+                                    Blood Orange,
+                                    Greek Yogurt,
+                                    Coral Tuile,
+                                    Saffron Tomato Marmalade,
+                                    Micro Cilantro
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card25" aria-label="Kapernaros Card: chef table card 25">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129205/Niko/chef_table/viber_image_2024-01-11_23-53-34-248_dt8wxa.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Volcano</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Aged Skirt Steak,
+                                    Graviera Parmesan Mousse,
+                                    Fingerling Potatoes,
+                                    Carrots,
+                                    Tomato Brunoise & Herbs,
+                                    Chives Oil
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card26" aria-label="Kapernaros Card: chef table card 26">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129204/Niko/chef_table/viber_image_2024-01-11_23-53-34-221_t0eupy.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">La Tartelette</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Tartelette,
+                                    Spicy Herbed Pumpkin Marmalade,
+                                    Tomato Brunoise,
+                                    Goat Cheese Mousse,
+                                    Thyme & Black Pepper,
+                                    Micro Greens Salad
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card27" aria-label="Kapernaros Card: chef table card 27">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129204/Niko/chef_table/viber_image_2024-01-11_23-53-34-098_hj4rsc.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">Under the Sea</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Sauté Scallops,
+                                    Corn Mousseline,
+                                    Jalapeños Pepper,
+                                    Sweet Potato,
+                                    Pumpkin Creme Brûlée,
+                                    Ouzo Honey Fluid Gel,
+                                    Quince Marmalade,
+                                    Black Truffle,
+                                    Grape Tomatoes,
+                                    Crispy Prosciutto
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card28" aria-label="Kapernaros Card: chef table card 28">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129204/Niko/chef_table/viber_image_2024-01-11_23-53-34-179_jr8b91.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Cube</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Poached in Orange Juice,
+                                    Pumpkin Cube,
+                                    Orange Cinnamon Ginger,
+                                    Fluid Gel,
+                                    Greek Yogurt,
+                                    Micro Amaranth,
+                                    Red Roses Powder                                
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card29" aria-label="Kapernaros Card: chef table card 29">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129204/Niko/chef_table/viber_image_2024-01-11_23-53-34-119_cikmmq.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card30" aria-label="Kapernaros Card: chef table card 30">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129203/Niko/chef_table/chef-table-6_og17z4.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card31" aria-label="Kapernaros Card: chef table card 31">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129202/Niko/chef_table/chef-table-5_ysan3m.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">Bread Made from Scratch</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Olives, 
+                                    Butter & Greek Extra Virgin Olive Oil from my Family's Trees
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card32" aria-label="Kapernaros Card: chef table card 32">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129202/Niko/chef_table/chef-table_pxamee.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <!-- <article class="flip-card" tabindex="0" id="card33" aria-label="Kapernaros Card: chef table card 33">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129202/Niko/chef_table/chef-table-4_xggqal.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article> -->
+                
+                    <article class="flip-card" tabindex="0" id="card34" aria-label="Kapernaros Card: chef table card 34">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129201/Niko/chef_table/0-02-01-96d06527b25d1583b2fb580d4006084da26280cdad88f0caeaab336a0c39130e_415f15bcd16fa1ff_e8582a.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card35" aria-label="Kapernaros Card: chef table card 35">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129202/Niko/chef_table/0-02-01-10290162e8916c36ed319d6dff9ef82a9ae927a9a97401e94d594fcbc36282a8_170c167bf26cea00_hk8wmh.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card36" aria-label="Kapernaros Card: chef table card 36">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129202/Niko/chef_table/0-02-01-38244141782d13c751db593f344f68b7ffbc618e2a1717420694320bb7e06f9d_9bcec064b48e79d5_i3mqfx.jpg" alt="Chef Table Picture">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="flip-card" tabindex="0" id="card37" aria-label="Kapernaros Card: chef table card 37">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129201/Niko/chef_table/0-02-01-3c2b1fdb36932913bff18c46c616632b582e27ead6be9a113d09172c07d4269e_240b34c4d0b8029e_wkmy8u.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Breeze</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Fig,
+                                    Compressed Watermelon,
+                                    Smoked Feta Cheese,
+                                    Balsamic Vinegar Pearls,
+                                    Lemon Vinaigrette,
+                                    Micro Basil
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card38" aria-label="Kapernaros Card: chef table card 38">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129201/Niko/chef_table/0-02-01-69e942c599e21f8100c6b094fc157d014fbe7d38d132e42a9cfc440feaaf7d25_b7b12635c3f9f663_gb7usl.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">By the Seaside</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Royal Scallops,
+                                    Tomato,
+                                    Herbs,
+                                    Tabbouleh Salad,
+                                    Haloumi,
+                                    Lemon Fluid Gel
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card39" aria-label="Kapernaros Card: chef table card 39">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129201/Niko/chef_table/0-02-01-09b7eef7896e07d3f732e9d55395c2c429f064ca89e53c71127ee5d28df0582e_e77a47c1a6b948a0_fpquxp.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">The Fisherman's Feast</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">                                    
+                                    Poached Chilean Seabass,
+                                    Vanilla Risotto Cake,
+                                    White Asparagus,
+                                    Trumpet Mushrooms,
+                                    Confit Grape Tomatoes,
+                                    Pickled Burned Onion,
+                                    Crispy Grape Leaf,
+                                    Herbs Oil,
+                                    Red Beets Powder
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="flip-card" tabindex="0" id="card40" aria-label="Kapernaros Card: chef table card 40">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="imgCont">
+                                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715129201/Niko/chef_table/0-02-01-1ec5531e7748286517bc8745e930d229e1d8a6ef3a81eefaa5a7d826df6cb318_37fca80cb24aed30_yvotn5.jpg" alt="Chef Table Picture">
+                                    <div class="hoverWrapper">
+                                        <h1 class="titlesChef">Lobster Pasta</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="cardText my-0 px-40">
+                                    Linguine, 
+                                    Lobster, 
+                                    Bisque, 
+                                    Tomato Herbs, 
+                                    Extra Virgin Greek Olive Oil
+                                </p>
+                            </div>
+                            <button class="flip-toggle p-5" aria-expanded="false" aria-controls="card3">
+                                <svg class="flip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        
+        <footer class="flex flex-alignItems-center flex-justifyContent-spaceBetween px-40 py-20">
+            <div class="flex flex-column flex-justifyContent-end" style="height: 100%;">
+                <div class="flex mb-30">
+                    <a class="mr-20" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a class="mr-20" target="_blank" href="https://www.youtube.com/channel/UClMP5KSZc2fR8cqTkUV4CCw"  aria-label="Visit YouTube channel">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-10 flex" id="webcraftLink">
+                <a class="font-ledger textWhite" href="https://marcolux.github.io/contact_form/" target="_blank" style="text-decoration: none;">Website designed and created by <span class="textGold">Webcraft</span></a>
+            </div>
+            <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_800/v1709722273/Niko/Chef_Kapernaros_logo_white_no_BG_xik49g.png" alt="Chef Kapernaros logo white no BG">
+        </footer>
+
+        <!-- Script -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script defer type="text/javascript" src=../chef-kapernaros/script/main.js></script>
+        <script src="../analytics.js"></script>
+
+    </body>
+
+</html>

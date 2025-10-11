@@ -41,7 +41,7 @@
   height: -moz-fit-content;
   height: fit-content;
   color: #000000;
-  font-family: 'Inter';
+  font-family: 'Ledger';
   border: 1px solid #b59b07;
   -webkit-box-shadow: 6px 6px 10px #949494 inset, -6px -6px 10px #949494 inset;
           box-shadow: 6px 6px 10px #949494 inset, -6px -6px 10px #949494 inset;
@@ -54,7 +54,7 @@
 }
 
 #media_section #mediaSelectorCont #mediaBlackBg .picSections li {
-  font-size: 17px;
+  font-size: 16px;
   text-decoration: none;
   list-style: none;
   -webkit-transition: scale .3s ease;
@@ -63,14 +63,15 @@
 
 #media_section #mediaSelectorCont #mediaBlackBg .picSections li:not(.active):hover {
   cursor: pointer;
-  scale: 1.1;
+  scale: 1.02;
   font-weight: 600;
 }
 
 #media_section #mediaSelectorCont #mediaBlackBg .picSections li.active {
   color: #b59b07;
   font-weight: 600;
-  scale: 1.1;
+  scale: 1;
+  letter-spacing: 0.03em;
 }
 
 #media_section #mediaContainer {
@@ -179,6 +180,17 @@
   border-radius: 10px;
   -webkit-box-shadow: 6px 6px 6px #aeaeae;
           box-shadow: 6px 6px 6px #aeaeae;
+}
+
+#media_section #mediaContainer #mediaShowCont #bigPic #picShowing .picDiv .mediaCaption {
+  position: absolute;
+  bottom: 5%;
+  right: 87%;
+  width: 73%;
+  text-align: center;
+  color: #f8f8f5;
+  background-color: #b59b0792;
+  font-size: 20px;
 }
 
 #media_section #mediaContainer #mediaShowCont #bigPic #picShowing.fullscreen-mode .picToEn {
@@ -368,6 +380,11 @@
     max-width: 300px;
     max-height: 360px;
   }
+  body #media_section #mediaContainer #mediaShowCont #bigPic #picShowing .picDiv .mediaCaption {
+    bottom: 15%;
+    width: 100%;
+    right: 100%;
+  }
   body #media_section #mediaContainer #mediaShowCont #bigPic #picShowing.fullscreen-mode .picToEn {
     -o-object-fit: contain;
        object-fit: contain;
@@ -394,6 +411,20 @@
 @media only screen and (max-width: 700px) {
   body {
     width: 100% !important;
+  }
+  body .maxWidth1500 {
+    padding: 0px !important;
+    margin-top: 30px !important;
+  }
+  body .maxWidth1500 p {
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+  }
+  body .maxWidth1500 p.textGold {
+    font-size: 20px !important;
+  }
+  body .fontSize18 {
+    font-size: 16px !important;
   }
   body #media_section {
     display: -webkit-box;
@@ -545,6 +576,12 @@
     max-width: 300px;
     max-height: 360px;
   }
+  body #media_section #mediaContainer #mediaShowCont #bigPic #picShowing .picDiv .mediaCaption {
+    bottom: 15%;
+    right: 0% !important;
+    width: 100%;
+    background-color: #000000bb;
+  }
   body #media_section #mediaContainer #mediaShowCont #bigPic #picShowing.fullscreen-mode .picToEn {
     -o-object-fit: contain;
        object-fit: contain;
@@ -565,6 +602,9 @@
     min-width: 100%;
     aspect-ratio: 1.5/1;
     margin: 10px 0px !important;
+  }
+  body .btnPrimary {
+    margin-left: 0px !important;
   }
 }
 /*# sourceMappingURL=media_page.css.map */

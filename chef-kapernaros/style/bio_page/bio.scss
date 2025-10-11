@@ -1,219 +1,479 @@
 $primaryColor: #f8f8f5;
-$gold: #b59b07;
-
-#carouselSec{ background: linear-gradient(#FFFFFF,  #F5F5F5); }
-#valueSec{ background: linear-gradient(#F5F5F5,#FFFFFF); }
-
-.carouselContainer {
-    width: 100%;
-    height: 60%;
-    justify-content: center;
-
-    #carousel{
-        width: 100%;
-        height: 80%;
-        max-width: 1500px;
-        min-width: 900px;
-        min-height: 480px;
-        align-items: center;
-        .singleCarouselSlide{
-            position: relative;
-            min-height: 480px;
-            max-height: 550px;
-            width: 90%;
-            box-shadow: 6px 6px 6px #aeaeae;
-           
-            #slideDescription{
-                width: 40%;
-                min-height: 480px;
-                color: #FFFFFF;
-                i{
-                    cursor: pointer;
-                    font-size: 68px !important;
-                    &:hover{
-                        font-size: 65px !important;
-                        text-shadow: 3px 0px 2px $gold;
-                    }
-                    &:active{
-                        font-size: 68px !important;
-                        text-shadow: 0px 0px 0px $gold;
-                    }
-                }
-                #prevSlide{
-                    position: absolute;
-                    top: 10px;
-                }
-                #nextSlide{
-                    position: absolute;
-                    bottom: 10px;
-                }
-            }
-            #slidePic{
-                width: 70%;
-                position: relative;
-                display: flex;
-                p{
-                    position: absolute;
-                    bottom: 20px;
-                    right: 20px;
-                    color: $primaryColor;
-                    font-weight: 600;
-                    font-size: 25px;
-                }
-                #picNote{
-                    text-shadow: 
-                    1px 1px 2px #000,
-                    -1px -1px 2px #000,
-                     1px -1px 2px #000,
-                    -1px  1px 2px #000;
-                    &:not(.note_0){
-                        opacity: 0;
-                    }
-                    transition: opacity 1s ease;
-                    &.darker{
-                        opacity: 1 !important;
-                    }
-                }
-            }
-            #slideImg{
-                height: 480px;
-                width: 0%;
-                object-fit: cover !important;
-                object-position:center !important;
-                transition: width 0.5s ease-in-out;
-            }
-            #slideText{
-                scale: 0;
-                transition: scale 0.5s ease-in-out;
-            }
-        }
-    }
-    #timeline{
+#bioPage {
+    background-color: #000000;
+    background-image: url('https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best,y_50/v1760151181/Niko/new_materials/viber_image_2024-12-17_19-48-56-276_yrvpx7.jpg');
+    // background-position-y: -100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .navBar { background-color: #f5f3f3;}
+    #carouselSec{
+        background-color: #f5f3f3;
+        height: calc(100vh - 14vh + 50px);
+        min-height: 550px;
+        padding-bottom: 50px;
         position: relative;
-        padding-left: 40px;
-        #lineWhite{
-            position: absolute;
-            background-color: white;
-            width: 1px;
-            left: calc(50% + 20px);
-        }
-        #circleWhite{
-            background-color: white;
-            height: 20px;
-            width: 20px;
-            border-radius: 10px;
-            left: calc(50% + 10px);
-            position: absolute;
-            opacity: 0;
-            transition: transform 0.5s ease;
-            &.position_0{
-                transform: translateY(0%);
-                opacity: 1;
-            }
-
-            &:not(.circle_0).moveDown{ transform: translateY(-1150%); }
-            &:not(.circle_5).moveUp{ transform: translateY(1150%); }
-        }
-    }
-}
-.cardsIntro{
-    width: 95%;
-    text-align: justify;
-}
-#cardsContainer{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .singleCard{
-        width: 100%;
-        max-width: 1400px;
-        &.reverse{
-            flex-direction: row-reverse;
-        }
-        img{
-            width: 50%;
-            max-width: 400px;
-            max-height: 400px;
-            object-fit: cover;
-            object-position: center 45%;
-            aspect-ratio: 1.1/1;
-        }
-        .cardDescr{
-            max-width: 550px;
-            text-align: justify;
-
-        }
-    }
-}
-.maxWidth1500 {
-    max-width: 1500px !important;
-}
-.highlights{
-    text-align: justify;
-    text-justify: newspaper;
-}
-
-.slidePic {
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-section#career-highlights{
-    background-color: #2F2F2F;
-    .highlights{
-        padding: 25px 25px 25px 25px;
-        list-style: none;   
-        ::marker{
-            color: $gold !important;
-        }
-        li{
-            width: fit-content;
-            font-weight: 600;
-            color: #000;
-            border: 1px solid #2F2F2F;
-            background-color: #ffffff;
-            position: relative;
-            transition: background-color .4s ease;
-            z-index: 10;
-            &::before{
-                content: '';
-                background-color: $gold;
-                display: flex;
-                position: absolute;
-                left: -10px;
-                bottom: 0px;
+        .carouselContainer {
+            height: calc(100% - 20px);
+            justify-content: center;
+            width: calc(100% - 40px);
+            #carousel {
+                align-items: center;
                 height: 100%;
-                width: 10px;
-                transition: all .3s ease;
-            }
-            &:hover{
-                z-index: 33; 
-                font-weight: 600;
-                &::before{
-                    z-index: -1;
+                max-width: 1500px;
+                min-width: 900px;
+                min-height: 550px;
+                width: 100%;
+                .singleCarouselSlide {
+                    box-shadow: 6px 6px 6px #aeaeae;
+                    height: 100%;
+                    min-height: 480px;
+                    position: relative;
                     width: 100%;
-                    left: 0px;
-                    background-color: $gold;
-                    
+                    #slideDescription {
+                        color: #FFFFFF;
+                        min-height: 480px;
+                        width: 40%;
+                        #slideText {
+                            p{
+                                color: #fff;
+                            }
+                        }
+                        i {
+                            cursor: pointer;
+                            font-size: 68px !important;
+                            &:hover {
+                                font-size: 65px !important;
+                                text-shadow: 3px 0px 2px var(--secondaryColor);
+                            }
+                            &:active {
+                                font-size: 68px !important;
+                                text-shadow: 0px 0px 0px var(--secondaryColor);
+                            }
+                        }
+                        #prevSlide {
+                            position: absolute;
+                            top: 10px;
+                        }
+                        #nextSlide {
+                            position: absolute;
+                            bottom: 10px;
+                        }
+                    }
+                    #slidePic {
+                        display: flex;
+                        position: relative;
+                        width: 70%;
+                        p {
+                            bottom: 20px;
+                            color: $primaryColor;
+                            font-size: 25px;
+                            font-weight: 600;
+                            position: absolute;
+                            right: 20px;
+                        }
+                        #picNote {
+                            background-color: var(--darkBlueColor);
+                            font-size: 20px !important;
+                            padding: 0px 10px;
+                            text-shadow: 
+                            1px 1px 2px #000,
+                            -1px -1px 2px #000,
+                            1px -1px 2px #000,
+                            -1px  1px 2px #000;
+                            &:not(.note_0) { opacity: 0; }
+                            transition: opacity 1s ease;
+                            &.darker { opacity: 1 !important; }
+                        }
+                    }
+                    #slideImg{
+                        min-height: 480px;
+                        object-fit: cover !important;
+                        object-position:center !important;
+                        transition: all 0.5s ease-in-out;
+                        width: 100%;
+                        filter: blur(1.5px);
+                    }
+                    #slideText {
+                        font-size: 18px;
+                        letter-spacing: 0.03em;
+                        line-height: 30px;
+                        font-weight: 400;
+                        scale: 0.5;
+                        transition: scale 0.4s ease-in-out;
+                    }
                 }
-
+            }
+            #timeline{
+                position: relative;
+                padding-left: 40px;
+                #lineWhite{
+                    position: absolute;
+                    background-color: var(--secondaryColor);
+                    width: 1px;
+                    left: calc(50% + 20px);
+                }
+                #circleWhite{
+                    background-color: #ffffff;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 10px;
+                    left: calc(50% + 10px);
+                    position: absolute;
+                    opacity: 0;
+                    transition: transform 0.5s ease;
+                    &.position_0{
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
+                    &:not(.circle_0).moveDown{ transform: translateY(-1150%); }
+                    &:not(.circle_6).moveUp{ transform: translateY(1150%); }
+                }
             }
         }
     }
-}
-.animated-highlight { color: $gold !important; }
+    #pageTransition {
+        height: 130vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #aeaeae;
+        background-color: rgba(20, 20, 20, 0.5);
+        border-top: 3px solid var(--secondaryColor);
+        border-bottom: 3px solid var(--secondaryColor);
+        position: relative;
+        #cardsIntro {
+            position: relative; 
+            transform: translateY(100%);
+            color: #000000;
+            height: fit-content;
+            z-index: 15;
+            #valuesIntro {
+                background-color: #F8F6F1;
+                border-radius: 8px;
+                box-shadow: 0 8px 30px #00000026;
+                font-size: clamp(16px, 2.2vh, 20px);
+                font-weight: 300;
+                line-height: 1.9;
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 30px 40px;
+                text-align: left;
+                .titlesChef {
+                    font-size: clamp(40px, 2.2vh, 47px);
+                    font-weight: 500; 
+                    letter-spacing: .01em;
+                    margin-bottom: 10px; 
+                    &::before {
+                        content: '';
+                        background-color: var(--secondaryColor);
+                        bottom: 20px;
+                        height: calc(100% - 36px);
+                        left: -55px;
+                        opacity: 0.5;
+                        position: absolute;
+                        width: calc(100% + 15px);
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+    #valueSec {
+        background-color: #ffffff;
+        margin-top: -120px;
+        padding: 160px 0px 100px 0px;
+        position: relative;
+        .cardContainer {
+            display: flex;
+            gap: 25px;
+            flex: auto;
+            justify-content: center;
+            max-height: 70vh;
+            padding: 20px;
+            width: 100%;
+            .flip-card { 
+                max-height: 500px;
+                max-width: 500px;
+                width: 31%;
+                outline: none; 
+                perspective: 1000px;
+                .flip-card-inner {
+                    aspect-ratio: 1.1/1.2;
+                    border-radius: 16px;
+                    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    transform-style: preserve-3d;
+                    -webkit-transform-style: preserve-3d;
+                    transition: transform 600ms cubic-bezier(.2,.7,.2,1);
+                    will-change: transform;
+                    .flip-card-front,
+                    .flip-card-back {
+                        backface-visibility: hidden;
+                        inset: 0;
+                        position: absolute;
+                        -webkit-backface-visibility: hidden;
+                    }
+                    .hoverWrapper {
+                        height: fit-content;
+                        width: fit-content;
+                        bottom: 0px;
+                        position: absolute;
+                        .titlesChef {
+                            transition: all 0.5s ease-in-out;
+                        }
+                    }
+                    &:hover, &:active, &:focus {
+                        .hoverWrapper {
+                            align-items: center;
+                            background-color: #0000008d;
+                            display: flex;
+                            height: 100%;
+                            justify-content: center;
+                            width: 100%;
+                            .titlesChef {
+                                bottom: auto !important;
+                                color: #fff !important;
+                                left: auto !important;
+                                scale: 1.7;
+                                &::before {
+                                    background-color: #ffffff !important;
+                                    height: 0% !important;
+                                    left: 0px;
+                                }
+                            }
+                        }
+                        .flip-toggle { 
+                            display: flex; 
+                            scale: 1;
+                            right: 2%;
+                            .flip-icon {
+                                transform: rotateY(180deg);
+                                opacity: 0.9;
+                            }
+                        }
+                    }
+                    .flip-card-front {
+                        transform: rotateY(0deg) translateZ(0);
+                        -webkit-transform: rotateY(0deg) translateZ(0);
+                        .imgCont {
+                            display: flex;
+                            height: 100%;
+                            position: relative;
+                            img {
+                                width: 100%; 
+                                height: 100%; 
+                                object-fit: cover;
+                            }  
+                            .titlesChef {
+                                color: #f1f1f1;
+                                bottom: 20px;
+                                left: 10px;
+                                font-size: clamp(1.5rem, 2.2vw, 2.5rem);
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 5px;
+                                    left: -30px;
+                                    width: calc(100% + 15px);
+                                    height: 100%;
+                                    background-color: var(--secondaryColor);
+                                    opacity: 0.9;
+                                    z-index: -1;
+                                }
+                            }
+                        }
+                    }
+                    .flip-card-back {
+                        background: linear-gradient(180deg,#0f172a,#1e293b); 
+                        color: #fff;
+                        display: grid; 
+                        padding: 18px;
+                        place-content: center; 
+                        transform: rotateY(180deg) translateZ(1px);
+                        -webkit-transform: rotateY(180deg) translateZ(1px);
+                        .cardText {
+                            font-size: 20px;
+                            letter-spacing: 0.01em;
+                            line-height: 30px;
+                            text-align: left;
+                        }
+                    }
+                    
+                    &:hover {color: var(--secondaryColor);}
+                    .flip-toggle { 
+                        // display: none;
+                        scale: 0;
+                        position: absolute; 
+                        inset: auto 35px 20px auto; 
+                        background-color: transparent;
+                        border: 2px solid #fff;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        right: 50%;
+                        transition: all 0.5s ease;
+                        align-items: center;
+                        justify-content: center;
+                        .flip-icon {
+                            fill: #f1f1f1;
+                            stroke-width: 2px;
+                            transition: all 1s ease;
+                            box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
+                            background-color: rgba(255, 255, 255, 0);
+                        }
+                        cursor: pointer;
+                        &:hover .flip-icon {
+                            fill: var(--secondaryColor);
+                            scale: 1;
+                        }
+                    }
+                }
+                &.is-flipped .flip-card-inner {
+                    transform: rotateY(180deg);
+                    scale: 1;
+                    .flip-toggle { 
+                        display: flex; 
+                        right: 2%;
+                        .flip-icon {
+                            transform: rotateY(180deg);
+                            opacity: 0.9;
+                        }
+                    }
+                    .flip-card-back { backface-visibility: visible;}
+                }
+            }
+        }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .flip-card-inner { transition: none; }
+    }
+    //   clamp(MIN, PREFERRED, MAX)
+    #careerHighlightsSec {
+        align-items: center;
+        // background-color: #000;
+        background: linear-gradient(180deg, var(--darkBlueColor), #000000) ;
+        // clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 120px 40px 0px 40px;
+        box-shadow: inset 0px 0px 50px 0px #000000;
 
-@media only screen and (min-width: 1301px) and (max-width: 1400px) {
+        .careerHighlightsWrapper {
+            align-items: center;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            .titlesChef {
+                font-size: 47px;
+                margin-bottom: 20px;
+            }
+            .timeline {
+                background-color: #ffffff;
+                border: 1px solid #f1f1f1;
+                box-shadow: 6px 6px 6px #d8d8d89a;
+                display: grid;
+                grid-template-columns: 150px 1fr; /* year column / events column */
+                .timeline__year {
+                    color: var(--secondaryColor);
+                    font-weight: 700;
+                    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+                    line-height: 1.2;
+                    position: relative;
+                    text-align: center;
+                    &.bgEven {
+                        background-color: #f5f3f3;
+                    }
+                }
+                .timeline__label {
+                    color: var(--secondaryColor);
+                    font-weight: 700;
+                    font-size: 16px;
+                    letter-spacing: 0.01em;
+                    line-height: 1.2;
+                    position: relative;
+                    text-align: center;
+                    text-transform: uppercase;
+                    &.bgEven {
+                        background-color: #f5f3f3;
+                    }
+                }
+                .timeline__events {
+                    border-left: 2px solid var(--secondaryColor);
+                    position: relative;
+                    padding-left: 18px;
+                    &.bgEven {
+                        background-color: #f5f3f3;
+                    }
+                    .event {
+                        background: rgba(0,0,0,0); /* keep transparent; change if you want pills */
+                        // margin: .35rem 0;
+                        position: relative;
+                        font-size: 18px;
+                        letter-spacing: 0.01em;
+                        line-height: 30px;
+                        &::before{
+                            background: var(--secondaryColor);
+                            border: 1px solid var(--secondaryColor);
+                            border-radius: 50%;
+                            content: "";
+                            position: absolute;
+                            height: 10px;
+                            left: -25px;
+                            top: calc(50% - 5px);
+                            width: 10px;
+                        }
+                        &:hover {
+                            outline: none;
+                            text-shadow: 0.5px 0.5px 1.5px var(--secondaryColor);
+                        }
+                    }
+                }
+            }
+        }
+        /* Mobile: stack */
+        @media (max-width: 720px){
+            .timeline{
+                grid-template-columns: 5rem 1fr;
+            }
+        }
+    }
+      
+    footer {
+        background-color: #000;
+        box-sizing: border-box;
+        height: fit-content;
+    }
+      
+    .maxWidth1500 {
+        max-width: 1500px !important;
+    }
     
+    .slidePic {
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .animated-highlight { color: var(--secondaryColor) !important; }
+}
+
+@media only screen and (min-width: 930px) and (max-width: 1170px) {
+    .singleCarouselSlide {  width: 100% !important; }
+    #slide_2,#slide_3,#slide_4,#slide_6 {
+        #slideText{
+            padding: 15px !important;
+            p { font-size: 15px !important; }
+        }
+    }
 }
 @media only screen and (max-width: 1200px) {
     #cardsContainer { width: 95% !important;}
- 
 }
 @media only screen and (min-width: 701px) and (max-width: 930px) {
     body{
@@ -293,13 +553,16 @@ section#career-highlights{
                     min-width: 300px !important;
                     max-height: 400px;
                     min-height: 400px;
-                    background-color:  #00000047 !important;
+                    background:  linear-gradient(180deg, var(--darkBlueColor), #000000);
                     padding-left: 10px;
                     z-index: 11;
                     #slideText{
                         background-color: #000000a3;
                         padding: 10px !important;
                         font-size: 14px;
+                        p {
+                            color: #fff !important;
+                        }
                     }
                     i{
                         font-size: 45px !important;
@@ -335,7 +598,7 @@ section#career-highlights{
         .cardDescr{
             padding: 20px !important;
             .cardText{
-                margin-top: 0px !important;
+                margin-top: 10px !important;
                 margin-bottom: 30px !important;
             } 
         }
@@ -351,6 +614,9 @@ section#career-highlights{
 
 }
 @media only screen and (max-width: 700px) {
+    .highlightsIntro, .valueIntro{
+        text-align: justify;
+    } 
     section{
         width: 88vw !important;
         padding: 0px !important;
@@ -370,21 +636,18 @@ section#career-highlights{
             p{
                 font-size: 16px !important;
                 &.textGold{
-                    font-size: 22px !important;
+                    font-size: 24px !important;
                 }
             }
         }
         p{
             text-align: left;
             font-size: 16px !important;
-            span.textGold{
-                font-size: 22px !important;
-            }
         }
     }
     #carouselSec{ 
-        margin-top: 0px !important;
-        padding: 20px !important;
+        margin-top: 20px !important;
+        padding: 50px 20px 20px 20px !important;
         width: 100%;
         min-width: 330px;
         max-width: 400px !important;
@@ -394,7 +657,8 @@ section#career-highlights{
                 text-align: left;
                 font-size: 16px !important;
                 span.textGold{
-                    font-size: 22px !important;
+                    margin-top: 20px !important;
+                    font-size: 18px !important;
                 }
             }
         }
@@ -406,7 +670,6 @@ section#career-highlights{
             max-height: 400px;
             min-height: 400px;
             .singleCarouselSlide{
-                // width: 300px;
                 max-height: 400px;
                 min-height: 400px;
                 #timeline{
@@ -432,7 +695,10 @@ section#career-highlights{
                     #slideText{
                         background-color: #000000a3;
                         padding: 10px !important;
-                        font-size: 14px;
+                        scale: 1;
+                        p{
+                            font-size: 14px !important;
+                        }
                     }
                     i{
                         font-size: 45px !important;
@@ -450,6 +716,7 @@ section#career-highlights{
                     width: 100%;
                     img{
                         height: 400px !important;
+                        width: 100%;
                     }
                     #picNote{
                         display: none;
@@ -472,8 +739,10 @@ section#career-highlights{
     .cardDescr{
         padding: 0px !important;
         .cardText{
-            margin-top: 0px !important;
+            margin-top: 10px !important;
             margin-bottom: 30px !important;
+            text-align: justify;
+            
         } 
     }
     #cardsContainer {

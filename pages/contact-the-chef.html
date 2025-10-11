@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" id="contactPage">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contact form for Chef Kapernaros website. Sending emails to Chef Nikolaos Kapernaros">
+
+        <!-- Style -->
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/combined.min.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/settings/common_style/common-style.css" media="screen"/>
+
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/home_page/style.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/contact-chef/contact-chef.css" media="screen"/>
+    
+        <!-- Logo -->
+        <!-- Standard favicon -->
+        <link rel="icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="/chef-kapernaros/images/favicon/apple-touch-icon.png"> 
+        <link rel="icon" type="image/png" sizes="32x32" href="/chef-kapernaros/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/chef-kapernaros/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/chef-kapernaros/images/favicon/site.webmanifest">
+
+        <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/w_800/v1715301147/Untitled_design_16_as2cia.webp" as="image">
+
+        <!-- Title -->
+        <title>Chef Kapernaros</title>
+    </head>
+
+    <body>
+        <nav class="navBar flex biggerScreen">
+            <div id="navBgScn">
+                <a href="../index.html" class="logoNav">
+                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" alt="Chef Kapernaros Nav Logo">
+                </a>
+                <div class="flex flex-justifyContent-start linkContainer">
+                    <a href="../pages/bio.html">Bio</a>
+                    <a href="../pages/services.html">Services</a>
+                    <a href="../pages/chef-table.html">The Chef's Table</a>
+                    <a href="../pages/events.html"><span>Events</span></a>
+                    <a href="../pages/contact-the-chef.html" class="currentTitle">Contact</a>
+                </div>
+            </div>
+            
+            <div class="hambContainer">
+                <div class="hamburger-menu">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </div>
+            </div>
+        
+            <div id="navMenu" class="hide pl-15 pr-20">
+                <a href="../index.html" class="logoNav flex col-12 flex-justifyContent-center">
+                    <img class="ml-40" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" alt="Chef Kapernaros Nav Logo">
+                </a>
+                <a href="../pages/bio.html">Bio</a>
+                <a href="../pages/services.html">Services</a>
+                <a href="../pages/chef-table.html">The Chef's Table</a>
+                <a href="../pages/events.html"><span>Events</span></a>
+                <a href="../pages/contact-the-chef.html">Contact</a>
+            </div>
+        </nav>
+
+        <section id="chefForm">
+            <div id="contactIntro">
+                <h1 class="titlesChef mt-20 mb-0 textWhite">Let's Keep in Touch</h1>
+                <!-- <p class="font-ledger mt-5 mb-0 fontSize16">For chef's table experience, consulting, cooking classes, collaborations or media/pr requests please complete the contact form below and we'll reply soon. </p> -->
+            </div>
+            <form id="myForm" class="flex flex-column flex-justifyContent-center p-25 mt-15">
+                <div class="col-12 flex">
+                    <div class="field mb-15 flex flex-column col-6">
+                        <label class="mb-5" for="from_first_name">First Name*</label>
+                        <input class="inputText mb-10" type="text" name="from_first_name" id="from_first_name" required>
+                        <div class="lineBorder"></div>
+                    </div>
+                    <div class="field mb-15 flex flex-column ml-20 col-6">
+                        <label class="mb-5" for="from_last_name">Last Name*</label>
+                        <input class="inputText mb-10" type="text" name="from_last_name" id="from_last_name" required>
+                        <div class="lineBorder"></div>
+                    </div>
+                </div>
+                <div class="field mb-15 flex col-12">
+                    <div class="field mb-15 flex flex-column col-6">
+                        <label class="mb-5" for="email_subject">Email Subject*</label>
+                        <select class="mb-10 fontSize16" name="email_subject" id="email_subject" required>
+                            <option class="fontSize16 px-5 hide" value="" disabled selected></option>
+                            <option class="fontSize16 px-5" value="Chef's Table Experience">Chef's Table Experience</option>
+                            <option class="fontSize16 px-5" value="Consulting">Consulting</option>
+                            <option class="fontSize16 px-5" value="Cooking Classes">Cooking Classes</option>
+                            <option class="fontSize16 px-5" value="Collaborations ">Collaborations </option>
+                            <option class="fontSize16 px-5" value="Media/PR Requests">Media/PR Requests</option>
+                            <option class="fontSize16 px-5" value="Other">Other </option>
+                        </select>
+                    </div>
+                    <div class="mb-15 ml-20 flex flex-column col-6">
+                        <label class="mb-5" for="email_address">Email Address*</label>
+                        <input class="inputText mb-10" type="email" name="email_address" id="email_address" required pattern=".*\.com$" title="Please enter an email ending with '.com'">
+                    </div>
+                </div>
+                <div class="field mb-15 flex flex-column">
+                    <label class="mb-5" for="message">Message*</label>
+                    <textarea rows="5" class="inputText mb-10 p-5" name="message" id="message" required></textarea>
+                </div>
+                <div class="flex flex-justifyContent-spaceBetween">
+                    <button type="submit" class="btnPrimary py-5">Send</button>
+                    <p id="messageSent" class="hide text-bold fontSize16 my-0" style="color: #000000;">Message Sent! Thank You!</p>
+
+                </div>
+            </form>
+            
+        </section>
+
+        <!-- Script -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script defer type="text/javascript" src=../chef-kapernaros/script/main.js></script>
+        <script src="../analytics.js"></script>
+
+    </body>
+</html>
