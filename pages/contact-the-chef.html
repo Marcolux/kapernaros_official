@@ -33,10 +33,11 @@
                 <a href="../index.html" class="logoNav">
                     <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" alt="Chef Kapernaros Nav Logo">
                 </a>
-                <div class="flex col-7 flex-justifyContent-center linkContainer pb-10">
+                <div class="flex flex-justifyContent-start linkContainer">
                     <a href="../pages/bio.html">Bio</a>
-                    <a href="../pages/media.html">Media</a>
+                    <a href="../pages/services.html">Services</a>
                     <a href="../pages/chef-table.html">The Chef's Table</a>
+                    <a href="../pages/events.html"><span>Events</span></a>
                     <a href="../pages/contact-the-chef.html" class="currentTitle">Contact</a>
                 </div>
             </div>
@@ -54,16 +55,17 @@
                     <img class="ml-40" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" alt="Chef Kapernaros Nav Logo">
                 </a>
                 <a href="../pages/bio.html">Bio</a>
-                <a href="../pages/media.html">Media</a>
+                <a href="../pages/services.html">Services</a>
                 <a href="../pages/chef-table.html">The Chef's Table</a>
+                <a href="../pages/events.html"><span>Events</span></a>
                 <a href="../pages/contact-the-chef.html">Contact</a>
             </div>
         </nav>
 
         <section id="chefForm">
             <div id="contactIntro">
-                <h3 class="textGold font-ledger text-bold my-0">Let's Keep in Touch</h3>
-                <p class="font-ledger mt-5 mb-0 fontSize16">For chef's table experience, consulting, cooking classes, collaborations or media/pr requests please complete the contact form below and we'll reply soon. </p>
+                <h1 class="titlesChef mt-20 mb-0 textWhite">Let's Keep in Touch</h1>
+                <!-- <p class="font-ledger mt-5 mb-0 fontSize16">For chef's table experience, consulting, cooking classes, collaborations or media/pr requests please complete the contact form below and we'll reply soon. </p> -->
             </div>
             <form id="myForm" class="flex flex-column flex-justifyContent-center p-25 mt-15">
                 <div class="col-12 flex">
@@ -82,7 +84,7 @@
                     <div class="field mb-15 flex flex-column col-6">
                         <label class="mb-5" for="email_subject">Email Subject*</label>
                         <select class="mb-10 fontSize16" name="email_subject" id="email_subject" required>
-                            <option class="fontSize16 px-5" value="" disabled selected></option>
+                            <option class="fontSize16 px-5 hide" value="" disabled selected></option>
                             <option class="fontSize16 px-5" value="Chef's Table Experience">Chef's Table Experience</option>
                             <option class="fontSize16 px-5" value="Consulting">Consulting</option>
                             <option class="fontSize16 px-5" value="Cooking Classes">Cooking Classes</option>
@@ -106,15 +108,13 @@
 
                 </div>
             </form>
-            <div id="lineGold"></div>
-            <div id="lineGold2"></div>
-            <img class="imgRound" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_800/v1715301147/Untitled_design_16_as2cia.webp" id="logoPic">
             
         </section>
 
         <!-- Script -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script defer type="text/javascript" src=../chef-kapernaros/script/main.js></script>
+        <script src="../analytics.js"></script>
 
     </body>
 </html>

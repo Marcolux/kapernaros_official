@@ -1,3 +1,4 @@
+
 interface Picture {
     src: string
     caption: string | null
@@ -62,8 +63,9 @@ class picCollection {
 
 function initPicCollection(newPicturesList: picCollection, collection: Picture[]) {
 
-    let bigPic = document.querySelector(`#bigPic`) as HTMLDivElement
-    let carouselElement = bigPic.querySelector(`#singlePicCont`) as HTMLDivElement
+
+    // let bigPic = document.querySelector(`#bigPic`) as HTMLDivElement
+    let carouselElement = document.querySelector(`#singlePicCont`) as HTMLDivElement
     carouselElement.innerHTML = ''
     let first = collection.shift() as Picture
 
@@ -71,13 +73,15 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
         collection.forEach(picture => { newPicturesList.append(picture) })
     }
 
+
     function showPicture(index: number) {
         carouselElement.innerHTML = ''
         
         const picture = newPicturesList.getSinglePic(index) as Picture
         if (index < newPicturesList.getLastIndex() && index !== 0) {
+
             carouselElement.innerHTML = `
-                <div id="picShowing" class="flex flex-alignItems-center">
+                <div id="picShowing" class="flex flex-alignItems-end">
                     <button class="p-20" id="prevPicture">
                         <i class="fa-solid fa-chevron-left fontSize40"></i>
                     </button>
@@ -92,7 +96,7 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
             `
         } else if ( index === newPicturesList.getLastIndex()) {
             carouselElement.innerHTML = `
-                <div id="picShowing" class="flex flex-alignItems-center">
+                <div id="picShowing" class="flex flex-alignItems-end">
                     <button class="p-20" id="prevPicture">
                         <i class="fa-solid fa-chevron-left fontSize40"></i>
                     </button>
@@ -105,8 +109,9 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
                 </div>
             `
         } else if (index === 0) {
+
             carouselElement.innerHTML = `
-                <div id="picShowing" class="flex flex-alignItems-center">
+                <div id="picShowing" class="flex flex-alignItems-end">
                     <div class="p-20 emptyBox"></div>
 
                     <div class="flex flex-justifyContent-center flex-alignItems-center picDiv" >
@@ -128,6 +133,7 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
             firstCaption.style.right = '88%'
         }
         setTimeout(()=>{
+
             const imgs = carouselElement.querySelector('img') as HTMLImageElement
             const imgShowing = carouselElement.querySelector('#picShowing') as HTMLImageElement
             imgs.classList.add('show')
@@ -135,9 +141,11 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
                 imgs.requestFullscreen()
                 imgShowing.classList.add('fullscreen-mode')
             })
+
             document.addEventListener('fullscreenchange', () => {
                 if (!document.fullscreenElement) { imgShowing.classList.remove('fullscreen-mode')  }
             })   
+
         },150) 
     
         const prevButton = document.getElementById('prevPicture') as HTMLElement
@@ -183,7 +191,7 @@ function initPicCollection(newPicturesList: picCollection, collection: Picture[]
 document.addEventListener('DOMContentLoaded', function() {
 
     const friendsCelebList = new picCollection('friendsCelebList')
-    const growingInGreeceList = new picCollection('growingInGreeceList')
+    // const growingInGreeceList = new picCollection('growingInGreeceList')
     const charityEventsList = new picCollection('charityEventsList')
     const competitionShows = new picCollection('competitionShows')
     const onThePass = new picCollection('onThePass')
@@ -191,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const allLists: picCollection[] = [
         friendsCelebList,
-        growingInGreeceList,
+        // growingInGreeceList,
         charityEventsList,
         competitionShows,
         onThePass,
@@ -201,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const friendsCelebList_src = [
         { src: 'friendsCelebList', caption: null },
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714608753/Niko/f_f_14_dulpgp.webp", caption: 'Jose Andres'},
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714611082/Niko/f_f_16_i861kj.webp", caption: 'Tony Priolo'},
+        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714611082/Niko/f_f_16_i861kj.webp", caption: 'Tony Priolo, Eva Davidman & Darren Gest'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714611418/Niko/f_f_19_cygdn0.webp", caption: 'Sarah Grueneberg'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714612983/Niko/f_f_32_jvdutb.webp", caption: 'Fabio Viviani'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714607529/Niko/f_f_11_metou3.webp", caption: 'Sanaa Abourezk'},
@@ -245,29 +253,29 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714613151/Niko/f_f_33_ke48sd.webp", caption: 'Kevin Warren'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714613366/Niko/f_f_36_j484sl.webp", caption: 'Lisa Fielding'},
         { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1714613639/Niko/f_f_38_mfwtlr.webp", caption: 'Amy Rutledge & Tonya Francisco'},
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715304167/viber_image_2024-05-07_22-30-12-805_kndjk7.webp", caption: 'Gianluigi Buff'},
+        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1715304167/viber_image_2024-05-07_22-30-12-805_kndjk7.webp", caption: 'Gianluigi Buffon'},
     ]
-    const growingInGreeceList_src = [
-        { src: 'growingInGreeceList', caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618491/Niko/niko-growing%20greece/g_g_17_mrjstu.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714614499/Niko/niko-growing%20greece/g_g_5_qva7un.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714615983/Niko/niko-growing%20greece/g_g_10_h4dbvx.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714614491/Niko/niko-growing%20greece/g_g_4_peo48x.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714616225/Niko/niko-growing%20greece/g_g_12_nw6vmq.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714615676/Niko/niko-growing%20greece/g_g_8_xaopxm.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714615465/Niko/niko-growing%20greece/g_g_7_tyzfaa.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714615279/Niko/niko-growing%20greece/g_g_6_vtni3k.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714616872/Niko/niko-growing%20greece/g_g_15_o0hg55.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042825/viber_image_2024-05-06_19-45-23-203_zf7az0.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042825/viber_image_2024-05-06_19-43-41-114_ysefnx.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714614484/Niko/niko-growing%20greece/g_g_3_xbjxxr.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042394/viber_image_2024-05-01_23-10-59-123_qe9moc.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1100,h_1000,c_fill/v1714614217/Niko/niko-growing%20greece/g_g_1_r7i5t5.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042558/viber_image_2024-05-06_19-41-34-011_pso3vm.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042653/viber_image_2024-05-06_19-42-54-272_boedrs.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1300,h_900,c_fill/v1714614224/Niko/niko-growing%20greece/g_g_2_myfflq.webp", caption: null },
-        { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714617566/Niko/niko-growing%20greece/g_g_16_jrjtzg.webp", caption: null },
-    ]
+    // const growingInGreeceList_src = [
+    //     { src: 'growingInGreeceList', caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618491/Niko/niko-growing%20greece/g_g_17_mrjstu.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714614499/Niko/niko-growing%20greece/g_g_5_qva7un.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714615983/Niko/niko-growing%20greece/g_g_10_h4dbvx.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714614491/Niko/niko-growing%20greece/g_g_4_peo48x.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714616225/Niko/niko-growing%20greece/g_g_12_nw6vmq.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714615676/Niko/niko-growing%20greece/g_g_8_xaopxm.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714615465/Niko/niko-growing%20greece/g_g_7_tyzfaa.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714615279/Niko/niko-growing%20greece/g_g_6_vtni3k.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714616872/Niko/niko-growing%20greece/g_g_15_o0hg55.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042825/viber_image_2024-05-06_19-45-23-203_zf7az0.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042825/viber_image_2024-05-06_19-43-41-114_ysefnx.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714614484/Niko/niko-growing%20greece/g_g_3_xbjxxr.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042394/viber_image_2024-05-01_23-10-59-123_qe9moc.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1100,h_1000,c_fill/v1714614217/Niko/niko-growing%20greece/g_g_1_r7i5t5.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042558/viber_image_2024-05-06_19-41-34-011_pso3vm.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1715042653/viber_image_2024-05-06_19-42-54-272_boedrs.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_1300,h_900,c_fill/v1714614224/Niko/niko-growing%20greece/g_g_2_myfflq.webp", caption: null },
+    //     { src: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714617566/Niko/niko-growing%20greece/g_g_16_jrjtzg.webp", caption: null },
+    // ]
     const charityEventsList_src = [
         {src:"charityEventsList", caption: null },
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1714618577/Niko/charity%20events/c_e_5_ybs4do.webp", caption: null },
@@ -292,9 +300,10 @@ document.addEventListener('DOMContentLoaded', function() {
         {src:"competitionShows", caption: null },
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_3_pwamwn.webp", caption: null },
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_2_flbrxf.webp", caption: null },
-        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_1_ln5jbt.webp", caption: null },
-        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_5_b9cztz.webp", caption: null },
-        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_4_u0abbm.webp", caption: null },
+        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_1_ln5jbt.webp", caption: 'Chef Monique Feybesse & Bobby Flay' },
+        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1727106224/Niko/competitions/Action___Bobby_Flay_w22uvp.webp", caption: 'Chef Jet Tila' },
+        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_5_b9cztz.webp", caption: 'Chef Jet Tila & Amanda Kloots' },
+        {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_4_u0abbm.webp", caption: 'Bobby Flay' },
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619837/Niko/competitions/c_s_8_a7ucnk.webp", caption: null },
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619857/Niko/competitions/c_s_10_cgzqss.webp", caption: null },
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1715043709/viber_image_2024-05-01_23-12-10-266_s3fepo.webp", caption: null },
@@ -355,7 +364,14 @@ document.addEventListener('DOMContentLoaded', function() {
         {src:"https://res.cloudinary.com/drdrs6pdq/image/upload/v1715716394/Niko/Chicago%20Chefs%20Cookbook%20Launch/viber_image_2024-05-13_20-48-09-943_moyknm.webp", caption: null },
 
     ]
-    const allSources = [friendsCelebList_src, growingInGreeceList_src, charityEventsList_src, competitionShows_src, onThePass_src, chicagoChefsCookbookLaunch_src]
+    const allSources = [
+        friendsCelebList_src, 
+        // growingInGreeceList_src, 
+        charityEventsList_src, 
+        competitionShows_src, 
+        onThePass_src, 
+        chicagoChefsCookbookLaunch_src
+    ]
 
     let allNotActiveTi = document.querySelectorAll('.secTitles') as NodeListOf<HTMLLIElement>
     allNotActiveTi.forEach( listEl => {
@@ -367,17 +383,12 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
     allNotActiveTi[3].addEventListener('click', () => {
-       if ( localStorage.getItem('loading_competions') === 'true' )
-            localStorage.removeItem('loading_competions')
+        if ( localStorage.getItem('loading_competions') === 'true' ) localStorage.removeItem('loading_competions')
     })
     localStorage.getItem('loading_competions') === 'true' ?
         allNotActiveTi[3].click()
     :
         allNotActiveTi[0].click()
-
-    
-
-
 })
 
   

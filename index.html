@@ -42,11 +42,12 @@
         <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/w_700/v1709720633/Niko/Chef_Kapernaros_charity_events_pic_4_swqkut.webp" as="image">
         <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/w_800/v1709720634/Niko/Chef_Kapernaros_charity_events_pic_1_diom0m.webp" as="image">
         <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709722273/Niko/Chef_Kapernaros_logo_white_no_BG_xik49g.webp" as="image">
+        <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,g_center,h_1100,q_auto,w_1150,x_50,y_200,f_auto/v1759769752/Niko/video-olive-field-3_r56pgc.mp4" as="video">
 
         <!-- preload chef table's pics -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                fetch('chef-kapernaros/pages/preload-chef-table-links.html')
+                fetch('/pages/preload-chef-table-links.html')
                     .then(response => response.text())
                     .then(data => {
                         const head = document.querySelector('head')
@@ -55,37 +56,47 @@
                 .catch(error => console.error('Error loading preload links:', error))
             })
         </script>
-        
+
         <!-- Title -->
         <title>Chef Kapernaros</title>
 
     </head>
 
-    <body style="position: relative;">
-        <nav class="navBar flex biggerScreen">
-            <div id="navBgScn">
-                <div id="logoNavIndexPage">
-                    <img class="activePage" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" alt="Chef Kapernaros Nav Logo">
-                </div>
-                <div class="flex col-7 flex-justifyContent-center linkContainer pb-10">
-                    <a href="./pages/bio.html">Bio</a>
-                    <a href="./pages/media.html">Media</a>
-                    <a href="./pages/chef-table.html">The Chef's Table</a>
-                    <a href="./pages/contact-the-chef.html">Contact</a>
-                </div>
-                
-                <div id="socialMedia" class="flex flex-justifyContent-start flex-alignItems-center" >
-                    <div class="flex">
-                        <a class="mr-20" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
-                            <i class="fa-brands fa-instagram noHighlight"></i>
-                        </a>
-                        <a class="mr-20" target="_blank" href="https://www.youtube.com/channel/UClMP5KSZc2fR8cqTkUV4CCw"  aria-label="Visit YouTube channel">
-                            <i class="fa-brands fa-youtube noHighlight"></i>
-                        </a>
-                    </div>
+    <body id="homePage">
+
+        <div class="flex flex-column col-5 flex-justifyContent-center linkContainer homePageLinks pb-10" id="landingMenu">
+            <a href="#bioSection" id="bioLink"><span>Bio</span></a>
+            <a href="#servicesSection" id="servicesLink"><span>Services</span></a>
+            <a href="#chefTableSec" id="chefTLink"><span>The Chef’s Table</span></a>
+            <a href="./pages/events.html" id="servicesLink"><span>Events</span></a>
+            <a href="./pages/contact-the-chef.html" id="contactLink"><span>Contact</span></a>
+
+            <div id="socialMedia" class="col-5 flex flex-justifyContent-end flex-alignItems-center" >
+                <div class="flex flex-alignItems-center flex-justifyContent-end">
+                    <a class="mr-20 socialLinks" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
+                        <i class="fa-brands fa-instagram noHighlight"></i>
+                    </a>
+                    <a class="socialLinks" target="_blank" href="https://www.youtube.com/channel/UClMP5KSZc2fR8cqTkUV4CCw"  aria-label="Visit YouTube channel">
+                        <i class="fa-brands fa-youtube noHighlight"></i>
+                    </a>
+                    <!-- <div id="landingAd">
+                        <div id="DuckImg"></div>
+                            <div id="eventTextBox" class="flex flex-column">
+                                <div class="flex mb-5">
+                                    <p class="my-0 shadowGold">Duck Sel x Chef Nikolaos Kapernaros</p>
+                                </div>
+                                <div class="flex flex-alignItems-center flex-justifyContent-center">
+                                    <a id="eventLink" href="https://www.exploretock.com/ducksel/event/502883/duck-sel-x-chef-nikolaos-kapernaros" target="_blank">Book Now</a>
+                                    <p class="my-0 ml-5">an exclusive dining experience</p>
+                                </div>
+                            </div>
+                        <div id="KaperImg"></div> 
+                    </div>-->
                 </div>
             </div>
-            
+        </div>
+
+        <nav class="navBar flex biggerScreen homePageLinks">  
             <div class="hambContainer">
                 <div class="hamburger-menu">
                     <div class="bar" id="bar1"></div>
@@ -99,152 +110,134 @@
                     <img class="ml-40" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" alt="Chef Kapernaros Nav Logo">
                 </a>
                 <a href="./pages/bio.html">Bio</a>
-                <a href="./pages/media.html">Media</a>
+                <a href="./pages/services.html">Services</a>
                 <a href="./pages/chef-table.html">The Chef's Table</a>
+                <a href="./pages/events.html">Events</a>
                 <a href="./pages/contact-the-chef.html">Contact</a>
-            </div>
 
-            
+                <!-- <div id="landingAd">
+                    <div id="DuckImg"></div>
+                        <div id="eventTextBox" class="flex flex-column">
+                            <div class="flex mb-5">
+                                <p class="my-0 shadowGold">Duck Sel x Chef Nikolaos Kapernaros</p>
+                            </div>
+                            <div class="flex flex-alignItems-center linkWrap">
+                                <a id="eventLink" href="https://www.exploretock.com/ducksel/event/502883/duck-sel-x-chef-nikolaos-kapernaros" target="_blank">Book Now</a>
+                                <p class="my-0 ml-5">an exclusive dining experience</p>
+                            </div>
+                        </div>
+                    <div id="KaperImg"></div>
+                </div> -->
+            </div>
         </nav>
 
-        <section class="landingPage flex flex-column flex-justifyContent-end" style="position: relative;">
-            <div class="chefQuote col-6 p-25 pr-40 flex flex-column flex-alignItems-center">
-                
-                <div class="wrapper">
-                    <div class="container">
-                        <!-- <h1>multi color text with css</h1> -->
-                        <p class="upLine text-bold">
-                            <i class="fa-solid fa-quote-left mr-10 mb-20 fontSize40"></i>
-                            Feel <span class="text-light">our</span> Love
-                        </p>
-                        <p class="dwnLine ml-50 text-light fontSize45">
-                            <span class="fontSize58 text-bold">in </span>every Bite of <span class="fontSize58 text-bold">your Food</span>
-                            <i class="fa-solid fa-quote-right ml-10 fontSize40"></i>
-                        </p>
-                    </div>
+        <section id="landingSection" class="flex flex-column flex-justifyContent-end" style="position: relative;" id="topPage">
+            <div id="landingPicBox">
+                <!-- <img src="chef-kapernaros/images/chef_kap.png" alt="Chef Kapernaros Landing page"> -->
+                <video  
+                autoplay
+                muted
+                playsinline
+                loop
+                class="slowmo"
+                preload="auto"
+                id="heroLandingVideo" 
+                src="https://res.cloudinary.com/drdrs6pdq/video/upload/v1760133487/Niko/new_materials/chef_kapernaros_landing_hero.mp4" type="video/mp4" 
+                >
+                <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/q_auto:best/br_4000k/v1760131800/Niko/new_materials/Comp_2_m6ixnc.mp4" type="video/mp4"  -->
+                <!-- style="filter: grayscale(1)" -->
+                <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,g_center,h_1100,q_auto,w_1150,x_50,y_200/v1759769752/Niko/video-olive-field-3_r56pgc.mp4" type="video/mp4" --> -->
+                <!-- src="https://www.veed.io/view/9f99f4b7-d4e2-4260-86c4-4a35f7f83fa8?source=editor&panel=share" type="video/mp4" -->
+                <!-- src="./chef-kapernaros/images/video-olive-field-3.mp4" type="video/mp4" -->
+                </video>
+            <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,g_center,h_1100,q_auto,w_1150,x_50,y_200/v1759765710/Niko/video-olive-field-3_r56pgc.mp4" type="video/mp4"> -->
+                <!-- <video  id="heroLandingVideo" autoplay
+                        >
+                    <source src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,g_center,h_1100,q_auto,w_1150,x_50,y_200/v1759765710/Niko/video-olive-field-3_r56pgc.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/drdrs6pdq/video/upload/v1759768432/video-olive-field_bsirbd.mp4" type="video/mp4"> -->
+                    <!-- <source src="https://res.cloudinary.com/your_cloud/video/upload/c_fill,ar_16:9,g_auto,w_1920,q_auto:good,f_auto/video-olive-field.mp4" type="video/mp4">
+                </video> -->
+                <div class="heroLandingVideoBG"></div>
+            </div>
+            <img src="chef-kapernaros/images/new_golden_logo.svg" alt="Chef Kapernaros Landing page Logo" id="logoLanding">
+            <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/e_blackwhite,q_100/v1760137353/Niko/signature_white_d0rqp9.png" alt="Chef Kapernaros Landing page signature" id="signatureLanding">
+        </section>
+
+        <section class="middlePic py-25 col-12 flex flex-justifyContent-center" id="middlePage">
+            <div class="flex p-15 middleImgWrapper">
+                <img class="col-4" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_600/v1712187961/Niko/chef-pic-4_fl6wep.webp" alt=" Chef Kapernaros middle pics">
+                <img class="col-4" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709573861/Niko/Kapernaros_middle_pic_1_sqpwri.webp" alt=" Chef Kapernaros middle pics">
+                <img class="col-4" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_600/v1712187500/Niko/plate-pic-3_b51gri.webp" alt=" Chef Kapernaros middle pics">
+            </div>
+        </section>
+
+        <section id="bioSection" class="bioLandingPicContainer col-12 py-40">
+            <div id="bioTextContainer" class=" bioLandingTextWrapper flex flex-column mt-10 pt-50">
+                <p class="titlesChef mt-0 mb-10 ml-40 font-prata"> Chef Nikolaos Kapernaros</p>
+                <p class="mt-10 textBioLanding">In every dish I craft, the essence of my homeland whispers, telling tales of my culture and family traditions.  My culinary journey is a homage to the land and people that raised me, a celebration of bountiful produce, vibrant flavors and enduring heritage.  This is more than cooking; it's a journey back to my roots, a path I tread with every ingredient I choose and every recipe I create.  Welcome to my story of passion, tradition and the unbreakable bond between culture and cuisine.</p>
+                <div id="logoBtnWrapper" class="mt-20 flex flex-alignItems-start flex-justifyContent-spaceBetween col-12">
+                    <img id="logoMidPage" src="./chef-kapernaros/images/logo-chef-kapernaros-2.png" alt="Chef Kapernaros middle pics">
+                    <a class="btnPrimary" href="./pages/bio.html">Chef's Story</a>
                 </div>
-
-                
             </div>
-            <div class="mt-30 mb-50 col-6 flex flex-justifyContent-center signature">
-                <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_100/v1709556440/Niko/chef-kapernaros-signature_edusac.webp" alt="chef kapernaros signature">
-            </div>
-            <p class="picCpt">© 2023 foodiebutabaddie</p>
-        </section>
-
-        <section class="middlePic col-12 flex flex-justifyContent-center">
-            <div class="flex py-25 col-7">
-                <img class="mr-20" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_600/v1712187961/Niko/chef-pic-4_fl6wep.webp" alt=" Chef Kapernaros middle pics">
-                <img class="mr-20" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709573861/Niko/Kapernaros_middle_pic_1_sqpwri.webp" alt=" Chef Kapernaros middle pics">
-                <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_600/v1712187500/Niko/plate-pic-3_b51gri.webp" alt=" Chef Kapernaros middle pics">
+            <div class="bioImgContainer">
+                <img id="bioChefImg" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880317/Niko/new_materials/chef-pic-27_qybyva.jpg" alt="Chef Kapernaros middle pics">
             </div>
         </section>
 
-        <section class="bioLanding col-12 flex flex-justifyContent-center flex-alignItems-center py-40">
-            <div class="col-6 bioLandingPicContainer">
-                <img id="pic1" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_600/v1709578128/Niko/Kapernaros_bio_landing_1_lprh8i.webp" alt=" Chef Kapernaros middle pics">
-                <img id="pic2" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709578128/Niko/Kapernaros_bio_landing_2_wn33pg.webp" alt=" Chef Kapernaros middle pics">
-                <img id="pic3" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709573633/Niko/Kapernaros_middle_pic_2_x0eeuu.webp" alt=" Chef Kapernaros middle pics">
-                <img id="pic4" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709578127/Niko/Kapernaros_bio_landing_4_l6yclh.webp" alt=" Chef Kapernaros middle pics">
-            </div>
-
-            <div class="col-6 bioLandingTextContainer flex flex-column flex-justifyContent-center">
-                <p class="titlesChef mt-0 mb-20"> Chef Nikolaos Kapernaros</p>
-                <p class="fontSize16 my-20 py-10 textBioLanding">In every dish I craft, the essence of my homeland whispers, telling tales of my culture and family traditions.  My culinary journey is a homage to the land and people that raised me, a celebration of bountiful produce, vibrant flavors and enduring heritage.  This is more than cooking; it's a journey back to my roots, a path I tread with every ingredient I choose and every recipe I create.  Welcome to my story of passion, tradition and the unbreakable bond between culture and cuisine.</p>
-                <a class="btnPrimary mt-20" href="./pages/bio.html">Chef's Story</a>
-            </div>
-        </section>
-
-        <section class="achievementLanding flex flex-justifyContent-center">
-            <div class="col-6 allAchvmText pl-40 mt-30">
-                <div class="col-6 flex flex-justifyContent-center">
-                    <p class="titlesChef mt-30 mb-10">Achievements</p>
+        <section id="servicesSection" class="bioLandingPicContainer flex flex-alignItems-center flex-justifyContent-center">
+            <div class="animatedPicWrapper">
+                <div class="picSubWr">
+                    <img id="pic1" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880305/Niko/new_materials/chef-pic-16_qwwkxy.jpg" alt=" Chef Kapernaros middle pics">
+                    <img id="pic2" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880317/Niko/new_materials/chef-pic-26_vyi7aa.jpg" alt=" Chef Kapernaros middle pics">
+                    <img id="pic3" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709573633/Niko/Kapernaros_middle_pic_2_x0eeuu.webp" alt=" Chef Kapernaros middle pics">
+                    <img id="pic4" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709578127/Niko/Kapernaros_bio_landing_4_l6yclh.webp" alt=" Chef Kapernaros middle pics">
                 </div>
-                <div class="col-12 mt-20">
-                    
-                    <img id="chef-corps-logo" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_600/v1709658322/Niko/Chef-Kapernaros-chef-corps-logo_assrxb.webp" alt="Chef Kapernaros chef corps logo" style="max-width: 250px;">
-                    <div class="col-7 card-1Div flex flex-justifyContent-end">
-
-                        <p id="card-1" class="achCards font-merriweather fontSize18" style="max-width: 315px;"><span class="textDkGold">Head Chef</span> for celebrities including: 
-                            <span class="textDkGold">Aerosmith</span>, 
-                            Bon Jovi, 
-                            <span class="textDkGold">Depeche Mode</span>, 
-                            Scorpions, 
-                            <span class="textDkGold">Foo Fighters</span>,
-                            Red Hot Chili Peppers,
-                            <span class="textDkGold">Jennifer Lopez</span>,
-                            Kylie Minogue,
-                            <span class="textDkGold">Kendall Jenner</span>,
-                            Tim Allen,
-                            <span class="textDkGold">Jose Andres</span>
-                        </p>
-                    </div>
-
-                    <div class="cardsLine cards23Cont col-10 flex flex-justifyContent-end">
-                        <p id="card-2" class="achCards font-bebas-neue fontSize28" style="max-width: 350px;">
-                            Created <span class="textDkGold">summer menu 2023 for American Airlines</span> premium cabin flights from Chicago O’Hare to
-                            Europe
-                            <!-- Head Chef <span class="textDkGold">for Princess Lalla Meryem HRH</span> of Morocco during her stay <span class="textDkGold">at Grand Resort</span> -->
-                        </p>
-                        <p id="card-3" class="achCards font-playfair-display fontSize23 ml-30 text-bold" style="max-width: 250px;">Guest Celebrity Chef for the <span class="textDkGold">Chicago Bears</span> 2023</p>
-                    </div>
-
-                    <div class="card45Cont col-12 col-xl-11 flex flex-column flex-alignItems-start flex-justifyContent-end">
-                        <div class="flex col-12 flex-justifyContent-end cardsLine">
-                            <p id="card-4" class="achCards font-playfair-display fontSize22" style="max-width: 265px;">
-                                1 st Place Winner at the 
-                                <span class="textDkGold">Good Taste Series </span>
-                                Competition 2018 <br><span class="textDkGold">– Award for Excellence –</span>
-                            </p>
-                            <p id="card-5" class="achCards font-bebas-neue fontSize24 ml-30" style="max-width: 175px;">
-                                Chicago 
-                                <span class="textDkGold">Gourmet guest Chef </span>
-                                2023 
-                            </p>
-                        </div>
-                        <div class="flex flex-alignItems-center mr-30 btnWrap">
-                            <a class="btnPrimary" href="./pages/bio.html#career-highlights">More Career Highlights</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            <div class="col-5 imgAchvm ml-30">
-                <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_100,w_800/v1709656193/Niko/chef-kapernaros-achievements-pic_ejbozs.webp" alt="Chef Kapernaros Achievements Pic">
-            </div>
-
-        </section>
-
-        <section class="charityLanding col-12 flex flex-justifyContent-center flex-alignItems-center py-40">
-            <div class="col-6 charityLandingPicContainer">
-                <img id="pic1" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1712186483/Niko/chef-kapernaros.greece_tjxtkk.webp" alt=" Chef Kapernaros middle pics">
-                <img id="pic2" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_800/v1709720634/Niko/Chef_Kapernaros_charity_events_pic_2_ealh1h.webp" alt=" Chef Kapernaros middle pics">
-                <img id="pic3" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_700/v1709720633/Niko/Chef_Kapernaros_charity_events_pic_4_swqkut.webp" alt=" Chef Kapernaros middle pics">
-                <img id="pic4" src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_800/v1709720634/Niko/Chef_Kapernaros_charity_events_pic_1_diom0m.webp" alt=" Chef Kapernaros middle pics">
-            </div>
-
-            <div class="col-6 charityLandingTextContainer flex flex-column flex-justifyContent-center">
-                <p class="titlesChef mt-0 mb-20">Charity Events</p>
-                <p class="fontSize16 my-20 py-10 textCharityLanding">
-                    Giving back is a core value that I strive to incorporate into both my career and my life. 
-                    I'm a proud member of several non-profit organizations, including the Chicago Chefs Cook and the World Central Kitchen Chef Corps. 
-                    Additionally, I've hosted and participated in numerous events supporting various philanthropic efforts.
+            <div id="servicesSectionTextContainer" class="col-6 bioLandingTextWrapper homePageTextWrapper textWhite">
+                <p class="titlesChef m-0 textWhite">Services</p>
+                <p class="textservicesSection mt-20 textWhite">
+                    Take a journey through pivotal moments in my culinary career: from my early days in Greece to appearances on renowned cooking shows, and memorable collaborations with fellow food enthusiasts and celebrities.
                 </p>
-                <a class="btnPrimary mt-20" href="./pages/media.html#videoSec">Watch Videos</a>
+                <a class="btnPrimary greyShadow" href="./pages/services.html">Read More</a>
             </div>
         </section>
 
-        <section id="bobbyFlay" class="hide">
+        <section id="chefTableSec" class="bioLandingPicContainer flex flex-justifyContent-center flex-alignItems-center">
+            <div id="chefTableTextContainer" class="col-6 bioLandingTextWrapper homePageTextWrapper">
+                <p class="titlesChef m-0">The Chef’s Table</p>
+                <p class="textchefTable mt-20">
+                    Delight in flavors that capture the essence of Greek cuisine, infused with the culmination of my global experiences and culinary expertise. Join me for an unforgettable dining experience that transcends borders and celebrates the art of food at The Chef’s Table.
+                </p>
+                <a class="btnPrimary" href="./pages/chef-table.html">Read More</a>
+            </div>
+            <div id="chefTablePicContainer" class="col-6 animatedPicWrapper">
+                <div class="picSubWr">
+                    <img id="pic1" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1715129221/Niko/chef_table/viber_image_2024-01-11_23-53-34-905_gjxng3.jpg" alt=" Chef Kapernaros middle pics">
+                    <img id="pic2" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/navy-pier-chef-kapernaros_m79t4g.jpg" alt=" Chef Kapernaros middle pics">
+                    <img id="pic3" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1715129212/Niko/chef_table/viber_image_2024-01-11_23-53-34-649_ihor7w.jpg" alt=" Chef Kapernaros middle pics">
+                    <img id="pic4" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg" alt=" Chef Kapernaros middle pics">
+                </div>
+            </div>
+
+
+        </section>
+    
+        
+        <!-- <section id="bobbyFlay" class="hide">
             <div id="bobbyFlayDiv">
                 <i id="closingPopup" class="fa-regular fa-circle-xmark"></i>
-                <img id="bobbyFlayLogo" src="./chef-kapernaros/images/Beat-Bobby-Flay-nobg.svg" alt="Bobby Flay">
+                <div id="logoCont" class="flex flex-column">
+                    <div id="nikoForPopup" ></div>
+                    <div id="bobbyFlayLogo"></div>
+                </div>
                 <div id="highlightsBob" class="font-ledger">
                     <p class="fontSize22 font-bold my-0">See the Highlights</p>
                     <button class="ml-10 font-ledger" id="clickToPics">HERE!</button>
                     <i class="fa-solid fa-arrow-left-long ml-10"></i>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <footer class="col-12 flex flex-alignItems-center flex-justifyContent-spaceBetween px-40 py-20">
             <div class="flex flex-column flex-justifyContent-end" style="height: 100%;">
@@ -260,13 +253,24 @@
             <div class="col-10 flex" id="webcraftLink">
                 <a class="font-inter textWhite" href="https://marcolux.github.io/contact_form/" target="_blank" style="text-decoration: none;">Website designed and created by <span class="textGold">Webcraft</span></a>
             </div>
-            <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709722273/Niko/Chef_Kapernaros_logo_white_no_BG_xik49g.webp" alt="Chef Kapernaros logo white no BG">
+            <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709722273/Niko/Chef_Kapernaros_logo_white_no_BG_xik49g.webp" alt="Chef Kapernaros logo white no BG"></footer>
         </footer>
 
         <!-- Scripts -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script defer type="text/javascript" src="./chef-kapernaros/script/main.js"></script>
         <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script> -->
+        <script src="./analytics.js"></script>
+        <script>
+            document.querySelectorAll('video.slowmo').forEach(v => {
+                const rate = 0.8              // 50% speed
+                v.defaultPlaybackRate = rate   // initial speed
+                v.playbackRate = rate
+
+                // Keep speed if the browser/user tries to change it
+                v.addEventListener('play', () => { v.playbackRate = rate; })
+            })
+        </script>
 
     </body>
 
