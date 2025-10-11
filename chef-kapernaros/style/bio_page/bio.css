@@ -1,7 +1,6 @@
 #bioPage {
   background-color: #000000;
-  background-image: url("../../images/chef_16x9_center_1600x900.webp");
-  background-position: top;
+  background-image: url("https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best,y_50/v1760151181/Niko/new_materials/viber_image_2024-12-17_19-48-56-276_yrvpx7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
