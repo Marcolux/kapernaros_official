@@ -41,6 +41,86 @@ body {
 		padding-bottom: 0vh;
 		padding-top: 0vh;
 	}
+	#landingSection{
+		// background-color: #00000003;
+		// height: 100vh;
+		// position: relative;
+		// #landingPicBox {
+		// 	background-color: #00000003;
+		// 	height: 100%;
+		// 	// width: 55%;
+		// 	#heroLandingVideo {
+		// 		height: 100%;
+
+		// 	}
+		// 	#videoOverlay {
+		// 		position: absolute;
+		// 		inset: 0;
+		// 		background: rgba(0,0,0,0.5); /* adjust 0.5 to darker/lighter */
+		// 		z-index: 5;                  /* above video, below menu/logo */
+		// 		pointer-events: none;         /* doesn't block clicks */
+		// 	}
+		// 	img {
+		// 		box-sizing: border-box;
+		// 		height: 100%;
+		// 		aspect-ratio: 1/1;
+		// 		object-fit: cover;
+		// 		object-position: center;
+		// 		opacity: 2;
+		// 		transition: all 2.5s ease;
+		// 		&.in-view {
+		// 			border-radius: 0px;
+		// 			opacity: 2;
+		// 		}
+		// 	}
+		// }
+		position: relative;
+		min-height: 100vh; // use min-height so content can grow
+		overflow: hidden;
+
+		#landingPicBox {
+			position: relative;
+			z-index: 0; // base layer
+			width: 50vw;
+			height: 100vh;
+
+			#heroLandingVideo {
+				position: absolute;
+				height: 85vh;
+				aspect-ratio: 1 / 1.2;
+				-o-object-fit: contain;
+				object-fit: cover;
+				z-index: 1;
+				top: 7.5vh;
+				left: 60%;
+				border-radius: 8px;
+			}
+		}
+		#heroLandingVideoBG {
+			position: absolute;
+			inset: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color: #00000080;
+			z-index: 2;
+		}
+		img#logoLanding {
+			height: 135px;
+			position: absolute;
+			top: 10%;
+			right: 5%;
+			z-index: 20;
+		}
+		img#signatureLanding {
+			width: 65%;
+			position: absolute;
+			bottom: 2%;
+			right: 20%;
+			z-index: 20;
+			transform: skewY(357deg) rotateY(35deg);
+		}
+	
+	}
 	.linkContainer {
 		align-items: end;
 		font: var( --navFont);
@@ -50,7 +130,7 @@ body {
 			position: absolute;
 			z-index: 10;
 			right: 0px;
-			top: 50%;
+			top: 40%;
 			a:not(.socialLinks) {
 				background-color: #ffffff;
 				color: #000;
@@ -222,92 +302,7 @@ body {
 			}
 		}
 	}
-	#landingSection{
-		// background-color: #00000003;
-		// height: 100vh;
-		// position: relative;
-		// #landingPicBox {
-		// 	background-color: #00000003;
-		// 	height: 100%;
-		// 	// width: 55%;
-		// 	#heroLandingVideo {
-		// 		height: 100%;
 
-		// 	}
-		// 	#videoOverlay {
-		// 		position: absolute;
-		// 		inset: 0;
-		// 		background: rgba(0,0,0,0.5); /* adjust 0.5 to darker/lighter */
-		// 		z-index: 5;                  /* above video, below menu/logo */
-		// 		pointer-events: none;         /* doesn't block clicks */
-		// 	}
-		// 	img {
-		// 		box-sizing: border-box;
-		// 		height: 100%;
-		// 		aspect-ratio: 1/1;
-		// 		object-fit: cover;
-		// 		object-position: center;
-		// 		opacity: 2;
-		// 		transition: all 2.5s ease;
-		// 		&.in-view {
-		// 			border-radius: 0px;
-		// 			opacity: 2;
-		// 		}
-		// 	}
-		// }
-		position: relative;
-		min-height: 100vh; // use min-height so content can grow
-		overflow: hidden;
-
-		#landingPicBox {
-			position: relative;
-			z-index: 0; // base layer
-			width: 50vw;
-			height: 100vh;
-
-			#heroLandingVideo {
-				position: absolute;
-				// top: 5vh;
-				// left: 5vw;
-				// top: -300px;
-				// inset: 0;
-				width: 50vw;
-				max-width: 650px;
-				min-width: 300px;
-				height: 100vh;
-				object-fit: cover;
-				object-position: center;
-				pointer-events: none;
-				z-index: 1;
-				// border-radius: 4px;
-				// border: 1px solid var(--secondaryColor);
-				// box-shadow: 6px 6px 6px #ffffff3d;
-			}
-		}
-		#heroLandingVideoBG {
-			position: absolute;
-			inset: 0;
-			width: 100vw;
-			height: 100vh;
-			background-color: #0000006d;
-			z-index: 2;
-		}
-		img#logoLanding {
-			height: 300px;
-			position: absolute;
-			top: 15%;
-			right: 10%;
-			z-index: 20;
-		}
-		img#signatureLanding {
-			width: 45%;
-			position: absolute;
-			bottom: 50px;
-			right: 17%;
-			z-index: 20;
-		}
-	
-	}
 	#bioSection {
 		background-color: #ffffff;
 		.bioImgContainer {
@@ -337,7 +332,7 @@ body {
 			}
 		}
 		#bioTextContainer {
-			margin-right: -50px;
+			margin-right: -0px;
 			width: 50%;
 			z-index: 10;
 			position: relative;

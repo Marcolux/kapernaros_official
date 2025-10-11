@@ -91,7 +91,7 @@ function initCarousel() {
     const slide5 = {
         description: 'In June 2018, I began carving my new path in Chicago as Chef de Cuisine at the Hyatt Regency Chicago.',
         leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1754953076/Niko/new_hyatt_h9wckf.jpg',
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1711574230/Niko/chef-kapernaros-team-work-card_gbakd0.png',
         picNote: 'Hyatt Regency Chicago'
     }
     const slide6 = {
@@ -103,7 +103,7 @@ function initCarousel() {
     const slide7 = {
         description: 'In June of 2024, I welcomed a new challenge and accepted a position with Levy Restaurants Cultural Attractions as Executive Chef of Navy Pier Chicago.  Here, I fuse culinary experiences with the timeless architectural beauty of Chicago and Lake Michigan.',
         leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1719343585/Kapernaros_NavyPier_gae6ms.webp',
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1759880319/Niko/new_materials/navy-pier-job_t6zgjv.jpg',
         picNote: 'Navy Pier, Chicago'
     }
     // After adding a new slide update the circle_(lastIndex) in scss file too

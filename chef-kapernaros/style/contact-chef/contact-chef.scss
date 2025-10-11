@@ -1,7 +1,28 @@
 $primaryColor: #f8f8f5;
 $gold: #b59b07;
 #contactPage{
-    background-color: $primaryColor;
+    background: var(--backgroundV1);
+    // background-image: url('https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1759954002/dk_serviceBG_b5gsnd.png');
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    .titlesChef {
+        font-size: clamp(40px, 2.6vw, 47px);
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        margin-bottom: 10px;
+        &::before {
+            content: "";
+            background-color: var(--secondaryColor);
+            bottom: 5px;
+            height: calc(100% - 20px);
+            left: -45px;
+            opacity: 0.5;
+            position: absolute;
+            width: calc(100% + 15px);
+            z-index: -1;
+        }
+    }
     #contactIntro{
         position: absolute;
         top: 17vh;
@@ -13,39 +34,11 @@ $gold: #b59b07;
         height: 100vh;
         display: flex;
         align-items: center;
-        padding-left: 10vh;
+        justify-content: center;
+        padding: auto;
         padding-right: 50px;
-        #lineGold{
-            position: absolute;
-            display: flex;;
-            height: 100%;
-            width: 4px;
-            background-color: $gold;
-            left: 80%;
-        }
-        #lineGold2{
-            position: absolute;
-            display: flex;
-            height: 100%;
-            width: 2px;
-            background-color: $gold;
-            left: 79.5%;
-        }  
-        #logoPic{
-            width: 32vw;
-            height: 32vw;
-            border-radius: 50%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            object-position: center; 
-            position: absolute;
-            left: 60%;
-            top: 20%;
-            border: 6px solid $gold;
-            filter: brightness(0.85);
-        }
         #myForm{
-            width: 40% !important;
+            width: 60% !important;
             height: fit-content;
             background-color: #fffffffa;
             border-radius: 6px;
@@ -59,22 +52,22 @@ $gold: #b59b07;
             z-index: 5;
             
             input{
-                height: 23px;
+                height: 35px;
                 font-family: var(--body-App-fontFamily);
                 font-size: 16px;
                 color: #000000;
                 &:focus-visible{
-                    
                     outline-width: 0px;
                     background-color: transparent;
                 }
                 &.inputText{
-                    border: 1px solid $gold;
+                    border: none;
+                    border-bottom: 1px solid $gold;
                 }
                 background-color: transparent;
             }
             select{
-                height: 28px;
+                height: 35px;
                 font-family: var(--body-App-fontFamily);
                 font-size: 16px;
                 color: #000000;
@@ -100,10 +93,6 @@ $gold: #b59b07;
                     outline-width: 0px;
                     border: 1px solid $gold;
                 }
-            }
-            button{
-                border-color: $gold !important;
-                color: $gold !important;
             }
         }
     }

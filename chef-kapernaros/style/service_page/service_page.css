@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 14vh;
-  background: linear-gradient(180deg, var(--darkBlueColor), #000000);
+  background: var(--backgroundV1);
 }
 #servicesPage #sectionHero {
   align-items: center;
@@ -21,10 +21,10 @@
   background-repeat: no-repeat;
   border: 1px solid var(--secondaryColor);
   border-radius: 50px;
-  height: 76vh;
+  height: 80vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  width: 50vw;
+  width: 70vw;
   transition: all 0.5s ease-in-out;
 }
 #servicesPage #sectionHero #imgHero.in-view {
@@ -73,8 +73,8 @@
   float: right;
 }
 #servicesPage #allServices article.singleService .singleServiceWrapper.reverse .serviceTextBx {
-  margin-left: -50px;
   left: 0;
+  margin-left: -50px;
   transition: all 0.5s ease-in-out;
 }
 #servicesPage #allServices article.singleService .singleServiceWrapper.reverse .serviceTextBx.in-view {
@@ -109,12 +109,13 @@
   display: block;
 }
 #servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx {
-  border: 3px solid var(--secondaryColor);
+  border: 1px solid var(--secondaryColor);
   border-radius: 8px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 35px;
+  margin-right: 100px;
   padding: 20px 30px;
   position: absolute;
   right: 0;
@@ -122,7 +123,6 @@
   transform: translateY(-50%);
   transition: all 0.5s ease-in-out;
   width: 22.1875rem;
-  margin-right: 100px;
 }
 #servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx.in-view {
   margin-right: 0px;

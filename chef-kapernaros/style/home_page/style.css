@@ -31,6 +31,7 @@
   --primaryColorLight: #00000090;
   --secondaryColor: #b19e47;
   --darkBlueColor: #1e293b;
+  --backgroundV1: linear-gradient(180deg, var(--darkBlueColor), #000000);
 }
 
 * {
@@ -85,6 +86,51 @@ body {
   padding-bottom: 0vh;
   padding-top: 0vh;
 }
+#homePage #landingSection {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+#homePage #landingSection #landingPicBox {
+  position: relative;
+  z-index: 0;
+  width: 50vw;
+  height: 100vh;
+}
+#homePage #landingSection #landingPicBox #heroLandingVideo {
+  position: absolute;
+  height: 85vh;
+  aspect-ratio: 1/1.2;
+  -o-object-fit: contain;
+  object-fit: cover;
+  z-index: 1;
+  top: 7.5vh;
+  left: 60%;
+  border-radius: 8px;
+}
+#homePage #landingSection #heroLandingVideoBG {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  z-index: 2;
+}
+#homePage #landingSection img#logoLanding {
+  height: 135px;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: 20;
+}
+#homePage #landingSection img#signatureLanding {
+  width: 65%;
+  position: absolute;
+  bottom: 2%;
+  right: 20%;
+  z-index: 20;
+  transform: skewY(357deg) rotateY(35deg);
+}
 #homePage .linkContainer {
   align-items: end;
   font: var(--navFont);
@@ -96,7 +142,7 @@ body {
   position: absolute;
   z-index: 10;
   right: 0px;
-  top: 50%;
+  top: 40%;
 }
 #homePage .linkContainer.homePageLinks a:not(.socialLinks) {
   background-color: #ffffff;
@@ -283,52 +329,6 @@ body {
   opacity: 1;
   scale: 1;
 }
-#homePage #landingSection {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-}
-#homePage #landingSection #landingPicBox {
-  position: relative;
-  z-index: 0;
-  width: 50vw;
-  height: 100vh;
-}
-#homePage #landingSection #landingPicBox #heroLandingVideo {
-  position: absolute;
-  width: 50vw;
-  max-width: 650px;
-  min-width: 300px;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  pointer-events: none;
-  z-index: 1;
-}
-#homePage #landingSection #heroLandingVideoBG {
-  position: absolute;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4274509804);
-  z-index: 2;
-}
-#homePage #landingSection img#logoLanding {
-  height: 300px;
-  position: absolute;
-  top: 15%;
-  right: 10%;
-  z-index: 20;
-}
-#homePage #landingSection img#signatureLanding {
-  width: 45%;
-  position: absolute;
-  bottom: 50px;
-  right: 17%;
-  z-index: 20;
-}
 #homePage #bioSection {
   background-color: #ffffff;
 }
@@ -361,7 +361,7 @@ body {
   scale: 1;
 }
 #homePage #bioSection #bioTextContainer {
-  margin-right: -50px;
+  margin-right: 0px;
   width: 50%;
   z-index: 10;
   position: relative;
