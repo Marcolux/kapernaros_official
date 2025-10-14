@@ -6,9 +6,44 @@
   background: var(--backgroundV1);
   flex: auto;
 }
+#eventsPage #tabs-events {
+  background-color: rgba(255, 255, 255, 0.2549019608);
+  display: flex;
+  justify-content: center;
+}
+#eventsPage #tabs-events #all-tabs {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#eventsPage #tabs-events #all-tabs label {
+  padding: 10px 20px 5px;
+}
+#eventsPage #tabs-events #all-tabs label:hover {
+  cursor: pointer;
+}
+#eventsPage #tabs-events input.activeTab + label {
+  background-color: rgba(114, 62, 255, 0.2549019608);
+  color: var(--secondaryColor);
+}
+#eventsPage #content-events {
+  display: flex;
+  flex: auto;
+  background-color: #f8f8f5;
+}
 #eventsPage #pageContent {
   flex: auto;
   padding-top: 50px;
+}
+#eventsPage .readOnly {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
 }
 
 @media only screen and (max-width: 1100px) {

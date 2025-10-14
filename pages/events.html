@@ -104,11 +104,71 @@
         
     </nav>
     
-    <section class="font-ledger" id="pageContent">
-       <h1 class="textWhite">Events Page Under construction .... </h1>
-    </section>
-    <section id="allEvents" class="">
+    <section class="font-ledger col-12" id="tabs-events">
+        <div id="all-tabs" class="col-10 flex">
+            <div class="flex">
+                <input 
+                    type="radio"
+                    name="tabsRadio"
+                    value="upcoming"
+                    class="single-tab readOnly activeTab"
+                    id="upcoming-tab"
+                    role="tab"
+                    aria-controls="upcoming-content"
+                >
+                <label for="upcoming-tab">Upcoming</label>
+            </div>
 
+            <div class="flex">
+                <input 
+                    type="radio"
+                    name="tabsRadio"
+                    value="past_events"
+                    class="single-tab readOnly"
+                    id="past_events-tab"
+                    role="tab"
+                    aria-controls="past_events-content"
+                >
+                <label for="past_events-tab">Past Events</label>
+            </div>
+
+            <div class="flex">
+                <input 
+                    type="radio"
+                    name="tabsRadio"
+                    value="competitions"
+                    class="single-tab readOnly"
+                    id="competitions-tab"
+                    role="tab"
+                    aria-controls="competitions-content"
+                >
+                <label for="competitions-tab">Competitions</label>
+            </div>
+        </div>
+    </section>
+    <section id="content-events" class="col-12">
+        <div 
+            class="tab-content"
+            id="upcoming-content"
+            role="tabpanel"
+            aria-labelledby="upcoming-tab"
+        >Upcoming Content</div>
+
+        <div 
+            class="tab-content"
+            id="past_events-content"
+            role="tabpanel"
+            aria-labelledby="past_events-tab"
+            hidden
+        >Past Events Content</div>
+
+        <div 
+            class="tab-content"
+            id="competitions-content"
+            role="tabpanel"
+            aria-labelledby="competitions-tab"
+            hidden
+        >Competitions Content</div>
     </section>
 
     

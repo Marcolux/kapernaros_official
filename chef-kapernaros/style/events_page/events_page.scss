@@ -10,9 +10,43 @@ $shadowInset: #ffffff41;
     padding-top: 14vh;
     background: var(--backgroundV1);
     flex: auto;
+    #tabs-events {
+        background-color: #ffffff41;
+        display: flex;
+        justify-content: center;
+        #all-tabs {
+            width: fit-content;
+            label {
+                padding: 10px 20px 5px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        input.activeTab + label {
+            background-color: #723eff41;
+            color: var(--secondaryColor);
+        }
+    }
+    #content-events {
+        display: flex;
+        flex: auto;
+        background-color: #f8f8f5;
+    }
     #pageContent {
         flex: auto;
         padding-top: 50px;
+    }
+    .readOnly {
+        border:0;
+        clip:rect(0,0,0,0);
+        height:1px;
+        margin:-1px;
+        overflow:hidden; 
+        padding:0; 
+        position:absolute !important;
+        white-space:nowrap; 
+        width:1px; 
     }
 }
 @media only screen and (max-width: 980px){}

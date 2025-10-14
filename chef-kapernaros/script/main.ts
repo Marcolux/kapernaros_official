@@ -170,3 +170,36 @@ document.getElementById('myForm')?.addEventListener('submit', function(event) {
 
 // Setting a cookie with SameSite=Lax
 document.cookie = "key=value; SameSite=Lax";
+
+// Events page ====> Tabs switch logic
+
+const eventSwitchTab = () => {
+
+    const eventsPage = document.querySelector('body#eventsPage') as HTMLElement
+    const tabsWrapper = eventsPage.querySelector('#all-tabs') as HTMLElement
+    const allTabs =  [...tabsWrapper.querySelectorAll<HTMLInputElement>('.single-tab')]
+    const allContents = [...eventsPage.querySelectorAll<HTMLDivElement>('.tab-content')]
+
+    const showTab = (valueText: string) => {
+        const contentId = `${valueText}-content`
+        allContents.forEach(content => {
+            const activeContent = content.id === contentId
+            content.hidden = !activeContent
+            content.setAttribute('aria-hidden', String(!activeContent))
+            content.tabIndex = 1
+        })
+        
+        allTabs.forEach(tab => {
+            const selected = tab.value === valueText
+            tab.checked = selected
+            tab.classList.toggle('activeTab', tab.checked)
+            tab.setAttribute('aria-selected', String(selected))
+            tab.tabIndex = 1
+        })
+    }
+    tabsWrapper.addEventListener('change', (e) => {
+        const tabClicked = e.target as HTMLInputElement
+        if (tabClicked) showTab(tabClicked.value)
+    })
+}
+eventSwitchTab()
