@@ -160,9 +160,12 @@ var inputTextSelect = document.querySelectorAll('select.inputText');
 // }
 // Setting a cookie with SameSite=Lax
 document.cookie = "key=value; SameSite=Lax";
-// Events page ====> Tabs switch logic
+/***************************************
+*  ====     EVENTS PAGE LOGIC     ==== *
+****************************************/
+/***  ====> Tabs switch logic <==== ***/
+var eventsPage = document.querySelector('body#eventsPage');
 var eventSwitchTab = function () {
-    var eventsPage = document.querySelector('body#eventsPage');
     var tabsWrapper = eventsPage.querySelector('#all-tabs');
     var allTabs = __spreadArray([], tabsWrapper.querySelectorAll('.single-tab'), true);
     var allContents = __spreadArray([], eventsPage.querySelectorAll('.tab-content'), true);
@@ -189,3 +192,147 @@ var eventSwitchTab = function () {
     });
 };
 eventSwitchTab();
+var templateCard = function (singleEvent) {
+    var cardElementWrapper = document.createElement('article');
+    cardElementWrapper.className = singleEvent.event_isMostRecent ? 'event_wrapper mostRecentEvt' : 'event_wrapper';
+    var cardElement = document.createElement('div');
+    cardElement.className = singleEvent.event_isMostRecent ? 'event_card mostRecentEvt' : 'event_card';
+    cardElementWrapper.append(cardElement);
+    cardElement.innerHTML = "\n        <div class=\"eventInfo\">\n            <div class=\"titlePicWrapper\">\n                <div class=\"flex flex-column flex-alignItems-center col-12\">\n                    <h5 class=\"col-12 eTitle\">".concat(singleEvent.event_title, "</h5>\n                    <h3 class=\"col-12 text-bold eDate\">").concat(singleEvent.event_date, "</h3>\n                </div>\n                <img class=\"eventPic\" src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n            </div>\n            <div class=\"col-12 flex flex-justifyContent-spaceBetween placeTimeWrapper\">\n                <h6 class=\"eLocation flex\">").concat(singleEvent.event_location, "</h6>\n                <h6 class=\"eTime flex\">").concat(singleEvent.event_time, "</h6>\n            </div>\n            <p class=\"col-12 eDescription\">").concat(singleEvent.event_description, "</p>\n            <a class=\"col-12 eLink\" href=\"").concat(singleEvent.event_link, "\" target=\"_blank\">Event Link</a>\n        </div>\n        <div class=\"eventPicWrapper\">\n            <img src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n        </div>\n    ");
+    var eTime = cardElement.querySelector('.eTime');
+    eTime.className = singleEvent.event_time === '' ? 'eTime flex' : 'eTime flex ml-50';
+    eTime.classList.toggle('hide', !singleEvent.event_isMostRecent);
+    return cardElementWrapper;
+};
+var allEventsUpcoming = [
+    {
+        event_title: 'Title Here',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Upcoming Events link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: true
+    },
+    {
+        event_title: 'Title Here',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Upcoming Events link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+    {
+        event_title: 'Title Here',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Upcoming Events link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+    {
+        event_title: 'Title Here',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Upcoming Events link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+];
+var allEventsPast = [
+    {
+        event_title: 'Chicago Gourmet',
+        event_date: 'Sept. 25 - 28, 2025',
+        event_location: 'Harris Theater Rooftop • Millennium Park',
+        event_time: '',
+        event_description: "Welcome to Chicago Gourmet, one of the country's most distinguished food festivals. Each year, Chicago Gourmet celebrates the city's diverse dining scene with a dynamic line-up of epicurean events that showcase the city’s top chefs, food, and drinks.",
+        event_link: 'https://www.chicagogourmet.org/',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760656045/Niko/new_materials/chef-gourmet_ngqfr3.jpg',
+        event_isMostRecent: true
+    },
+    {
+        event_title: 'Title Here',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Past Events link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+    {
+        event_title: 'Title Here',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Past Events link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+    {
+        event_title: 'Title Here',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Past Events link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+];
+var allEventsCompetions = [
+    {
+        event_title: 'Competions title',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Competions link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+    {
+        event_title: 'Competions title',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Competions link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+    {
+        event_title: 'Competions title',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Competions link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+    {
+        event_title: 'Competions title',
+        event_date: 'Oct 6-7, 2025',
+        event_location: 'Chicago, Navy Pier',
+        event_time: '5:00 pm - 6:00 pm',
+        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+        event_link: 'Competions link',
+        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_isMostRecent: false
+    },
+];
+var upcomingContent = eventsPage.querySelector('#upcoming-content');
+allEventsUpcoming.forEach(function (event) { upcomingContent.append(templateCard(event)); });
+var pastEventsContent = eventsPage.querySelector('#past_events-content');
+allEventsPast.forEach(function (event) { pastEventsContent.append(templateCard(event)); });
+var competitionsContent = eventsPage.querySelector('#competitions-content');
+allEventsCompetions.forEach(function (event) { competitionsContent.append(templateCard(event)); });
