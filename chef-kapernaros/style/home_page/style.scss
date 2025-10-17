@@ -94,7 +94,8 @@ p {color: #000000;}
 				z-index: 1;
 				top: 7.5vh;
 				left: 60%;
-				border-radius: 8px;
+				border-radius: 4px;
+				filter:sepia(0.3);
 			}
 		}
 		#heroLandingVideoBG {
@@ -135,6 +136,7 @@ p {color: #000000;}
 			a:not(.socialLinks) {
 				background-color: #ffffff;
 				color: #000;
+				letter-spacing: 0.07em;
 				margin-right: 0px;
 				max-width: 400px;
 				padding: 5px 10px;
@@ -144,7 +146,7 @@ p {color: #000000;}
 				text-transform: uppercase;
 				width: fit-content;
 				z-index: 0;
-				&:not(:last-child) { margin-bottom: 5px; }
+				&:not(:last-child) { margin-bottom: 8px; }
 				&#bioLink {	width: 200px; }
 				&#servicesLink { width: 135px; }
 				&#chefTLink { width: 285px; }
@@ -287,13 +289,13 @@ p {color: #000000;}
 				&#pic3 {
 					left: 27%;
 					bottom: 0%;
-					transition-delay: 0.4s;
+					transition-delay: 0.5s;
 					z-index: 2;
 				}
 				&#pic4 {
 					left: 0px;
 					bottom: 35%;
-					transition-delay: 0.6s;
+					transition-delay: 0.8s;
 					z-index: 1;
 				}
 				&.in-view {

@@ -84,7 +84,7 @@ const removeObserveInView = (selectorClass: string, offset = 0) => {
 
 
 observeInView('.bioLandingPicContainer img', -100)
-observeInView('#landingPicBox img', -100)
+// observeInView('#landingPicBox img', -100)
 observeInView('.singleCard', -100)
 observeInView('#imgTransition', -100)
 observeInView('.flip-icon', 0)

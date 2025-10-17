@@ -86,7 +86,7 @@ var removeObserveInView = function (selectorClass, offset) {
     document.querySelectorAll(selectorClass).forEach(function (el) { return observer.observe(el); });
 };
 observeInView('.bioLandingPicContainer img', -100);
-observeInView('#landingPicBox img', -100);
+// observeInView('#landingPicBox img', -100)
 observeInView('.singleCard', -100);
 observeInView('#imgTransition', -100);
 observeInView('.flip-icon', 0);

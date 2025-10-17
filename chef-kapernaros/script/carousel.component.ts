@@ -126,34 +126,34 @@ function initCarousel() {
         const slide = newSlidesList.getSingleSlide(index) as Slide
         carouselElement.innerHTML = `
             <div class="flex singleCarouselSlide" id="slide_${index+1}">
-                <div id="timeline" class="flex flex-column flex-justifyContent-spaceAround">
-                    <div id="lineWhite"></div>
-                    <div id="circleWhite" class="circle_${index} position_0"></div>
+                <div class="timeline flex flex-column flex-justifyContent-spaceAround">
+                    <div class="lineWhite"></div>
+                    <div class="circleWhite circle_${index} position_0"></div>
                 </div>
                     
-                <div id="slideDescription" class="flex flex-column flex-justifyContent-center flex-alignItems-center" style="background: ${slide.leftBG}"> 
-                    <i id="prevSlide" class="fa-solid fa-chevron-up fontSize40"></i>            
-                    <div id="slideText" class="p-20 mx-30">
+                <div class="slideDescription flex flex-column flex-justifyContent-center flex-alignItems-center" style="background: ${slide.leftBG}"> 
+                    <i class="prevSlide fa-solid fa-chevron-up fontSize40"></i>            
+                    <div class="slideText p-20 mx-30">
                         <p class="my-0">${slide.description}</p>
                     </div> 
-                    <i id="nextSlide" class="fa-solid fa-chevron-down fontSize40"></i>     
+                    <i class="nextSlide fa-solid fa-chevron-down fontSize40"></i>     
                 </div>
-                <div id="slidePic">
-                    <img id="slideImg" src="${slide.rightBG}" alt="Carousel Picture">
-                    <p class="m-0 note_${index}" id="picNote">${slide.picNote}</p>
+                <div class="slidePic">
+                    <img class="slideImg" src="${slide.rightBG}" alt="Carousel Picture">
+                    <p class="picNote m-0 note_${index}">${slide.picNote}</p>
                 </div>
             </div>
         `
             
-        const prevButton = document.getElementById('prevSlide') as HTMLElement
-        const nextButton = document.getElementById('nextSlide') as HTMLElement
-        const slideImg = document.getElementById('slideImg') as HTMLElement
-        const slideText = document.getElementById('slideText') as HTMLElement
+        const prevButton = document.querySelector('.prevSlide') as HTMLElement
+        const nextButton = document.querySelector('.nextSlide') as HTMLElement
+        const slideImg = document.querySelector('.slideImg') as HTMLElement
+        const slideText = document.querySelector('.slideText') as HTMLElement
         
         prevButton.addEventListener('click', () => {
             setTimeout(() => {
-                const circleWhite = document.getElementById('circleWhite') as HTMLElement
-                const picNote = document.getElementById('picNote') as HTMLElement
+                const circleWhite = document.querySelector('.circleWhite') as HTMLElement
+                const picNote = document.querySelector('.picNote') as HTMLElement
 
                 circleWhite.classList.remove('position_0')
                 circleWhite.classList.add('moveUp')
@@ -172,8 +172,8 @@ function initCarousel() {
 
         nextButton.addEventListener('click', () => {
             setTimeout(() => {
-                const circleWhite = document.getElementById('circleWhite') as HTMLElement
-                const picNote = document.getElementById('picNote') as HTMLElement
+                const circleWhite = document.querySelector('.circleWhite') as HTMLElement
+                const picNote = document.querySelector('.picNote') as HTMLElement
                 
                 circleWhite.classList.remove('position_0')
                 circleWhite.classList.add('moveDown')
@@ -191,8 +191,8 @@ function initCarousel() {
             moveSlide(1)
         })
         
-        let timelineElement = document.querySelector('#timeline') as HTMLDivElement
-        const lineWhite = document.getElementById('lineWhite') as HTMLElement
+        let timelineElement = document.querySelector('.timeline') as HTMLDivElement
+        const lineWhite = document.querySelector('.lineWhite') as HTMLElement
         timelineElement.style.background = slide.leftBG
 
         if (index >= newSlidesList.getLastIndex()) {

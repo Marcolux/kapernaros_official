@@ -8,7 +8,7 @@ body#chefTablePage section#chefTableSec {
 }
 body#chefTablePage section#chefTableSec .chefTableIntro {
   background-color: #F8F6F1;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6823529412);
   font-size: 20px;
   font-weight: 300;

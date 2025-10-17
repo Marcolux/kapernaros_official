@@ -112,7 +112,8 @@ p {
   z-index: 1;
   top: 7.5vh;
   left: 60%;
-  border-radius: 8px;
+  border-radius: 4px;
+  filter: sepia(0.3);
 }
 #homePage #landingSection #heroLandingVideoBG {
   position: absolute;
@@ -153,6 +154,7 @@ p {
 #homePage .linkContainer.homePageLinks a:not(.socialLinks) {
   background-color: #ffffff;
   color: #000;
+  letter-spacing: 0.07em;
   margin-right: 0px;
   max-width: 400px;
   padding: 5px 10px;
@@ -165,7 +167,7 @@ p {
   z-index: 0;
 }
 #homePage .linkContainer.homePageLinks a:not(.socialLinks):not(:last-child) {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 #homePage .linkContainer.homePageLinks a:not(.socialLinks)#bioLink {
   width: 200px;
@@ -322,13 +324,13 @@ p {
 #homePage .animatedPicWrapper .picSubWr img#pic3 {
   left: 27%;
   bottom: 0%;
-  transition-delay: 0.4s;
+  transition-delay: 0.5s;
   z-index: 2;
 }
 #homePage .animatedPicWrapper .picSubWr img#pic4 {
   left: 0px;
   bottom: 35%;
-  transition-delay: 0.6s;
+  transition-delay: 0.8s;
   z-index: 1;
 }
 #homePage .animatedPicWrapper .picSubWr img.in-view {
