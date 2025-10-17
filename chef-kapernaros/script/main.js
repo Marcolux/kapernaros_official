@@ -121,14 +121,14 @@ document.querySelectorAll('.flip-card').forEach(function (card) {
 emailjs.init('0wA6kpUaumn2FNdbg');
 var messageSent = document.querySelector('#messageSent');
 var inputText = document.querySelectorAll('.inputText');
-var inputTextSelect = document.querySelectorAll('select.inputText');
+var inputTextSelect = document.querySelectorAll('select');
 (_a = document.getElementById('myForm')) === null || _a === void 0 ? void 0 : _a.addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission
     emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
         .then(function (response) {
         messageSent.classList.remove('hide');
         inputText.forEach(function (text) { return text.value = ''; });
-        inputTextSelect.forEach(function (text) { return text.value = 'Select One'; });
+        inputTextSelect.forEach(function (select) { return select.selectedIndex = 0; });
         console.log('SUCCESS!', response.status, response.text);
         setTimeout(function () { messageSent.classList.add('hide'); }, 5000);
     }, function (error) {

@@ -30,6 +30,7 @@
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
   --secondaryColor: #b19e47;
+  --secondaryColorTran: #b9970034;
   --darkBlueColor: #1e293b;
   --backgroundV1: linear-gradient(180deg, var(--darkBlueColor), #000000);
 }
@@ -57,23 +58,24 @@ p {
 
 .titlesChef {
   font-family: "Prata";
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 500;
   margin-left: 15px;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
   z-index: 5;
+  letter-spacing: 0.03em;
 }
 .titlesChef::before {
   content: "";
-  position: absolute;
-  bottom: -2px;
-  left: -5px;
-  width: calc(100% + 15px);
-  height: 45%;
   background-color: var(--secondaryColor);
+  bottom: 5px;
+  height: calc(100% - 10px);
+  left: -25px;
   opacity: 0.5;
+  position: absolute;
+  width: 100%;
   z-index: -1;
 }
 

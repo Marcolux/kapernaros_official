@@ -164,11 +164,11 @@ $primaryColor: #f8f8f5;
                     letter-spacing: .01em;
                     margin-bottom: 10px; 
                     &::before {
-                        content: '';
+                        content: "";
                         background-color: var(--secondaryColor);
-                        bottom: 20px;
-                        height: calc(100% - 36px);
-                        left: -55px;
+                        bottom: 17px;
+                        height: calc(100% - 40px);
+                        left: -45px;
                         opacity: 0.5;
                         position: absolute;
                         width: calc(100% + 15px);
@@ -277,9 +277,9 @@ $primaryColor: #f8f8f5;
                                     position: absolute;
                                     bottom: 5px;
                                     left: -30px;
-                                    width: calc(100% + 15px);
-                                    height: 100%;
-                                    background-color: var(--secondaryColor);
+                                    width: calc(100% + 45px);
+                                    height: calc(100% - 10px);
+                                    background-color: #000000b3;
                                     opacity: 0.9;
                                     z-index: -1;
                                 }
@@ -371,6 +371,17 @@ $primaryColor: #f8f8f5;
             .titlesChef {
                 font-size: 47px;
                 margin-bottom: 20px;
+                &::before {
+                    content: "";
+                    background-color: var(--secondaryColor);
+                    bottom: 5px;
+                    height: calc(100% - 25px);
+                    left: -45px;
+                    opacity: 0.5;
+                    position: absolute;
+                    width: calc(100% + 15px);
+                    z-index: -1;
+                }
             }
             .timeline {
                 background-color: #ffffff;

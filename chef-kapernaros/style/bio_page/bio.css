@@ -176,9 +176,9 @@
 #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef::before {
   content: "";
   background-color: var(--secondaryColor);
-  bottom: 20px;
-  height: calc(100% - 36px);
-  left: -55px;
+  bottom: 17px;
+  height: calc(100% - 40px);
+  left: -45px;
   opacity: 0.5;
   position: absolute;
   width: calc(100% + 15px);
@@ -291,9 +291,9 @@
   position: absolute;
   bottom: 5px;
   left: -30px;
-  width: calc(100% + 15px);
-  height: 100%;
-  background-color: var(--secondaryColor);
+  width: calc(100% + 45px);
+  height: calc(100% - 10px);
+  background-color: rgba(0, 0, 0, 0.7019607843);
   opacity: 0.9;
   z-index: -1;
 }
@@ -381,6 +381,17 @@
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .titlesChef {
   font-size: 47px;
   margin-bottom: 20px;
+}
+#bioPage #careerHighlightsSec .careerHighlightsWrapper .titlesChef::before {
+  content: "";
+  background-color: var(--secondaryColor);
+  bottom: 5px;
+  height: calc(100% - 25px);
+  left: -45px;
+  opacity: 0.5;
+  position: absolute;
+  width: calc(100% + 15px);
+  z-index: -1;
 }
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline {
   background-color: #ffffff;

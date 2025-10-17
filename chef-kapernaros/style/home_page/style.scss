@@ -13,21 +13,22 @@ body {
 p {color: #000000;}
 .titlesChef {
 	font-family: 'Prata';
-	font-size: 35px;
+	font-size: 40px;
 	font-weight: 500;
 	margin-left: 15px;
 	position: relative;
 	width: fit-content;
 	z-index: 5;
-	&::before{
-		content: '';
-		position: absolute;
-		bottom: -2px;
-		left: -5px;
-		width: calc(100% + 15px);
-		height: 45%;
+	letter-spacing: 0.03em;
+	&::before {
+		content: "";
 		background-color: var(--secondaryColor);
+		bottom: 5px;
+		height: calc(100% - 10px);
+		left: -25px;
 		opacity: 0.5;
+		position: absolute;
+		width: calc(100%);
 		z-index: -1;
 	}
 }

@@ -19,6 +19,9 @@
 }
 #eventsPage #tabs-events #all-tabs label {
   padding: 10px 20px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 #eventsPage #tabs-events #all-tabs label:hover {
   cursor: pointer;
