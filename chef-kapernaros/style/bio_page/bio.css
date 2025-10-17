@@ -375,6 +375,7 @@
 #bioPage #careerHighlightsSec .careerHighlightsWrapper {
   align-items: center;
   background-color: #ffffff;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
 }

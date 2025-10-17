@@ -20,16 +20,15 @@
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px solid var(--secondaryColor);
-  border-radius: 50px;
+  border-radius: 0px;
   height: 80vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  width: 70vw;
+  width: 60vw;
   transition: all 0.5s ease-in-out;
 }
 #servicesPage #sectionHero #imgHero.in-view {
   border-radius: 4px;
-  width: 60vw;
 }
 #servicesPage #allServices {
   display: flex;
