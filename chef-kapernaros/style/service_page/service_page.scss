@@ -15,24 +15,18 @@ $shadowInset: #ffffff41;
         display: flex;
         height: calc(100vh - 14vh); 
         justify-content: center;
-        min-width: fit-content;
-        // padding-bottom: 100px;
+        // min-width: fit-content;
         position: relative;
         width: 100% !important;
         #imgHero {
             background-size: cover;
             background-repeat: no-repeat;
-            border: 1px solid var(--secondaryColor);
-            border-radius: 50px;
-            height: calc(100vh - 20vh);
+            border-radius: 0px;
+            height: 100vh;
             margin-top: 5vh;
             margin-bottom: 5vh;
-            width: 70vw;
-            transition: all .5s ease-in-out;
-            &.in-view {
-                border-radius: 4px;
-                width: 60vw;
-            }
+            width: 100%;
+            filter: grayscale(1);
         }
     }
     #allServices {
@@ -50,7 +44,7 @@ $shadowInset: #ffffff41;
             .singleServiceWrapper {
                 float: left;
                 margin: 0 auto;
-                max-width: 71.25em;
+                max-width: 85%;
                 padding-left: .9375rem;
                 padding-right: .9375rem;
                 position: relative;

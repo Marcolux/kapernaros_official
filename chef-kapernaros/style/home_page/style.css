@@ -30,6 +30,7 @@
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
   --secondaryColor: #b19e47;
+  --secondaryColorTran: #b9970034;
   --darkBlueColor: #1e293b;
   --backgroundV1: linear-gradient(180deg, var(--darkBlueColor), #000000);
 }
@@ -57,23 +58,24 @@ p {
 
 .titlesChef {
   font-family: "Prata";
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 500;
   margin-left: 15px;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
   z-index: 5;
+  letter-spacing: 0.03em;
 }
 .titlesChef::before {
   content: "";
-  position: absolute;
-  bottom: -2px;
-  left: -5px;
-  width: calc(100% + 15px);
-  height: 45%;
   background-color: var(--secondaryColor);
+  bottom: 5px;
+  height: calc(100% - 10px);
+  left: -25px;
   opacity: 0.5;
+  position: absolute;
+  width: 100%;
   z-index: -1;
 }
 
@@ -95,6 +97,49 @@ p {
   min-height: 100vh;
   overflow: hidden;
 }
+#homePage #landingSection #motto {
+  font-family: "Bodoni";
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 40px;
+  position: absolute;
+  z-index: 999;
+  top: 25%;
+  color: #ffffff;
+}
+#homePage #landingSection #motto span {
+  font-size: 60px;
+}
+#homePage #landingSection #motto h1 {
+  padding: 10px 30px;
+  font-size: 40px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#homePage #landingSection #motto h1 span {
+  scale: 2;
+}
+#homePage #landingSection #motto h2 {
+  padding: 10px 30px;
+  font-size: 40px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#homePage #landingSection #motto h2 span {
+  scale: 2;
+}
+#homePage #landingSection #motto h3 {
+  padding: 10px 30px;
+  font-size: 40px;
+  padding-left: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#homePage #landingSection #motto h3 span {
+  scale: 2;
+}
 #homePage #landingSection #landingPicBox {
   position: relative;
   z-index: 0;
@@ -109,8 +154,9 @@ p {
   object-fit: cover;
   z-index: 1;
   top: 7.5vh;
-  left: 60%;
-  border-radius: 8px;
+  left: 70%;
+  border-radius: 4px;
+  filter: sepia(0.3);
 }
 #homePage #landingSection #heroLandingVideoBG {
   position: absolute;
@@ -131,7 +177,7 @@ p {
   width: 65%;
   position: absolute;
   bottom: 2%;
-  right: 20%;
+  right: 10%;
   z-index: 20;
   transform: skewY(357deg) rotateY(35deg);
 }
@@ -151,6 +197,7 @@ p {
 #homePage .linkContainer.homePageLinks a:not(.socialLinks) {
   background-color: #ffffff;
   color: #000;
+  letter-spacing: 0.07em;
   margin-right: 0px;
   max-width: 400px;
   padding: 5px 10px;
@@ -163,7 +210,7 @@ p {
   z-index: 0;
 }
 #homePage .linkContainer.homePageLinks a:not(.socialLinks):not(:last-child) {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 #homePage .linkContainer.homePageLinks a:not(.socialLinks)#bioLink {
   width: 200px;
@@ -320,13 +367,13 @@ p {
 #homePage .animatedPicWrapper .picSubWr img#pic3 {
   left: 27%;
   bottom: 0%;
-  transition-delay: 0.4s;
+  transition-delay: 0.5s;
   z-index: 2;
 }
 #homePage .animatedPicWrapper .picSubWr img#pic4 {
   left: 0px;
   bottom: 35%;
-  transition-delay: 0.6s;
+  transition-delay: 0.8s;
   z-index: 1;
 }
 #homePage .animatedPicWrapper .picSubWr img.in-view {

@@ -3,12 +3,152 @@
   display: flex;
   flex-direction: column;
   padding-top: 14vh;
-  background: var(--backgroundV1);
+  background-color: #ffffff;
   flex: auto;
+}
+#eventsPage #tabs-events {
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+#eventsPage #tabs-events #all-tabs {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#eventsPage #tabs-events #all-tabs label {
+  padding: 10px 20px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+#eventsPage #tabs-events #all-tabs label:hover {
+  cursor: pointer;
+}
+#eventsPage #tabs-events input.activeTab + label {
+  background-color: #000000;
+  color: var(--secondaryColor);
+}
+#eventsPage #content-events {
+  display: flex;
+  flex: auto;
+  background-color: #f8f8f5;
 }
 #eventsPage #pageContent {
   flex: auto;
   padding-top: 50px;
+}
+#eventsPage .readOnly {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+#eventsPage .tab-content {
+  width: 100%;
+  background-color: #ffffff;
+}
+#eventsPage .tab-content:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+}
+#eventsPage .tab-content .event_wrapper {
+  display: flex;
+  padding: 20px 10px 0px 10px;
+  width: 50%;
+}
+#eventsPage .tab-content .event_wrapper.mostRecentEvt {
+  width: 100%;
+}
+#eventsPage .tab-content .event_wrapper.mostRecentEvt .eventInfo {
+  float: none;
+}
+#eventsPage .tab-content .event_wrapper.mostRecentEvt .eventInfo .titlePicWrapper {
+  text-align: center;
+}
+#eventsPage .tab-content .event_wrapper.mostRecentEvt .eventInfo .eDate {
+  text-align: center;
+}
+#eventsPage .tab-content .event_wrapper.mostRecentEvt .eventInfo .placeTimeWrapper {
+  justify-content: center !important;
+}
+#eventsPage .tab-content .event_wrapper.mostRecentEvt .eventPic {
+  display: none;
+}
+#eventsPage .tab-content .event_wrapper.mostRecentEvt .eventPicWrapper {
+  display: flex !important;
+  min-width: 450px !important;
+  height: 100% !important;
+  max-height: 442px;
+}
+#eventsPage .tab-content .event_wrapper.mostRecentEvt .eventPicWrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+#eventsPage .tab-content .event_wrapper .event_card {
+  display: flex;
+  position: relative;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1450980392);
+  width: 100%;
+  background-color: #f2f2f2;
+}
+#eventsPage .tab-content .event_wrapper .event_card .eventInfo {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  gap: 15px;
+  padding: 50px;
+  float: left;
+}
+#eventsPage .tab-content .event_wrapper .event_card .eventInfo .eTitle {
+  font-size: 40px;
+  font-weight: 300;
+}
+#eventsPage .tab-content .event_wrapper .event_card .eventInfo .eDate {
+  font-size: 40px;
+  font-weight: 700;
+}
+#eventsPage .tab-content .event_wrapper .event_card .eventInfo .eLocation, #eventsPage .tab-content .event_wrapper .event_card .eventInfo .eTime {
+  font-size: 24px;
+  font-weight: 300;
+}
+#eventsPage .tab-content .event_wrapper .event_card .eventInfo .eDescription {
+  font-size: 18px;
+  margin: auto;
+}
+#eventsPage .tab-content .event_wrapper .event_card .eventInfo .eLink {
+  font-size: 18px;
+  margin-top: auto;
+  text-align: end;
+  text-decoration: none;
+  color: var(--secondaryColor);
+}
+#eventsPage .tab-content .event_wrapper .event_card .eventPicWrapper {
+  display: none;
+}
+#eventsPage .tab-content .event_wrapper .event_card .titlePicWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+}
+#eventsPage .tab-content .event_wrapper .event_card .titlePicWrapper .eventPic {
+  height: 150px;
+  width: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 @media only screen and (max-width: 1100px) {

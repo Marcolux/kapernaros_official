@@ -11,25 +11,18 @@
   display: flex;
   height: 86vh;
   justify-content: center;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
   position: relative;
   width: 100% !important;
 }
 #servicesPage #sectionHero #imgHero {
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid var(--secondaryColor);
-  border-radius: 50px;
-  height: 80vh;
+  border-radius: 0px;
+  height: 100vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  width: 70vw;
-  transition: all 0.5s ease-in-out;
-}
-#servicesPage #sectionHero #imgHero.in-view {
-  border-radius: 4px;
-  width: 60vw;
+  width: 100%;
+  filter: grayscale(1);
 }
 #servicesPage #allServices {
   display: flex;
@@ -48,7 +41,7 @@
 #servicesPage #allServices article.singleService .singleServiceWrapper {
   float: left;
   margin: 0 auto;
-  max-width: 71.25em;
+  max-width: 85%;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   position: relative;

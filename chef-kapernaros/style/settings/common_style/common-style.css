@@ -30,6 +30,7 @@
   --primaryColor: #897400;
   --primaryColorLight: #00000090;
   --secondaryColor: #b19e47;
+  --secondaryColorTran: #b9970034;
   --darkBlueColor: #1e293b;
   --backgroundV1: linear-gradient(180deg, var(--darkBlueColor), #000000);
 }
@@ -139,7 +140,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(227, 215, 200, 0.3019607843);
+  background-color: rgba(239, 239, 239, 0.768627451);
   border-radius: 20px;
 }
 
