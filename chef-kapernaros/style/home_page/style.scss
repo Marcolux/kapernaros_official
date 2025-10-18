@@ -10,7 +10,7 @@ body {
 	overflow-y: auto;
 	position: relative; 
 }
-p {color: #000000;}
+p {color: #000000 !important;}
 .titlesChef {
 	font-family: 'Prata';
 	font-size: 40px;
@@ -87,37 +87,16 @@ p {color: #000000;}
 			position: absolute;
 			z-index: 999;
 			top: 25%;
-			// gap: 10px;
 			color: #ffffff;
 			span {
-				// background-color: var(--secondaryColorTran);
 				font-size: 60px;
-				// padding: 10px;
-			}
-			h1 {
-				span {scale:2;}
-				// background-color: #0000006f;
-				padding: 10px 30px;
-				font-size: 40px;
-				width: fit-content;
 			}
 			h2 {
-				span {scale:2;}
-				// background-color: #0000006f;
 				padding: 10px 30px;
 				font-size: 40px;
-				// font-size: 50px;
 				width: fit-content;
-			}
-			h3 {
-				span {scale:2;}
-				// background-color: var(--secondaryColorTran);
-				padding: 10px 30px;
-				// text-align: center;
-				font-size: 40px;
-				// font-size: 60px;
-				padding-left: 30px;
-				width: fit-content;
+				margin: 0px !important;
+				left: 0px !important;
 			}
 		}
 
