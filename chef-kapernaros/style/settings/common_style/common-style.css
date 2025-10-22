@@ -285,26 +285,26 @@ footer img {
   filter: drop-shadow(1px 1px 1px var(--primaryColorLight)) !important;
 }
 .navBar.mobileView {
-  background-color: rgba(255, 255, 255, 0.6549019608);
+  background-color: rgba(0, 0, 0, 0.81);
   border: 2px solid var(--navBtnBackGroundDK);
-  border-radius: 40px;
+  border-radius: 0px;
   display: flex;
   flex-direction: column;
   height: 50px;
   max-width: 50px;
   position: fixed;
-  right: 10px;
+  right: 20px;
   top: 10px;
   transition: max-width 0.4s ease, height 0.4s ease, border-radius 0.6s ease;
   width: 100vw;
   z-index: 9999;
 }
 .navBar.mobileView.expand {
-  background-color: rgba(255, 255, 255, 0.8078431373);
-  border-inline: -12px;
+  background-color: rgba(0, 0, 0, 0.81);
+  border-inline: 0px;
   border-radius: 0px;
-  height: 99.4%;
-  max-width: 99%;
+  height: 100%;
+  max-width: 100%;
   right: 0px;
   top: 0px;
 }
@@ -316,7 +316,7 @@ footer img {
 }
 .navBar.mobileView a:not(.logoNav) {
   align-items: center;
-  color: var(--navBarTextColor);
+  color: var(--secondaryColor);
   font-size: 25px;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -370,11 +370,14 @@ footer img {
   width: 30px;
 }
 .navBar.mobileView .hambContainer .hamburger-menu .bar {
-  background-color: var(--navBtnBackGroundDK);
+  background-color: var(--secondaryColor);
   border-radius: 10px;
   height: 4px;
   transition: all 0.4s ease;
   width: 95%;
+}
+.navBar.mobileView .hambContainer .hamburger-menu .bar#bar2 {
+  width: 80%;
 }
 .navBar.mobileView .hambContainer .hamburger-menu.openHam .bar#bar1 {
   transform: rotate(45deg) translate(0px, 10px);

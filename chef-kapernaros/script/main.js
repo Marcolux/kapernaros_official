@@ -1,19 +1,11 @@
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
+"use strict";
 var _a;
 console.log('hello world 4');
-var hambMenu = document.querySelector('.hamburger-menu');
-var navMenu = document.getElementById('navMenu');
-var navBar = document.querySelector('.navBar');
-var spanToBreak = document.querySelectorAll('.brSm');
-var socialMedia = document.querySelector('#socialMedia');
+const hambMenu = document.querySelector('.hamburger-menu');
+const navMenu = document.getElementById('navMenu');
+const navBar = document.querySelector('.navBar');
+const spanToBreak = document.querySelectorAll('.brSm');
+const socialMedia = document.querySelector('#socialMedia');
 if (hambMenu) {
     hambMenu.addEventListener('click', function () {
         navMenu.classList.toggle('show');
@@ -22,7 +14,7 @@ if (hambMenu) {
         navBar.classList.toggle('expand');
     });
 }
-var navBarAdjToScreen = function () {
+const navBarAdjToScreen = function () {
     if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
         navBar.classList.add('mobileView');
         navBar.classList.remove('biggerScreen');
@@ -32,12 +24,12 @@ var navBarAdjToScreen = function () {
         navBar.classList.add('biggerScreen');
     }
 };
-window.addEventListener('resize', function () { navBarAdjToScreen(); });
+window.addEventListener('resize', () => { navBarAdjToScreen(); });
 navBarAdjToScreen();
 // The scrollable wrapper
-var SCROLL_SEL = 'body';
-var scrollEl = document.querySelector(SCROLL_SEL) || document; // document => page scroll
-var getScrollTop = function () {
+const SCROLL_SEL = 'body';
+const scrollEl = document.querySelector(SCROLL_SEL) || document; // document => page scroll
+const getScrollTop = () => {
     if (scrollEl === document) {
         return window.scrollY || document.documentElement.scrollTop || 0;
     }
@@ -45,8 +37,8 @@ var getScrollTop = function () {
         return scrollEl.scrollTop; // safe cast
     }
 };
-var onScroll = function () {
-    var y = getScrollTop();
+const onScroll = () => {
+    const y = getScrollTop();
     // navScrolling logic with y
     if (y > 30) {
         navBar.classList.add('scrolled');
@@ -63,27 +55,25 @@ var onScroll = function () {
 };
 (scrollEl === document ? window : scrollEl).addEventListener('scroll', onScroll, { passive: true });
 onScroll(); // run once on load
-var observeInView = function (selectorClass, offset) {
-    if (offset === void 0) { offset = 0; }
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+const observeInView = (selectorClass, offset = 0) => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
             }
         });
-    }, { rootMargin: "".concat(offset, "px 0px") });
-    document.querySelectorAll(selectorClass).forEach(function (el) { return observer.observe(el); });
+    }, { rootMargin: `${offset}px 0px` });
+    document.querySelectorAll(selectorClass).forEach(el => observer.observe(el));
 };
-var removeObserveInView = function (selectorClass, offset) {
-    if (offset === void 0) { offset = 0; }
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+const removeObserveInView = (selectorClass, offset = 0) => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 entry.target.classList.remove('in-view');
             }
         });
-    }, { rootMargin: "".concat(offset, "px 0px") });
-    document.querySelectorAll(selectorClass).forEach(function (el) { return observer.observe(el); });
+    }, { rootMargin: `${offset}px 0px` });
+    document.querySelectorAll(selectorClass).forEach(el => observer.observe(el));
 };
 observeInView('.bioLandingPicContainer img', -100);
 // observeInView('#landingPicBox img', -100)
@@ -97,40 +87,40 @@ observeInView('.singleServiceWrapper ', 200);
 removeObserveInView('.singleServiceWrapper ', 0);
 observeInView('#imgHero ', 100);
 removeObserveInView('#imgHero ', 0);
-var container = document.querySelector('#bigPic');
-var allNotActiveTitles = document.querySelectorAll('.secTitles');
-allNotActiveTitles.forEach(function (listEl) {
-    listEl.addEventListener('click', function () {
+const container = document.querySelector('#bigPic');
+let allNotActiveTitles = document.querySelectorAll('.secTitles');
+allNotActiveTitles.forEach(listEl => {
+    listEl.addEventListener('click', () => {
         allNotActiveTitles = document.querySelectorAll('.secTitles');
         if (!listEl.classList.contains('active')) {
-            var titleActive = __spreadArray([], allNotActiveTitles, true).filter(function (el) { return el.classList.contains('active'); })[0];
+            const titleActive = [...allNotActiveTitles].filter(el => el.classList.contains('active'))[0];
             titleActive.classList.remove('active');
             listEl.classList.add('active');
         }
     });
 });
-document.querySelectorAll('.flip-card').forEach(function (card) {
-    var btn = card.querySelector('.flip-toggle');
+document.querySelectorAll('.flip-card').forEach(card => {
+    const btn = card.querySelector('.flip-toggle');
     if (btn) {
-        btn.addEventListener('click', function () {
-            var is = card.classList.toggle('is-flipped');
+        btn.addEventListener('click', () => {
+            const is = card.classList.toggle('is-flipped');
             btn.setAttribute('aria-expanded', String(is));
         });
     }
 });
 emailjs.init('0wA6kpUaumn2FNdbg');
-var messageSent = document.querySelector('#messageSent');
-var inputText = document.querySelectorAll('.inputText');
-var inputTextSelect = document.querySelectorAll('select');
+const messageSent = document.querySelector('#messageSent');
+const inputText = document.querySelectorAll('.inputText');
+const inputTextSelect = document.querySelectorAll('select');
 (_a = document.getElementById('myForm')) === null || _a === void 0 ? void 0 : _a.addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission
     emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
         .then(function (response) {
         messageSent.classList.remove('hide');
-        inputText.forEach(function (text) { return text.value = ''; });
-        inputTextSelect.forEach(function (select) { return select.selectedIndex = 0; });
+        inputText.forEach(text => text.value = '');
+        inputTextSelect.forEach(select => select.selectedIndex = 0);
         console.log('SUCCESS!', response.status, response.text);
-        setTimeout(function () { messageSent.classList.add('hide'); }, 5000);
+        setTimeout(() => { messageSent.classList.add('hide'); }, 5000);
     }, function (error) {
         console.log('FAILED...', error);
         alert("Failed to send email.");
@@ -164,47 +154,66 @@ document.cookie = "key=value; SameSite=Lax";
 *  ====     EVENTS PAGE LOGIC     ==== *
 ****************************************/
 /***  ====> Tabs switch logic <==== ***/
-var eventsPage = document.querySelector('body#eventsPage');
-var eventSwitchTab = function () {
-    var tabsWrapper = eventsPage.querySelector('#all-tabs');
-    var allTabs = __spreadArray([], tabsWrapper.querySelectorAll('.single-tab'), true);
-    var allContents = __spreadArray([], eventsPage.querySelectorAll('.tab-content'), true);
-    var showTab = function (valueText) {
-        var contentId = "".concat(valueText, "-content");
-        allContents.forEach(function (content) {
-            var activeContent = content.id === contentId;
+const eventsPage = document.querySelector('body#eventsPage');
+const eventSwitchTab = () => {
+    const tabsWrapper = eventsPage.querySelector('#all-tabs');
+    const allTabs = [...tabsWrapper.querySelectorAll('.single-tab')];
+    const allContents = [...eventsPage.querySelectorAll('.tab-content')];
+    const showTab = (valueText) => {
+        const contentId = `${valueText}-content`;
+        allContents.forEach(content => {
+            const activeContent = content.id === contentId;
             content.hidden = !activeContent;
             content.setAttribute('aria-hidden', String(!activeContent));
             content.tabIndex = 1;
         });
-        allTabs.forEach(function (tab) {
-            var selected = tab.value === valueText;
+        allTabs.forEach(tab => {
+            const selected = tab.value === valueText;
             tab.checked = selected;
             tab.classList.toggle('activeTab', tab.checked);
             tab.setAttribute('aria-selected', String(selected));
             tab.tabIndex = 1;
         });
     };
-    tabsWrapper.addEventListener('change', function (e) {
-        var tabClicked = e.target;
+    tabsWrapper.addEventListener('change', (e) => {
+        const tabClicked = e.target;
         if (tabClicked)
             showTab(tabClicked.value);
     });
 };
 eventSwitchTab();
-var templateCard = function (singleEvent) {
-    var cardElementWrapper = document.createElement('article');
+const templateCard = (singleEvent) => {
+    const cardElementWrapper = document.createElement('article');
     cardElementWrapper.className = singleEvent.event_isMostRecent ? 'event_wrapper mostRecentEvt' : 'event_wrapper';
-    var cardElement = document.createElement('div');
+    const cardElement = document.createElement('div');
     cardElement.className = singleEvent.event_isMostRecent ? 'event_card mostRecentEvt' : 'event_card';
     cardElementWrapper.append(cardElement);
-    cardElement.innerHTML = "\n        <div class=\"eventInfo\">\n            <div class=\"titlePicWrapper\">\n                <div class=\"flex flex-column flex-alignItems-center col-12\">\n                    <h5 class=\"col-12 eTitle\">".concat(singleEvent.event_title, "</h5>\n                    <h3 class=\"col-12 text-bold eDate\">").concat(singleEvent.event_date, "</h3>\n                </div>\n                <img class=\"eventPic\" src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n            </div>\n            <div class=\"col-12 flex flex-justifyContent-spaceBetween placeTimeWrapper\">\n                <h6 class=\"eLocation flex\">").concat(singleEvent.event_location, "</h6>\n                <h6 class=\"eTime flex\">").concat(singleEvent.event_time, "</h6>\n            </div>\n            <p class=\"col-12 eDescription\">").concat(singleEvent.event_description, "</p>\n            <a class=\"col-12 eLink\" href=\"").concat(singleEvent.event_link, "\" target=\"_blank\">Event Link</a>\n        </div>\n        <div class=\"eventPicWrapper\">\n            <img src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n        </div>\n    ");
-    var eTime = cardElement.querySelector('.eTime');
+    cardElement.innerHTML = `
+        <div class="eventInfo">
+            <div class="titlePicWrapper">
+                <div class="flex flex-column flex-alignItems-center col-12">
+                    <h5 class="col-12 eTitle">${singleEvent.event_title}</h5>
+                    <h3 class="col-12 text-bold eDate">${singleEvent.event_date}</h3>
+                </div>
+                <img class="eventPic" src="${singleEvent.event_picture}" alt="">
+            </div>
+            <div class="col-12 flex flex-justifyContent-spaceBetween placeTimeWrapper">
+                <h6 class="eLocation flex">${singleEvent.event_location}</h6>
+                <h6 class="eTime flex">${singleEvent.event_time}</h6>
+            </div>
+            <p class="col-12 eDescription">${singleEvent.event_description}</p>
+            <a class="col-12 eLink" href="${singleEvent.event_link}" target="_blank">Event Link</a>
+        </div>
+        <div class="eventPicWrapper">
+            <img src="${singleEvent.event_picture}" alt="">
+        </div>
+    `;
+    const eTime = cardElement.querySelector('.eTime');
     eTime.className = singleEvent.event_time === '' ? 'eTime flex' : 'eTime flex ml-50';
     eTime.classList.toggle('hide', !singleEvent.event_isMostRecent);
     return cardElementWrapper;
 };
-var allEventsUpcoming = [
+const allEventsUpcoming = [
     {
         event_title: 'Title Here',
         event_date: 'Oct 6-7, 2025',
@@ -246,7 +255,7 @@ var allEventsUpcoming = [
         event_isMostRecent: false
     },
 ];
-var allEventsPast = [
+const allEventsPast = [
     {
         event_title: 'Chicago Gourmet',
         event_date: 'Sept. 25 - 28, 2025',
@@ -288,7 +297,7 @@ var allEventsPast = [
         event_isMostRecent: false
     },
 ];
-var allEventsCompetions = [
+const allEventsCompetions = [
     {
         event_title: 'Competions title',
         event_date: 'Oct 6-7, 2025',
@@ -330,9 +339,9 @@ var allEventsCompetions = [
         event_isMostRecent: false
     },
 ];
-var upcomingContent = eventsPage.querySelector('#upcoming-content');
-allEventsUpcoming.forEach(function (event) { upcomingContent.append(templateCard(event)); });
-var pastEventsContent = eventsPage.querySelector('#past_events-content');
-allEventsPast.forEach(function (event) { pastEventsContent.append(templateCard(event)); });
-var competitionsContent = eventsPage.querySelector('#competitions-content');
-allEventsCompetions.forEach(function (event) { competitionsContent.append(templateCard(event)); });
+const upcomingContent = eventsPage.querySelector('#upcoming-content');
+allEventsUpcoming.forEach(event => { upcomingContent.append(templateCard(event)); });
+const pastEventsContent = eventsPage.querySelector('#past_events-content');
+allEventsPast.forEach(event => { pastEventsContent.append(templateCard(event)); });
+const competitionsContent = eventsPage.querySelector('#competitions-content');
+allEventsCompetions.forEach(event => { competitionsContent.append(templateCard(event)); });

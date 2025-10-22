@@ -97,29 +97,6 @@ p {
   min-height: 100vh;
   overflow: hidden;
 }
-#homePage #landingSection #motto {
-  font-family: "Bodoni";
-  display: flex;
-  flex-direction: column;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 40px;
-  position: absolute;
-  z-index: 999;
-  top: 25%;
-  color: #ffffff;
-}
-#homePage #landingSection #motto span {
-  font-size: 60px;
-}
-#homePage #landingSection #motto h2 {
-  padding: 10px 30px;
-  font-size: 40px;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0px !important;
-  left: 0px !important;
-}
 #homePage #landingSection #landingPicBox {
   position: relative;
   z-index: 0;
@@ -134,7 +111,7 @@ p {
   object-fit: cover;
   z-index: 1;
   top: 7.5vh;
-  left: 70%;
+  left: 50%;
   border-radius: 4px;
   filter: sepia(0.3);
 }
@@ -157,7 +134,7 @@ p {
   width: 65%;
   position: absolute;
   bottom: 2%;
-  right: 10%;
+  right: 20%;
   z-index: 20;
   transform: skewY(357deg) rotateY(35deg);
 }
@@ -546,741 +523,282 @@ p {
   justify-self: center;
 }
 
-@media only screen and (min-width: 1500px) {
-  .bioLanding .bioLandingPicContainer {
-    right: 18% !important;
-  }
-  .bioLanding .bioLandingTextContainer {
-    left: 18% !important;
-    width: 40% !important;
-  }
-}
-@media only screen and (min-width: 1368px) and (max-width: 1400px) {
-  .chefQuote {
-    width: 60%;
-  }
-  .achievementLanding .btnPrimary {
-    font-size: 16px !important;
-    padding: 10px 20px !important;
-  }
-  .achievementLanding .allAchvmText {
-    width: 60% !important;
-  }
-  .achievementLanding .allAchvmText #chef-corps-logo {
-    max-width: 200px !important;
-  }
-  .achievementLanding .allAchvmText p:not(.titlesChef) {
-    margin-top: 0px !important;
-    margin-bottom: 25px !important;
-  }
-  .achievementLanding .allAchvmText .achCards.in-view#card-1 {
-    right: 30%;
-  }
-  .achievementLanding .allAchvmText .achCards.in-view#card-2 {
-    font-size: 25px !important;
-  }
-  .achievementLanding .allAchvmText .achCards.in-view#card-3 {
-    font-size: 20px !important;
-  }
-  .achievementLanding .allAchvmText .achCards.in-view#card-4 {
-    font-size: 17px !important;
-  }
-  .achievementLanding .allAchvmText .achCards.in-view#card-5 {
-    font-size: 25px !important;
-  }
-  .achievementLanding .imgAchvm {
-    width: 40% !important;
-  }
-}
-@media only screen and (max-width: 1367px) {
-  .achievementLanding .btnPrimary {
-    position: absolute;
-    bottom: 30px;
-    left: 20px;
-  }
-  .achievementLanding .imgAchvm img {
-    height: 97% !important;
-  }
-  .bioLanding .bioLandingPicContainer {
-    right: 10% !important;
-  }
-  .bioLanding .bioLandingTextContainer {
-    left: 10% !important;
-    width: 52% !important;
-  }
-}
-@media only screen and (min-width: 771px) and (max-width: 1050px) {
-  #logoNavIndexPage .activePage {
-    margin-right: 20px !important;
-  }
-  .linkContainer {
-    width: 50%;
-  }
-  .linkContainer a {
-    font-size: 15px !important;
-  }
-  #landingAd {
-    border: 1px solid #000;
-    background-color: #aba4a4;
-    justify-self: end;
-  }
-  #landingAd #DuckImg, #landingAd #KaperImg {
-    background-color: #2f2f2f;
-    height: 42px !important;
-    width: 42px !important;
-  }
-  #landingAd #eventTextBox {
-    background-color: #aba4a4;
-    padding: 5px 10px;
-    font-size: 10px !important;
-  }
-  #landingAd #eventTextBox .shadowGold {
-    font-size: 12px !important;
-  }
-  .chefQuote {
-    width: 92% !important;
-    background-color: rgba(255, 255, 255, 0.4117647059);
-  }
-  .chefQuote p {
-    font-size: 40px !important;
-  }
-  .chefQuote .fontSize40 {
-    font-size: 28px !important;
-  }
-  .chefQuote .fontSize58 {
-    font-size: 40px !important;
-  }
-  .signature {
-    width: 100% !important;
-    background-color: rgba(255, 255, 255, 0.4117647059);
-    margin-top: 0px !important;
-  }
-  .achievementLanding {
-    min-height: 780px;
-  }
-  .allAchvmText {
-    width: 100% !important;
-  }
-  .allAchvmText .btnPrimary {
-    position: absolute;
-    bottom: -30px !important;
-  }
-  .card45Cont {
-    width: 90vw;
-    position: absolute;
-  }
-  .card45Cont > div {
-    justify-content: center !important;
-  }
-  .card45Cont #card-4 {
-    max-width: 350px !important;
-  }
-  .imgAchvm {
-    width: 0px !important;
-  }
-  .cardsLine {
-    flex-wrap: nowrap;
-    justify-content: flex-start !important;
-    width: 100% !important;
-  }
-  .cardsLine.cards23Cont {
-    width: 90vw !important;
-  }
-}
-@media only screen and (min-width: 771px) and (max-width: 1350px) {
-  .chefQuote {
-    width: 60%;
-  }
-  .chefQuote p {
-    font-size: 40px !important;
-  }
-  .chefQuote .fontSize40 {
-    font-size: 28px !important;
-  }
-  .chefQuote .fontSize58 {
-    font-size: 40px !important;
-  }
-  .middlePic > div {
-    justify-content: center;
-    width: 70% !important;
-  }
-  .middlePic > div img {
-    width: 30% !important;
-  }
-  .achievementLanding {
-    align-items: start;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 100%;
-  }
-  .achievementLanding .allAchvmText {
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 0px !important;
-    width: 90%;
-  }
-  .achievementLanding .allAchvmText .cardsLine {
-    width: 100% !important;
-  }
-  .achievementLanding .allAchvmText .cardsLine .btnWrap {
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-    margin-top: 30px;
-  }
-  .achievementLanding .allAchvmText .cardsLine .btnWrap .btnPrimary {
-    position: relative !important;
-    bottom: 0px !important;
-  }
-  .achievementLanding .allAchvmText #chef-corps-logo {
-    max-width: 200px !important;
-    right: 25px !important;
-    top: 80px !important;
-  }
-  .achievementLanding .allAchvmText p:not(.titlesChef) {
-    margin-top: 0px !important;
-    margin-bottom: 25px !important;
-  }
-  .achievementLanding .allAchvmText .achCards {
-    width: 100% !important;
-    height: -moz-fit-content;
-    height: fit-content;
-    text-align: center;
-  }
-  .achievementLanding .imgAchvm {
-    display: flex;
-    height: 50%;
-    justify-content: center;
-    margin-left: 0px !important;
-    width: 60%;
-  }
-  .achievementLanding .imgAchvm img {
-    display: flex;
-    max-height: 50% !important;
-    width: 80%;
-  }
-  .achievementLanding .btnPrimary {
-    bottom: -40px;
-    left: 20px;
-    position: absolute;
-  }
-  .charityLanding {
-    flex-direction: column-reverse;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-    width: 100%;
-  }
-  .charityLanding .charityLandingPicContainer {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-  }
-  .charityLanding .charityLandingPicContainer img {
-    position: relative !important;
-    top: 0px !important;
-    left: 0px !important;
-    transform: translateX(0px);
-    width: 23%;
-    height: 75%;
-  }
-  .charityLanding .charityLandingTextContainer {
-    width: 80%;
-    margin-bottom: 30px;
-  }
-  .charityLanding .charityLandingTextContainer .textCharityLanding {
-    padding-right: 0px !important;
-  }
-}
-@media only screen and (max-width: 870px) {
-  #landingAd #DuckImg, #landingAd #KaperImg {
+/* Mobile Small */
+@media only screen and (max-width: 480px) {
+  /* styles for small phones */
+  #homePage #landingMenu {
     display: none;
   }
-}
-@media only screen and (max-width: 770px) {
-  .landingPage {
-    padding: 0px 0px !important;
-    background-position-x: 87.5%;
+  #homePage #landingSection {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
   }
-  .landingPage .signature {
-    width: 100% !important;
-    background-color: rgba(255, 255, 255, 0.4117647059) !important;
-    margin-top: 0px !important;
+  #homePage #landingSection #landingPicBox {
+    width: 100vw;
+    height: 100vh;
   }
-  .landingPage .signature img {
-    width: 70%;
+  #homePage #landingSection #landingPicBox #heroLandingVideo {
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    left: 0%;
+    border-radius: 0px;
   }
-  .landingPage .chefQuote {
-    width: 100% !important;
-    padding: 20px 0px !important;
-    background-color: rgba(255, 255, 255, 0.4117647059) !important;
+  #homePage #landingSection img#logoLanding {
+    display: none;
+    height: 135px;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 20;
   }
-  .landingPage i {
-    font-size: 20px !important;
+  #homePage #landingSection img#signatureLanding {
+    width: 100vw;
+    bottom: 5%;
+    right: 0%;
   }
-  .landingPage .dwnLine {
-    margin: 0px !important;
-  }
-  .landingPage p {
-    font-size: 25px !important;
-  }
-  .landingPage p span {
-    font-size: 28px !important;
-  }
-  .middlePic > div {
-    width: 90% !important;
-    justify-content: center;
-  }
-  .middlePic > div img {
-    width: 32% !important;
-    aspect-ratio: 1.1/1;
-  }
-  .middlePic > div img.mr-20 {
-    margin-right: 10px !important;
-  }
-  .bioLanding {
-    flex-direction: column-reverse;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
+  #homePage .middlePic .middleImgWrapper {
+    border: 1px solid var(--secondaryColor);
+    gap: 0px;
+    padding: 0px !important;
     width: 100%;
   }
-  .bioLanding .bioLandingPicContainer {
-    width: 95%;
-    display: flex;
-    justify-content: space-around;
+  #homePage .middlePic .middleImgWrapper img {
+    aspect-ratio: 1/1;
+    padding: 5px;
   }
-  .bioLanding .bioLandingPicContainer img {
-    position: relative !important;
-    top: 0px !important;
-    left: 0px !important;
-    transform: translateX(0px);
-    width: 24%;
-  }
-  .bioLanding .bioLandingTextContainer {
-    width: 90%;
-    margin-bottom: 30px;
-  }
-  .bioLanding .bioLandingTextContainer .textBioLanding {
-    padding-right: 0px !important;
-  }
-  .charityLanding {
-    flex-direction: column-reverse;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-    width: 100%;
-  }
-  .charityLanding .charityLandingPicContainer {
-    width: 95%;
-    display: flex;
-    justify-content: space-around;
-  }
-  .charityLanding .charityLandingPicContainer img {
-    position: relative !important;
-    top: 0px !important;
-    left: 0px !important;
-    transform: translateX(0px);
-    width: 24%;
-  }
-  .charityLanding .charityLandingTextContainer {
-    width: 90%;
-    margin-bottom: 30px;
+  #homePage .middlePic .middleImgWrapper img:nth-child(2) {
     padding-left: 0px !important;
-  }
-  .charityLanding .charityLandingTextContainer .textCharityLanding {
     padding-right: 0px !important;
   }
-  .achievementLanding {
-    align-items: start;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 100%;
-  }
-  .achievementLanding .allAchvmText {
-    width: 90%;
-    padding: 0px !important;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .achievementLanding .allAchvmText .cardsLine {
-    flex-wrap: wrap;
-    flex-direction: column-reverse !important;
-    width: 100% !important;
-  }
-  .achievementLanding .allAchvmText .cardsLine .btnWrap {
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-    margin-top: 30px;
-  }
-  .achievementLanding .allAchvmText .cardsLine .btnWrap .btnPrimary {
-    position: relative !important;
-  }
-  .achievementLanding .allAchvmText .card45Cont .btnWrap {
-    width: 100% !important;
-    padding-left: 10px !important;
-    margin-right: 0px !important;
-  }
-  .achievementLanding .allAchvmText .card45Cont .btnWrap .btnPrimary {
-    margin: 0px !important;
-    box-sizing: border-box !important;
-    left: 0px !important;
-  }
-  .achievementLanding .allAchvmText #chef-corps-logo {
-    max-width: 120px !important;
-    right: 15px !important;
-    top: -15px !important;
-  }
-  .achievementLanding .allAchvmText p:not(.titlesChef) {
-    margin-top: 0px !important;
-    margin-bottom: 10px !important;
-  }
-  .achievementLanding .allAchvmText .card-1Div {
-    width: 100% !important;
-    margin-left: 0%;
-    margin-top: 20px !important;
-    justify-content: center !important;
-  }
-  .achievementLanding .allAchvmText .card-1Div #card-1 {
-    margin-top: 15px !important;
-    font-size: 17px !important;
-    text-align: center !important;
-    justify-self: center !important;
-  }
-  .achievementLanding .allAchvmText #card-2 {
-    font-size: 24px !important;
-  }
-  .achievementLanding .allAchvmText #card-3 {
-    font-size: 20px !important;
-  }
-  .achievementLanding .allAchvmText #card-4 {
-    font-size: 18px !important;
-  }
-  .achievementLanding .allAchvmText #card-5 {
-    font-size: 20px !important;
-    margin-right: 0px !important;
-    margin-left: 0px !important;
-  }
-  .achievementLanding .allAchvmText .achCards {
-    max-width: 80% !important;
-    width: 80% !important;
-    text-align: center;
-    transform: translatex(-130%);
-    scale: 1 !important;
-  }
-  .achievementLanding .allAchvmText .achCards.in-view {
-    margin-left: 0% !important;
-  }
-  .achievementLanding .allAchvmText .btnPrimary {
-    position: relative;
-    bottom: 0px;
-    margin-bottom: 20px;
-    margin-left: -20px;
-  }
-  .achievementLanding .imgAchvm {
-    display: none;
-  }
-  .titlesChef {
-    font-size: 20px !important;
-  }
-  footer {
-    padding-bottom: 80px !important;
-  }
-  footer #webcraftLink a {
-    font-size: 12px !important;
-    text-align: start;
-  }
-  footer img {
-    align-self: baseline;
-    height: 11vh;
-  }
-}
-@media only screen and (max-width: 450px) {
-  #bobbyFlay {
-    height: 100% !important;
-    width: 100% !important;
-  }
-  #bobbyFlay #bobbyFlayDiv {
-    background-size: cover;
-    width: 90%;
-    height: 95%;
-    min-width: 250px !important;
-    min-height: 250px !important;
-  }
-  #bobbyFlay #bobbyFlayDiv #logoCont {
-    height: 47%;
-  }
-  #bobbyFlay #bobbyFlayDiv #highlightsBob {
-    width: 80%;
-  }
-  #bobbyFlay #bobbyFlayDiv #highlightsBob p {
-    font-size: 16px !important;
-  }
-  #bobbyFlay #bobbyFlayDiv #highlightsBob #clickToPics {
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  #landingAd #DuckImg, #landingAd #KaperImg {
-    display: none !important;
-    max-height: 0px !important;
-    max-width: 0px !important;
-  }
-  #landingAd #eventTextBox {
-    background-color: #aba4a4;
-    padding: 5px 10px;
-    font-size: 12px !important;
-    position: relative;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2392156863);
-  }
-  #landingAd #eventTextBox #shadowGold {
-    font-weight: bold !important;
-  }
-  #landingAd #eventTextBox #eventLink {
-    font-size: 13px;
-    width: -moz-fit-content !important;
-    width: fit-content !important;
-    margin: 0px;
-  }
-  #landingAd #eventTextBox .linkWrap {
-    width: -moz-fit-content !important;
-    width: fit-content !important;
-  }
-}
-@media only screen and (max-height: 400px) {
-  .landingPage {
-    padding: 0px 0px !important;
-    background-position-x: 87.5%;
-  }
-  .landingPage .signature {
-    width: 100% !important;
-    background-color: rgba(255, 255, 255, 0.4117647059) !important;
-    margin-top: 0px !important;
-  }
-  .landingPage .signature img {
-    width: 70%;
-  }
-  .landingPage .chefQuote {
-    width: 100% !important;
-    padding: 20px 0px !important;
-    background-color: rgba(255, 255, 255, 0.4117647059) !important;
-  }
-  .landingPage i {
-    font-size: 20px !important;
-  }
-  .landingPage .dwnLine {
-    margin: 0px !important;
-  }
-  .landingPage p {
-    font-size: 25px !important;
-  }
-  .landingPage p span {
-    font-size: 28px !important;
-  }
-  .middlePic > div {
-    width: 90% !important;
-    justify-content: center;
-  }
-  .middlePic > div img {
-    width: 32% !important;
-    aspect-ratio: 1.1/1;
-  }
-  .middlePic > div img.mr-20 {
-    margin-right: 10px !important;
-  }
-  .bioLanding {
-    flex-direction: column-reverse;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-    width: 100%;
-  }
-  .bioLanding .bioLandingPicContainer {
-    width: 95%;
+  #homePage .bioLandingPicContainer {
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
-  }
-  .bioLanding .bioLandingPicContainer img {
-    position: relative !important;
-    top: 0px !important;
-    left: 0px !important;
-    transform: translateX(0px);
-    width: 24%;
-  }
-  .bioLanding .bioLandingTextContainer {
-    width: 90%;
-    margin-bottom: 30px;
-  }
-  .bioLanding .bioLandingTextContainer .textBioLanding {
-    padding-right: 0px !important;
-  }
-  .charityLanding {
     flex-direction: column-reverse;
+    justify-content: space-around !important;
+    gap: 50px;
     height: -moz-fit-content !important;
     height: fit-content !important;
-    width: 100%;
+    min-height: -moz-fit-content !important;
+    min-height: fit-content !important;
+    max-height: -moz-fit-content !important;
+    max-height: fit-content !important;
+    padding: 50px 5px;
+    max-width: 100% !important;
   }
-  .charityLanding .charityLandingPicContainer {
-    width: 95%;
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    font-size: 16px;
+    letter-spacing: 0.05px;
+    line-height: 25px;
+    padding-bottom: 25px !important;
   }
-  .charityLanding .charityLandingPicContainer img {
-    position: relative !important;
-    top: 0px !important;
-    left: 0px !important;
-    transform: translateX(0px);
-    width: 24%;
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper .titlesChef {
+    font-size: 30px !important;
   }
-  .charityLanding .charityLandingTextContainer {
-    width: 90%;
-    margin-bottom: 30px;
-    padding-left: 0px !important;
-  }
-  .charityLanding .charityLandingTextContainer .textCharityLanding {
-    padding-right: 0px !important;
-  }
-  .achievementLanding {
-    align-items: start;
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper {
+    border: 1px solid var(--secondaryColor);
     height: -moz-fit-content;
     height: fit-content;
+    padding: 10px;
+    position: relative;
     width: 100%;
   }
-  .achievementLanding .allAchvmText {
-    width: 90%;
-    padding: 0px !important;
-    height: -moz-fit-content;
-    height: fit-content;
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper .textBioLanding {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
   }
-  .achievementLanding .allAchvmText .cardsLine {
-    flex-wrap: wrap;
-    flex-direction: column-reverse !important;
-    width: 100% !important;
-  }
-  .achievementLanding .allAchvmText .cardsLine .btnWrap {
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-    margin-top: 30px;
-  }
-  .achievementLanding .allAchvmText .cardsLine .btnWrap .btnPrimary {
-    position: relative !important;
-  }
-  .achievementLanding .allAchvmText #chef-corps-logo {
-    max-width: 120px !important;
-    right: 15px !important;
-    top: -15px !important;
-  }
-  .achievementLanding .allAchvmText p:not(.titlesChef) {
-    margin-top: 0px !important;
-    margin-bottom: 10px !important;
-  }
-  .achievementLanding .allAchvmText .card-1Div {
-    width: 100% !important;
-    margin-left: 0%;
-    margin-top: 20px !important;
-    justify-content: center !important;
-  }
-  .achievementLanding .allAchvmText .card-1Div #card-1 {
-    margin-top: 15px !important;
-    font-size: 17px !important;
-    text-align: left !important;
-  }
-  .achievementLanding .allAchvmText #card-2 {
-    font-size: 24px !important;
-  }
-  .achievementLanding .allAchvmText #card-3 {
-    font-size: 20px !important;
-  }
-  .achievementLanding .allAchvmText #card-4 {
-    font-size: 18px !important;
-  }
-  .achievementLanding .allAchvmText #card-5 {
-    font-size: 20px !important;
-  }
-  .achievementLanding .allAchvmText .achCards {
-    max-width: 80% !important;
-    width: 80% !important;
-    text-align: center;
-  }
-  .achievementLanding .allAchvmText .achCards.in-view {
-    margin-left: 0% !important;
-  }
-  .achievementLanding .allAchvmText .btnPrimary {
-    position: relative;
-    bottom: 0px;
-    margin-bottom: 20px;
-  }
-  .achievementLanding .imgAchvm {
-    display: none;
-  }
-  .titlesChef {
-    font-size: 20px !important;
-  }
-  footer {
-    padding-bottom: 80px !important;
-  }
-  footer #webcraftLink a {
-    font-size: 12px !important;
-    text-align: start;
-  }
-  footer img {
-    align-self: baseline;
-    height: 11vh;
-  }
-  #bobbyFlay {
-    height: 100% !important;
-    width: 100% !important;
-  }
-  #bobbyFlay #bobbyFlayDiv {
-    background-size: cover;
-    background-position-y: -100px;
-    width: 90%;
-    height: 95%;
-    min-width: 250px !important;
-    min-height: 250px !important;
-  }
-  #bobbyFlay #bobbyFlayDiv #logoCont {
-    height: 47%;
-  }
-  #bobbyFlay #bobbyFlayDiv #highlightsBob {
-    width: 70%;
-    bottom: 85%;
-  }
-  #bobbyFlay #bobbyFlayDiv #highlightsBob p {
-    font-size: 14px !important;
-  }
-  #bobbyFlay #bobbyFlayDiv #highlightsBob #clickToPics {
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper .btnPrimary {
+    bottom: -22px;
+    position: absolute;
+    right: 40px;
     font-size: 16px;
   }
+  #homePage .bioLandingPicContainer .animatedPicWrapper {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    padding: 0px;
+    border: 1px solid var(--secondaryColor);
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr {
+    position: relative;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 5px;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr::after {
+    display: none;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr::before {
+    display: none;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img {
+    aspect-ratio: 1/1;
+    width: 25%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    opacity: 0;
+    padding: 5px;
+    position: relative !important;
+    scale: 0.5;
+    transition: all 0.5s ease;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img#pic1 {
+    right: auto;
+    top: 0%;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img#pic2 {
+    right: auto;
+    top: 0%;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img#pic3 {
+    left: auto;
+    bottom: 0%;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img#pic4 {
+    left: auto;
+    bottom: 0%;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img.in-view {
+    opacity: 1;
+    scale: 1;
+  }
+  #homePage #bioSection {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    padding: 0px !important;
+    gap: 0px;
+  }
+  #homePage #bioSection .bioImgContainer {
+    position: relative;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    display: flex;
+  }
+  #homePage #bioSection .bioImgContainer img {
+    height: -moz-fit-content;
+    height: fit-content;
+    bottom: 0px !important;
+    opacity: 0;
+    position: relative !important;
+    scale: 0.9;
+    transition: all 0.5s ease;
+  }
+  #homePage #bioSection .bioImgContainer img#bioChefImg {
+    aspect-ratio: 1.5/1;
+    border: 0px solid;
+    border-radius: 0px;
+    transition-delay: 0s;
+    z-index: 4;
+    width: 100%;
+    height: auto;
+  }
+  #homePage #bioSection .bioImgContainer img.in-view {
+    opacity: 1;
+    scale: 1;
+  }
+  #homePage #bioSection #bioTextContainer {
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    padding: 20px !important;
+  }
+  #homePage #bioSection #bioTextContainer .titlesChef {
+    display: none;
+  }
+  #homePage #bioSection #bioTextContainer #logoBtnWrapper {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  #homePage #bioSection #bioTextContainer #logoBtnWrapper .btnPrimary {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 0%;
+    font-size: 16px;
+    align-self: flex-end;
+  }
+  #homePage #bioSection #bioTextContainer #logoBtnWrapper img#logoMidPage {
+    aspect-ratio: inherit;
+    height: auto;
+    left: 0px;
+    width: 50%;
+  }
+  #homePage #servicesSection {
+    background-color: transparent;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #homePage #servicesSection #servicesSectionTextContainer {
+    color: #ffffff;
+  }
+  #homePage #servicesSection .picSubWr::before {
+    width: 0px;
+    margin: 0px !important;
+  }
+  #homePage #chefTableSec {
+    background-color: #ffffff;
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column !important;
+  }
+  #homePage #chefTableSec .picSubWr::after {
+    width: 0px;
+    margin: 0px;
+  }
+  #homePage #chefTableSec .picSubWr #pic1 {
+    left: auto !important;
+  }
+  #homePage #chefTableSec .picSubWr #pic2 {
+    left: auto !important;
+  }
+  #homePage #chefTableSec .picSubWr #pic3 {
+    left: auto !important;
+  }
+  #homePage #chefTableSec .picSubWr #pic4 {
+    left: auto !important;
+  }
+  #homePage footer {
+    background-color: transparent;
+    position: relative;
+    padding-bottom: 50px !important;
+  }
+  #homePage footer #webcraftLink {
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px !important;
+  }
+  #homePage footer img {
+    height: 100%;
+    width: auto;
+  }
 }
-footer {
-  position: relative;
-  justify-content: center;
-  padding-bottom: 50px !important;
-  box-sizing: border-box;
+/* Mobile Large */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /* styles for large phones */
 }
-footer #webcraftLink {
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  justify-content: center;
-  font-size: 14px !important;
-  box-sizing: border-box;
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* styles for tablets */
 }
-footer #webcraftLink a {
-  text-align: center;
+/* Desktop */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* styles for laptops and standard desktops */
 }
-
-.wrapper {
-  line-height: 1.2;
-  display: grid;
-  place-items: center;
+/* Large Desktop */
+@media only screen and (min-width: 1441px) and (max-width: 1919px) {
+  /* styles for large desktop screens */
 }
-.wrapper p {
-  font-family: var(--body-App-fontFamily);
-  margin: auto;
-  text-transform: uppercase;
-  background: linear-gradient(219deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.7) 11%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.8) 31%, rgb(0, 0, 0) 60%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0.7) 80%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.wrapper .container {
-  padding: 1.5rem;
-  text-align: center;
+/* Ultra-wide Screens */
+@media only screen and (min-width: 1920px) {
+  /* styles for 2K and 4K screens */
 }/*# sourceMappingURL=style.css.map */
