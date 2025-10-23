@@ -7,6 +7,7 @@ html {
 }
 body {
 	height: 100vh;
+	height: 100dvh;
 	overflow-y: auto;
 	position: relative; 
 }
@@ -45,6 +46,7 @@ p {color: #000000 !important;}
 	#landingSection{
 		// background-color: #00000003;
 		// height: 100vh;
+			// height: 100dvh;
 		// position: relative;
 		// #landingPicBox {
 		// 	background-color: #00000003;
@@ -76,7 +78,8 @@ p {color: #000000 !important;}
 		// 	}
 		// }
 		position: relative;
-		min-height: 100vh; // use min-height so content can grow
+		min-height: 100vh;
+		min-height: 100dvh; // use min-height so content can grow
 		overflow: hidden;
 
 		#landingPicBox {
@@ -84,6 +87,7 @@ p {color: #000000 !important;}
 			z-index: 0; // base layer
 			width: 50vw;
 			height: 100vh;
+			height: 100dvh;
 
 			#heroLandingVideo {
 				position: absolute;
@@ -103,6 +107,7 @@ p {color: #000000 !important;}
 			inset: 0;
 			width: 100vw;
 			height: 100vh;
+			height: 100dvh;
 			background-color: #00000080;
 			z-index: 2;
 		}
@@ -483,20 +488,23 @@ p {color: #000000 !important;}
 
 // Break Points 
 /* Mobile Small */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   /* styles for small phones */
   	#homePage {
 		#landingMenu { display: none; }
 		#landingSection{
 			position: relative;
-			min-height: 100vh; // use min-height so content can grow
+			min-height: 100vh;
+			min-height: 100dvh;
 			overflow: hidden;
 
 			#landingPicBox {
 				width: 100vw;
 				height: 100vh;
+				height: 100dvh;
 				#heroLandingVideo {
 					height: 100vh;
+					height: 100dvh;
 					width: 100vw;
 					top: 0vh;
 					left: 0%;
@@ -513,7 +521,7 @@ p {color: #000000 !important;}
 			}
 			img#signatureLanding {
 				width: 100vw;
-				bottom: 5%;
+				bottom: 15%;
 				right: 0%;
 			}
 		
@@ -718,10 +726,6 @@ p {color: #000000 !important;}
 	}
 }
 
-/* Mobile Large */
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  /* styles for large phones */
-}
 
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

@@ -2,11 +2,9 @@
 <html lang="en">
 
     <head>
-
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Home page for Chef Kapernaros website. Little description of Chef Nikolaos Kapernaros activity.">
     
         <!-- Logo -->
         <!-- Standard favicon -->
@@ -58,12 +56,67 @@
         </script>
 
         <!-- Title -->
-        <title>Chef Kapernaros</title>
+        <title>Chef Nikolaos Kapernaros</title>
 
+        <!-- SEO Improvement -->
+        <meta name="description" content="Hire a private chef in Chicago, Norridge and Harwood Heights for intimate dinners, events, and weekly meals. Mediterranean-inspired menus, shopping, cooking.">
+        <link rel="canonical" href="https://chefkapernaros.com/">
+        <meta name="robots" content="index,follow">
+
+        <!-- OPEN GRAPH / TWITTER (better CTR on social & SMS shares) -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Navy Pier Chef in Chicago, Norridge and Harwood Heights">
+        <meta property="og:description" content="Mediterranean-inspired private dining and chef services across Chicago, Norridge and Harwood Heights.">
+        <meta property="og:url" content="https://chefkapernaros.com/">
+        <meta property="og:image" content="https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880317/Niko/new_materials/chef-kapernaros-navypier-chicago.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!-- Local Business + Person schema  -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Chef Nikolaos Kapernaros",
+                "image": "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880317/Niko/new_materials/chef-kapernaros-navypier-chicago.jpg",
+                "url": "https://chefkapernaros.com/",
+                "telephone": "+1-312-555-1234",
+                "priceRange": "$$$",
+                "servesCuisine": ["Mediterranean", "Greek"],
+                "areaServed": [
+                    {"@type":"City","name":"Chicago"},
+                    {"@type":"City","name":"Norridge"},
+                    {"@type":"City","name":"Harwood Heights"},
+                    {"@type":"City","name":"Park Ridge"}
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Chicago",
+                    "addressRegion": "IL",
+                    "postalCode": "60656",
+                    "streetAddress": "Service area only"
+                },
+                "openingHoursSpecification": [{
+                    "@type":"OpeningHoursSpecification",
+                    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                    "opens":"10:00",
+                    "closes":"21:00"
+                }],
+                "sameAs": [
+                    "https://www.instagram.com/chefkapernaros/",
+                    "https://www.youtube.com/channel/UClMP5KSZc2fR8cqTkUV4CCw"
+                ],
+                "founder": {
+                    "@type": "Person",
+                    "name": "Nikolaos Kapernaros",
+                    "jobTitle": "Chef at NavyPier Chicago",
+                    "image": "https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.png",
+                    "url": "https://chefkapernaros.com/"
+                }
+            }
+        </script>
     </head>
 
     <body id="homePage">
-
         <div class="flex flex-column col-5 flex-justifyContent-center linkContainer homePageLinks pb-10" id="landingMenu">
             <a href="#bioSection" id="bioLink"><span>Bio</span></a>
             <a href="#servicesSection" id="servicesLink"><span>Services</span></a>
@@ -95,7 +148,6 @@
                 </div>
             </div>
         </div>
-
         <nav class="navBar flex biggerScreen homePageLinks">  
             <div class="hambContainer">
                 <div class="hamburger-menu">
@@ -107,7 +159,7 @@
         
             <div id="navMenu" class="hide pl-15 pr-20">
                 <a href="./index.html" class="logoNav flex col-12 flex-justifyContent-center">
-                    <img class="ml-40" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" alt="Chef Kapernaros Nav Logo">
+                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.png" alt="Chef Kapernaros Chicago Navy Pier Nav Logo">
                 </a>
                 <a href="./pages/bio.html">Bio</a>
                 <a href="./pages/services.html">Services</a>
@@ -130,9 +182,7 @@
                 </div> -->
             </div>
         </nav>
-
         <section id="landingSection" class="flex flex-column flex-justifyContent-end" style="position: relative;" id="topPage">
-
             <div id="landingPicBox" class="hero">
                 <video
                     id="heroLandingVideo"
@@ -151,10 +201,10 @@
                         type="video/mp4" 
                     />
                     <!-- Optional: a WebM for Chrome/Edge if you want -->
-                    <source
+                    <!-- <source
                         src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_scale,w_600/v1760735729/Niko/new_materials/chef_kapernaros_landing_hero_9_d9gjwy.webm"
                         type="video/webm" 
-                    />
+                    /> -->
                    
                 </video>
             </div>
@@ -218,11 +268,7 @@
                     <img id="pic4" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg" alt=" Chef Kapernaros middle pics">
                 </div>
             </div>
-
-
         </section>
-    
-        
         <!-- <section id="bobbyFlay" class="hide">
             <div id="bobbyFlayDiv">
                 <i id="closingPopup" class="fa-regular fa-circle-xmark"></i>
@@ -256,13 +302,13 @@
         </footer>
 
         <!-- Scripts -->
+        <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script> -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script defer type="text/javascript" src="./chef-kapernaros/script/main.js"></script>
-        <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script> -->
         <script src="./analytics.js"></script>
         <script>
             document.querySelectorAll('video.slowmo').forEach(v => {
-                const rate = 0.9              // speed
+                const rate = 1              // speed
                 v.defaultPlaybackRate = rate   // initial speed
                 v.playbackRate = rate
 
@@ -271,6 +317,26 @@
             })
         </script>
 
+        <!-- Video Json Tag  -->
+        <script type="application/ld+json">
+            {
+                "@context":"https://schema.org",
+                "@type":"VideoObject",
+                "name":"Chef Kapernaros — Navy Pier Chef in Chicago",
+                "description":"Mediterranean-inspired dining and events across Chicago, Norridge and Harwood Heights.",
+                "thumbnailUrl": ["https://res.cloudinary.com/drdrs6pdq/video/upload/so_0,q_auto,f_jpg/Niko/new_materials/chef_kapernaros_landing_hero.jpg"],
+                "contentUrl":"https://res.cloudinary.com/drdrs6pdq/video/upload/c_scale,w_600/v1760735729/Niko/new_materials/chef_kapernaros_landing_hero_9_d9gjwy.mp4",
+                "uploadDate":"2025-01-01",
+                "embedUrl":"https://chefkapernaros.com/",
+                "publisher": {
+                    "@type":"Organization",
+                    "name":"Chef Kapernaros",
+                    "logo": {
+                        "@type":"ImageObject",
+                        "url":"https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.png"
+                    }
+                }
+            }
+        </script>
     </body>
-
 </html>

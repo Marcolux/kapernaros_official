@@ -48,6 +48,7 @@ html {
 
 body {
   height: 100vh;
+  height: 100dvh;
   overflow-y: auto;
   position: relative;
 }
@@ -95,6 +96,7 @@ p {
 #homePage #landingSection {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
 }
 #homePage #landingSection #landingPicBox {
@@ -102,6 +104,7 @@ p {
   z-index: 0;
   width: 50vw;
   height: 100vh;
+  height: 100dvh;
 }
 #homePage #landingSection #landingPicBox #heroLandingVideo {
   position: absolute;
@@ -120,6 +123,7 @@ p {
   inset: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   background-color: rgba(0, 0, 0, 0.5019607843);
   z-index: 2;
 }
@@ -524,7 +528,7 @@ p {
 }
 
 /* Mobile Small */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   /* styles for small phones */
   #homePage #landingMenu {
     display: none;
@@ -532,14 +536,17 @@ p {
   #homePage #landingSection {
     position: relative;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow: hidden;
   }
   #homePage #landingSection #landingPicBox {
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
   }
   #homePage #landingSection #landingPicBox #heroLandingVideo {
     height: 100vh;
+    height: 100dvh;
     width: 100vw;
     top: 0vh;
     left: 0%;
@@ -555,7 +562,7 @@ p {
   }
   #homePage #landingSection img#signatureLanding {
     width: 100vw;
-    bottom: 5%;
+    bottom: 15%;
     right: 0%;
   }
   #homePage .middlePic .middleImgWrapper {
@@ -781,10 +788,6 @@ p {
     height: 100%;
     width: auto;
   }
-}
-/* Mobile Large */
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  /* styles for large phones */
 }
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
