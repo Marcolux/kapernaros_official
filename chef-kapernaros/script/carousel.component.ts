@@ -71,19 +71,19 @@ function initCarousel() {
         picNote: 'Piraeus, Attica'
     }
     const slide2 = {
-        description: 'In 2011, I achieved one of my dreams - teaching at the Culinary Institute of Greece, Anavissos, showcasing the cooking styles of Greek, French, Mediterranean and international cuisines.  My team and I worked closely with the Greek Government and the Council of the European Union on exhibitions featuring Greek cuisine and environmental sustainability.',
+        description: 'In 2011, I fulfilled a dream by teaching at the Culinary Institute of Greece, highlighting Greek, French, Mediterranean, and international cuisines. My team collaborated with the Greek Government and the EU Council on exhibitions promoting Greek cuisine and sustainability.',
         leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1711495906/Niko/Rectangle_52_xrwyz8.webp',
         picNote: 'Culinary Institute of Greece, Anavissos, Attica'
     }
     const slide3 = {
-        description: 'As I continued teaching, I then settled into Grand Resort Lagonissi, Greece, a private peninsula Luxury Resort and member of Leading Hotels of the World.  I worked my way up and was entrusted to be the Head Chef for Lagonissi’s VIP guests such as royalty, world-renowned athletes, award-winning actors/actresses and those in the music industry. I ended my career at Grand Resort Lagonissi as Executive Sous Chef in 2018.',
+        description: 'I later joined Grand Resort Lagonissi, a luxury private peninsula resort in Greece and member of Leading Hotels of the World, where I advanced to Executive Sous Chef. I led the VIP kitchen serving royalty, world-class athletes, and acclaimed entertainers.',
         leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1711495915/Niko/Rectangle_54_lltm3q.webp',
         picNote: 'Lagonissi, Attica'
     }
     const slide4 = {
-        description: 'In 2018, my wife and I made the decision to move to Chicago to be closer to her family.  We packed up our home, and with our daughter, and moved to the other side of the world. I continued to pursue my passion for cooking, and in January of 2021 we welcomed a beautiful boy - making us a family of four.',
+        description: 'In 2018, my wife and I relocated to Chicago to be closer to her family. We continued building our life here, and in 2021, welcomed our son, completing our family of four.',
         leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1712186480/Niko/chef-kapernaros.family2_kxxwzi.webp',
         picNote: ''
@@ -95,7 +95,7 @@ function initCarousel() {
         picNote: 'Hyatt Regency Chicago'
     }
     const slide6 = {
-        description: 'In 2021, I joined the Avli restaurant group and assisted with opening Avli on the Park, located in Chicago Lakeshore East. I was hired to lead and expand the vision of contemporary Greek cuisine with an emphasis of curating a menu where everything is made from scratch. In 2023, the culinary team’s efforts were recognized and the restaurant was named a Michelin 2023 Honoree.',
+        description: 'In 2021, I joined Avli restaurant group to help open Avli on the Park in Chicago. I led the development of a from-scratch contemporary Greek menu that earned a Michelin 2023 Honoree recognition.',
         leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/w_800/v1712191635/Niko/IMG_20210701_161941_808_qdmrcm.webp',
         picNote: 'Avli on the Park, Lakeshore East, Chicago'

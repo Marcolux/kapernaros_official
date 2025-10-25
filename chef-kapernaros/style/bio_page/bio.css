@@ -626,6 +626,136 @@
   }
 }
 @media only screen and (max-width: 700px) {
+  #bioPage {
+    background-position: bottom !important;
+  }
+  #bioPage #pageTransition {
+    height: 100dvh;
+    width: 100vw !important;
+  }
+  #bioPage #carouselSec {
+    margin-top: 0px !important;
+    padding: 0px !important;
+    width: 100vw !important;
+    min-height: 100dvh !important;
+    height: 100dvh !important;
+    min-width: 0px;
+  }
+  #bioPage #carouselSec > div {
+    padding: 0px !important;
+  }
+  #bioPage #carouselSec > div p {
+    font-size: 16px !important;
+    text-align: left;
+  }
+  #bioPage #carouselSec > div p span.textGold {
+    margin-top: 20px !important;
+    font-size: 18px !important;
+  }
+  #bioPage #carouselSec .carouselContainer {
+    width: 100vw !important;
+    height: 100dvh !important;
+  }
+  #bioPage #carouselSec #carousel {
+    min-width: 0px !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    max-height: 100dvh;
+    min-height: 0px;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide {
+    max-height: 100dvh;
+    min-height: 100dvh;
+    position: relative;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .timeline {
+    background-color: #ffffff !important;
+    background: transparent !important;
+    padding-left: 0px;
+    z-index: 15;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .timeline .lineWhite {
+    background-color: #ffffff !important;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .timeline .circleWhite {
+    background-color: #ffffff !important;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .slideDescription {
+    width: 100vw;
+    min-width: 100vw !important;
+    max-height: 60dvh !important;
+    min-height: 50dvh !important;
+    background-color: rgba(0, 0, 0, 0.8156862745) !important;
+    padding-left: 10px;
+    z-index: 11;
+    position: absolute !important;
+    bottom: 0px;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .slideDescription .slideText {
+    align-self: center !important;
+    justify-self: center !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 1px solid var(--secondaryColor);
+    padding: 10px !important;
+    scale: 1;
+    line-height: 22px !important;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .slideDescription .slideText p {
+    font-size: 14px !important;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .slideDescription i {
+    font-size: 30px;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .slideDescription .nextSlide {
+    bottom: 1%;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .slideDescription .prevSlide {
+    top: 1%;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .slidePic {
+    position: absolute;
+    width: 100% !important;
+    height: 50% !important;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .slidePic img {
+    height: auto !important;
+    max-height: 100% !important;
+    min-height: 0px !important;
+    width: 100vw;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+    -o-object-position: top !important;
+       object-position: top !important;
+  }
+  #bioPage #carouselSec #carousel .singleCarouselSlide .slidePic .picNote {
+    display: none;
+  }
+  #bioPage #pageTransition #cardsIntro {
+    transform: translateY(0%);
+  }
+  #bioPage #pageTransition #cardsIntro #valuesIntro {
+    max-width: 100% !important;
+    line-height: 22px;
+    padding: 20px;
+  }
+  #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef {
+    font-size: 22px;
+  }
+  #bioPage #valueSec {
+    padding: 0px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    max-height: -moz-fit-content !important;
+    max-height: fit-content !important;
+  }
+  #bioPage #valueSec .cardContainer {
+    max-height: -moz-fit-content !important;
+    max-height: fit-content !important;
+    flex-direction: column !important;
+  }
+  #bioPage #valueSec .cardContainer .flip-card {
+    width: 100%;
+  }
   .navBar {
     background-color: #000000 !important;
   }
@@ -633,15 +763,7 @@
     text-align: justify;
   }
   section {
-    width: 88vw !important;
-    padding: 0px !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  section#valueSec {
-    padding: 0px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    width: 100vw !important;
   }
   section#career-highlights {
     padding: 0px !important;
@@ -659,102 +781,6 @@
   section p {
     text-align: left;
     font-size: 16px !important;
-  }
-  #carouselSec {
-    margin-top: 0px !important;
-    padding: 0px !important;
-    width: 100vw !important;
-    min-height: 100dvh !important;
-    height: 100dvh !important;
-    min-width: 0px;
-  }
-  #carouselSec > div {
-    padding: 0px !important;
-  }
-  #carouselSec > div p {
-    font-size: 16px !important;
-    text-align: left;
-  }
-  #carouselSec > div p span.textGold {
-    margin-top: 20px !important;
-    font-size: 18px !important;
-  }
-  #carouselSec .carouselContainer {
-    width: 100vw !important;
-    height: 100dvh !important;
-  }
-  #carouselSec #carousel {
-    min-width: 0px !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-    max-height: 100dvh;
-    min-height: 0px;
-  }
-  #carouselSec #carousel .singleCarouselSlide {
-    max-height: 100dvh;
-    min-height: 100dvh;
-    position: relative;
-  }
-  #carouselSec #carousel .singleCarouselSlide .timeline {
-    background-color: #ffffff !important;
-    background: transparent !important;
-    padding-left: 0px;
-    z-index: 15;
-  }
-  #carouselSec #carousel .singleCarouselSlide .timeline .lineWhite {
-    background-color: #ffffff !important;
-  }
-  #carouselSec #carousel .singleCarouselSlide .timeline .circleWhite {
-    background-color: #ffffff !important;
-  }
-  #carouselSec #carousel .singleCarouselSlide .slideDescription {
-    width: 100vw;
-    min-width: 100vw !important;
-    max-height: 60dvh !important;
-    min-height: 60dvh !important;
-    background-color: rgba(0, 0, 0, 0.8156862745) !important;
-    padding-left: 10px;
-    z-index: 11;
-    position: absolute !important;
-    bottom: 0px;
-  }
-  #carouselSec #carousel .singleCarouselSlide .slideDescription .slideText {
-    align-self: center !important;
-    justify-self: center !important;
-    background-color: rgba(0, 0, 0, 0) !important;
-    padding: 0px !important;
-    scale: 1;
-    line-height: 22px !important;
-  }
-  #carouselSec #carousel .singleCarouselSlide .slideDescription .slideText p {
-    font-size: 14px !important;
-  }
-  #carouselSec #carousel .singleCarouselSlide .slideDescription i {
-    font-size: 45px;
-  }
-  #carouselSec #carousel .singleCarouselSlide .slideDescription .nextSlide {
-    bottom: 2%;
-  }
-  #carouselSec #carousel .singleCarouselSlide .slideDescription .prevSlide {
-    top: 2%;
-  }
-  #carouselSec #carousel .singleCarouselSlide .slidePic {
-    position: absolute;
-    width: 100% !important;
-    height: 50% !important;
-  }
-  #carouselSec #carousel .singleCarouselSlide .slidePic img {
-    height: auto !important;
-    max-height: 100% !important;
-    min-height: 0px !important;
-    width: 100vw;
-    -o-object-fit: cover !important;
-       object-fit: cover !important;
-    -o-object-position: top !important;
-       object-position: top !important;
-  }
-  #carouselSec #carousel .singleCarouselSlide .slidePic .picNote {
-    display: none;
   }
   .singleCard {
     flex-direction: column;

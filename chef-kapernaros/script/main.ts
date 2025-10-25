@@ -261,129 +261,109 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
 
 const allEventsUpcoming: eventObj[] = [
     {
-        event_title: 'Title Here',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Upcoming Events link',
+        event_title: 'Taste of Hope',
+        event_date: 'Nov 6, 2025',
+        event_location: 'Chicago, Navy Pier - AON Grand Ballroom',
+        event_time: '6:00 pm - 9:00 pm',
+        event_description: "This isn’t just a night out; it’s a movement toward a world without cancer. Join us as we celebrate over 35 amazing restaurants from the Chicagoland area, and let's make a difference together!",
+        event_link: 'www.chicagotasteofhope.com',
         event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
         event_isMostRecent: true
     },
     {
-        event_title: 'Title Here',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Upcoming Events link',
+        event_title: 'Harwood Heights Cooking Class',
+        event_date: 'Dec 9, 2025',
+        event_location: 'Harwood Heights, Recreation center',
+        event_time: '6:00 pm - 8:30 pm',
+        event_description: '',
+        event_link: '',
         event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
-    },
-    {
-        event_title: 'Title Here',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Upcoming Events link',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
-    },
-    {
-        event_title: 'Title Here',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Upcoming Events link',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
+        event_isMostRecent: true
     },
 ]
 const allEventsPast: eventObj[] = [
-    {
-        event_title: 'Chicago Gourmet',
-        event_date: 'Sept. 25 - 28, 2025',
-        event_location: 'Harris Theater Rooftop • Millennium Park',
-        event_time: '',
-        event_description: "Welcome to Chicago Gourmet, one of the country's most distinguished food festivals. Each year, Chicago Gourmet celebrates the city's diverse dining scene with a dynamic line-up of epicurean events that showcase the city’s top chefs, food, and drinks.",
-        event_link: 'https://www.chicagogourmet.org/',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760656045/Niko/new_materials/chef-gourmet_ngqfr3.jpg',
+    { 
+        event_title: "Chicago Gourmet",
+        event_date: "Sep 28, 2025",
+        event_location: "Chicago, Harries Theater for Music and Dance",
+        event_time: "",
+        event_description: "Rise and Shine gourmet brunch",
+        event_link: "",
+        event_picture: "",
         event_isMostRecent: true
     },
-    {
-        event_title: 'Title Here',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Past Events link',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
+    { 
+        event_title: "Panos Food Show",
+        event_date: "June 10, 2025",
+        event_location: "Chicago, Drury Lane Theater",
+        event_time: "",
+        event_description: "Celebrating 50 years of Panos Food",
+        event_link: "",
+        event_picture: "",
+        event_isMostRecent: true
     },
-    {
-        event_title: 'Title Here',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Past Events link',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
+    { 
+        event_title: `"I Cook For" benefit`,
+        event_date: "March 20, 2025",
+        event_location: "Chicago, Four Seasons Hotel",
+        event_time: "",
+        event_description: "Pierless Hospitality team of Navy Pier Chicago at 'I Cook For' Benefit",
+        event_link: "",
+        event_picture: "",
+        event_isMostRecent: true
     },
-    {
-        event_title: 'Title Here',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Past Events link',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
-    },
+    { 
+        event_title: "Grand Chef Experience",
+        event_date: "March 2, 2025",
+        event_location: "Chicago, Field Museum",
+        event_time: "",
+        event_description: "For one more year It is a great honor for me and Pierless Hospitality team to support The Cystic Fibrosis Foundation, the world's leader in the search for a cure for CF.",
+        event_link: "",
+        event_picture: "",
+        event_isMostRecent: true
+    }
 ]
 
 const allEventsCompetions: eventObj[] = [
-    {
-        event_title: 'Competions title',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Competions link',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
+    { 
+        event_title: "Good Taste Series For Hyatt World Midwest",
+        event_date: "2018",
+        event_location: "Chicago, Hyatt McCormick",
+        event_time: "",
+        event_description: "Fine dining competitions awarded for excellence. First place winner.",
+        event_link: "",
+        event_picture: "",
+        event_isMostRecent: true
     },
-    {
-        event_title: 'Competions title',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Competions link',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
+    { 
+        event_title: "Good Taste Series For Hyatt Americas Final",
+        event_date: "Sep, 2018",
+        event_location: "Bahamas, Grand Hyatt",
+        event_time: "",
+        event_description: "Fine dining competitions awarded for excellence. First place winner.",
+        event_link: "",
+        event_picture: "",
+        event_isMostRecent: true
     },
-    {
-        event_title: 'Competions title',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Competions link',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
+    { 
+        event_title: "Beat Bobby Flay",
+        event_date: "Oct, 2024",
+        event_location: "New York",
+        event_time: "",
+        event_description: "Season 35, Episode 12 - Talk the Talk and Walk the Walk - Episode winner.",
+        event_link: "",
+        event_picture: "",
+        event_isMostRecent: true
     },
-    {
-        event_title: 'Competions title',
-        event_date: 'Oct 6-7, 2025',
-        event_location: 'Chicago, Navy Pier',
-        event_time: '5:00 pm - 6:00 pm',
-        event_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
-        event_link: 'Competions link',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
-        event_isMostRecent: false
+    { 
+        event_title: "Chopped",
+        event_date: "Nov, 2024",
+        event_location: "New York",
+        event_time: "",
+        event_description: "Season 60, Episode 2 - Big Fat Greek Kitchen - participant",
+        event_link: "",
+        event_picture: "",
+        event_isMostRecent: true
     },
 ]
 
