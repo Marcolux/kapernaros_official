@@ -474,160 +474,13 @@ $primaryColor: #f8f8f5;
     .animated-highlight { color: var(--secondaryColor) !important; }
 }
 
-@media only screen and (min-width: 930px) and (max-width: 1170px) {
-    .singleCarouselSlide {  width: 100% !important; }
-    #slide_2,#slide_3,#slide_4,#slide_6 {
-        #slideText{
-            padding: 15px !important;
-            p { font-size: 15px !important; }
-        }
-    }
-}
-@media only screen and (max-width: 1200px) {
-    #cardsContainer { width: 95% !important;}
-}
-@media only screen and (min-width: 701px) and (max-width: 930px) {
-    body{
-        width: 100% !important;
-        position: relative;
-    }
-
-    section{
-        width: 95% !important;
-        padding: 0px !important;
-        padding-left: 0px !important;
-        padding-right: 0px !important;
-        &#valueSec{
-            padding: 0px !important;
-            padding-left: 20px !important;
-            padding-right: 20px !important;
-            width: 100%;
-
-        }
-        &#career-highlights{
-            padding: 0px !important;
-            width: 100% !important;
-            li{
-                font-size: 14px;
-            }
-            p{
-                font-size: 16px !important;
-                &.textGold{
-                    font-size: 22px !important;
-                }
-            }
-        }
-        p{
-            text-align: left;
-            font-size: 16px !important;
-            span.textGold{
-                font-size: 22px !important;
-            }
-        }
-    }
-    #carouselSec{ 
-        margin-top: 14vh !important;
-        padding: 20px !important;
-        width: 95% !important;
-        >div {
-            padding: 0px !important;
-            p{
-                text-align: left;
-                font-size: 16px !important;
-                span.textGold{
-                    font-size: 22px !important;
-                }
-            }
-        }
-    
-        #carousel{
-            margin-top: 30px;
-            min-width: 95% !important;
-            max-height: 400px;
-            min-height: 400px;
-            .singleCarouselSlide{
-                max-height: 400px;
-                min-height: 400px;
-                #timeline{
-    
-                    background-color:  #ffffff !important;
-                    padding-left: 0px;
-                    z-index: 15;
-                    #lineWhite{
-                        background-color: #ffffff !important;
-                    }
-                    #circleWhite{
-                        background-color: #ffffff !important;
-                    }
-                }
-                #slideDescription{
-                    width: 100%;
-                    min-width: 300px !important;
-                    max-height: 400px;
-                    min-height: 400px;
-                    background:  linear-gradient(180deg, var(--darkBlueColor), #000000);
-                    padding-left: 10px;
-                    z-index: 11;
-                    #slideText{
-                        background-color: #000000a3;
-                        padding: 10px !important;
-                        font-size: 14px;
-                        p {
-                            color: #fff !important;
-                        }
-                    }
-                    i{
-                        font-size: 45px;
-                    }
-                    #nextSlide{
-                        bottom: 2%;
-    
-                    }
-                    #prevSlide{
-                        top: 2%;
-                    }
-                }
-                #slidePic{
-                    position: absolute;
-                    width: 100%;
-                    img{
-                        height: 400px !important;
-                    }
-                    #picNote{
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    .singleCard {
-
-        img{
-            width: 40%;
-            min-width: 40%;
-            max-width: 40%;
-        }
-        .cardDescr{
-            padding: 20px !important;
-            .cardText{
-                margin-top: 10px !important;
-                margin-bottom: 30px !important;
-            } 
-        }
-    }
-    #cardsContainer {
-        width: 100% !important;
-    }
-    .cardsIntro{
-        p.fontSize18{
-            font-size: 16px !important;
-        }
-    }
-
-}
+@media only screen and (min-width: 930px) and (max-width: 1170px) { }
+@media only screen and (max-width: 1200px) { }
+@media only screen and (min-width: 701px) and (max-width: 930px) { }
 @media only screen and (max-width: 700px) {
     #bioPage {
         background-position: bottom !important;
+        overflow-x: hidden;
         #pageTransition {
             height: 100dvh;
             width: 100vw !important;
@@ -727,8 +580,10 @@ $primaryColor: #f8f8f5;
             }
         }
         #pageTransition {
+            width: fit-content !important;
             #cardsIntro {
                 transform: translateY(0%);
+                padding: 0px !important;
                 #valuesIntro {
                     max-width: 100% !important;
                     line-height: 22px;
@@ -748,64 +603,76 @@ $primaryColor: #f8f8f5;
             .cardContainer {
                 max-height: fit-content !important;
                 flex-direction: column !important;  
+                padding: 20px 0px;
                 .flip-card {
                     width: 100%;
+                    .flip-card-back {
+                        padding: 0px 15px !important;
+                    }
+                    .cardText  {
+                        color: #f1f1f1 !important;
+                        font-size: 16px !important;
+                        line-height: 20px !important;
+                        padding: 0px !important;
+                    }
+                    .flip-toggle {
+                        width: 35px !important;
+                        height: 35px !important;
+                    }
                 } 
+            }
+        }
+        #careerHighlightsSec {
+            padding: 20px 10px;
+            .careerHighlightsWrapper {
+                padding: 0px !important;
+                .titlesChef  {
+                    font-size: 25px;
+                    margin-bottom: 0px;
+                    &::before {
+                        height:  calc(100% - 15px);
+                        left: -25px;
+                    }
+                }
+                #highligthsIntroText {
+                    width: 100% !important;
+                    font-size: 16px !important;
+                    margin-top: 20px !important;
+                    margin-bottom: 20px !important;
+                    padding: 0px 15px;
+                }
+            }
+            .timeline {
+                grid-template-columns: 90px 1fr !important;
+                box-shadow: none !important;
+                .timeline__year, .timeline__label {
+                    font-size: 16px !important;
+                }
+                .timeline__events {
+                    padding: 12px !important;
+                    .event  {
+                        font-size: 16px !important;
+                        line-height: 20px !important;
+                        margin-bottom: 10px;
+                        &::before {
+                            left: -19px !important;
+                        }
+                    }
+                }
             }
         }
     }
     .navBar { background-color: #000000 !important;}
-    .highlightsIntro, .valueIntro {
-        text-align: justify;
-    } 
-    section{
-        width: 100vw !important;
-        
-        &#career-highlights{
-            padding: 0px !important;
-            width: 100% !important;
-            li{
-                font-size: 14px;
-            }
-            p{
-                font-size: 16px !important;
-                &.textGold{
-                    font-size: 24px !important;
-                }
-            }
-        }
-        p{
-            text-align: left;
-            font-size: 16px !important;
-        }
-    }
 
-    .singleCard {
-        flex-direction: column;
-        &.reverse{
-            flex-direction: column !important;
+    footer { 
+        position: relative;
+        padding-bottom: 50px !important;
+        width: 100%;
+        #webcraftLink {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px !important;
         }
-        img{
-            width: 100%;
-            min-width: 100%;
-            max-width: 100%;
-        }
-    }
-    .cardDescr{
-        padding: 0px !important;
-        .cardText{
-            margin-top: 10px !important;
-            margin-bottom: 30px !important;
-            text-align: justify;
-            
-        } 
-    }
-    #cardsContainer {
-        width: 100% !important;
-    }
-    .cardsIntro{
-        p.fontSize18{
-            font-size: 16px !important;
-        }
+        
     }
 }

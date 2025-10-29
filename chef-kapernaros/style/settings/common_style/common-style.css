@@ -140,7 +140,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(239, 239, 239, 0.768627451);
+  background-color: rgba(239, 239, 239, 0.768627451) !important;
   border-radius: 20px;
 }
 
