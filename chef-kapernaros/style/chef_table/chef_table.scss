@@ -22,7 +22,7 @@ body#chefTablePage{
             text-align: left;
             z-index: 55;
             .titlesChef {
-                font-size: clamp(40px, 2.6vw, 47px);
+                font-size: clamp(22px, 2.6vw, 47px);
                 font-weight: 500; 
                 letter-spacing: .01em;
                 margin-bottom: 10px; 
@@ -220,57 +220,193 @@ body#chefTablePage{
     }
 }
 
-@media only screen and (min-width: 1301px) and (max-width: 1400px) {
-
-}
-@media only screen and (max-width: 1361px) {
- 
-}
-@media only screen and (min-width: 701px) and (max-width: 930px) {
-
-}
-@media only screen and (min-width: 701px) and (max-width: 1300px) {
-
-
-}
+@media only screen and (min-width: 1301px) and (max-width: 1400px) {}
+@media only screen and (max-width: 1361px) {}
+@media only screen and (min-width: 701px) and (max-width: 930px) {}
+@media only screen and (min-width: 701px) and (max-width: 1300px) {}
 @media only screen and (max-width: 700px) {
-    .fontSize18 {
-        font-size: 16px !important;
-    }
-    .chefTableIntro{
-        text-align: justify;
-    }
-    p.fontSize20.mb-0.font-ledger.textGold.text-bold{
-        margin-top: 0px !important;
-    }
-    .maxWidth1500{
-        padding: 60px 15px 30px 15px !important;
-    }
-    #chefTableSec{
-        margin-top: 0px !important;
-        padding-top: 0px !important;
-        .picDescr:hover{
-            display: none;
-        }
-    }
-    #tablePicContainer{
-        background-color: #2F2F2F;
-        >div{
-            padding: 30px 0px !important;
-        }
-    
-        .singlePicTable{
-            width: 45%;
-            margin-right: 5px;
-            margin-top: 5px;
-            .picDescr:not(.noBG){
-                display: none;
+    body#chefTablePage {
+        section#chefTableSec {
+            margin-top: 0px !important;
+            .chefTableIntro {
+                box-shadow: none;
+                font-size: 16px;
+                line-height: 25px;
+                max-width: 90%;
+                padding: 20px 30px;
+                .titlesChef {
+                    &::before {
+                        bottom: 0px;
+                        height: calc(100% - 5px);
+                        left: -25px;
+                        width: calc(100% + 15px);
+                    }
+                }           
             }
-            &:hover{
-                scale: 1;
-                z-index:1;
-            } 
-
+            #tablePicContainer{
+                    position: relative;
+                    .cardContainer {
+                        display: flex;
+                        gap: 20px;
+                        flex: auto;
+                        justify-content: center;
+                        padding: 20px;
+                        width: 100%;
+                        .flip-card {
+                            border: 1px solid var(--secondaryColor);
+                            border-radius: 0px;
+                            box-shadow: none;
+                            width: 46%;
+                            .flip-card-inner {
+                                aspect-ratio: 1/1;
+                                border-radius: 0px;
+                                box-shadow: none;
+                                width: 101%;
+                                .flip-card-front,
+                                .flip-card-back {
+                                    backface-visibility: hidden;
+                                    inset: 0;
+                                    position: absolute;
+                                    -webkit-backface-visibility: hidden;
+                                }
+                                .hoverWrapper {
+                                    height: fit-content;
+                                    width: 100%;
+                                    bottom: 0px;
+                                    transition: all 0.5s ease-in-out;
+                                    position:absolute;
+                                    .titlesChef{
+                                        margin-left: 0px !important;
+                                        font-family: 'Bodoni Libre' !important;
+                                        padding: 4px 0px 1px;
+                                    }
+                                }
+                                &:hover, &:active, &:focus {
+                                    .hoverWrapper {
+                                        align-items: center;
+                                        background-color: #0000008d;
+                                        display: flex;
+                                        height: 100%;
+                                        justify-content: center;
+                                        width: 100%;
+                                        .titlesChef {
+                                            bottom: auto !important;
+                                            color: #fff !important;
+                                            left: auto !important;
+                                            margin-left: 0px !important;
+                                            font-size: clamp(1.5rem, 2.2vw, 2rem) !important;
+                                            background-color: transparent !important;
+                                            &::before {
+                                                background-color: #ffffff !important;
+                                                height: 0% !important;
+                                                left: 0px;
+                                            }
+                                        }
+                                    }
+                                    .flip-toggle { 
+                                        display: flex; 
+                                        right: 2%;
+                                        .flip-icon {
+                                            transform: rotateY(180deg);
+                                            opacity: 0.9;
+                                        }
+                                    }
+                                }
+                                .flip-card-front {
+                                    transform: rotateY(0deg) translateZ(0);
+                                    -webkit-transform: rotateY(0deg) translateZ(0);
+                                    .imgCont {
+                                        display: flex;
+                                        height: 100%;
+                                        position: relative;
+                                        img {
+                                            width: 100%; 
+                                            height: 100%; 
+                                            object-fit: cover;
+                                        }  
+                                        .titlesChef {
+                                            color: var($background);
+                                            bottom: 20px;
+                                            padding-left: 10px;
+                                            font-size: clamp(1rem, 2.2vw, 1.5rem);
+                                            width: 100%;
+                                            text-align: left;
+                                            letter-spacing: 0em !important;
+                                            // background-color: var(--secondaryColor);
+                                            &::before {
+                                                content: '';
+                                                position: absolute;
+                                                bottom: -5px;
+                                                left: -30px;
+                                                width: calc(100% + 45px);
+                                                height: calc(100% + 10px);
+                                                background-color: #ffffffc5;
+                                                opacity: 0.9;
+                                                z-index: -1;
+                                            }
+                                        }
+                                    }
+                                }
+                                .flip-card-back {
+                                    background: linear-gradient(180deg,#2c4378,#1e293b); 
+                                    // opacity: 0.5;
+                                    color: #fff;
+                                    display: grid; 
+                                    padding: 18px;
+                                    place-content: center; 
+                                    transform: rotateY(180deg) translateZ(1px);
+                                    -webkit-transform: rotateY(180deg) translateZ(1px);
+                                    .cardText {
+                                        font-size: 20px;
+                                        letter-spacing: 0.01em;
+                                        line-height: 30px;
+                                        text-align: left;
+                                        color: #fff;
+                                    }
+                                }
+                                
+                                &:hover {color: var(--secondaryColor);}
+                                .flip-toggle { 
+                                    display: none;
+                                    position: absolute; 
+                                    inset: auto 35px 20px auto; 
+                                    background-color: transparent;
+                                    border: 2px solid #fff;
+                                    border-radius: 50%;
+                                    width: 50px;
+                                    height: 50px;
+                                    right: 50%;
+                                    transition: all 0.5s ease;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .flip-icon {
+                                        fill: #f1f1f1;
+                                        stroke-width: 2px;
+                                        transition: all 1s ease;
+                                        box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
+                                        background-color: rgba(255, 255, 255, 0);
+                                    }
+                                    cursor: pointer;
+                                    &:hover .flip-icon {
+                                        fill: var(--secondaryColor);
+                                    }
+                                }
+                            }
+                            &.is-flipped .flip-card-inner {
+                                transform: rotateY(180deg);
+                                .flip-toggle { 
+                                    display: flex; 
+                                    right: 2%;
+                                    .flip-icon {
+                                        transform: rotateY(180deg);
+                                        opacity: 0.9;
+                                    }
+                                }
+                                .flip-card-back { backface-visibility: visible;}
+                            }
+                        }
+                    }
+            }
         }
     }
 }
