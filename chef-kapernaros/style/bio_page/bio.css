@@ -486,10 +486,6 @@
     background-position: bottom !important;
     overflow-x: hidden;
   }
-  #bioPage #pageTransition {
-    height: 100dvh;
-    width: 100vw !important;
-  }
   #bioPage #carouselSec {
     margin-top: 0px !important;
     padding: 0px !important;
@@ -588,11 +584,12 @@
     display: none;
   }
   #bioPage #pageTransition {
+    height: 100dvh;
     width: -moz-fit-content !important;
     width: fit-content !important;
   }
   #bioPage #pageTransition #cardsIntro {
-    transform: translateY(0%);
+    transform: translateY(15%);
     padding: 0px !important;
   }
   #bioPage #pageTransition #cardsIntro #valuesIntro {
@@ -601,7 +598,13 @@
     padding: 20px;
   }
   #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef {
-    font-size: 22px;
+    font-size: 21px;
+    margin-left: 0px !important;
+  }
+  #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef::before {
+    bottom: 2px !important;
+    height: calc(100% - 5px);
+    left: -25px;
   }
   #bioPage #valueSec {
     padding: 0px !important;

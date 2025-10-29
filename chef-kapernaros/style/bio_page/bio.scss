@@ -481,10 +481,6 @@ $primaryColor: #f8f8f5;
     #bioPage {
         background-position: bottom !important;
         overflow-x: hidden;
-        #pageTransition {
-            height: 100dvh;
-            width: 100vw !important;
-        }
         #carouselSec{ 
             margin-top: 0px !important;
             padding: 0px !important;
@@ -580,16 +576,23 @@ $primaryColor: #f8f8f5;
             }
         }
         #pageTransition {
+            height: 100dvh;
             width: fit-content !important;
             #cardsIntro {
-                transform: translateY(0%);
+                transform: translateY(15%);
                 padding: 0px !important;
                 #valuesIntro {
                     max-width: 100% !important;
                     line-height: 22px;
                     padding: 20px;
                     .titlesChef {
-                        font-size: 22px;
+                        font-size: 21px;
+                        margin-left: 0px !important;
+                        &::before {
+                            bottom: 2px !important;
+                            height: calc(100% - 5px);
+                            left: -25px;
+                        }
                     }
                 }
             }
@@ -599,6 +602,7 @@ $primaryColor: #f8f8f5;
             padding-left: 20px !important;
             padding-right: 20px !important;
             max-height: fit-content !important;
+
             
             .cardContainer {
                 max-height: fit-content !important;
