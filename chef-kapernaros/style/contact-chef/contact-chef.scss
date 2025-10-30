@@ -129,7 +129,7 @@ $fieldPadding: 10px;
                 text-align: center;
                 justify-content: left !important;
                 .titlesChef {
-                    font-size: clamp(21px, 2.6vw, 47px);
+                    font-size: clamp(24px, 2.6vw, 47px);
                     font-weight: 500;
                     letter-spacing: 0.01em;
                     margin-bottom: 0px;
@@ -173,22 +173,7 @@ $fieldPadding: 10px;
                 }
                 input, select, textarea {
                     margin-bottom: 0px !important;
-                }
-                select{
-                    border: 1px solid $gold;
-                    background-color: #fff;
-                    color: #000000;
-                    font-family: var(--body-App-fontFamily);
-                    font-size: 16px;
-                    height: 35px;
-                    // padding: $fieldPadding;
-                    &:focus-visible{
-                        border: 1px solid $gold !important;
-                        outline-width: 0px;
-                    }
-                    &.inputText{
-                        border: 1px solid $gold !important;
-                    }
+                    border-radius: 0px !important;
                 }
             }
         }

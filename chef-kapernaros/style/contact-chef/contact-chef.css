@@ -116,7 +116,7 @@
     justify-content: left !important;
   }
   #contactPage #chefForm #contactIntro .titlesChef {
-    font-size: clamp(21px, 2.6vw, 47px);
+    font-size: clamp(24px, 2.6vw, 47px);
     font-weight: 500;
     letter-spacing: 0.01em;
     margin-bottom: 0px;
@@ -161,20 +161,6 @@
   }
   #contactPage #chefForm #myForm input, #contactPage #chefForm #myForm select, #contactPage #chefForm #myForm textarea {
     margin-bottom: 0px !important;
-  }
-  #contactPage #chefForm #myForm select {
-    border: 1px solid #b59b07;
-    background-color: #fff;
-    color: #000000;
-    font-family: var(--body-App-fontFamily);
-    font-size: 16px;
-    height: 35px;
-  }
-  #contactPage #chefForm #myForm select:focus-visible {
-    border: 1px solid #b59b07 !important;
-    outline-width: 0px;
-  }
-  #contactPage #chefForm #myForm select.inputText {
-    border: 1px solid #b59b07 !important;
+    border-radius: 0px !important;
   }
 }/*# sourceMappingURL=contact-chef.css.map */
