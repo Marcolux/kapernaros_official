@@ -391,7 +391,7 @@ const cardsOnSmallScreen = () => {
         if (card.classList.contains('smallScreenCard')) {
             card.addEventListener('mouseover', () => {
                 allCardsInChefTable.forEach(card => {
-                    card.classList.remove('clicked', 'is-flipped')
+                    card.classList.remove('clicked')
                 })
                 setTimeout(() => {
                     card.classList.add('clicked')
@@ -400,10 +400,10 @@ const cardsOnSmallScreen = () => {
                         block: "center",    // centers vertically
                         inline: "nearest"   // keeps horizontal position if possible
                     })
+                    allCardsInChefTable.forEach(card => {
+                        if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
+                    })
                 },10)
-                // allCardsInChefTable.forEach(card => {
-                //     if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
-                // })
             })
         }
     })

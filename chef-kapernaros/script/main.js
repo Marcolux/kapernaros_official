@@ -331,7 +331,7 @@ var cardsOnSmallScreen = function () {
         if (card.classList.contains('smallScreenCard')) {
             card.addEventListener('mouseover', function () {
                 allCardsInChefTable.forEach(function (card) {
-                    card.classList.remove('clicked', 'is-flipped');
+                    card.classList.remove('clicked');
                 });
                 setTimeout(function () {
                     card.classList.add('clicked');
@@ -340,10 +340,11 @@ var cardsOnSmallScreen = function () {
                         block: "center", // centers vertically
                         inline: "nearest" // keeps horizontal position if possible
                     });
+                    allCardsInChefTable.forEach(function (card) {
+                        if (!card.classList.contains('clicked'))
+                            card.classList.remove('is-flipped');
+                    });
                 }, 10);
-                // allCardsInChefTable.forEach(card => {
-                //     if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
-                // })
             });
         }
     });
