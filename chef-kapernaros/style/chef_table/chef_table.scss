@@ -275,8 +275,7 @@ body#chefTablePage{
                                     aspect-ratio: 1/1 !important;
                                 }
                                 .flip-card-back {
-                                    background: linear-gradient(180deg,#2c4378,#1e293b); 
-                                    // opacity: 0.5;
+                                    background: linear-gradient(180deg,#2c4378,#1e293b);
                                     color: #fff;
                                     display: grid; 
                                     padding: 18px;
@@ -284,9 +283,9 @@ body#chefTablePage{
                                     transform: rotateY(180deg) translateZ(1px);
                                     -webkit-transform: rotateY(180deg) translateZ(1px);
                                     .cardText {
-                                        font-size: 16px !important;
+                                        font-size: 18px !important;
                                         letter-spacing: 0.01em;
-                                        line-height: 20px !important;
+                                        line-height: 25px !important;
                                         text-align: left;
                                     }
                                 }

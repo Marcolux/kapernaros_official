@@ -275,9 +275,9 @@ body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-
     -webkit-transform: rotateY(180deg) translateZ(1px);
   }
   body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card.smallScreenCard .flip-card-back .cardText {
-    font-size: 16px !important;
+    font-size: 18px !important;
     letter-spacing: 0.01em;
-    line-height: 20px !important;
+    line-height: 25px !important;
     text-align: left;
   }
   body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-toggle {
