@@ -396,7 +396,11 @@ const cardsOnSmallScreen = () => {
                 })
                 setTimeout(() => {
                     card.classList.add('clicked')
-                    card.scrollIntoView()
+                    card.scrollIntoView({
+                        behavior: "smooth", // optional
+                        block: "center",    // centers vertically
+                        inline: "nearest"   // keeps horizontal position if possible
+                    })
                 },0)
                 // allCardsInChefTable.forEach(card => {
                 //     if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
