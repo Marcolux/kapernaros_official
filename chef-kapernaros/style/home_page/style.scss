@@ -709,20 +709,25 @@ p {color: #000000 !important;}
 				#pic4 { left: auto !important; }
 			}
 		}
-		footer { 
-			background-color: transparent; 
-			position: relative;
-			padding-bottom: 50px !important;
-			#webcraftLink {
-				position: absolute;
-				bottom: 10px;
-				font-size: 14px !important;
-			}
-			img {
-				height: 100%;
-				width: auto;
-			}
-		}
+        footer { 
+            flex-direction: column-reverse;
+            position: relative;
+            padding-top: 15px !important;
+            padding-bottom: 40px !important;
+            width: 100%;
+            height: fit-content;
+            gap: 30px;
+            img {
+                width: 70%;
+                height: auto !important;
+            }
+            #webcraftLink {
+                position: absolute;
+                bottom: 20px;
+                font-size: 14px !important;
+            }
+            
+        }
 	}
 }
 

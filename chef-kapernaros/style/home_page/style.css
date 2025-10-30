@@ -775,18 +775,23 @@ p {
     left: auto !important;
   }
   #homePage footer {
-    background-color: transparent;
+    flex-direction: column-reverse;
     position: relative;
-    padding-bottom: 50px !important;
+    padding-top: 15px !important;
+    padding-bottom: 40px !important;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 30px;
+  }
+  #homePage footer img {
+    width: 70%;
+    height: auto !important;
   }
   #homePage footer #webcraftLink {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     font-size: 14px !important;
-  }
-  #homePage footer img {
-    height: 100%;
-    width: auto;
   }
 }
 /* Tablet */

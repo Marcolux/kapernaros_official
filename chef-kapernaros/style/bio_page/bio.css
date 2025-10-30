@@ -644,6 +644,7 @@
   #bioPage #careerHighlightsSec .careerHighlightsWrapper .titlesChef {
     font-size: 25px;
     margin-bottom: 0px;
+    margin-top: 20px;
   }
   #bioPage #careerHighlightsSec .careerHighlightsWrapper .titlesChef::before {
     height: calc(100% - 15px);
@@ -678,13 +679,22 @@
     background-color: #000000 !important;
   }
   footer {
+    flex-direction: column-reverse;
     position: relative;
+    padding-top: 15px !important;
     padding-bottom: 50px !important;
     width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 20px;
+  }
+  footer img {
+    width: 70%;
+    height: auto !important;
   }
   footer #webcraftLink {
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     font-size: 14px !important;
   }
 }/*# sourceMappingURL=bio.css.map */

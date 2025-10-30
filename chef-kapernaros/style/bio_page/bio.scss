@@ -633,6 +633,7 @@ $primaryColor: #f8f8f5;
                 .titlesChef  {
                     font-size: 25px;
                     margin-bottom: 0px;
+                    margin-top: 20px;
                     &::before {
                         height:  calc(100% - 15px);
                         left: -25px;
@@ -669,12 +670,20 @@ $primaryColor: #f8f8f5;
     .navBar { background-color: #000000 !important;}
 
     footer { 
+        flex-direction: column-reverse;
         position: relative;
+        padding-top: 15px !important;
         padding-bottom: 50px !important;
         width: 100%;
+        height: fit-content;
+        gap: 20px;
+        img {
+            width: 70%;
+            height: auto !important;
+        }
         #webcraftLink {
             position: absolute;
-            bottom: 10px;
+            bottom: 15px;
             font-size: 14px !important;
         }
         
