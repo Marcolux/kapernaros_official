@@ -390,12 +390,17 @@ const cardsOnSmallScreen = () => {
         card.classList.toggle('smallScreenCard',window.innerWidth < 750)
         if (card.classList.contains('smallScreenCard')) {
             card.addEventListener('mouseover', () => {
-                allCardsInChefTable.forEach(card => card.classList.remove('clicked'))
-                card.classList.add('clicked')
-                card.scrollIntoView()
                 allCardsInChefTable.forEach(card => {
-                    if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
+                    card.classList.remove('clicked', 'is-flipped')
+                   
                 })
+                setTimeout(() => {
+                    card.classList.add('clicked')
+                    card.scrollIntoView()
+                },0)
+                // allCardsInChefTable.forEach(card => {
+                //     if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
+                // })
             })
         }
     })
