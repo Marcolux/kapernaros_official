@@ -255,9 +255,13 @@ body#chefTablePage{
                             border-radius: 0px;
                             box-shadow: none;
                             width: 46%;
-                            // transition: width 0.2s ease-in-out;
                             &.smallScreenCard {
-
+                                transition: width 0.2s ease-in-out;
+                                transition-delay: 0.2s;
+                                .titlesChef {
+                                    padding: 0px 0px 0px 4px !important;
+                                    font-size: 11px !important;
+                                }
                                 &.clicked { 
                                     width: 100%;
                                 } 

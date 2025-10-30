@@ -331,12 +331,11 @@ var cardsOnSmallScreen = function () {
         if (card.classList.contains('smallScreenCard')) {
             card.addEventListener('mouseover', function () {
                 allCardsInChefTable.forEach(function (card) { return card.classList.remove('clicked'); });
-                // setTimeout(() => {},0)
+                setTimeout(function () {
+                }, 0);
                 card.classList.add('clicked');
                 card.scrollIntoView({
                     behavior: "smooth", // optional
-                    block: "center", // centers vertically
-                    inline: "nearest" // keeps horizontal position if possible
                 });
                 allCardsInChefTable.forEach(function (card) {
                     if (!card.classList.contains('clicked'))
