@@ -390,20 +390,17 @@ const cardsOnSmallScreen = () => {
         card.classList.toggle('smallScreenCard',window.innerWidth < 750)
         if (card.classList.contains('smallScreenCard')) {
             card.addEventListener('mouseover', () => {
+                allCardsInChefTable.forEach(card => card.classList.remove('clicked'))
+                // setTimeout(() => {},0)
+                card.classList.add('clicked')
+                card.scrollIntoView({
+                    behavior: "smooth", // optional
+                    block: "center",    // centers vertically
+                    inline: "nearest"   // keeps horizontal position if possible
+                });
                 allCardsInChefTable.forEach(card => {
-                    card.classList.remove('clicked')
+                    if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
                 })
-                setTimeout(() => {
-                    card.classList.add('clicked')
-                    card.scrollIntoView({
-                        behavior: "smooth", // optional
-                        block: "center",    // centers vertically
-                        inline: "nearest"   // keeps horizontal position if possible
-                    })
-                    allCardsInChefTable.forEach(card => {
-                        if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
-                    })
-                },10)
             })
         }
     })

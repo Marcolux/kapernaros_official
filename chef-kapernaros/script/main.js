@@ -330,21 +330,18 @@ var cardsOnSmallScreen = function () {
         card.classList.toggle('smallScreenCard', window.innerWidth < 750);
         if (card.classList.contains('smallScreenCard')) {
             card.addEventListener('mouseover', function () {
-                allCardsInChefTable.forEach(function (card) {
-                    card.classList.remove('clicked');
+                allCardsInChefTable.forEach(function (card) { return card.classList.remove('clicked'); });
+                // setTimeout(() => {},0)
+                card.classList.add('clicked');
+                card.scrollIntoView({
+                    behavior: "smooth", // optional
+                    block: "center", // centers vertically
+                    inline: "nearest" // keeps horizontal position if possible
                 });
-                setTimeout(function () {
-                    card.classList.add('clicked');
-                    card.scrollIntoView({
-                        behavior: "smooth", // optional
-                        block: "center", // centers vertically
-                        inline: "nearest" // keeps horizontal position if possible
-                    });
-                    allCardsInChefTable.forEach(function (card) {
-                        if (!card.classList.contains('clicked'))
-                            card.classList.remove('is-flipped');
-                    });
-                }, 10);
+                allCardsInChefTable.forEach(function (card) {
+                    if (!card.classList.contains('clicked'))
+                        card.classList.remove('is-flipped');
+                });
             });
         }
     });
