@@ -579,15 +579,20 @@ $primaryColor: #f8f8f5;
             height: 100dvh;
             width: fit-content !important;
             #cardsIntro {
+                width: 100% !important;
+                padding: 10px !important;
                 transform: translateY(15%);
-                padding: 0px !important;
                 #valuesIntro {
                     max-width: 100% !important;
                     line-height: 22px;
-                    padding: 20px;
+                    padding: 20px 30px;
+                    strong {
+                        font-weight: 400 !important;
+                    }
                     .titlesChef {
-                        font-size: 21px;
+                        font-size: 20px;
                         margin-left: 0px !important;
+                        margin-bottom: 0px !important;
                         &::before {
                             bottom: 2px !important;
                             height: calc(100% - 5px);

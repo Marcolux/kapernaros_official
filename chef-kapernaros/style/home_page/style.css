@@ -777,7 +777,7 @@ p {
   #homePage footer {
     flex-direction: column-reverse;
     position: relative;
-    padding-top: 15px !important;
+    padding-top: 25px !important;
     padding-bottom: 40px !important;
     width: 100%;
     height: -moz-fit-content;

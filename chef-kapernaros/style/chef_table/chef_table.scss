@@ -231,7 +231,7 @@ body#chefTablePage{
                 font-size: 16px;
                 line-height: 25px;
                 max-width: 90%;
-                padding: 20px 30px;
+                padding: 20px 30px !important;
                 .titlesChef {
                     &::before {
                         bottom: 0px;
@@ -242,59 +242,59 @@ body#chefTablePage{
                 }           
             }
             #tablePicContainer{
-                    position: relative;
-                    .cardContainer {
-                        display: flex;
-                        gap: 10px;
-                        flex: auto;
-                        justify-content: center;
-                        padding: 20px 10px !important;
-                        width: 100%;
-                        .flip-card {
-                            border: 1px solid var(--secondaryColor);
-                            border-radius: 0px !important;
-                            box-shadow: none;
-                            width: 46%;
-                            &.smallScreenCard {
-                                .titlesChef {
-                                    padding: 0px 0px 0px 4px !important;
-                                    font-size: 11px !important;
-                                }
-                                &.clicked { 
-                                    width: 100%;
-                                } 
-                                &:not(.clicked) {
-                                    .flip-card-front {
-                                        transform: rotateY(0deg) translateZ(0);
-                                    }
-                                }
-                                .flip-card-inner {
-                                    border-radius: 0px !important;
-                                    aspect-ratio: 1/1 !important;
-                                }
-                                .flip-card-back {
-                                    background: linear-gradient(180deg,#2c4378,#1e293b);
-                                    color: #fff;
-                                    display: grid; 
-                                    padding: 18px;
-                                    place-content: center; 
-                                    transform: rotateY(180deg) translateZ(1px);
-                                    -webkit-transform: rotateY(180deg) translateZ(1px);
-                                    .cardText {
-                                        font-size: 18px !important;
-                                        letter-spacing: 0.01em;
-                                        line-height: 25px !important;
-                                        text-align: left;
-                                    }
+                position: relative;
+                .cardContainer {
+                    display: flex;
+                    gap: 10px;
+                    flex: auto;
+                    justify-content: center;
+                    padding: 20px 10px !important;
+                    width: 100%;
+                    .flip-card {
+                        border: 1px solid var(--secondaryColor);
+                        border-radius: 0px !important;
+                        box-shadow: none;
+                        width: 46%;
+                        &.smallScreenCard {
+                            .titlesChef {
+                                padding: 0px 0px 0px 4px !important;
+                                font-size: 9.5pt !important;
+                            }
+                            &.clicked { 
+                                width: 100%;
+                            } 
+                            &:not(.clicked) {
+                                .flip-card-front {
+                                    transform: rotateY(0deg) translateZ(0);
                                 }
                             }
-                            .flip-toggle { 
-                                width: 35px !important;
-                                height: 35px !important;
+                            .flip-card-inner {
+                                border-radius: 0px !important;
+                                aspect-ratio: 1/1 !important;
                             }
-                            
+                            .flip-card-back {
+                                background: linear-gradient(180deg,#2c4378,#1e293b);
+                                color: #fff;
+                                display: grid; 
+                                padding: 18px;
+                                place-content: center; 
+                                transform: rotateY(180deg) translateZ(1px);
+                                -webkit-transform: rotateY(180deg) translateZ(1px);
+                                .cardText {
+                                    font-size: 18px !important;
+                                    letter-spacing: 0.01em;
+                                    line-height: 25px !important;
+                                    text-align: left;
+                                }
+                            }
                         }
+                        .flip-toggle { 
+                            width: 35px !important;
+                            height: 35px !important;
+                        }
+                        
                     }
+                }
             }
         }
         footer { 

@@ -589,17 +589,22 @@
     width: fit-content !important;
   }
   #bioPage #pageTransition #cardsIntro {
+    width: 100% !important;
+    padding: 10px !important;
     transform: translateY(15%);
-    padding: 0px !important;
   }
   #bioPage #pageTransition #cardsIntro #valuesIntro {
     max-width: 100% !important;
     line-height: 22px;
-    padding: 20px;
+    padding: 20px 30px;
+  }
+  #bioPage #pageTransition #cardsIntro #valuesIntro strong {
+    font-weight: 400 !important;
   }
   #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef {
-    font-size: 21px;
+    font-size: 20px;
     margin-left: 0px !important;
+    margin-bottom: 0px !important;
   }
   #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef::before {
     bottom: 2px !important;

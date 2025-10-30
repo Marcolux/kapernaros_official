@@ -222,7 +222,7 @@ body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-
     font-size: 16px;
     line-height: 25px;
     max-width: 90%;
-    padding: 20px 30px;
+    padding: 20px 30px !important;
   }
   body#chefTablePage section#chefTableSec .chefTableIntro .titlesChef::before {
     bottom: 0px;
@@ -249,7 +249,7 @@ body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-
   }
   body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card.smallScreenCard .titlesChef {
     padding: 0px 0px 0px 4px !important;
-    font-size: 11px !important;
+    font-size: 9.5pt !important;
   }
   body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card.smallScreenCard.clicked {
     width: 100%;
