@@ -329,7 +329,7 @@ var cardsOnSmallScreen = function () {
     allCardsInChefTable.forEach(function (card) {
         card.classList.toggle('smallScreenCard', window.innerWidth < 750);
         if (card.classList.contains('smallScreenCard')) {
-            card.addEventListener('click', function () {
+            card.addEventListener('mouseover', function () {
                 allCardsInChefTable.forEach(function (card) { return card.classList.remove('clicked'); });
                 card.classList.add('clicked');
                 card.scrollIntoView();

@@ -389,7 +389,7 @@ const cardsOnSmallScreen = () => {
     allCardsInChefTable.forEach(card => { 
         card.classList.toggle('smallScreenCard',window.innerWidth < 750)
         if (card.classList.contains('smallScreenCard')) {
-            card.addEventListener('click', () => {
+            card.addEventListener('mouseover', () => {
                 allCardsInChefTable.forEach(card => card.classList.remove('clicked'))
                 card.classList.add('clicked')
                 card.scrollIntoView()
