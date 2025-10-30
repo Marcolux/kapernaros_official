@@ -80,7 +80,7 @@
                         <div class="lineBorder"></div>
                     </div>
                 </div>
-                <div class="field mb-15 flex col-12">
+                <div class="mb-15 flex col-12">
                     <div class="field mb-15 flex flex-column col-6">
                         <label class="mb-5" for="email_subject">Email Subject*</label>
                         <select class="mb-10 fontSize16" name="email_subject" id="email_subject" required>
@@ -93,7 +93,7 @@
                             <option class="fontSize16 px-5" value="Other">Other </option>
                         </select>
                     </div>
-                    <div class="mb-15 ml-20 flex flex-column col-6">
+                    <div class="field mb-15 ml-20 flex flex-column col-6">
                         <label class="mb-5" for="email_address">Email Address*</label>
                         <input class="inputText mb-10" type="email" name="email_address" id="email_address" required pattern=".*\.com$" title="Please enter an email ending with '.com'">
                     </div>
@@ -102,10 +102,9 @@
                     <label class="mb-5" for="message">Message*</label>
                     <textarea rows="5" class="inputText mb-10 p-5" name="message" id="message" required></textarea>
                 </div>
-                <div class="flex flex-justifyContent-spaceBetween">
+                <div class="field flex flex-justifyContent-spaceBetween">
                     <button type="submit" class="btnPrimary py-5">Send</button>
                     <p id="messageSent" class="hide fontSize16 my-0" >Message Sent! Thank You!</p>
-
                 </div>
             </form>
             
