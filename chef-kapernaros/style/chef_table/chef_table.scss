@@ -256,8 +256,6 @@ body#chefTablePage{
                             box-shadow: none;
                             width: 46%;
                             &.smallScreenCard {
-                                transition: width 0.2s ease-in-out;
-                                transition-delay: 0.2s;
                                 .titlesChef {
                                     padding: 0px 0px 0px 4px !important;
                                     font-size: 11px !important;
