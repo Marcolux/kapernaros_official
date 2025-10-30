@@ -180,32 +180,33 @@ document.cookie = "key=value; SameSite=Lax";
 
 const eventsPage = document.querySelector('body#eventsPage') as HTMLElement
 const eventSwitchTab = () => {
-
-    const tabsWrapper = eventsPage.querySelector('#all-tabs') as HTMLElement
-    const allTabs =  [...tabsWrapper.querySelectorAll<HTMLInputElement>('.single-tab')]
-    const allContents = [...eventsPage.querySelectorAll<HTMLDivElement>('.tab-content')]
-
-    const showTab = (valueText: string) => {
-        const contentId = `${valueText}-content`
-        allContents.forEach(content => {
-            const activeContent = content.id === contentId
-            content.hidden = !activeContent
-            content.setAttribute('aria-hidden', String(!activeContent))
-            content.tabIndex = 1
-        })
-        
-        allTabs.forEach(tab => {
-            const selected = tab.value === valueText
-            tab.checked = selected
-            tab.classList.toggle('activeTab', tab.checked)
-            tab.setAttribute('aria-selected', String(selected))
-            tab.tabIndex = 1
+    if (eventsPage) {
+        const tabsWrapper = eventsPage.querySelector('#all-tabs') as HTMLElement
+        const allTabs =  [...tabsWrapper.querySelectorAll<HTMLInputElement>('.single-tab')]
+        const allContents = [...eventsPage.querySelectorAll<HTMLDivElement>('.tab-content')]
+    
+        const showTab = (valueText: string) => {
+            const contentId = `${valueText}-content`
+            allContents.forEach(content => {
+                const activeContent = content.id === contentId
+                content.hidden = !activeContent
+                content.setAttribute('aria-hidden', String(!activeContent))
+                content.tabIndex = 1
+            })
+            
+            allTabs.forEach(tab => {
+                const selected = tab.value === valueText
+                tab.checked = selected
+                tab.classList.toggle('activeTab', tab.checked)
+                tab.setAttribute('aria-selected', String(selected))
+                tab.tabIndex = 1
+            })
+        }
+        tabsWrapper.addEventListener('change', (e) => {
+            const tabClicked = e.target as HTMLInputElement
+            if (tabClicked) showTab(tabClicked.value)
         })
     }
-    tabsWrapper.addEventListener('change', (e) => {
-        const tabClicked = e.target as HTMLInputElement
-        if (tabClicked) showTab(tabClicked.value)
-    })
 }
 eventSwitchTab()
 
@@ -366,12 +367,39 @@ const allEventsCompetions: eventObj[] = [
         event_isMostRecent: true
     },
 ]
+if (eventsPage) {
+    const upcomingContent = eventsPage.querySelector('#upcoming-content') as HTMLElement
+    allEventsUpcoming.forEach(event => { upcomingContent.append(templateCard(event)) })
+    
+    const pastEventsContent = eventsPage.querySelector('#past_events-content') as HTMLElement
+    allEventsPast.forEach(event => { pastEventsContent.append(templateCard(event)) })
+    
+    const competitionsContent = eventsPage.querySelector('#competitions-content') as HTMLElement
+    allEventsCompetions.forEach(event => { competitionsContent.append(templateCard(event)) })
+}
 
-const upcomingContent = eventsPage.querySelector('#upcoming-content') as HTMLElement
-allEventsUpcoming.forEach(event => { upcomingContent.append(templateCard(event)) })
 
-const pastEventsContent = eventsPage.querySelector('#past_events-content') as HTMLElement
-allEventsPast.forEach(event => { pastEventsContent.append(templateCard(event)) })
+/*************************************************
+*  ====     The Chef's Table PAGE LOGIC     ==== *
+*************************************************/
 
-const competitionsContent = eventsPage.querySelector('#competitions-content') as HTMLElement
-allEventsCompetions.forEach(event => { competitionsContent.append(templateCard(event)) })
+const chefTableCardContainer = document.querySelector('#tablePicContainer') as HTMLDivElement
+const allCardsInChefTable = chefTableCardContainer.querySelectorAll('article') as NodeListOf<HTMLElement>
+const cardsOnSmallScreen = () => {
+    allCardsInChefTable.forEach(card => { 
+        card.classList.toggle('smallScreenCard',window.innerWidth < 750)
+        if (card.classList.contains('smallScreenCard')) {
+            card.addEventListener('click', () => {
+                allCardsInChefTable.forEach(card => card.classList.remove('clicked'))
+                card.classList.add('clicked')
+                card.scrollIntoView()
+                allCardsInChefTable.forEach(card => {
+                    if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
+                })
+            })
+        }
+    })
+    
+}
+cardsOnSmallScreen()
+window.addEventListener('resize', cardsOnSmallScreen)
