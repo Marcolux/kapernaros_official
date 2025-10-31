@@ -125,12 +125,26 @@
 
 @media only screen and (max-width: 980px) {
   #contactPage #chefForm {
-    margin-top: 0px;
-    height: 100dvh;
-    padding: 20px !important;
     flex-direction: column;
+    height: 100dvh;
+    margin-top: 0px;
+    padding: 20px !important;
+    width: 100vw;
   }
-  #contactPage #chefForm #contactIntro {
+  #contactPage #chefForm #contactWrapper {
+    border: none;
+    box-shadow: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100vw;
+    height: 100dvh !important;
+    overflow: visible;
+  }
+  #contactPage #chefForm #contactWrapper .left {
+    background-image: none;
+    width: 100% !important;
+  }
+  #contactPage #chefForm #contactWrapper .left #contactIntro {
     position: relative;
     top: 0px;
     display: flex;
@@ -138,14 +152,14 @@
     text-align: center;
     justify-content: left !important;
   }
-  #contactPage #chefForm #contactIntro .titlesChef {
+  #contactPage #chefForm #contactWrapper .left #contactIntro .titlesChef {
     font-size: clamp(24px, 2.6vw, 47px);
     font-weight: 500;
     letter-spacing: 0.01em;
     margin-bottom: 0px;
     margin-left: 30px;
   }
-  #contactPage #chefForm #contactIntro .titlesChef::before {
+  #contactPage #chefForm #contactWrapper .left #contactIntro .titlesChef::before {
     content: "";
     background-color: var(--secondaryColor);
     bottom: 5px;
@@ -156,12 +170,15 @@
     width: calc(100% + 15px);
     z-index: -1;
   }
-  #contactPage #chefForm #myForm {
+  #contactPage #chefForm #contactWrapper .right {
+    width: 100% !important;
+  }
+  #contactPage #chefForm #contactWrapper .right #myForm {
     width: 100% !important;
     height: -moz-fit-content;
     height: fit-content;
-    background-color: #fdfaf3;
-    border: 2px solid var(--secondaryColor);
+    background-color: #ffffff;
+    border: 1px solid var(--secondaryColor);
     position: relative;
     top: 0vh;
     font-family: var(--body-App-fontFamily);
@@ -170,19 +187,19 @@
     z-index: 5;
     gap: 15px;
   }
-  #contactPage #chefForm #myForm div:not(.field) {
+  #contactPage #chefForm #contactWrapper .right #myForm div:not(.field) {
     margin: 0px !important;
     gap: 10px;
   }
-  #contactPage #chefForm #myForm div.flex {
+  #contactPage #chefForm #contactWrapper .right #myForm div.flex {
     margin: 0px !important;
     flex-direction: column;
   }
-  #contactPage #chefForm #myForm .col-6 {
+  #contactPage #chefForm #contactWrapper .right #myForm .col-6 {
     width: 100% !important;
     margin: 0px !important;
   }
-  #contactPage #chefForm #myForm input, #contactPage #chefForm #myForm select, #contactPage #chefForm #myForm textarea {
+  #contactPage #chefForm #contactWrapper .right #myForm input, #contactPage #chefForm #contactWrapper .right #myForm select, #contactPage #chefForm #contactWrapper .right #myForm textarea {
     margin-bottom: 0px !important;
     border-radius: 0px !important;
   }

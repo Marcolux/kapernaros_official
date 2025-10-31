@@ -145,65 +145,83 @@ $fieldPadding: 10px;
     #contactPage{
 
         #chefForm{
-            margin-top: 0px;
-            height: 100dvh;
-            padding: 20px !important;
             flex-direction: column;
-            #contactIntro{
-                position: relative;
-                top: 0px;
-                display: flex;
-                width: 100% !important;
-                text-align: center;
-                justify-content: left !important;
-                .titlesChef {
-                    font-size: clamp(24px, 2.6vw, 47px);
-                    font-weight: 500;
-                    letter-spacing: 0.01em;
-                    margin-bottom: 0px;
-                    margin-left: 30px;
-                    &::before {
-                        content: "";
-                        background-color: var(--secondaryColor);
-                        bottom: 5px;
-                        height: calc(100% - 10px);
-                        left: -25px;
-                        opacity: 0.5;
-                        position: absolute;
-                        width: calc(100% + 15px);
-                        z-index: -1;
+            height: 100dvh;
+            margin-top: 0px;
+            padding: 20px !important;
+            width: 100vw;
+            #contactWrapper {
+                border: none;
+                box-shadow: none;
+                flex-direction: column;
+                gap: 10px;
+                width: 100vw;
+                height: 100dvh !important;
+                overflow: visible;
+                .left {
+                    background-image: none;
+                    width: 100% !important;
+                    #contactIntro{
+                        position: relative;
+                        top: 0px;
+                        display: flex;
+                        width: 100% !important;
+                        text-align: center;
+                        justify-content: left !important;
+                        .titlesChef {
+                            font-size: clamp(24px, 2.6vw, 47px);
+                            font-weight: 500;
+                            letter-spacing: 0.01em;
+                            margin-bottom: 0px;
+                            margin-left: 30px;
+                            &::before {
+                                content: "";
+                                background-color: var(--secondaryColor);
+                                bottom: 5px;
+                                height: calc(100% - 10px);
+                                left: -25px;
+                                opacity: 0.5;
+                                position: absolute;
+                                width: calc(100% + 15px);
+                                z-index: -1;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width: 100% !important;
+                    #myForm{
+                        width: 100% !important;
+                        height: fit-content;
+                        background-color: #ffffff;
+                        border: 1px solid var(--secondaryColor);
+                        position: relative;
+                        top: 0vh;
+                        font-family: var(--body-App-fontFamily);
+                        font-size: 16px;
+                        color: #000000;
+                        z-index: 5;
+                        gap: 15px;
+                        div:not(.field) {
+                            margin: 0px !important;
+                            gap: 10px;
+                        }
+                        div.flex {
+                            margin: 0px !important;
+                            flex-direction: column;
+                        }
+                        .col-6 {
+                            width: 100% !important;
+                            margin: 0px !important;
+                        }
+                        input, select, textarea {
+                            margin-bottom: 0px !important;
+                            border-radius: 0px !important;
+                        }
                     }
                 }
             }
-            #myForm{
-                width: 100% !important;
-                height: fit-content;
-                background-color: #fdfaf3;
-                border: 2px solid var(--secondaryColor);
-                position: relative;
-                top: 0vh;
-                font-family: var(--body-App-fontFamily);
-                font-size: 16px;
-                color: #000000;
-                z-index: 5;
-                gap: 15px;
-                div:not(.field) {
-                    margin: 0px !important;
-                    gap: 10px;
-                }
-                div.flex {
-                    margin: 0px !important;
-                    flex-direction: column;
-                }
-                .col-6 {
-                    width: 100% !important;
-                    margin: 0px !important;
-                }
-                input, select, textarea {
-                    margin-bottom: 0px !important;
-                    border-radius: 0px !important;
-                }
-            }
+
         }
     }
 }
