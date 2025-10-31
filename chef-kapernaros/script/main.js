@@ -320,13 +320,27 @@ if (eventsPage) {
     var competitionsContent_1 = eventsPage.querySelector('#competitions-content');
     allEventsCompetions.forEach(function (event) { competitionsContent_1.append(templateCard(event)); });
 }
+// serviceBxButton
+/*****************************************
+*  ====     Services PAGE LOGIC     ==== *
+******************************************/
+var servicesSec = document.querySelector('section#allServices');
+if (servicesSec) {
+    var allButtonServices = servicesSec.querySelectorAll('button.serviceBxButton');
+    allButtonServices.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var service = encodeURIComponent(button.value);
+            window.location.href = "contact-the-chef.html?service=".concat(service);
+        });
+    });
+}
 /*************************************************
 *  ====     The Chef's Table PAGE LOGIC     ==== *
 *************************************************/
 var chefTableCardContainer = document.querySelector('#tablePicContainer');
-var allCardsInChefTable = chefTableCardContainer.querySelectorAll('article');
+var allCardsInChefTable = chefTableCardContainer === null || chefTableCardContainer === void 0 ? void 0 : chefTableCardContainer.querySelectorAll('article');
 var cardsOnSmallScreen = function () {
-    allCardsInChefTable.forEach(function (card) {
+    allCardsInChefTable === null || allCardsInChefTable === void 0 ? void 0 : allCardsInChefTable.forEach(function (card) {
         card.classList.toggle('smallScreenCard', window.innerWidth < 750);
         if (card.classList.contains('smallScreenCard')) {
             card.addEventListener('mouseover', function () {

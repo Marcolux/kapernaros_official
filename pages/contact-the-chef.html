@@ -27,7 +27,7 @@
         <title>Chef Kapernaros</title>
     </head>
 
-    <body>
+    <body id="contactChefPage" class="flex flex-column flex-justifyContent-center flex-alignItems-center">
         <nav class="navBar flex biggerScreen">
             <div id="navBgScn">
                 <a href="../index.html" class="logoNav">
@@ -62,51 +62,61 @@
             </div>
         </nav>
 
-        <section id="chefForm">
-            <div id="contactIntro">
-                <h1 class="titlesChef mt-20 mb-0 textWhite">Let's Keep in Touch</h1>
-                <!-- <p class="font-ledger mt-5 mb-0 fontSize16">For chef's table experience, consulting, cooking classes, collaborations or media/pr requests please complete the contact form below and we'll reply soon. </p> -->
+        <section id="chefForm" class="col-9">
+            <div id="contactWrapper" class="col-12">
+                <div class="left col-6">
+                    <div id="contactIntro">
+                        <h1 class="titlesChef mt-20 mb-0 textWhite">Let's Keep in Touch</h1>
+                        <!-- <p class="font-ledger mt-5 mb-0 fontSize16">For chef's table experience, consulting, cooking classes, collaborations or media/pr requests please complete the contact form below and we'll reply soon. </p> -->
+                    </div>
+                </div>
+
+                <div class="right col-6">
+                    <form id="myForm" class="col-12 flex flex-column flex-justifyContent-center p-25">
+                        
+                            <div class="field mb-15 flex flex-column col-12">
+                                <label class="mb-5" for="from_first_name">First Name <sup class="font-bold fontSize16">*</sup></label>
+                                <input class="inputText" type="text" name="from_first_name" id="from_first_name" required>
+                                <div class="lineBorder"></div>
+                            </div>
+
+                            <div class="field mb-15 flex flex-column col-12">
+                                <label class="mb-5" for="from_last_name">Last Name <sup class="font-bold fontSize16">*</sup></label>
+                                <input class="inputText" type="text" name="from_last_name" id="from_last_name" required>
+                                <div class="lineBorder"></div>
+                            </div>
+
+                            <div class="field mb-15 flex flex-column col-12">
+                                <label class="mb-5" for="email_subject">Email Subject <sup class="font-bold fontSize16">*</sup></label>
+                                <select class="fontSize16" name="email_subject" id="email_subject" required>
+                                    <option class="fontSize16 px-5 hide" value="" disabled selected></option>
+                                    <option class="fontSize16 px-5" value="Chef's Table Experience">Chef's Table Experience</option>
+                                    <option class="fontSize16 px-5" value="Consulting">Consulting</option>
+                                    <option class="fontSize16 px-5" value="Cooking Classes">Cooking Classes</option>
+                                    <option class="fontSize16 px-5" value="Collaborations ">Collaborations </option>
+                                    <option class="fontSize16 px-5" value="Media/PR Requests">Media/PR Requests</option>
+                                    <option class="fontSize16 px-5" value="Other">Other </option>
+                                </select>
+                            </div>
+
+                            <div class="field mb-15 flex flex-column col-12">
+                                <label class="mb-5" for="email_address">Email Address <sup class="font-bold fontSize16">*</sup></label>
+                                <input class="inputText" type="email" name="email_address" id="email_address" required pattern=".*\.com$" title="Please enter an email ending with '.com'">
+                            </div>
+
+                            <div class="field mb-15 flex flex-column">
+                                <label class="mb-5" for="message">Message <sup class="font-bold fontSize16">*</sup></label>
+                                <textarea rows="5" class="inputText p-5" name="message" id="message" required></textarea>
+                            </div>
+
+                            <div class="field flex flex-justifyContent-spaceBetween">
+                                <button type="submit" class="btnPrimary py-5">Send</button>
+                                <p id="messageSent" class="hide fontSize16 my-0" >Message Sent! Thank You!</p>
+                            </div>
+                    </form>
+                </div>
+
             </div>
-            <form id="myForm" class="flex flex-column flex-justifyContent-center p-25 mt-15">
-                <div class="col-12 flex">
-                    <div class="field mb-15 flex flex-column col-6">
-                        <label class="mb-5" for="from_first_name">First Name*</label>
-                        <input class="inputText mb-10" type="text" name="from_first_name" id="from_first_name" required>
-                        <div class="lineBorder"></div>
-                    </div>
-                    <div class="field mb-15 flex flex-column ml-20 col-6">
-                        <label class="mb-5" for="from_last_name">Last Name*</label>
-                        <input class="inputText mb-10" type="text" name="from_last_name" id="from_last_name" required>
-                        <div class="lineBorder"></div>
-                    </div>
-                </div>
-                <div class="mb-15 flex col-12">
-                    <div class="field mb-15 flex flex-column col-6">
-                        <label class="mb-5" for="email_subject">Email Subject*</label>
-                        <select class="mb-10 fontSize16" name="email_subject" id="email_subject" required>
-                            <option class="fontSize16 px-5 hide" value="" disabled selected></option>
-                            <option class="fontSize16 px-5" value="Chef's Table Experience">Chef's Table Experience</option>
-                            <option class="fontSize16 px-5" value="Consulting">Consulting</option>
-                            <option class="fontSize16 px-5" value="Cooking Classes">Cooking Classes</option>
-                            <option class="fontSize16 px-5" value="Collaborations ">Collaborations </option>
-                            <option class="fontSize16 px-5" value="Media/PR Requests">Media/PR Requests</option>
-                            <option class="fontSize16 px-5" value="Other">Other </option>
-                        </select>
-                    </div>
-                    <div class="field mb-15 ml-20 flex flex-column col-6">
-                        <label class="mb-5" for="email_address">Email Address*</label>
-                        <input class="inputText mb-10" type="email" name="email_address" id="email_address" required pattern=".*\.com$" title="Please enter an email ending with '.com'">
-                    </div>
-                </div>
-                <div class="field mb-15 flex flex-column">
-                    <label class="mb-5" for="message">Message*</label>
-                    <textarea rows="5" class="inputText mb-10 p-5" name="message" id="message" required></textarea>
-                </div>
-                <div class="field flex flex-justifyContent-spaceBetween">
-                    <button type="submit" class="btnPrimary py-5">Send</button>
-                    <p id="messageSent" class="hide fontSize16 my-0" >Message Sent! Thank You!</p>
-                </div>
-            </form>
             
         </section>
 
@@ -114,6 +124,17 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script defer type="text/javascript" src=../chef-kapernaros/script/main.js></script>
         <script src="../analytics.js"></script>
+        <script>
+            // Run after page loads
+            window.addEventListener('DOMContentLoaded', () => {
+                const params = new URLSearchParams(window.location.search)
+                const service = params.get('service')
+                if (service) {
+                    const dropdown = document.querySelector('#email_subject')
+                    if (dropdown) dropdown.value = service
+                }
+            })
+        </script>
 
     </body>
 </html>

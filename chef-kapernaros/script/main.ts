@@ -378,15 +378,31 @@ if (eventsPage) {
     allEventsCompetions.forEach(event => { competitionsContent.append(templateCard(event)) })
 }
 
+// serviceBxButton
+/*****************************************
+*  ====     Services PAGE LOGIC     ==== *
+******************************************/
+
+const servicesSec = document.querySelector('section#allServices') as HTMLElement
+if (servicesSec) {
+    const allButtonServices = servicesSec.querySelectorAll('button.serviceBxButton') as NodeListOf<HTMLButtonElement>
+    allButtonServices.forEach(button => {
+        button.addEventListener('click', () => {
+            const service = encodeURIComponent(button.value)
+            window.location.href = `contact-the-chef.html?service=${service}`
+        })
+    })
+
+}
 
 /*************************************************
 *  ====     The Chef's Table PAGE LOGIC     ==== *
 *************************************************/
 
 const chefTableCardContainer = document.querySelector('#tablePicContainer') as HTMLDivElement
-const allCardsInChefTable = chefTableCardContainer.querySelectorAll('article') as NodeListOf<HTMLElement>
+const allCardsInChefTable = chefTableCardContainer?.querySelectorAll('article') as NodeListOf<HTMLElement>
 const cardsOnSmallScreen = () => {
-    allCardsInChefTable.forEach(card => { 
+    allCardsInChefTable?.forEach(card => { 
         card.classList.toggle('smallScreenCard',window.innerWidth < 750)
         if (card.classList.contains('smallScreenCard')) {
             card.addEventListener('mouseover', () => {
