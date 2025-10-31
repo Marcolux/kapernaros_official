@@ -213,6 +213,7 @@ eventSwitchTab()
 /***  ====> EVENTS CARDS <==== ***/
 
 interface eventObj {
+    event_id: string
     event_title: string
     event_date: string
     event_location: string
@@ -229,6 +230,7 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
     
     const cardElement = document.createElement('div') 
     cardElement.className = singleEvent.event_isMostRecent ? 'event_card mostRecentEvt' : 'event_card'
+    cardElement.id = singleEvent.event_id
     
     cardElementWrapper.append(cardElement)
 
@@ -241,7 +243,7 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
                 </div>
                 <img class="eventPic" src="${singleEvent.event_picture}" alt="">
             </div>
-            <div class="col-12 flex flex-justifyContent-spaceBetween placeTimeWrapper">
+            <div class="col-12 flex flex-column flex-alignItems-center flex-justifyContent-spaceBetween placeTimeWrapper">
                 <h6 class="eLocation flex">${singleEvent.event_location}</h6>
                 <h6 class="eTime flex">${singleEvent.event_time}</h6>
             </div>
@@ -254,66 +256,75 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
     `
 
     const eTime =  cardElement.querySelector('.eTime') as HTMLElement
+    const eLink =  cardElement.querySelector('.eLink') as HTMLElement
+    const eDescription =  cardElement.querySelector('.eDescription') as HTMLElement
     eTime.className = singleEvent.event_time === '' ? 'eTime flex' : 'eTime flex ml-50'
     eTime.classList.toggle('hide', !singleEvent.event_isMostRecent)
+    eLink.classList.toggle('hide', singleEvent.event_isMostRecent)
     
     return cardElementWrapper  
 }
 
 const allEventsUpcoming: eventObj[] = [
     {
-        event_title: 'Taste of Hope',
-        event_date: 'Nov 6, 2025',
-        event_location: 'Chicago, Navy Pier - AON Grand Ballroom',
-        event_time: '6:00 pm - 9:00 pm',
+        event_id: "Taste_of_Hope",
+        event_title: "Taste of Hope",
+        event_date: "Nov 6, 2025",
+        event_location: "Chicago, Navy Pier - AON Grand Ballroom",
+        event_time: "6:00 pm - 9:00 pm",
         event_description: "This isn’t just a night out; it’s a movement toward a world without cancer. Join us as we celebrate over 35 amazing restaurants from the Chicagoland area, and let's make a difference together!",
-        event_link: 'www.chicagotasteofhope.com',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_link: "www.chicagotasteofhope.com",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/taste_of_hope_chef_kapernaros_pwpjn9.jpg",
         event_isMostRecent: true
     },
     {
-        event_title: 'Harwood Heights Cooking Class',
-        event_date: 'Dec 9, 2025',
-        event_location: 'Harwood Heights, Recreation center',
-        event_time: '6:00 pm - 8:30 pm',
-        event_description: '',
-        event_link: '',
-        event_picture: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1760143358/Niko/new_materials/chef-kapernaros-on-the-pass_fl0osx.jpg',
+        event_id: "Harwood_Heights_Cooking_Class",
+        event_title: "Harwood Heights Cooking Class",
+        event_date: "Dec 9, 2025",
+        event_location: "Harwood Heights, Recreation center",
+        event_time: "6:00 pm - 8:30 pm",
+        event_description: "Spend an unforgettable evening learning, tasting, and cooking with Chef Kapernaros. This hands-on class focuses on creating fresh, flavorful dishes using wholesome ingredients and classic Mediterranean techniques. Perfect for anyone who loves cooking, good company, and discovering the joy in every bite.",
+        event_link: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/cooking_classes_chef_kapernaros_vz0pbx.jpg",
         event_isMostRecent: true
     },
 ]
 const allEventsPast: eventObj[] = [
     { 
+        event_id: "Chicago_Gourmet",
         event_title: "Chicago Gourmet",
         event_date: "Sep 28, 2025",
         event_location: "Chicago, Harries Theater for Music and Dance",
         event_time: "",
         event_description: "Rise and Shine gourmet brunch",
         event_link: "",
-        event_picture: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/pierless_hospitality_chef_kapernaros_gfd3sh.jpg",
         event_isMostRecent: true
     },
     { 
+        event_id: "Panos_Food_Show",
         event_title: "Panos Food Show",
         event_date: "June 10, 2025",
         event_location: "Chicago, Drury Lane Theater",
         event_time: "",
         event_description: "Celebrating 50 years of Panos Food",
         event_link: "",
-        event_picture: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880299/Niko/new_materials/chef-pic-8_fehnzs.jpg",
         event_isMostRecent: true
     },
     { 
+        event_id: "I_Cook_For_benefit",
         event_title: `"I Cook For" benefit`,
         event_date: "March 20, 2025",
         event_location: "Chicago, Four Seasons Hotel",
         event_time: "",
         event_description: "Pierless Hospitality team of Navy Pier Chicago at 'I Cook For' Benefit",
         event_link: "",
-        event_picture: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,h_640,w_1080,y_200/v1759880300/Niko/new_materials/chef-pic-10_jmooa1.webp",
         event_isMostRecent: true
     },
     { 
+        event_id: "Grand_Chef_Experience",
         event_title: "Grand Chef Experience",
         event_date: "March 2, 2025",
         event_location: "Chicago, Field Museum",
@@ -327,43 +338,47 @@ const allEventsPast: eventObj[] = [
 
 const allEventsCompetions: eventObj[] = [
     { 
+        event_id: "Good_Taste_Series_For_Hyatt_World_Midwest",
         event_title: "Good Taste Series For Hyatt World Midwest",
         event_date: "2018",
         event_location: "Chicago, Hyatt McCormick",
         event_time: "",
         event_description: "Fine dining competitions awarded for excellence. First place winner.",
         event_link: "",
-        event_picture: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761874686/Niko/competitions/hyatt_world_midwest_eysuy8.jpg",
         event_isMostRecent: true
     },
     { 
+        event_id: "Good_Taste_Series_For_Hyatt_Americas_Final",
         event_title: "Good Taste Series For Hyatt Americas Final",
         event_date: "Sep, 2018",
         event_location: "Bahamas, Grand Hyatt",
         event_time: "",
         event_description: "Fine dining competitions awarded for excellence. First place winner.",
         event_link: "",
-        event_picture: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619857/Niko/competitions/c_s_10_cgzqss.webp",
         event_isMostRecent: true
     },
     { 
+        event_id: "Beat_Bobby_Flay",
         event_title: "Beat Bobby Flay",
         event_date: "Oct, 2024",
         event_location: "New York",
         event_time: "",
         event_description: "Season 35, Episode 12 - Talk the Talk and Walk the Walk - Episode winner.",
         event_link: "",
-        event_picture: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_2_flbrxf.jpg",
         event_isMostRecent: true
     },
     { 
+        event_id: "Chopped",
         event_title: "Chopped",
         event_date: "Nov, 2024",
         event_location: "New York",
         event_time: "",
         event_description: "Season 60, Episode 2 - Big Fat Greek Kitchen - participant",
         event_link: "",
-        event_picture: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880299/Niko/new_materials/chef-pic-5_mbrlln.jpg",
         event_isMostRecent: true
     },
 ]

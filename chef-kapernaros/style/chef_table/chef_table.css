@@ -213,7 +213,7 @@ body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-
   backface-visibility: visible;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   body#chefTablePage section#chefTableSec {
     margin-top: 0px !important;
   }

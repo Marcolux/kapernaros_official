@@ -528,7 +528,7 @@ p {
 }
 
 /* Mobile Small */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   /* styles for small phones */
   #homePage #landingMenu {
     display: none;

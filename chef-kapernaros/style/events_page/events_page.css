@@ -16,24 +16,34 @@
 #eventsPage #tabs-events #all-tabs {
   width: -moz-fit-content;
   width: fit-content;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid var(--secondaryColor);
+  overflow: hidden;
+}
+#eventsPage #tabs-events #all-tabs div.flex:nth-child(2) label {
+  border-left: 1px solid var(--secondaryColor);
+  border-right: 1px solid var(--secondaryColor);
 }
 #eventsPage #tabs-events #all-tabs label {
-  padding: 10px 20px 5px;
-  font-size: 16px;
+  padding: 10px 40px 5px;
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.01em;
 }
-#eventsPage #tabs-events #all-tabs label:hover {
+#eventsPage #tabs-events #all-tabs label:nth-child(2) #eventsPage #tabs-events #all-tabs label:hover {
   cursor: pointer;
 }
 #eventsPage #tabs-events input.activeTab + label {
   background-color: #000000;
   color: var(--secondaryColor);
+  font-weight: 600 !important;
 }
 #eventsPage #content-events {
   display: flex;
   flex: auto;
-  background-color: #f8f8f5;
+  box-shadow: inset 0px 0px 50px 0px #000000;
+  background: linear-gradient(180deg, var(--darkBlueColor), #000000);
 }
 #eventsPage #pageContent {
   flex: auto;
@@ -52,7 +62,6 @@
 }
 #eventsPage .tab-content {
   width: 100%;
-  background-color: #ffffff;
 }
 #eventsPage .tab-content:not([hidden]) {
   display: flex;
@@ -60,8 +69,12 @@
 }
 #eventsPage .tab-content .event_wrapper {
   display: flex;
-  padding: 20px 10px 0px 10px;
-  width: 50%;
+  padding: 60px 10px 0px 10px;
+  width: 100%;
+  height: 550px;
+}
+#eventsPage .tab-content .event_wrapper:nth-child(odd) .event_card {
+  flex-direction: row-reverse;
 }
 #eventsPage .tab-content .event_wrapper.mostRecentEvt {
   width: 100%;
@@ -85,7 +98,7 @@
   display: flex !important;
   min-width: 450px !important;
   height: 100% !important;
-  max-height: 442px;
+  width: 45% !important;
 }
 #eventsPage .tab-content .event_wrapper.mostRecentEvt .eventPicWrapper img {
   width: 100%;
@@ -99,8 +112,13 @@
   display: flex;
   position: relative;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1450980392);
+  border: 1px solid var(--secondaryColor);
   width: 100%;
   background-color: #f2f2f2;
+}
+#eventsPage .tab-content .event_wrapper .event_card#Chicago_Gourmet .eDescription, #eventsPage .tab-content .event_wrapper .event_card#Panos_Food_Show .eDescription, #eventsPage .tab-content .event_wrapper .event_card#Chopped .eDescription {
+  text-align: center;
+  font-size: 22px;
 }
 #eventsPage .tab-content .event_wrapper .event_card .eventInfo {
   display: flex;
@@ -108,23 +126,25 @@
   flex-direction: column;
   gap: 15px;
   padding: 50px;
+  width: 55%;
   float: left;
 }
 #eventsPage .tab-content .event_wrapper .event_card .eventInfo .eTitle {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 300;
 }
 #eventsPage .tab-content .event_wrapper .event_card .eventInfo .eDate {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 700;
 }
 #eventsPage .tab-content .event_wrapper .event_card .eventInfo .eLocation, #eventsPage .tab-content .event_wrapper .event_card .eventInfo .eTime {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 300;
 }
 #eventsPage .tab-content .event_wrapper .event_card .eventInfo .eDescription {
-  font-size: 18px;
+  font-size: 20px;
   margin: auto;
+  text-align: start;
 }
 #eventsPage .tab-content .event_wrapper .event_card .eventInfo .eLink {
   font-size: 18px;
@@ -151,7 +171,7 @@
      object-position: top;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1000px) {
   #eventsPage {
     padding-top: 10vh;
   }
@@ -170,6 +190,7 @@
   }
   #eventsPage #tabs-events #all-tabs div label {
     padding: 10px;
+    font-size: 16px;
   }
   #eventsPage #content-events {
     display: flex;
@@ -188,18 +209,26 @@
   }
   #eventsPage .tab-content .event_wrapper {
     display: flex;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
     padding: 0px;
-    width: 50%;
+    width: 100%;
     gap: 20px;
   }
+  #eventsPage .tab-content .event_wrapper .event_card {
+    flex-direction: column-reverse !important;
+  }
   #eventsPage .tab-content .event_wrapper.mostRecentEvt {
+    width: 100%;
+  }
+  #eventsPage .tab-content .event_wrapper.mostRecentEvt .eventInfo {
     width: 100%;
   }
   #eventsPage .tab-content .event_wrapper.mostRecentEvt .eventInfo .titlePicWrapper {
     text-align: center;
   }
   #eventsPage .tab-content .event_wrapper.mostRecentEvt .eventInfo .placeTimeWrapper {
-    flex-direction: column;
+    flex-direction: column !important;
     justify-content: center !important;
     gap: 10px;
   }
