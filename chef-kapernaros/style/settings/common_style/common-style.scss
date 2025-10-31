@@ -413,6 +413,37 @@ footer {
 		}
 	} 
 }
+@media only screen and (max-width: 800px) {
+    .navBar { background-color: #000000 !important;}
+}
+@media only screen and (min-width: 781px) and (max-width: 1200px) {
+    .navBar.biggerScreen { 
+		&.scrolled {
+			#navBgScn { 
+				height: 4dvh !important;			
+				.logoNav {
+					height: 3dvh !important;
+					width: 3dvh !important;
+					left: 8vw !important;
+					img {
+						height: 4dvh !important;
+					}
+				}
+			}
+
+		}
+		.logoNav {
+			height: 5dvh !important;
+			width: 5dvh !important;
+			left: 8vw !important;
+			img {
+				height: 6dvh !important;
+			}
+		}
+		#navBgScn { height: 6dvh !important;}
+	}
+}
+
 
 .btnPrimary {
 	background-color: var(--secondaryColor);

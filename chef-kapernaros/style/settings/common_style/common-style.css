@@ -530,6 +530,35 @@ footer img {
   margin-left: -1px;
 }
 
+@media only screen and (max-width: 800px) {
+  .navBar {
+    background-color: #000000 !important;
+  }
+}
+@media only screen and (min-width: 781px) and (max-width: 1200px) {
+  .navBar.biggerScreen.scrolled #navBgScn {
+    height: 4dvh !important;
+  }
+  .navBar.biggerScreen.scrolled #navBgScn .logoNav {
+    height: 3dvh !important;
+    width: 3dvh !important;
+    left: 8vw !important;
+  }
+  .navBar.biggerScreen.scrolled #navBgScn .logoNav img {
+    height: 4dvh !important;
+  }
+  .navBar.biggerScreen .logoNav {
+    height: 5dvh !important;
+    width: 5dvh !important;
+    left: 8vw !important;
+  }
+  .navBar.biggerScreen .logoNav img {
+    height: 6dvh !important;
+  }
+  .navBar.biggerScreen #navBgScn {
+    height: 6dvh !important;
+  }
+}
 .btnPrimary {
   background-color: var(--secondaryColor);
   border: none;
