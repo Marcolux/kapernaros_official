@@ -528,7 +528,7 @@ p {
 }
 
 /* Mobile Small */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 767px) {
   /* styles for small phones */
   #homePage #landingMenu {
     display: none;
@@ -797,6 +797,275 @@ p {
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* styles for tablets */
+  #homePage #landingMenu {
+    display: flex;
+  }
+  #homePage #landingSection {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+  #homePage #landingSection #landingPicBox {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+  }
+  #homePage #landingSection #landingPicBox #heroLandingVideo {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    top: 0vh;
+    left: 0%;
+    border-radius: 0px;
+  }
+  #homePage #landingSection img#logoLanding {
+    display: none;
+  }
+  #homePage #landingSection img#signatureLanding {
+    width: 100vw;
+    bottom: 5%;
+    right: 0%;
+  }
+  #homePage .middlePic {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  #homePage .middlePic .middleImgWrapper {
+    border: 1px solid var(--secondaryColor);
+    gap: 0px;
+    padding: 0px !important;
+    width: 100%;
+  }
+  #homePage .middlePic .middleImgWrapper img {
+    aspect-ratio: 1/1;
+    padding: 15px;
+  }
+  #homePage .middlePic .middleImgWrapper img:nth-child(2) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  #homePage .bioLandingPicContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around !important;
+    align-items: center;
+    gap: 50px;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    min-height: -moz-fit-content !important;
+    min-height: fit-content !important;
+    max-height: -moz-fit-content !important;
+    max-height: fit-content !important;
+    padding: 50px 5px;
+    max-width: 100% !important;
+  }
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    letter-spacing: 0.05px;
+    line-height: 25px;
+    padding-bottom: 25px !important;
+    width: 80% !important;
+  }
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper .titlesChef {
+    font-size: 30px !important;
+  }
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper {
+    border: 1px solid var(--secondaryColor);
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+  }
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper .textBioLanding {
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+  }
+  #homePage .bioLandingPicContainer .bioLandingTextWrapper.homePageTextWrapper .btnPrimary {
+    bottom: -22px;
+    position: absolute;
+    right: 40px;
+    font-size: 16px;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+    padding: 0px;
+    border: 1px solid var(--secondaryColor);
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr {
+    position: relative;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 5px;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr::after {
+    display: none;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr::before {
+    display: none;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img {
+    aspect-ratio: 1/1;
+    width: 25%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    opacity: 0;
+    padding: 5px;
+    position: relative !important;
+    scale: 0.5;
+    transition: all 0.5s ease;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img#pic1 {
+    right: auto;
+    top: 0%;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img#pic2 {
+    right: auto;
+    top: 0%;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img#pic3 {
+    left: auto;
+    bottom: 0%;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img#pic4 {
+    left: auto;
+    bottom: 0%;
+  }
+  #homePage .bioLandingPicContainer .animatedPicWrapper .picSubWr img.in-view {
+    opacity: 1;
+    scale: 1;
+  }
+  #homePage #bioSection {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    padding: 40px 0px !important;
+    gap: 0px;
+  }
+  #homePage #bioSection .bioImgContainer {
+    position: relative;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  #homePage #bioSection .bioImgContainer img {
+    height: -moz-fit-content;
+    height: fit-content;
+    bottom: 0px !important;
+    opacity: 0;
+    position: relative !important;
+    scale: 0.9;
+    transition: all 0.5s ease;
+  }
+  #homePage #bioSection .bioImgContainer img#bioChefImg {
+    aspect-ratio: 1.5/1;
+    border: 0px solid;
+    border-radius: 0px;
+    transition-delay: 0s;
+    z-index: 4;
+    width: 80%;
+    height: auto;
+  }
+  #homePage #bioSection .bioImgContainer img.in-view {
+    opacity: 1;
+    scale: 1;
+  }
+  #homePage #bioSection #bioTextContainer {
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    padding: 20px !important;
+  }
+  #homePage #bioSection #bioTextContainer .titlesChef {
+    display: flex;
+  }
+  #homePage #bioSection #bioTextContainer #logoBtnWrapper {
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 40px !important;
+  }
+  #homePage #bioSection #bioTextContainer #logoBtnWrapper .btnPrimary {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 0%;
+    font-size: 16px;
+    align-self: flex-end;
+  }
+  #homePage #bioSection #bioTextContainer #logoBtnWrapper img#logoMidPage {
+    aspect-ratio: inherit;
+    height: auto;
+    left: 0px;
+    width: 30%;
+  }
+  #homePage #servicesSection {
+    background-color: transparent;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #homePage #servicesSection #servicesSectionTextContainer {
+    color: #ffffff;
+    font-size: 20px;
+  }
+  #homePage #servicesSection .picSubWr::before {
+    width: 0px;
+    margin: 0px !important;
+  }
+  #homePage #chefTableSec {
+    background-color: #ffffff;
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column !important;
+  }
+  #homePage #chefTableSec .picSubWr::after {
+    width: 0px;
+    margin: 0px;
+  }
+  #homePage #chefTableSec .picSubWr #pic1 {
+    left: auto !important;
+  }
+  #homePage #chefTableSec .picSubWr #pic2 {
+    left: auto !important;
+  }
+  #homePage #chefTableSec .picSubWr #pic3 {
+    left: auto !important;
+  }
+  #homePage #chefTableSec .picSubWr #pic4 {
+    left: auto !important;
+  }
+  #homePage footer {
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 25px !important;
+    padding-bottom: 40px !important;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 30px;
+  }
+  #homePage footer img {
+    width: 30%;
+    height: auto !important;
+  }
+  #homePage footer #webcraftLink {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px !important;
+  }
 }
 /* Desktop */
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
