@@ -482,12 +482,17 @@
   color: var(--secondaryColor) !important;
 }
 
+@media only screen and (max-width: 1200px) {
+  #bioPage #carouselSec {
+    margin-top: 10dvh !important;
+  }
+}
 @media only screen and (max-width: 800px) {
   .navBar {
     background-color: #000000 !important;
   }
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 780px) {
   .slideDescription {
     height: 50%;
     min-height: 50% !important;
@@ -509,7 +514,7 @@
     height: 35px !important;
   }
 }
-@media only screen and (min-width: 761px) and (max-width: 1050px) {
+@media only screen and (min-width: 781px) and (max-width: 1050px) {
   #bioPage #carouselSec {
     margin-top: 10dvh !important;
     height: 90dvh !important;

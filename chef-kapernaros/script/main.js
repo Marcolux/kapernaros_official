@@ -1,11 +1,19 @@
-"use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 var _a;
 console.log('hello world 4');
-const hambMenu = document.querySelector('.hamburger-menu');
-const navMenu = document.getElementById('navMenu');
-const navBar = document.querySelector('.navBar');
-const spanToBreak = document.querySelectorAll('.brSm');
-const socialMedia = document.querySelector('#socialMedia');
+var hambMenu = document.querySelector('.hamburger-menu');
+var navMenu = document.getElementById('navMenu');
+var navBar = document.querySelector('.navBar');
+var spanToBreak = document.querySelectorAll('.brSm');
+var socialMedia = document.querySelector('#socialMedia');
 if (hambMenu) {
     hambMenu.addEventListener('click', function () {
         navMenu.classList.toggle('show');
@@ -14,7 +22,7 @@ if (hambMenu) {
         navBar.classList.toggle('expand');
     });
 }
-const navBarAdjToScreen = function () {
+var navBarAdjToScreen = function () {
     if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
         navBar.classList.add('mobileView');
         navBar.classList.remove('biggerScreen');
@@ -24,12 +32,12 @@ const navBarAdjToScreen = function () {
         navBar.classList.add('biggerScreen');
     }
 };
-window.addEventListener('resize', () => { navBarAdjToScreen(); });
+window.addEventListener('resize', function () { navBarAdjToScreen(); });
 navBarAdjToScreen();
 // The scrollable wrapper
-const SCROLL_SEL = 'body';
-const scrollEl = document.querySelector(SCROLL_SEL) || document; // document => page scroll
-const getScrollTop = () => {
+var SCROLL_SEL = 'body';
+var scrollEl = document.querySelector(SCROLL_SEL) || document; // document => page scroll
+var getScrollTop = function () {
     if (scrollEl === document) {
         return window.scrollY || document.documentElement.scrollTop || 0;
     }
@@ -37,8 +45,8 @@ const getScrollTop = () => {
         return scrollEl.scrollTop; // safe cast
     }
 };
-const onScroll = () => {
-    const y = getScrollTop();
+var onScroll = function () {
+    var y = getScrollTop();
     // navScrolling logic with y
     if (y > 30) {
         navBar.classList.add('scrolled');
@@ -55,25 +63,27 @@ const onScroll = () => {
 };
 (scrollEl === document ? window : scrollEl).addEventListener('scroll', onScroll, { passive: true });
 onScroll(); // run once on load
-const observeInView = (selectorClass, offset = 0) => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+var observeInView = function (selectorClass, offset) {
+    if (offset === void 0) { offset = 0; }
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
             }
         });
-    }, { rootMargin: `${offset}px 0px` });
-    document.querySelectorAll(selectorClass).forEach(el => observer.observe(el));
+    }, { rootMargin: "".concat(offset, "px 0px") });
+    document.querySelectorAll(selectorClass).forEach(function (el) { return observer.observe(el); });
 };
-const removeObserveInView = (selectorClass, offset = 0) => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+var removeObserveInView = function (selectorClass, offset) {
+    if (offset === void 0) { offset = 0; }
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (!entry.isIntersecting) {
                 entry.target.classList.remove('in-view');
             }
         });
-    }, { rootMargin: `${offset}px 0px` });
-    document.querySelectorAll(selectorClass).forEach(el => observer.observe(el));
+    }, { rootMargin: "".concat(offset, "px 0px") });
+    document.querySelectorAll(selectorClass).forEach(function (el) { return observer.observe(el); });
 };
 observeInView('.bioLandingPicContainer img', -100);
 // observeInView('#landingPicBox img', -100)
@@ -87,44 +97,26 @@ observeInView('.singleServiceWrapper ', 200);
 removeObserveInView('.singleServiceWrapper ', 0);
 observeInView('#imgHero ', 100);
 removeObserveInView('#imgHero ', 0);
-const container = document.querySelector('#bigPic');
-let allNotActiveTitles = document.querySelectorAll('.secTitles');
-allNotActiveTitles.forEach(listEl => {
-    listEl.addEventListener('click', () => {
+var container = document.querySelector('#bigPic');
+var allNotActiveTitles = document.querySelectorAll('.secTitles');
+allNotActiveTitles.forEach(function (listEl) {
+    listEl.addEventListener('click', function () {
         allNotActiveTitles = document.querySelectorAll('.secTitles');
         if (!listEl.classList.contains('active')) {
-            const titleActive = [...allNotActiveTitles].filter(el => el.classList.contains('active'))[0];
+            var titleActive = __spreadArray([], allNotActiveTitles, true).filter(function (el) { return el.classList.contains('active'); })[0];
             titleActive.classList.remove('active');
             listEl.classList.add('active');
         }
     });
 });
-document.querySelectorAll('.flip-card').forEach(card => {
-    const btn = card.querySelector('.flip-toggle');
+document.querySelectorAll('.flip-card').forEach(function (card) {
+    var btn = card.querySelector('.flip-toggle');
     if (btn) {
-        btn.addEventListener('click', () => {
-            const is = card.classList.toggle('is-flipped');
+        btn.addEventListener('click', function () {
+            var is = card.classList.toggle('is-flipped');
             btn.setAttribute('aria-expanded', String(is));
         });
     }
-});
-emailjs.init('0wA6kpUaumn2FNdbg');
-const messageSent = document.querySelector('#messageSent');
-const inputText = document.querySelectorAll('.inputText');
-const inputTextSelect = document.querySelectorAll('select');
-(_a = document.getElementById('myForm')) === null || _a === void 0 ? void 0 : _a.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
-    emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
-        .then(function (response) {
-        messageSent.classList.remove('hide');
-        inputText.forEach(text => text.value = '');
-        inputTextSelect.forEach(select => select.selectedIndex = 0);
-        console.log('SUCCESS!', response.status, response.text);
-        setTimeout(() => { messageSent.classList.add('hide'); }, 5000);
-    }, function (error) {
-        console.log('FAILED...', error);
-        alert("Failed to send email.");
-    });
 });
 // ******* Popup logic ******* \\
 // const bobbyLink = document.getElementById('clickToPics') as HTMLElement
@@ -154,72 +146,53 @@ document.cookie = "key=value; SameSite=Lax";
 *  ====     EVENTS PAGE LOGIC     ==== *
 ****************************************/
 /***  ====> Tabs switch logic <==== ***/
-const eventsPage = document.querySelector('body#eventsPage');
-const eventSwitchTab = () => {
+var eventsPage = document.querySelector('body#eventsPage');
+var eventSwitchTab = function () {
     if (eventsPage) {
-        const tabsWrapper = eventsPage.querySelector('#all-tabs');
-        const allTabs = [...tabsWrapper.querySelectorAll('.single-tab')];
-        const allContents = [...eventsPage.querySelectorAll('.tab-content')];
-        const showTab = (valueText) => {
-            const contentId = `${valueText}-content`;
-            allContents.forEach(content => {
-                const activeContent = content.id === contentId;
+        var tabsWrapper = eventsPage.querySelector('#all-tabs');
+        var allTabs_1 = __spreadArray([], tabsWrapper.querySelectorAll('.single-tab'), true);
+        var allContents_1 = __spreadArray([], eventsPage.querySelectorAll('.tab-content'), true);
+        var showTab_1 = function (valueText) {
+            var contentId = "".concat(valueText, "-content");
+            allContents_1.forEach(function (content) {
+                var activeContent = content.id === contentId;
                 content.hidden = !activeContent;
                 content.setAttribute('aria-hidden', String(!activeContent));
                 content.tabIndex = 1;
             });
-            allTabs.forEach(tab => {
-                const selected = tab.value === valueText;
+            allTabs_1.forEach(function (tab) {
+                var selected = tab.value === valueText;
                 tab.checked = selected;
                 tab.classList.toggle('activeTab', tab.checked);
                 tab.setAttribute('aria-selected', String(selected));
                 tab.tabIndex = 1;
             });
         };
-        tabsWrapper.addEventListener('change', (e) => {
-            const tabClicked = e.target;
+        tabsWrapper.addEventListener('change', function (e) {
+            var tabClicked = e.target;
             if (tabClicked)
-                showTab(tabClicked.value);
+                showTab_1(tabClicked.value);
         });
     }
 };
 eventSwitchTab();
-const templateCard = (singleEvent) => {
-    const cardElementWrapper = document.createElement('article');
+var templateCard = function (singleEvent) {
+    var cardElementWrapper = document.createElement('article');
     cardElementWrapper.className = singleEvent.event_isMostRecent ? 'event_wrapper mostRecentEvt' : 'event_wrapper';
-    const cardElement = document.createElement('div');
+    var cardElement = document.createElement('div');
     cardElement.className = singleEvent.event_isMostRecent ? 'event_card mostRecentEvt' : 'event_card';
     cardElement.id = singleEvent.event_id;
     cardElementWrapper.append(cardElement);
-    cardElement.innerHTML = `
-        <div class="eventInfo">
-            <div class="titlePicWrapper">
-                <div class="flex flex-column flex-alignItems-center col-12">
-                    <h5 class="col-12 eTitle">${singleEvent.event_title}</h5>
-                    <h3 class="col-12 text-bold eDate">${singleEvent.event_date}</h3>
-                </div>
-                <img class="eventPic" src="${singleEvent.event_picture}" alt="">
-            </div>
-            <div class="col-12 flex flex-column flex-alignItems-center flex-justifyContent-spaceBetween placeTimeWrapper">
-                <h6 class="eLocation flex">${singleEvent.event_location}</h6>
-                <h6 class="eTime flex">${singleEvent.event_time}</h6>
-            </div>
-            <p class="col-12 eDescription">${singleEvent.event_description}</p>
-            <a class="col-12 eLink" href="${singleEvent.event_link}" target="_blank">Event Link</a>
-        </div>
-        <div class="eventPicWrapper">
-            <img src="${singleEvent.event_picture}" alt="">
-        </div>
-    `;
-    const eTime = cardElement.querySelector('.eTime');
-    const eLink = cardElement.querySelector('.eLink');
-    const eDescription = cardElement.querySelector('.eDescription');
+    cardElement.innerHTML = "\n        <div class=\"eventInfo\">\n            <div class=\"titlePicWrapper\">\n                <div class=\"flex flex-column flex-alignItems-center col-12\">\n                    <h5 class=\"col-12 eTitle\">".concat(singleEvent.event_title, "</h5>\n                    <h3 class=\"col-12 text-bold eDate\">").concat(singleEvent.event_date, "</h3>\n                </div>\n                <img class=\"eventPic\" src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n            </div>\n            <div class=\"col-12 flex flex-column flex-alignItems-center flex-justifyContent-spaceBetween placeTimeWrapper\">\n                <h6 class=\"eLocation flex\">").concat(singleEvent.event_location, "</h6>\n                <h6 class=\"eTime flex\">").concat(singleEvent.event_time, "</h6>\n            </div>\n            <p class=\"col-12 eDescription\">").concat(singleEvent.event_description, "</p>\n            <a class=\"col-12 eLink\" href=\"").concat(singleEvent.event_link, "\" target=\"_blank\">Event Link</a>\n        </div>\n        <div class=\"eventPicWrapper\">\n            <img src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n        </div>\n    ");
+    var eTime = cardElement.querySelector('.eTime');
+    var eLink = cardElement.querySelector('.eLink');
+    var eDescription = cardElement.querySelector('.eDescription');
     eTime.className = singleEvent.event_time === '' ? 'eTime flex' : 'eTime flex ml-50';
     eTime.classList.toggle('hide', !singleEvent.event_isMostRecent);
     eLink.classList.toggle('hide', singleEvent.event_isMostRecent);
     return cardElementWrapper;
 };
-const allEventsUpcoming = [
+var allEventsUpcoming = [
     {
         event_id: "Taste_of_Hope",
         event_title: "Taste of Hope",
@@ -228,7 +201,7 @@ const allEventsUpcoming = [
         event_time: "6:00 pm - 9:00 pm",
         event_description: "This isn’t just a night out; it’s a movement toward a world without cancer. Join us as we celebrate over 35 amazing restaurants from the Chicagoland area, and let's make a difference together!",
         event_link: "www.chicagotasteofhope.com",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/taste_of_hope_chef_kapernaros_pwpjn9.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035491/Niko/new_materials/taste-of-hope-2jpg_wwnzyt.jpg",
         event_isMostRecent: true
     },
     {
@@ -243,7 +216,7 @@ const allEventsUpcoming = [
         event_isMostRecent: true
     },
 ];
-const allEventsPast = [
+var allEventsPast = [
     {
         event_id: "Chicago_Gourmet",
         event_title: "Chicago Gourmet",
@@ -268,13 +241,13 @@ const allEventsPast = [
     },
     {
         event_id: "I_Cook_For_benefit",
-        event_title: `"I Cook For" benefit`,
+        event_title: "\"I Cook For\" benefit",
         event_date: "March 20, 2025",
         event_location: "Chicago, Four Seasons Hotel",
         event_time: "",
         event_description: "Pierless Hospitality team of Navy Pier Chicago at 'I Cook For' Benefit",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,h_640,w_1080,y_200/v1759880300/Niko/new_materials/chef-pic-10_jmooa1.webp",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035490/Niko/new_materials/I-cook-for-benefit_ri4usq.jpg",
         event_isMostRecent: true
     },
     {
@@ -285,11 +258,11 @@ const allEventsPast = [
         event_time: "",
         event_description: "For one more year It is a great honor for me and Pierless Hospitality team to support The Cystic Fibrosis Foundation, the world's leader in the search for a cure for CF.",
         event_link: "",
-        event_picture: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035621/Niko/new_materials/grand-chef-experience_u2rqn2.jpg",
         event_isMostRecent: true
     }
 ];
-const allEventsCompetions = [
+var allEventsCompetions = [
     {
         event_id: "Good_Taste_Series_For_Hyatt_World_Midwest",
         event_title: "Good Taste Series For Hyatt World Midwest",
@@ -309,7 +282,7 @@ const allEventsCompetions = [
         event_time: "",
         event_description: "Fine dining competitions awarded for excellence. First place winner.",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619857/Niko/competitions/c_s_10_cgzqss.webp",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035672/Niko/new_materials/Chrisa-kapernaros-hyatt-competition_vkbvwq.jpg",
         event_isMostRecent: true
     },
     {
@@ -336,45 +309,45 @@ const allEventsCompetions = [
     },
 ];
 if (eventsPage) {
-    const upcomingContent = eventsPage.querySelector('#upcoming-content');
-    allEventsUpcoming.forEach(event => { upcomingContent.append(templateCard(event)); });
-    const pastEventsContent = eventsPage.querySelector('#past_events-content');
-    allEventsPast.forEach(event => { pastEventsContent.append(templateCard(event)); });
-    const competitionsContent = eventsPage.querySelector('#competitions-content');
-    allEventsCompetions.forEach(event => { competitionsContent.append(templateCard(event)); });
+    var upcomingContent_1 = eventsPage.querySelector('#upcoming-content');
+    allEventsUpcoming.forEach(function (event) { upcomingContent_1.append(templateCard(event)); });
+    var pastEventsContent_1 = eventsPage.querySelector('#past_events-content');
+    allEventsPast.forEach(function (event) { pastEventsContent_1.append(templateCard(event)); });
+    var competitionsContent_1 = eventsPage.querySelector('#competitions-content');
+    allEventsCompetions.forEach(function (event) { competitionsContent_1.append(templateCard(event)); });
 }
 // serviceBxButton
 /*****************************************
 *  ====     Services PAGE LOGIC     ==== *
 ******************************************/
-const servicesSec = document.querySelector('section#allServices');
+var servicesSec = document.querySelector('section#allServices');
 if (servicesSec) {
-    const allButtonServices = servicesSec.querySelectorAll('button.serviceBxButton');
-    allButtonServices.forEach(button => {
-        button.addEventListener('click', () => {
-            const service = encodeURIComponent(button.value);
-            window.location.href = `contact-the-chef.html?service=${service}`;
+    var allButtonServices = servicesSec.querySelectorAll('button.serviceBxButton');
+    allButtonServices.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var service = encodeURIComponent(button.value);
+            window.location.href = "contact-the-chef.html?service=".concat(service);
         });
     });
 }
 /*************************************************
 *  ====     The Chef's Table PAGE LOGIC     ==== *
 *************************************************/
-const chefTableCardContainer = document.querySelector('#tablePicContainer');
-const allCardsInChefTable = chefTableCardContainer === null || chefTableCardContainer === void 0 ? void 0 : chefTableCardContainer.querySelectorAll('article');
-const cardsOnSmallScreen = () => {
-    allCardsInChefTable === null || allCardsInChefTable === void 0 ? void 0 : allCardsInChefTable.forEach(card => {
+var chefTableCardContainer = document.querySelector('#tablePicContainer');
+var allCardsInChefTable = chefTableCardContainer === null || chefTableCardContainer === void 0 ? void 0 : chefTableCardContainer.querySelectorAll('article');
+var cardsOnSmallScreen = function () {
+    allCardsInChefTable === null || allCardsInChefTable === void 0 ? void 0 : allCardsInChefTable.forEach(function (card) {
         card.classList.toggle('smallScreenCard', window.innerWidth < 750);
         if (card.classList.contains('smallScreenCard')) {
-            card.addEventListener('mouseover', () => {
-                allCardsInChefTable.forEach(card => card.classList.remove('clicked'));
-                setTimeout(() => {
+            card.addEventListener('mouseover', function () {
+                allCardsInChefTable.forEach(function (card) { return card.classList.remove('clicked'); });
+                setTimeout(function () {
                 }, 0);
                 card.classList.add('clicked');
                 card.scrollIntoView({
                     behavior: "smooth", // optional
                 });
-                allCardsInChefTable.forEach(card => {
+                allCardsInChefTable.forEach(function (card) {
                     if (!card.classList.contains('clicked'))
                         card.classList.remove('is-flipped');
                 });
@@ -384,3 +357,35 @@ const cardsOnSmallScreen = () => {
 };
 cardsOnSmallScreen();
 window.addEventListener('resize', cardsOnSmallScreen);
+emailjs.init('0wA6kpUaumn2FNdbg');
+var messageSent = document.querySelector('#messageSent');
+var textArea = document.querySelector('textarea.inputText');
+var inputText = document.querySelectorAll('.inputText');
+var inputTextSelect = document.querySelectorAll('select');
+(_a = document.getElementById('myForm')) === null || _a === void 0 ? void 0 : _a.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+    emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
+        .then(function (response) {
+        messageSent.classList.remove('hide');
+        inputText.forEach(function (text) { return text.value = ''; });
+        inputTextSelect.forEach(function (select) { return select.selectedIndex = 0; });
+        console.log('SUCCESS!', response.status, response.text);
+        setTimeout(function () { messageSent.classList.add('hide'); }, 5000);
+    }, function (error) {
+        console.log('FAILED...', error);
+        alert("Failed to send email.");
+    });
+});
+// ******* Resizing logic ******* \\
+var textAreaAdjustToScreen = function () {
+    console.log('triggered');
+    if (window.innerHeight < 700) {
+        textArea.rows = 1;
+        console.log('here');
+    }
+    else {
+        textArea.rows = 3;
+    }
+};
+textAreaAdjustToScreen();
+window.addEventListener('resize', function () { textAreaAdjustToScreen(); });

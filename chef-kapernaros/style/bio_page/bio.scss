@@ -475,11 +475,17 @@ $primaryColor: #f8f8f5;
     .animated-highlight { color: var(--secondaryColor) !important; }
 }
 
-@media only screen and (min-width: 930px) and (max-width: 1170px) { }
+@media only screen and (max-width: 1200px) { 
+        #bioPage {
+        #carouselSec{ 
+            margin-top: 10dvh !important;
+        }
+    }
+}
 @media only screen and (max-width: 800px) {
     .navBar { background-color: #000000 !important;}
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 780px) {
     .slideDescription {
         height: 50%;
         min-height: 50% !important;
@@ -501,7 +507,7 @@ $primaryColor: #f8f8f5;
         }
     }
 }
-@media only screen and (min-width: 761px) and (max-width: 1050px) {
+@media only screen and (min-width: 781px) and (max-width: 1050px) {
 
     #bioPage {
         #carouselSec{ 

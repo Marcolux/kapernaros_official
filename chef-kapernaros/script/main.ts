@@ -82,7 +82,6 @@ const removeObserveInView = (selectorClass: string, offset = 0) => {
     document.querySelectorAll(selectorClass).forEach(el => observer.observe(el))
 }
 
-
 observeInView('.bioLandingPicContainer img', -100)
 // observeInView('#landingPicBox img', -100)
 observeInView('.singleCard', -100)
@@ -121,28 +120,7 @@ document.querySelectorAll('.flip-card').forEach(card=>{
     }
 })
 
-// ******* Sending Email logic ******* \\
 
-declare var emailjs: any
-emailjs.init('0wA6kpUaumn2FNdbg')
-const messageSent = document.querySelector('#messageSent') as HTMLElement
-const inputText = document.querySelectorAll('.inputText') as NodeListOf <HTMLInputElement>
-const inputTextSelect = document.querySelectorAll('select') as  NodeListOf<HTMLSelectElement>
-
-document.getElementById('myForm')?.addEventListener('submit', function(event) {
-    event.preventDefault() // Prevent the default form submission
-    emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
-    .then(function(response: any) {
-        messageSent.classList.remove('hide')
-        inputText.forEach(text => text.value= '')
-        inputTextSelect.forEach(select => select.selectedIndex = 0)
-        console.log('SUCCESS!', response.status, response.text)
-        setTimeout(()=>{ messageSent.classList.add('hide') }, 5000)
-    }, function(error: any) {
-        console.log('FAILED...', error)
-        alert("Failed to send email.")
-    })
-})
 
 // ******* Popup logic ******* \\
 
@@ -274,7 +252,7 @@ const allEventsUpcoming: eventObj[] = [
         event_time: "6:00 pm - 9:00 pm",
         event_description: "This isn’t just a night out; it’s a movement toward a world without cancer. Join us as we celebrate over 35 amazing restaurants from the Chicagoland area, and let's make a difference together!",
         event_link: "www.chicagotasteofhope.com",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/taste_of_hope_chef_kapernaros_pwpjn9.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035491/Niko/new_materials/taste-of-hope-2jpg_wwnzyt.jpg",
         event_isMostRecent: true
     },
     {
@@ -320,7 +298,7 @@ const allEventsPast: eventObj[] = [
         event_time: "",
         event_description: "Pierless Hospitality team of Navy Pier Chicago at 'I Cook For' Benefit",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,h_640,w_1080,y_200/v1759880300/Niko/new_materials/chef-pic-10_jmooa1.webp",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035490/Niko/new_materials/I-cook-for-benefit_ri4usq.jpg",
         event_isMostRecent: true
     },
     { 
@@ -331,7 +309,7 @@ const allEventsPast: eventObj[] = [
         event_time: "",
         event_description: "For one more year It is a great honor for me and Pierless Hospitality team to support The Cystic Fibrosis Foundation, the world's leader in the search for a cure for CF.",
         event_link: "",
-        event_picture: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035621/Niko/new_materials/grand-chef-experience_u2rqn2.jpg",
         event_isMostRecent: true
     }
 ]
@@ -356,7 +334,7 @@ const allEventsCompetions: eventObj[] = [
         event_time: "",
         event_description: "Fine dining competitions awarded for excellence. First place winner.",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714619857/Niko/competitions/c_s_10_cgzqss.webp",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035672/Niko/new_materials/Chrisa-kapernaros-hyatt-competition_vkbvwq.jpg",
         event_isMostRecent: true
     },
     { 
@@ -438,3 +416,46 @@ const cardsOnSmallScreen = () => {
 }
 cardsOnSmallScreen()
 window.addEventListener('resize', cardsOnSmallScreen)
+
+/*************************************************
+*  ====     Contact the Chef PAGE LOGIC     ==== *
+*************************************************/
+
+// ******* Sending Email logic ******* \\
+
+declare var emailjs: any
+emailjs.init('0wA6kpUaumn2FNdbg')
+const messageSent = document.querySelector('#messageSent') as HTMLElement
+const textArea = document.querySelector('textarea.inputText') as HTMLTextAreaElement
+const inputText = document.querySelectorAll('.inputText') as NodeListOf <HTMLInputElement>
+const inputTextSelect = document.querySelectorAll('select') as  NodeListOf<HTMLSelectElement>
+
+document.getElementById('myForm')?.addEventListener('submit', function(event) {
+    event.preventDefault() // Prevent the default form submission
+    emailjs.sendForm('service_m5a5vcb', 'template_1jfyvjh', this)
+    .then(function(response: any) {
+        messageSent.classList.remove('hide')
+        inputText.forEach(text => text.value= '')
+        inputTextSelect.forEach(select => select.selectedIndex = 0)
+        console.log('SUCCESS!', response.status, response.text)
+        setTimeout(()=>{ messageSent.classList.add('hide') }, 5000)
+    }, function(error: any) {
+        console.log('FAILED...', error)
+        alert("Failed to send email.")
+    })
+})
+
+// ******* Resizing logic ******* \\
+
+const textAreaAdjustToScreen = function () {
+    console.log('triggered')
+
+    if (window.innerHeight < 700) {
+        textArea.rows = 1
+        console.log('here')
+    } else {
+        textArea.rows = 3
+    }
+}
+textAreaAdjustToScreen()
+window.addEventListener('resize',() => {textAreaAdjustToScreen()})

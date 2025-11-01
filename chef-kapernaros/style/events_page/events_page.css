@@ -171,6 +171,57 @@
      object-position: top;
 }
 
+@media only screen and (min-width: 1050px) and (max-width: 1250px) and (max-height: 920px) {
+  .eventInfo .eTitle {
+    font-size: 40px !important;
+  }
+  .eventInfo .eDate {
+    font-size: 35px !important;
+  }
+  .eventInfo .eLocation {
+    font-size: 27px !important;
+  }
+  .eventInfo .eDescription {
+    font-size: 18px !important;
+  }
+}
+@media only screen and (min-width: 761px) and (max-width: 1050px) {
+  #tabs-events {
+    display: flex;
+    justify-content: center !important;
+  }
+  #tabs-events #all-tabs {
+    justify-content: center !important;
+    border: 0px solid var(--secondaryColor) !important;
+  }
+  #tabs-events #all-tabs div {
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    border-top: 1px solid var(--secondaryColor);
+  }
+  #tabs-events #all-tabs div:nth-child(1) {
+    border-left: 1px solid var(--secondaryColor);
+  }
+  #tabs-events #all-tabs div:nth-child(3) {
+    border-right: 1px solid var(--secondaryColor);
+  }
+  .event_wrapper {
+    width: 90% !important;
+    margin: auto;
+  }
+  .event_wrapper .eDescription {
+    font-size: 25px !important;
+    line-height: 35px;
+    padding: 20px;
+  }
+  .event_wrapper .eventPicWrapper img {
+    max-height: 40dvh;
+    -o-object-position: center !important;
+       object-position: center !important;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
+}
 @media only screen and (max-width: 1050px) {
   #eventsPage {
     padding-top: 10vh;
@@ -183,6 +234,7 @@
     padding-top: 20px;
   }
   #eventsPage #tabs-events #all-tabs {
+    display: flex;
     width: 100%;
   }
   #eventsPage #tabs-events #all-tabs div {
@@ -192,18 +244,11 @@
     padding: 10px;
     font-size: 16px;
   }
-  #eventsPage #content-events {
-    display: flex;
-    flex: auto;
-    background-color: #f8f8f5;
-  }
   #eventsPage #pageContent {
     flex: auto;
     padding-top: 50px;
   }
   #eventsPage .tab-content {
-    width: 100%;
-    background-color: #ffffff;
     padding: 20px !important;
     gap: 20px;
   }
