@@ -196,6 +196,55 @@ footer img {
   height: 13vh;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    flex-direction: row !important;
+    align-items: end !important;
+  }
+  footer img {
+    width: 30% !important;
+  }
+  footer #webcraftLink {
+    bottom: 20px !important;
+    height: 13vh !important;
+    justify-content: center;
+    align-items: end;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* styles for laptops and standard desktops */
+  footer {
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 25px !important;
+    padding-bottom: 40px !important;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 30px;
+  }
+  footer img {
+    width: 70%;
+    height: auto !important;
+  }
+  footer #webcraftLink {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px !important;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+  /* styles for laptops and standard desktops */
+  footer {
+    align-items: end !important;
+  }
+  footer #webcraftLink {
+    bottom: 20px;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+  }
+}
 .navBar {
   background-color: var(--navBackGroundColor);
   color: var(--navBarTextColor);

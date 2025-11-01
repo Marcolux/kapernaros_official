@@ -709,25 +709,7 @@ p {color: #000000 !important;}
 				#pic4 { left: auto !important; }
 			}
 		}
-        footer { 
-            flex-direction: column-reverse;
-            position: relative;
-            padding-top: 25px !important;
-            padding-bottom: 40px !important;
-            width: 100%;
-            height: fit-content;
-            gap: 30px;
-            img {
-                width: 70%;
-                height: auto !important;
-            }
-            #webcraftLink {
-                position: absolute;
-                bottom: 20px;
-                font-size: 14px !important;
-            }
-            
-        }
+
 	}
 }
 
@@ -801,13 +783,6 @@ p {color: #000000 !important;}
 		#servicesSection {
 			#servicesSectionTextContainer { font-size: 20px;}
 		}
-        footer {
-            img { width: 30%; }
-            #webcraftLink {
-                bottom: 20px;
-				justify-content: center;
-            }
-        }
 	}
 }
 
@@ -818,14 +793,6 @@ p {color: #000000 !important;}
 		img {
 			&#pic1 { top: 5% !important; }
 			&#pic3 { bottom: 5% !important; }
-		}
-	}
-	footer {
-		#webcraftLink {
-			bottom: 20px;
-			justify-content: center;
-			align-items: end;
-			height: 100%;
 		}
 	}
 }

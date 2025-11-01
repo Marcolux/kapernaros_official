@@ -774,25 +774,6 @@ p {
   #homePage #chefTableSec .picSubWr #pic4 {
     left: auto !important;
   }
-  #homePage footer {
-    flex-direction: column-reverse;
-    position: relative;
-    padding-top: 25px !important;
-    padding-bottom: 40px !important;
-    width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    gap: 30px;
-  }
-  #homePage footer img {
-    width: 70%;
-    height: auto !important;
-  }
-  #homePage footer #webcraftLink {
-    position: absolute;
-    bottom: 20px;
-    font-size: 14px !important;
-  }
 }
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -868,13 +849,6 @@ p {
   #homePage #servicesSection #servicesSectionTextContainer {
     font-size: 20px;
   }
-  #homePage footer img {
-    width: 30%;
-  }
-  #homePage footer #webcraftLink {
-    bottom: 20px;
-    justify-content: center;
-  }
 }
 /* Desktop */
 @media only screen and (min-width: 1025px) and (max-width: 1400px) {
@@ -884,12 +858,6 @@ p {
   }
   .picSubWr img#pic3 {
     bottom: 5% !important;
-  }
-  footer #webcraftLink {
-    bottom: 20px;
-    justify-content: center;
-    align-items: end;
-    height: 100%;
   }
 }
 /* Large Desktop */

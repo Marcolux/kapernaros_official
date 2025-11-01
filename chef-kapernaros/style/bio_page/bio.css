@@ -492,10 +492,28 @@
     height: 50%;
     min-height: 50% !important;
   }
+  .flip-card {
+    width: 100% !important;
+  }
+  .flip-card .flip-card-back {
+    padding: 0px 15px !important;
+  }
+  .flip-card .cardText {
+    color: #f1f1f1 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    padding: 5px !important;
+  }
+  .flip-card .flip-toggle {
+    width: 35px !important;
+    height: 35px !important;
+  }
 }
 @media only screen and (min-width: 761px) and (max-width: 1050px) {
   #bioPage #carouselSec {
     margin-top: 10dvh !important;
+    height: 90dvh !important;
+    min-height: 90dvh !important;
   }
   #bioPage #carouselSec > div {
     padding: 0px !important;
@@ -591,61 +609,43 @@
     display: none;
   }
   #bioPage #pageTransition {
-    height: 100dvh;
+    height: 70dvh !important;
     width: -moz-fit-content !important;
     width: fit-content !important;
   }
   #bioPage #pageTransition #cardsIntro {
-    width: 100% !important;
-    padding: 10px !important;
-    transform: translateY(15%);
+    width: 90% !important;
+    transform: translateY(50%) !important;
   }
   #bioPage #pageTransition #cardsIntro #valuesIntro {
-    max-width: 100% !important;
-    line-height: 22px;
-    padding: 20px 30px;
-  }
-  #bioPage #pageTransition #cardsIntro #valuesIntro strong {
-    font-weight: 400 !important;
-  }
-  #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef {
-    font-size: 20px;
-    margin-left: 0px !important;
-    margin-bottom: 0px !important;
-  }
-  #bioPage #pageTransition #cardsIntro #valuesIntro .titlesChef::before {
-    bottom: 2px !important;
-    height: calc(100% - 5px);
-    left: -25px;
-  }
-  #bioPage #valueSec {
-    padding: 0px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    max-height: -moz-fit-content !important;
-    max-height: fit-content !important;
+    max-width: 80% !important;
+    line-height: 30px !important;
+    padding: 40px !important;
   }
   #bioPage #valueSec .cardContainer {
+    align-items: center;
+    flex-direction: row !important;
+    flex-wrap: wrap;
     max-height: -moz-fit-content !important;
     max-height: fit-content !important;
-    flex-direction: column !important;
-    padding: 20px 0px;
+    padding: 60px 0px !important;
+    width: 100% !important;
   }
   #bioPage #valueSec .cardContainer .flip-card {
-    width: 100%;
+    width: 48% !important;
   }
   #bioPage #valueSec .cardContainer .flip-card .flip-card-back {
     padding: 0px 15px !important;
   }
   #bioPage #valueSec .cardContainer .flip-card .cardText {
     color: #f1f1f1 !important;
-    font-size: 16px !important;
-    line-height: 20px !important;
-    padding: 0px !important;
+    font-size: 20px !important;
+    line-height: 27px !important;
+    padding: 20px !important;
   }
   #bioPage #valueSec .cardContainer .flip-card .flip-toggle {
-    width: 35px !important;
-    height: 35px !important;
+    height: 40px !important;
+    width: 40px !important;
   }
   #bioPage #careerHighlightsSec {
     padding: 20px 10px;
@@ -794,12 +794,12 @@
     width: fit-content !important;
   }
   #bioPage #pageTransition #cardsIntro {
-    width: 100% !important;
-    padding: 10px !important;
+    width: 100%;
+    padding: 10px;
     transform: translateY(15%);
   }
   #bioPage #pageTransition #cardsIntro #valuesIntro {
-    max-width: 100% !important;
+    max-width: 100%;
     line-height: 22px;
     padding: 20px 30px;
   }
@@ -826,24 +826,8 @@
   #bioPage #valueSec .cardContainer {
     max-height: -moz-fit-content !important;
     max-height: fit-content !important;
-    flex-direction: column !important;
+    flex-direction: column;
     padding: 20px 0px;
-  }
-  #bioPage #valueSec .cardContainer .flip-card {
-    width: 100%;
-  }
-  #bioPage #valueSec .cardContainer .flip-card .flip-card-back {
-    padding: 0px 15px !important;
-  }
-  #bioPage #valueSec .cardContainer .flip-card .cardText {
-    color: #f1f1f1 !important;
-    font-size: 16px !important;
-    line-height: 20px !important;
-    padding: 0px !important;
-  }
-  #bioPage #valueSec .cardContainer .flip-card .flip-toggle {
-    width: 35px !important;
-    height: 35px !important;
   }
   #bioPage #careerHighlightsSec {
     padding: 20px 10px;
@@ -884,24 +868,5 @@
   }
   #bioPage #careerHighlightsSec .timeline .timeline__events .event::before {
     left: -19px !important;
-  }
-  footer {
-    flex-direction: column-reverse;
-    position: relative;
-    padding-top: 15px !important;
-    padding-bottom: 50px !important;
-    width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    gap: 20px;
-  }
-  footer img {
-    width: 70%;
-    height: auto !important;
-  }
-  footer #webcraftLink {
-    position: absolute;
-    bottom: 15px;
-    font-size: 14px !important;
   }
 }/*# sourceMappingURL=bio.css.map */
