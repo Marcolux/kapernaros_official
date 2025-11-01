@@ -171,7 +171,7 @@
      object-position: top;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1050px) {
   #eventsPage {
     padding-top: 10vh;
   }

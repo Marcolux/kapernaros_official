@@ -148,7 +148,39 @@ $shadowInset: #ffffff41;
         }
     }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1050px) {
+    .singleServiceWrapper {
+        height: 70dvh !important;
+        .serviceVideoContainer {
+            position: relative;
+            width: 100% !important;
+            height: 50dvh !important;
+            video {
+                border-radius: 4px;
+                height: 100% !important;
+                object-fit: cover;
+                width: 100% !important;
+            }
+            // *
+            img {
+                border-radius: 4px;
+                height: 100% !important;
+                object-fit: cover;
+                width: 100% !important;
+                &.hoverImg {display: none; }
+            }
+            &:hover {
+                img.defaultImg {display: flex; }
+                img.hoverImg {display: none; }
+            }
+        }
+        .serviceBxDescription {
+            font-size: 20px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px) {
     #servicesPage {
         padding-top: 0vh;
         background-position: center;
@@ -203,19 +235,19 @@ $shadowInset: #ffffff41;
                     }
                     .serviceVideoContainer {
                         position: relative;
-                        width: 100% !important;
+                        width: 100% ;
                         height: fit-content;
 
                         video {
                             border-radius: 4px;
-                            height: auto !important;
+                            height: auto;
                             object-fit: cover;
                             width: 100% !important;
                         }
                         // *
                         img {
                             border-radius: 4px;
-                            height: auto !important;
+                            height: auto;
                             object-fit: cover;
                             width: 100% !important;
                             &.hoverImg {display: none; }

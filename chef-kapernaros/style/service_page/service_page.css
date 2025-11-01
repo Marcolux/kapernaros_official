@@ -147,7 +147,43 @@
   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 768px) and (max-width: 1050px) {
+  .singleServiceWrapper {
+    height: 70dvh !important;
+  }
+  .singleServiceWrapper .serviceVideoContainer {
+    position: relative;
+    width: 100% !important;
+    height: 50dvh !important;
+  }
+  .singleServiceWrapper .serviceVideoContainer video {
+    border-radius: 4px;
+    height: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100% !important;
+  }
+  .singleServiceWrapper .serviceVideoContainer img {
+    border-radius: 4px;
+    height: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100% !important;
+  }
+  .singleServiceWrapper .serviceVideoContainer img.hoverImg {
+    display: none;
+  }
+  .singleServiceWrapper .serviceVideoContainer:hover img.defaultImg {
+    display: flex;
+  }
+  .singleServiceWrapper .serviceVideoContainer:hover img.hoverImg {
+    display: none;
+  }
+  .singleServiceWrapper .serviceBxDescription {
+    font-size: 20px !important;
+  }
+}
+@media only screen and (max-width: 1050px) {
   #servicesPage {
     padding-top: 0vh;
     background-position: center;
@@ -207,20 +243,20 @@
   }
   #servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer {
     position: relative;
-    width: 100% !important;
+    width: 100%;
     height: -moz-fit-content;
     height: fit-content;
   }
   #servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer video {
     border-radius: 4px;
-    height: auto !important;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     width: 100% !important;
   }
   #servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer img {
     border-radius: 4px;
-    height: auto !important;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     width: 100% !important;
