@@ -189,10 +189,8 @@
                     autoplay
                     muted
                     playsinline
-                    webkit-playsinline
                     loop
                     preload="auto"
-                    poster="https://res.cloudinary.com/drdrs6pdq/video/upload/so_0,q_auto,f_jpg/Niko/new_materials/chef_kapernaros_landing_hero.jpg"
                     src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_scale,w_600/v1760735729/Niko/new_materials/chef_kapernaros_landing_hero_9_d9gjwy.mp4"
                     crossorigin="anonymous"
                 ></video>
@@ -296,31 +294,30 @@
         <script defer type="text/javascript" src="./chef-kapernaros/script/main.js"></script>
         <script src="./analytics.js"></script>
         <script>
-            document.querySelectorAll('video.slowmo').forEach(v => {
-                const rate = 1              // speed
-                v.defaultPlaybackRate = rate   // initial speed
-                v.playbackRate = rate
+            // document.querySelectorAll('video.slowmo').forEach(v => {
+            //     const rate = 1              // speed
+            //     v.defaultPlaybackRate = rate   // initial speed
+            //     v.playbackRate = rate
 
-                // Keep speed if the browser/user tries to change it
-                v.addEventListener('play', () => { v.playbackRate = rate })
-            })
-        </script>
-        <script>
+            //     // Keep speed if the browser/user tries to change it
+            //     v.addEventListener('play', () => { v.playbackRate = rate })
+            // })
+            
             document.addEventListener('DOMContentLoaded', function () {
-            const video = document.getElementById('heroLandingVideo');
-            if (!video) return;
+                const video = document.getElementById('heroLandingVideo');
+                if (!video) return;
 
-            // make super sure it's muted & inline
-            video.muted = true;
-            video.playsInline = true;
+                // make super sure it's muted & inline
+                video.muted = true;
+                video.playsInline = true;
 
-            const playPromise = video.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(() => {
-                // Autoplay was blocked – you can show a play button if you want
-                // console.log('Autoplay blocked on this device');
-                });
-            }
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                    // Autoplay was blocked – you can show a play button if you want
+                    // console.log('Autoplay blocked on this device');
+                    });
+                }
             });
         </script>
 
