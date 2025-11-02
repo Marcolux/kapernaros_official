@@ -305,6 +305,24 @@
                 v.addEventListener('play', () => { v.playbackRate = rate })
             })
         </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('heroLandingVideo');
+            if (!video) return;
+
+            // make super sure it's muted & inline
+            video.muted = true;
+            video.playsInline = true;
+
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                // Autoplay was blocked – you can show a play button if you want
+                // console.log('Autoplay blocked on this device');
+                });
+            }
+            });
+        </script>
 
         <!-- Video Json Tag  -->
         <script type="application/ld+json">
