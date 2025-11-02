@@ -4,6 +4,7 @@ $background: linear-gradient(180deg, var(--darkBlueColor), #000000);
 body#chefTablePage{
     // background-color: #f8f8f8;
     section#chefTableSec {
+        margin-top: 15vh;
         padding-top: 40px;
         background: $background;
         width: 100%;
@@ -221,11 +222,19 @@ body#chefTablePage{
 @media only screen and (min-width: 1301px) and (max-width: 1400px) {}
 @media only screen and (max-width: 1361px) {}
 @media only screen and (min-width: 701px) and (max-width: 930px) {}
-@media only screen and (min-width: 701px) and (max-width: 1300px) {}
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 801px) and (max-width: 1050px) {
+    section#chefTableSec {
+        margin-top: 10vh !important;
+        .flip-card {
+            border: 1px solid var(--secondaryColor);
+            border-radius: 4px !important;
+        }
+    }
+}
+@media only screen and (max-width: 1050px) {
     body#chefTablePage {
         section#chefTableSec {
-            margin-top: 0px !important;
+            margin-top: 0px ;
             .chefTableIntro {
                 box-shadow: none;
                 font-size: 16px;
@@ -252,7 +261,7 @@ body#chefTablePage{
                     width: 100%;
                     .flip-card {
                         border: 1px solid var(--secondaryColor);
-                        border-radius: 0px !important;
+                        border-radius: 0px;
                         box-shadow: none;
                         width: 46%;
                         &.smallScreenCard {
