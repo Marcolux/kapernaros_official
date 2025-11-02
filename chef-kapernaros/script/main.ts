@@ -450,7 +450,7 @@ document.getElementById('myForm')?.addEventListener('submit', function(event) {
 const textAreaAdjustToScreen = function () {
     console.log('triggered')
 
-    if (window.innerHeight < 700) {
+    if (window.innerHeight < 700 && window.innerWidth > 800) {
         textArea.rows = 1
         console.log('here')
     } else {
