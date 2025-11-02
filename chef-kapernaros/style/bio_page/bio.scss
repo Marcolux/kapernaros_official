@@ -475,8 +475,8 @@ $primaryColor: #f8f8f5;
     .animated-highlight { color: var(--secondaryColor) !important; }
 }
 
-@media only screen and (max-width: 1200px) { 
-        #bioPage {
+@media only screen and (min-width: 781px) and (max-width: 1200px) { 
+    #bioPage {
         #carouselSec{ 
             margin-top: 10dvh !important;
         }
