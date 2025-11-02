@@ -312,7 +312,7 @@
   letter-spacing: 0.01em;
   line-height: 30px;
   text-align: left;
-  color: #fff;
+  color: #fff !important;
 }
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner:hover {
   color: var(--secondaryColor);
