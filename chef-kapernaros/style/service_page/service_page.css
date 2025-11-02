@@ -147,9 +147,9 @@
   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1050px) {
+@media only screen and (min-width: 801px) and (max-width: 1050px) {
   .singleServiceWrapper {
-    height: 70dvh !important;
+    height: 75dvh !important;
   }
   .singleServiceWrapper .serviceVideoContainer {
     position: relative;
@@ -180,7 +180,10 @@
     display: none;
   }
   .singleServiceWrapper .serviceBxDescription {
-    font-size: 20px !important;
+    font-size: 16px !important;
+  }
+  .singleServiceWrapper .serviceTextBx {
+    gap: 10px !important;
   }
 }
 @media only screen and (max-width: 1050px) {
@@ -306,24 +309,5 @@
     box-shadow: inset 3px 3px 5px rgba(25, 25, 25, 0.15), inset -3px -3px 5px rgba(25, 25, 25, 0.15);
     cursor: pointer;
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-  }
-  #servicesPage footer {
-    flex-direction: column-reverse;
-    position: relative;
-    padding-top: 15px !important;
-    padding-bottom: 40px !important;
-    width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    gap: 30px;
-  }
-  #servicesPage footer img {
-    width: 70%;
-    height: auto !important;
-  }
-  #servicesPage footer #webcraftLink {
-    position: absolute;
-    bottom: 20px;
-    font-size: 14px !important;
   }
 }/*# sourceMappingURL=service_page.css.map */

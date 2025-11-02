@@ -297,24 +297,5 @@ body#chefTablePage{
                 }
             }
         }
-        footer { 
-            flex-direction: column-reverse;
-            position: relative;
-            padding-top: 15px !important;
-            padding-bottom: 40px !important;
-            width: 100%;
-            height: fit-content;
-            gap: 30px;
-            img {
-                width: 70%;
-                height: auto !important;
-            }
-            #webcraftLink {
-                position: absolute;
-                bottom: 20px;
-                font-size: 14px !important;
-            }
-            
-        }
     }
 }

@@ -280,23 +280,4 @@ body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-
     width: 35px !important;
     height: 35px !important;
   }
-  body#chefTablePage footer {
-    flex-direction: column-reverse;
-    position: relative;
-    padding-top: 15px !important;
-    padding-bottom: 40px !important;
-    width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    gap: 30px;
-  }
-  body#chefTablePage footer img {
-    width: 70%;
-    height: auto !important;
-  }
-  body#chefTablePage footer #webcraftLink {
-    position: absolute;
-    bottom: 20px;
-    font-size: 14px !important;
-  }
 }/*# sourceMappingURL=chef_table.css.map */

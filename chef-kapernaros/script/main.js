@@ -23,11 +23,11 @@ if (hambMenu) {
     });
 }
 var navBarAdjToScreen = function () {
-    if (window.innerWidth < 750 && navBar.classList.contains('biggerScreen')) {
+    if (window.innerWidth < 800 && navBar.classList.contains('biggerScreen')) {
         navBar.classList.add('mobileView');
         navBar.classList.remove('biggerScreen');
     }
-    else if (window.innerWidth >= 750 && !navBar.classList.contains('biggerScreen')) {
+    else if (window.innerWidth >= 800 && !navBar.classList.contains('biggerScreen')) {
         navBar.classList.remove('mobileView');
         navBar.classList.add('biggerScreen');
     }

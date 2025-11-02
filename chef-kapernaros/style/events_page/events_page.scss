@@ -236,14 +236,21 @@ $shadowInset: #ffffff41;
             justify-content: center;
             padding-top: 20px;
             #all-tabs {
+                border: 1px solid var(--secondaryColor) !important;
                 display: flex;
-                width: 100% ;
                 div {
-                    width: 33%;
-                    label {
-                        padding: 10px;
-                        font-size: 16px;
-                    }
+                    // border-top: 1px solid var(--secondaryColor);
+                    width: fit-content !important;
+                    // label {
+                    //     font-size: 16px;
+                    //     padding: 10px;
+                    // }
+                    // &:nth-child(1) { 
+                    //     border-left: 1px solid var(--secondaryColor);
+                    // }
+                    // &:nth-child(3) { 
+                    //     border-right: 1px solid var(--secondaryColor);
+                    // }
                 }
             }
         }
@@ -311,25 +318,6 @@ $shadowInset: #ffffff41;
                 }
             }
 
-        }
-        footer { 
-            flex-direction: column-reverse;
-            position: relative;
-            padding-top: 15px !important;
-            padding-bottom: 40px !important;
-            width: 100%;
-            height: fit-content;
-            gap: 30px;
-            img {
-                width: 70%;
-                height: auto !important;
-            }
-            #webcraftLink {
-                position: absolute;
-                bottom: 20px;
-                font-size: 14px !important;
-            }
-            
         }
     }
 }

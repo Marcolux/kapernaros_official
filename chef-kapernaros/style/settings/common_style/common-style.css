@@ -205,9 +205,7 @@ footer img {
     width: 30% !important;
   }
   footer #webcraftLink {
-    bottom: 20px !important;
     height: 13vh !important;
-    justify-content: center;
     align-items: end;
   }
 }
@@ -217,7 +215,7 @@ footer img {
     flex-direction: column-reverse;
     position: relative;
     padding-top: 25px !important;
-    padding-bottom: 40px !important;
+    padding-bottom: 60px !important;
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
@@ -231,6 +229,8 @@ footer img {
     position: absolute;
     bottom: 20px;
     font-size: 14px !important;
+    text-align: center;
+    justify-content: center;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1400px) {
@@ -239,7 +239,7 @@ footer img {
     align-items: end !important;
   }
   footer #webcraftLink {
-    bottom: 20px;
+    bottom: 30px;
     justify-content: center;
     align-items: end;
     height: 100%;
@@ -584,7 +584,16 @@ footer img {
     background-color: #000000 !important;
   }
 }
-@media only screen and (min-width: 781px) and (max-width: 1200px) {
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+  .navBar.biggerScreen #socialMedia a:not(.logoNav) i {
+    font-size: 20px !important;
+  }
+  .navBar.biggerScreen .linkContainer {
+    font-size: 16px !important;
+  }
+  .navBar.biggerScreen .linkContainer .currentTitle {
+    font-size: 16px !important;
+  }
   .navBar.biggerScreen.scrolled #navBgScn {
     height: 4dvh !important;
   }

@@ -234,15 +234,12 @@
     padding-top: 20px;
   }
   #eventsPage #tabs-events #all-tabs {
+    border: 1px solid var(--secondaryColor) !important;
     display: flex;
-    width: 100%;
   }
   #eventsPage #tabs-events #all-tabs div {
-    width: 33%;
-  }
-  #eventsPage #tabs-events #all-tabs div label {
-    padding: 10px;
-    font-size: 16px;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
   }
   #eventsPage #pageContent {
     flex: auto;
@@ -320,24 +317,5 @@
   }
   #eventsPage .tab-content .event_wrapper .event_card .eventPicWrapper {
     min-width: 100% !important;
-  }
-  #eventsPage footer {
-    flex-direction: column-reverse;
-    position: relative;
-    padding-top: 15px !important;
-    padding-bottom: 40px !important;
-    width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    gap: 30px;
-  }
-  #eventsPage footer img {
-    width: 70%;
-    height: auto !important;
-  }
-  #eventsPage footer #webcraftLink {
-    position: absolute;
-    bottom: 20px;
-    font-size: 14px !important;
   }
 }/*# sourceMappingURL=events_page.css.map */

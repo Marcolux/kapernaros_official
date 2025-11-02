@@ -101,9 +101,7 @@ footer {
 		align-items: end !important;
 		img { width: 30% !important; }
 		#webcraftLink {
-			bottom: 20px !important;
 			height: 13vh !important;
-			justify-content: center;
 			align-items: end;
 		}
 	}
@@ -114,7 +112,7 @@ footer {
 		flex-direction: column-reverse;
 		position: relative;
 		padding-top: 25px !important;
-		padding-bottom: 40px !important;
+		padding-bottom: 60px !important;
 		width: 100%;
 		height: fit-content;
 		gap: 30px;
@@ -126,6 +124,8 @@ footer {
 			position: absolute;
 			bottom: 20px;
 			font-size: 14px !important;
+			text-align: center;
+			justify-content: center;
 		}
 		
 	}
@@ -135,7 +135,7 @@ footer {
 	footer {
 		align-items: end !important;
 		#webcraftLink {
-			bottom: 20px;
+			bottom: 30px;
 			justify-content: center;
 			align-items: end;
 			height: 100%;
@@ -464,8 +464,17 @@ footer {
     .navBar { background-color: #000000 !important;}
 }
 
-@media only screen and (min-width: 781px) and (max-width: 1200px) {
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
     .navBar.biggerScreen { 
+		#socialMedia a:not(.logoNav) i {
+			font-size: 20px !important;
+		}
+		.linkContainer {
+			font-size: 16px !important;
+			.currentTitle {
+				font-size: 16px !important;
+			}
+		}
 		&.scrolled {
 			#navBgScn { 
 				height: 4dvh !important;			

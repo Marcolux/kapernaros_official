@@ -461,12 +461,6 @@
     grid-template-columns: 5rem 1fr;
   }
 }
-#bioPage footer {
-  background-color: #000;
-  box-sizing: border-box;
-  height: -moz-fit-content;
-  height: fit-content;
-}
 #bioPage .maxWidth1500 {
   max-width: 1500px !important;
 }
