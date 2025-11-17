@@ -118,6 +118,9 @@ p {
   border-radius: 4px;
   filter: sepia(0.3);
 }
+#homePage #landingSection #landingPicBox #heroLandingPic {
+  display: none;
+}
 #homePage #landingSection #heroLandingVideoBG {
   position: absolute;
   inset: 0;
@@ -545,12 +548,18 @@ p {
     height: 100dvh;
   }
   #homePage #landingSection #landingPicBox #heroLandingVideo {
+    display: none;
+  }
+  #homePage #landingSection #heroLandingPic {
+    display: flex !important;
     height: 100vh;
     height: 100dvh;
     width: 100vw;
     top: 0vh;
     left: 0%;
     border-radius: 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #homePage #landingSection img#logoLanding {
     display: none;

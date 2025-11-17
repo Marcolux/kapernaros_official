@@ -101,6 +101,9 @@ p {color: #000000 !important;}
 				border-radius: 4px;
 				filter:sepia(0.3);
 			}
+			#heroLandingPic {
+				display: none;
+			}
 		}
 		#heroLandingVideoBG {
 			position: absolute;
@@ -503,13 +506,18 @@ p {color: #000000 !important;}
 				height: 100vh;
 				height: 100dvh;
 				#heroLandingVideo {
-					height: 100vh;
-					height: 100dvh;
-					width: 100vw;
-					top: 0vh;
-					left: 0%;
-					border-radius: 0px;
+					display: none;
 				}
+			}
+			#heroLandingPic {
+				display: flex !important;
+				height: 100vh;
+				height: 100dvh;
+				width: 100vw;
+				top: 0vh;
+				left: 0%;
+				border-radius: 0px;
+				object-fit: cover;
 			}
 			img#logoLanding {
 				display: none;

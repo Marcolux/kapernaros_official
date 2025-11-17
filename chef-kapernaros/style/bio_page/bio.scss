@@ -13,6 +13,7 @@ $primaryColor: #f8f8f5;
         min-height: 550px;
         padding-bottom: 50px;
         position: relative;
+        #scrollForMore { display: none;}
         .carouselContainer {
             height: calc(100% - 20px);
             justify-content: center;
@@ -691,6 +692,20 @@ $primaryColor: #f8f8f5;
             height: 100dvh;
             min-width: 0px;
             // background-color: #000000 !important;
+            #scrollForMore {
+                display: flex;
+                width: 100%;
+                p {
+                    // border: 1px solid var(--secondaryColor);
+                    padding: 5px 20px;
+                    color: var(--secondaryColor) !important;
+                    z-index: 11;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                    font-size: 14px;
+                }
+            }
             
             >div {
                 padding: 0px !important;

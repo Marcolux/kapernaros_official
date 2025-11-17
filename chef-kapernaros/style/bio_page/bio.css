@@ -15,6 +15,9 @@
   padding-bottom: 50px;
   position: relative;
 }
+#bioPage #carouselSec #scrollForMore {
+  display: none;
+}
 #bioPage #carouselSec .carouselContainer {
   height: calc(100% - 20px);
   justify-content: center;
@@ -699,6 +702,19 @@
     min-height: 100dvh;
     height: 100dvh;
     min-width: 0px;
+  }
+  #bioPage #carouselSec #scrollForMore {
+    display: flex;
+    width: 100%;
+  }
+  #bioPage #carouselSec #scrollForMore p {
+    padding: 5px 20px;
+    color: var(--secondaryColor) !important;
+    z-index: 11;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 14px;
   }
   #bioPage #carouselSec > div {
     padding: 0px !important;

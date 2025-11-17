@@ -25,7 +25,7 @@
 
         <!--Preload Images-->
 
-        <!-- <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1920,h_1080,q_auto:best,vc_h264,f_mp4/v1759964303/videos/cooking_classes_3_lkhxug.mp4" as="video"> -->
+        <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/video/upload/f_mp4,vc_h264:baseline,q_auto,c_scale,w_600/Niko/new_materials/chef_kapernaros_landin_new_pl8qij.mp4" as="video">
         <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709553929/Niko/Home_Page_Chef_Kapernaros_img_HQ_1_q0nf2f.webp" as="image">
         <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" as="image">
         <link rel="preload" href="https://res.cloudinary.com/drdrs6pdq/image/upload/q_100/v1709556440/Niko/chef-kapernaros-signature_edusac.webp" as="image">
@@ -185,20 +185,22 @@
         </nav>
         <section id="landingSection" class="flex flex-column flex-justifyContent-end" style="position: relative;" id="topPage">
             <div id="landingPicBox" class="hero">
-            <video
-            id="heroLandingVideo"
-            autoplay
-            playsinline
-            webkit-playsinline
-            loop
-            preload="auto"
-            poster="https://res.cloudinary.com/drdrs6pdq/video/upload/so_0,q_auto,f_jpg/Niko/new_materials/chef_kapernaros_landing_hero.jpg"
-            crossorigin="anonymous"
-            >
-                <source src="https://res.cloudinary.com/drdrs6pdq/video/upload/f_mp4,vc_h264:baseline,q_auto,c_scale,w_600/Niko/new_materials/chef_kapernaros_landin_new_pl8qij.mp4" type="video/mp4">
-            </video>
+                <video
+                    id="heroLandingVideo"
+                    autoplay
+                    muted
+                    playsinline
+                    webkit-playsinline
+                    loop
+                    preload="auto"
+                    poster="https://res.cloudinary.com/drdrs6pdq/video/upload/so_0,q_auto,f_jpg/Niko/new_materials/chef_kapernaros_landing_hero.jpg"
+                    crossorigin="anonymous"
+                >
+                    <source src="https://res.cloudinary.com/drdrs6pdq/video/upload/f_mp4,vc_h264:baseline,q_auto,c_scale,w_600/Niko/new_materials/chef_kapernaros_landin_new_pl8qij.mp4" type="video/mp4">
+                </video>
 
 
+                <img id="heroLandingPic" src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871522/Niko/new_materials/chef-pic-9_o336q6.jpg" style="display: none;"/>
             </div>
             <img src="chef-kapernaros/images/new_golden_logo.svg" alt="Chef Kapernaros Landing page Logo" id="logoLanding">
             <img src="chef-kapernaros/images/chef-signature.svg" alt="Chef Kapernaros Landing page signature" id="signatureLanding">
