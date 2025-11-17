@@ -264,8 +264,8 @@ const allEventsUpcoming: eventObj[] = [
         event_location: "Harwood Heights, Recreation center",
         event_time: "6:00 pm - 8:30 pm",
         event_description: "Spend an unforgettable evening learning, tasting, and cooking with Chef Kapernaros. This hands-on class focuses on creating fresh, flavorful dishes using wholesome ingredients and classic Mediterranean techniques. Perfect for anyone who loves cooking, good company, and discovering the joy in every bite.",
-        event_link: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340325/Niko/new_materials/viber_image_2025-11-16_18-39-00-116_qscdyt.jpg",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/cooking_classes_chef_kapernaros_vz0pbx.jpg",
+        event_link: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340325/Niko/new_materials/viber_image_2025-11-16_18-39-00-116_qscdyt.webp",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_631,h_709/v1761871515/Niko/new_materials/cooking_classes_chef_kapernaros_vz0pbx.webp",
         event_isMostRecent: true
     }
 ]
@@ -278,7 +278,7 @@ const allEventsPast: eventObj[] = [
         event_time: "6:30 pm - 7:45 pm",
         event_description: "This isn’t just a night out; it’s a movement toward a world without cancer. Join us as we celebrate over 35 amazing restaurants from the Chicagoland area, and let's make a difference together!",
         event_link: "www.chicagotasteofhope.com",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340556/Niko/new_materials/taste_of_hope_chef_Kapernaros_2_ezmkfg.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340556/Niko/new_materials/taste_of_hope_chef_Kapernaros_2_ezmkfg.webp",
         event_isMostRecent: true
     },
     { 
@@ -289,7 +289,7 @@ const allEventsPast: eventObj[] = [
         event_time: "",
         event_description: "Rise and Shine gourmet brunch, enjoy cooking with some of most talent chefs in the city",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/pierless_hospitality_chef_kapernaros_gfd3sh.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/pierless_hospitality_chef_kapernaros_gfd3sh.webp",
         event_isMostRecent: true
     },
     { 
@@ -300,7 +300,7 @@ const allEventsPast: eventObj[] = [
         event_time: "",
         event_description: "Celebrating 50 years of Panos Food",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880299/Niko/new_materials/chef-pic-8_fehnzs.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880299/Niko/new_materials/chef-pic-8_fehnzs.webp",
         event_isMostRecent: true
     },
     { 
@@ -311,7 +311,7 @@ const allEventsPast: eventObj[] = [
         event_time: "",
         event_description: "Pierless Hospitality team of Navy Pier Chicago at 'I Cook For' Benefit",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035490/Niko/new_materials/I-cook-for-benefit_ri4usq.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035490/Niko/new_materials/I-cook-for-benefit_ri4usq.webp",
         event_isMostRecent: true
     },
     { 
@@ -322,7 +322,7 @@ const allEventsPast: eventObj[] = [
         event_time: "",
         event_description: "For one more year It is a great honor for me and Pierless Hospitality team to support The Cystic Fibrosis Foundation, the world's leader in the search for a cure for CF.",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035621/Niko/new_materials/grand-chef-experience_u2rqn2.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035621/Niko/new_materials/grand-chef-experience_u2rqn2.webp",
         event_isMostRecent: true
     }
 ]
@@ -336,7 +336,7 @@ const allEventsCompetions: eventObj[] = [
         event_time: "",
         event_description: "Season 60, Episode 2 - Big Fat Greek Kitchen - participant",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880299/Niko/new_materials/chef-pic-5_mbrlln.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880299/Niko/new_materials/chef-pic-5_mbrlln.webp",
         event_isMostRecent: true
     },
     { 
@@ -347,7 +347,7 @@ const allEventsCompetions: eventObj[] = [
         event_time: "",
         event_description: "<span class='col-12 text-center text-bold fontSize24'>Chef Kapernaros Big Win vs Iron Chef Bobby Flay</span> <br><br>- Episode winner - Season 35, Episode 12 - Talk the Talk and Walk the Walk.",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_2_flbrxf.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1726763368/Niko/competitions/BobbyFlay_2_flbrxf.webp",
         event_isMostRecent: true
     },
     { 
@@ -358,7 +358,7 @@ const allEventsCompetions: eventObj[] = [
         event_time: "",
         event_description: "Fine dining competition awarded for excellence. Americas final finalist.",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035672/Niko/new_materials/Chrisa-kapernaros-hyatt-competition_vkbvwq.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035672/Niko/new_materials/Chrisa-kapernaros-hyatt-competition_vkbvwq.webp",
         event_isMostRecent: true
     },
     { 
@@ -369,7 +369,7 @@ const allEventsCompetions: eventObj[] = [
         event_time: "",
         event_description: "Fine dining competition awarded for excellence. First place winner.",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761874686/Niko/competitions/hyatt_world_midwest_eysuy8.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761874686/Niko/competitions/hyatt_world_midwest_eysuy8.webp",
         event_isMostRecent: true
     },
 ]

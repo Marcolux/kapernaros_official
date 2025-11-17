@@ -1,50 +1,113 @@
 @import './website_variables';
 
-* { box-sizing: border-box; }
+* { 
+	box-sizing: border-box; 
+	padding: 0px; 
+	margin: 0px;
+}
 html { 
 	letter-spacing: 0.009em; 
 	font-family: var(--body-App-fontFamily);
+    height: 100%;
+    margin: 0;
+	overflow-y: hidden;
+}
+body {
+	height: 100dvh;
+	overflow-y: auto;
+	position: relative; 
+}
+p {color: #000000 !important;}
+.titlesChef {
+	font-family: 'Prata';
+	font-size: 40px;
+	font-weight: 500;
+	margin-left: 15px;
+	position: relative;
+	width: fit-content;
+	z-index: 5;
+	letter-spacing: 0.03em;
+	&::before {
+		content: "";
+		background-color: var(--secondaryColor);
+		bottom: 5px;
+		height: calc(100% - 10px);
+		left: -25px;
+		opacity: 0.5;
+		position: absolute;
+		width: calc(100%);
+		z-index: -1;
+	}
 }
 @font-face {
 	font-family: var(--body-App-fontFamily);
-	src: url('../../fonts/ledger/var(--body-App-fontFamily)-Regular.ttf');
+	src: url('../../fonts/ledger/var(--body-App-fontFamily)-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
-
 @font-face {
 	font-family: 'Bebas Neue';
-	src: url('../../fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+	src: url('../../fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Prata';
-	src: url('../../fonts/Prata/Prata-Regular.ttf');
+	src: url('../../fonts/Prata/Prata-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Bison';
-	src: url('../../fonts/Bison/Bison-Bold.ttf');
+	src: url('../../fonts/Bison/Bison-Bold.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'September Script';
-	src: url('../../fonts/September_script/september-script.regular.ttf');
+	src: url('../../fonts/September_script/september-script.regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Playfair Display';
-	src: url('../../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf');
+	src: url('../../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Inter';
-	src: url('../../fonts/Inter/Inter-Regular.ttf');
+	src: url('../../fonts/Inter/Inter-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Merriweather';
-	src: url('../../fonts/Merriweather/Merriweather-Regular.ttf');
+	src: url('../../fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Bodoni';
-	src: url('../../fonts/Bodoni/BodoniModa-VariableFont_opsz\,wght.ttf');
+	src: url('../../fonts/Bodoni/BodoniModa-VariableFont_opsz\,wght.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Bodoni Libre';
-	src: url('../../fonts/Bodoni/LibreBodoni-VariableFont_wght.ttf');
+	src: url('../../fonts/Bodoni/LibreBodoni-VariableFont_wght.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 .rotate180{
 	transform: rotate(180deg);

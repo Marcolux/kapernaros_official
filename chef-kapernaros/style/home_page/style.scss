@@ -1,37 +1,5 @@
 @import '../settings/common_style/website_variables';
-* {padding: 0px; margin: 0px;}
-html {
-    height: 100%;
-    margin: 0;
-	overflow-y: hidden;
-}
-body {
-	height: 100dvh;
-	overflow-y: auto;
-	position: relative; 
-}
-p {color: #000000 !important;}
-.titlesChef {
-	font-family: 'Prata';
-	font-size: 40px;
-	font-weight: 500;
-	margin-left: 15px;
-	position: relative;
-	width: fit-content;
-	z-index: 5;
-	letter-spacing: 0.03em;
-	&::before {
-		content: "";
-		background-color: var(--secondaryColor);
-		bottom: 5px;
-		height: calc(100% - 10px);
-		left: -25px;
-		opacity: 0.5;
-		position: absolute;
-		width: calc(100%);
-		z-index: -1;
-	}
-}
+
 #homePage {
 	background: url('../../images/servicesBg.png');
 	background-size: cover;
@@ -313,10 +281,9 @@ p {color: #000000 !important;}
 					margin-right: 15%;
 				}
 				img#logoMidPage {
-					aspect-ratio: 1/2;
-					height: 126px;
+					aspect-ratio: 1.51/1;
 					left: -100px;
-					width: 215px;
+					width: 250px;
 				}
 			}
 		}

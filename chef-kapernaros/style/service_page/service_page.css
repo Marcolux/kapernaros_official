@@ -132,7 +132,7 @@
   margin: 0px;
 }
 #servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx button.serviceBxButton {
-  background-color: #D3C896;
+  background-color: #b9af7f;
   color: #ffffff !important;
   border: 0px solid var(--secondaryColor);
   width: 100%;

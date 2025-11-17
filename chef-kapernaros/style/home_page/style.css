@@ -19,7 +19,7 @@
   --navbar-fontWeight: 600;
   --navbar-before-color: #CDAA7F;
   /*==== BODY ====*/
-  --body-App-fontFamily: "Inter";
+  --body-App-fontFamily: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   /*==== FOOTER ====*/
   --footer-height: 160px;
   --navBackGroundColor: #ffffff00;
@@ -33,50 +33,6 @@
   --secondaryColorTran: #b9970034;
   --darkBlueColor: #1e293b;
   --backgroundV1: linear-gradient(180deg, var(--darkBlueColor), #000000);
-}
-
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
-html {
-  height: 100%;
-  margin: 0;
-  overflow-y: hidden;
-}
-
-body {
-  height: 100dvh;
-  overflow-y: auto;
-  position: relative;
-}
-
-p {
-  color: #000000 !important;
-}
-
-.titlesChef {
-  font-family: "Prata";
-  font-size: 40px;
-  font-weight: 500;
-  margin-left: 15px;
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  z-index: 5;
-  letter-spacing: 0.03em;
-}
-.titlesChef::before {
-  content: "";
-  background-color: var(--secondaryColor);
-  bottom: 5px;
-  height: calc(100% - 10px);
-  left: -25px;
-  opacity: 0.5;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
 }
 
 #homePage {
@@ -380,10 +336,9 @@ p {
   margin-right: 15%;
 }
 #homePage #bioSection #bioTextContainer #logoBtnWrapper img#logoMidPage {
-  aspect-ratio: 1/2;
-  height: 126px;
+  aspect-ratio: 1.51/1;
   left: -100px;
-  width: 215px;
+  width: 250px;
 }
 #homePage #servicesSection {
   background-color: transparent;
