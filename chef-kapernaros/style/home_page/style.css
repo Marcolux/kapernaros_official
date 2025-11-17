@@ -545,7 +545,14 @@ p {
     height: 100dvh;
   }
   #homePage #landingSection #landingPicBox #heroLandingVideo {
-    display: none;
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    top: 0vh;
+    left: 0%;
+    border-radius: 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #homePage #landingSection img#logoLanding {
     display: none;

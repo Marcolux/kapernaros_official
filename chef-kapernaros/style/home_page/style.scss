@@ -503,19 +503,15 @@ p {color: #000000 !important;}
 				height: 100vh;
 				height: 100dvh;
 				#heroLandingVideo {
-					display: none;
+					height: 100vh;
+					height: 100dvh;
+					width: 100vw;
+					top: 0vh;
+					left: 0%;
+					border-radius: 0px;
+					object-fit: cover;
 				}
 			}
-			// #heroLandingPic {
-			// 	display: flex !important;
-			// 	height: 100vh;
-			// 	height: 100dvh;
-			// 	width: 100vw;
-			// 	top: 0vh;
-			// 	left: 0%;
-			// 	border-radius: 0px;
-			// 	object-fit: cover;
-			// }
 			img#logoLanding {
 				display: none;
 				height: 135px;
