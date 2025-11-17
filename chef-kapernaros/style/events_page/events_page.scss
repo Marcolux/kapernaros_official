@@ -1,0 +1,333 @@
+$primaryColor: #f8f8f5;
+$gold: #b59b07;
+$background: linear-gradient(180deg, var(--darkBlueColor), #000000);
+$shadowInset: #ffffff41;
+
+#eventsPage {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 14vh;
+    // background: var(--backgroundV1);
+    background-color: #ffffff;
+    flex: auto;
+    #tabs-events {
+        background-color: #ffffff;
+        border-bottom: 1px solid #000000;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        #all-tabs {
+            width: fit-content;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: 1px solid var(--secondaryColor);
+            overflow: hidden;
+            &:hover {
+                cursor: pointer;
+            }
+            div.flex:nth-child(2) {
+                label {
+                    border-left: 1px solid var(--secondaryColor);
+                    border-right: 1px solid var(--secondaryColor);
+                }
+            }
+            label {
+                padding: 10px 40px 5px;
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 0.01em;
+                &:nth-child(2)
+                &:hover {
+                    cursor: pointer;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        input.activeTab + label {
+            background-color: #000000;
+            color: var(--secondaryColor);
+            font-weight: 600 !important;
+        }
+    }
+    #content-events {
+        display: flex;
+        flex: auto;
+        // background-color: #f8f8f5;
+        box-shadow: inset 0px 0px 50px 0px #000000;
+        background: linear-gradient(180deg, var(--darkBlueColor), #000000);
+    }
+    #pageContent {
+        flex: auto;
+        padding-top: 50px;
+    }
+    .readOnly {
+        border:0;
+        clip:rect(0,0,0,0);
+        height:1px;
+        margin:-1px;
+        overflow:hidden; 
+        padding:0; 
+        position:absolute !important;
+        white-space:nowrap; 
+        width:1px; 
+    }
+    .tab-content {
+        width: 100%;
+        // background-color: #ffffff;
+        // gap: 20px;
+        &:not([hidden]) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .event_wrapper {
+            display: flex;
+            padding: 60px 10px 0px 10px;
+            width: 100%;
+            height: 550px;
+            &:nth-child(odd) {
+                .event_card {
+                    flex-direction: row-reverse;
+                }
+            }
+            &.mostRecentEvt {
+                width: 100%;
+                .eventInfo {
+                    float: none;
+                    .titlePicWrapper {
+                        text-align: center;
+                    }
+                    .eDate {
+                        text-align: center;
+                    }
+                    .placeTimeWrapper {
+                        justify-content: center !important;
+                        // gap: 50px;
+                    }
+                }
+                .eventPic {display: none;}
+                .eventPicWrapper {
+                    display: flex !important;                    
+                    min-width: 450px !important;
+                    height: 100% !important;
+                    width: 45% !important;
+                    // max-height: 442px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+            }
+            .event_card {
+                display: flex;
+                position: relative;
+                box-shadow: 0 4px 4px #00000025;
+                border: 1px solid var(--secondaryColor);
+                width: 100%;
+                background-color: #f2f2f2;
+                &#Chicago_Gourmet, &#Panos_Food_Show, &#Chopped {
+                    .eDescription {
+                        text-align: center;
+                        font-size: 22px;
+                    }
+                }
+                .eventInfo {
+                    display: flex;
+                    flex: auto;
+                    flex-direction: column;
+                    gap: 15px;
+                    padding: 50px;
+                    width: 55%;
+                    .eTitle {
+                        font-size: 50px;
+                        font-weight: 300;
+                    }
+                    .eDate {
+                        font-size: 45px;
+                        font-weight: 700;
+                    }
+                    .eLocation, .eTime {
+                        font-size: 30px;
+                        font-weight: 300;
+                    } 
+                    .eDescription {
+                        font-size: 20px;
+                        margin: auto;
+                        text-align: start;
+                    }
+                    .eLink {
+                        font-size: 18px;
+                        margin-top: auto;
+                        text-align: end;
+                        text-decoration: none;
+                        color: var(--secondaryColor);
+                    }
+                    float: left;
+                }
+                .eventPicWrapper {
+                    display: none;
+                }
+                .titlePicWrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: end;
+                    width: 100%;
+                    .eventPic {
+                        height: 150px;
+                        width: 30%;
+                        // height: 100%;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1050px) and (max-width: 1250px) and (max-height: 920px) {
+    .eventInfo {
+        .eTitle {font-size: 40px !important;}
+        .eDate {font-size: 35px !important;}
+        .eLocation {font-size: 27px !important;}
+        .eDescription {font-size: 18px !important;}
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 1250px) {
+    #tabs-events {
+        display: flex;
+        justify-content: center !important;
+        #all-tabs {
+            justify-content: center !important;
+            border: 0px solid var(--secondaryColor) !important;
+            div {
+                width: fit-content !important;
+                border-top: 1px solid var(--secondaryColor);
+                &:nth-child(1) { 
+                    border-left: 1px solid var(--secondaryColor);
+                }
+                &:nth-child(3) { 
+                    border-right: 1px solid var(--secondaryColor);
+                }
+            }
+        }
+    }
+    .event_wrapper {
+        width: 90% !important;
+        margin: auto;
+        .eDescription {
+            font-size: 25px !important;
+            line-height: 35px;
+            padding: 20px;
+        }
+        .eventPicWrapper {
+            img {
+                max-height: 40dvh;
+                object-position: center !important;
+                object-fit: contain !important;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1050px){
+    #eventsPage {
+        padding-top: 10vh;
+        #tabs-events {
+            background-color: #ffffff;
+            border-bottom: 1px solid #000000;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            #all-tabs {
+                border: 1px solid var(--secondaryColor) !important;
+                display: flex;
+                div {
+                    // border-top: 1px solid var(--secondaryColor);
+                    width: fit-content !important;
+                    label {
+                        font-size: 16px;
+                        padding: 10px;
+                    }
+                    // &:nth-child(1) { 
+                    //     border-left: 1px solid var(--secondaryColor);
+                    // }
+                    // &:nth-child(3) { 
+                    //     border-right: 1px solid var(--secondaryColor);
+                    // }
+                }
+            }
+        }
+        #pageContent {
+            flex: auto;
+            padding-top: 50px;
+        }
+        .tab-content {
+            padding: 20px !important;
+            gap: 20px;
+            .event_wrapper {
+                display: flex;
+                height: fit-content !important;
+                padding: 0px;
+                width: 100%;
+                gap: 20px;
+                .event_card  {
+                    flex-direction: column-reverse !important;
+                }
+                &.mostRecentEvt {
+                    width: 100%;
+                    .eventInfo {
+                        width: 100%;
+                        .titlePicWrapper {text-align: center;}
+                        .placeTimeWrapper {
+                            flex-direction: column !important;
+                            justify-content: center !important;
+                            gap: 10px;
+                        }
+                    }
+                    .eventPic {display: none;}
+                    .eventPicWrapper {                
+                        min-width: 100% !important;
+                        height: 100% !important;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: top;
+                        }
+                    }
+                }
+                .event_card {
+                    flex-direction: column-reverse;
+                    box-shadow: none;
+                    .eventInfo {
+                        flex-direction: column;
+                        gap: 20px;
+                        padding: 20px;
+                        .eTitle { font-size: 30px; font-weight: 600; }
+                        .eDate {  font-size: 30px; font-weight: 300 !important; }
+                        .eLocation, .eTime {
+                            font-size: 20px;
+                            margin: 0px !important;
+                            text-align: center !important;
+                            justify-content: center;
+                        }
+                        .eLink {
+                            font-size: 18px;
+                        }
+                    }
+                    .eventPicWrapper {
+                        min-width: 100% !important;
+                    }
+                }
+            }
+
+        }
+    }
+}
+@media only screen and (min-width: 1551px) {}
+@media only screen and (min-width: 1451px) and (max-width: 1650px) {}
+@media only screen and (max-width: 1451px) {}
+@media only screen and (max-width: 1100px) {}

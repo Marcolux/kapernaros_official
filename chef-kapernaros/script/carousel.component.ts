@@ -66,44 +66,44 @@ class slidesList {
 function initCarousel() {
     const slide1 = {
         description: 'Born and raised in Piraeus, Greece, I began my career studying at the Greek Culinary Institute & working on islands such as Rhodes, Kos and Crete.',
-        leftBG: '#000B4C',
+        leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1711495614/Niko/Rectangle_55_rwurxu.webp',
         picNote: 'Piraeus, Attica'
     }
     const slide2 = {
-        description: 'In 2011, I achieved one of my dreams - teaching at the Culinary Institute of Greece, Anavissos, showcasing the cooking styles of Greek, French, Mediterranean and international cuisines.  My team and I worked closely with the Greek Government and the Council of the European Union on exhibitions featuring Greek cuisine and environmental sustainability.',
-        leftBG: '#000000',
+        description: 'In 2011, I fulfilled a dream by teaching at the Culinary Institute of Greece, highlighting Greek, French, Mediterranean, and international cuisines. My team collaborated with the Greek Government and the EU Council on exhibitions promoting Greek cuisine and sustainability.',
+        leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1711495906/Niko/Rectangle_52_xrwyz8.webp',
         picNote: 'Culinary Institute of Greece, Anavissos, Attica'
     }
     const slide3 = {
-        description: 'As I continued teaching, I then settled into Grand Resort Lagonissi, Greece, a private peninsula Luxury Resort and member of Leading Hotels of the World.  I worked my way up and was entrusted to be the Head Chef for Lagonissi’s VIP guests such as royalty, world-renowned athletes, award-winning actors/actresses and those in the music industry. I ended my career at Grand Resort Lagonissi as Executive Sous Chef in 2018.',
-        leftBG: '#262626',
+        description: 'I later joined Grand Resort Lagonissi, a luxury private peninsula resort in Greece and member of Leading Hotels of the World, where I advanced to Executive Sous Chef. I led the VIP kitchen serving royalty, world-class athletes, and acclaimed entertainers.',
+        leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1711495915/Niko/Rectangle_54_lltm3q.webp',
         picNote: 'Lagonissi, Attica'
     }
     const slide4 = {
-        description: 'In 2018, my wife and I made the decision to move to Chicago to be closer to her family.  We packed up our home, and with our daughter, and moved to the other side of the world. I continued to pursue my passion for cooking, and in January of 2021 we welcomed a beautiful boy - making us a family of four.',
-        leftBG: '#000B4C',
+        description: 'In 2018, my wife and I relocated to Chicago to be closer to her family. We continued building our life here, and in 2021, welcomed our son, completing our family of four.',
+        leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1712186480/Niko/chef-kapernaros.family2_kxxwzi.webp',
         picNote: ''
     }
     const slide5 = {
         description: 'In June 2018, I began carving my new path in Chicago as Chef de Cuisine at the Hyatt Regency Chicago.',
-        leftBG: '#000000',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1712191409/Niko/Untitled_design_14_hjsup9.webp',
+        leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1711574230/Niko/chef-kapernaros-team-work-card_gbakd0.png',
         picNote: 'Hyatt Regency Chicago'
     }
     const slide6 = {
-        description: 'In 2021, I joined the Avli restaurant group and assisted with opening Avli on the Park, located in Chicago Lakeshore East. I was hired to lead and expand the vision of contemporary Greek cuisine with an emphasis of curating a menu where everything is made from scratch. In 2023, the culinary team’s efforts were recognized and the restaurant was named a Michelin 2023 Honoree.',
-        leftBG: '#262626',
+        description: 'In 2021, I joined Avli restaurant group to help open Avli on the Park in Chicago. I led the development of a from-scratch contemporary Greek menu that earned a Michelin 2023 Honoree recognition.',
+        leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
         rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/w_800/v1712191635/Niko/IMG_20210701_161941_808_qdmrcm.webp',
         picNote: 'Avli on the Park, Lakeshore East, Chicago'
     }
     const slide7 = {
         description: 'In June of 2024, I welcomed a new challenge and accepted a position with Levy Restaurants Cultural Attractions as Executive Chef of Navy Pier Chicago.  Here, I fuse culinary experiences with the timeless architectural beauty of Chicago and Lake Michigan.',
-        leftBG: '#000B4C',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1719343585/Kapernaros_NavyPier_gae6ms.webp',
+        leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1759880319/Niko/new_materials/navy-pier-job_t6zgjv.jpg',
         picNote: 'Navy Pier, Chicago'
     }
     // After adding a new slide update the circle_(lastIndex) in scss file too
@@ -126,35 +126,34 @@ function initCarousel() {
         const slide = newSlidesList.getSingleSlide(index) as Slide
         carouselElement.innerHTML = `
             <div class="flex singleCarouselSlide" id="slide_${index+1}">
-                <div id="timeline" class="flex flex-column flex-justifyContent-spaceAround">
-                    
-                    <div id="lineWhite"></div>
-                    <div id="circleWhite" class="circle_${index} position_0"></div>
+                <div class="timeline flex flex-column flex-justifyContent-spaceAround">
+                    <div class="lineWhite"></div>
+                    <div class="circleWhite circle_${index} position_0"></div>
                 </div>
                     
-                <div id="slideDescription" class="flex flex-column flex-justifyContent-center flex-alignItems-center" style="background-color: ${slide.leftBG}"> 
-                    <i id="prevSlide" class="fa-solid fa-chevron-up fontSize40"></i>            
-                    <div id="slideText" class="p-20 mx-30" style="border: 1px solid #dbba00">
-                        <p class="my-0 fontSize16">${slide.description}</p>
+                <div class="slideDescription flex flex-column flex-justifyContent-center flex-alignItems-center" style="background: ${slide.leftBG}"> 
+                    <i class="prevSlide fa-solid fa-chevron-up fontSize40"></i>            
+                    <div class="slideText p-20 mx-30">
+                        <p class="my-0">${slide.description}</p>
                     </div> 
-                    <i id="nextSlide" class="fa-solid fa-chevron-down fontSize40"></i>     
+                    <i class="nextSlide fa-solid fa-chevron-down fontSize40"></i>     
                 </div>
-                <div id="slidePic">
-                    <img id="slideImg" src="${slide.rightBG}" alt="Carousel Picture">
-                    <p class="m-0 note_${index}" id="picNote">${slide.picNote}</p>
+                <div class="slidePic">
+                    <img class="slideImg" src="${slide.rightBG}" alt="Carousel Picture">
+                    <p class="picNote m-0 note_${index}">${slide.picNote}</p>
                 </div>
             </div>
         `
             
-        const prevButton = document.getElementById('prevSlide') as HTMLElement
-        const nextButton = document.getElementById('nextSlide') as HTMLElement
-        const slideImg = document.getElementById('slideImg') as HTMLElement
-        const slideText = document.getElementById('slideText') as HTMLElement
+        const prevButton = document.querySelector('.prevSlide') as HTMLElement
+        const nextButton = document.querySelector('.nextSlide') as HTMLElement
+        const slideImg = document.querySelector('.slideImg') as HTMLElement
+        const slideText = document.querySelector('.slideText') as HTMLElement
         
         prevButton.addEventListener('click', () => {
             setTimeout(() => {
-                const circleWhite = document.getElementById('circleWhite') as HTMLElement
-                const picNote = document.getElementById('picNote') as HTMLElement
+                const circleWhite = document.querySelector('.circleWhite') as HTMLElement
+                const picNote = document.querySelector('.picNote') as HTMLElement
 
                 circleWhite.classList.remove('position_0')
                 circleWhite.classList.add('moveUp')
@@ -173,8 +172,8 @@ function initCarousel() {
 
         nextButton.addEventListener('click', () => {
             setTimeout(() => {
-                const circleWhite = document.getElementById('circleWhite') as HTMLElement
-                const picNote = document.getElementById('picNote') as HTMLElement
+                const circleWhite = document.querySelector('.circleWhite') as HTMLElement
+                const picNote = document.querySelector('.picNote') as HTMLElement
                 
                 circleWhite.classList.remove('position_0')
                 circleWhite.classList.add('moveDown')
@@ -192,8 +191,8 @@ function initCarousel() {
             moveSlide(1)
         })
         
-        let timelineElement = document.querySelector('#timeline') as HTMLDivElement
-        const lineWhite = document.getElementById('lineWhite') as HTMLElement
+        let timelineElement = document.querySelector('.timeline') as HTMLDivElement
+        const lineWhite = document.querySelector('.lineWhite') as HTMLElement
         timelineElement.style.background = slide.leftBG
 
         if (index >= newSlidesList.getLastIndex()) {
@@ -216,6 +215,8 @@ function initCarousel() {
         setTimeout(()=>{
             if (slideImg && slideText) {
                 slideImg.style.width = '100%'
+                slideImg.style.scale = '1'
+                slideImg.style.filter = 'blur(0px)'
                 slideText.style.scale = '1'
             }
         },200)
