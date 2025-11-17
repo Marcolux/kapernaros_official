@@ -23,6 +23,9 @@ $shadowInset: #ffffff41;
             border-top-right-radius: 8px;
             border: 1px solid var(--secondaryColor);
             overflow: hidden;
+            &:hover {
+                cursor: pointer;
+            }
             div.flex:nth-child(2) {
                 label {
                     border-left: 1px solid var(--secondaryColor);
@@ -35,6 +38,9 @@ $shadowInset: #ffffff41;
                 font-weight: 500;
                 letter-spacing: 0.01em;
                 &:nth-child(2)
+                &:hover {
+                    cursor: pointer;
+                }
                 &:hover {
                     cursor: pointer;
                 }

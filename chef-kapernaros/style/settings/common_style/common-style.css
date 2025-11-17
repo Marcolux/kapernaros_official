@@ -21,7 +21,7 @@
   /*==== BODY ====*/
   --body-App-fontFamily: "Inter";
   /*==== FOOTER ====*/
-  --footer-height: 60px;
+  --footer-height: 160px;
   --navBackGroundColor: #ffffff00;
   --navBarTextColor: #000;
   --navBtnBackGround: #C4B980;
@@ -195,6 +195,13 @@ footer i::before {
 footer img {
   height: 13vh;
 }
+footer #logosFooter {
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+footer #logosFooter img {
+  height: 80px;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   footer {
@@ -228,9 +235,23 @@ footer img {
   footer #webcraftLink {
     position: absolute;
     bottom: 20px;
-    font-size: 14px !important;
+    font-size: 12px !important;
     text-align: center;
     justify-content: center;
+  }
+  footer #logosFooter {
+    -moz-column-gap: 10px !important;
+         column-gap: 10px !important;
+  }
+  footer #logosFooter img {
+    height: 50px !important;
+  }
+  footer #socialLinks {
+    width: 100% !important;
+    justify-content: center;
+  }
+  footer #webcraftLink-footer {
+    font-size: 12px !important;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1400px) {

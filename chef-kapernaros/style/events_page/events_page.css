@@ -21,6 +21,9 @@
   border: 1px solid var(--secondaryColor);
   overflow: hidden;
 }
+#eventsPage #tabs-events #all-tabs:hover {
+  cursor: pointer;
+}
 #eventsPage #tabs-events #all-tabs div.flex:nth-child(2) label {
   border-left: 1px solid var(--secondaryColor);
   border-right: 1px solid var(--secondaryColor);
@@ -32,6 +35,9 @@
   letter-spacing: 0.01em;
 }
 #eventsPage #tabs-events #all-tabs label:nth-child(2) #eventsPage #tabs-events #all-tabs label:hover {
+  cursor: pointer;
+}
+#eventsPage #tabs-events #all-tabs label:hover {
   cursor: pointer;
 }
 #eventsPage #tabs-events input.activeTab + label {

@@ -119,27 +119,28 @@ document.querySelectorAll('.flip-card').forEach(function (card) {
     }
 });
 // ******* Popup logic ******* \\
-// const bobbyLink = document.getElementById('clickToPics') as HTMLElement
-// const bobbyFlay = document.getElementById('bobbyFlay') as HTMLElement
-// const closingPopup = document.getElementById('closingPopup') as HTMLElement
-// const openCompetitions = () => {
-//     window.location.href = './pages/services.html';
-//     localStorage.setItem('loading_competions', 'true')
-//     localStorage.setItem('hide_landing_popup', 'true')
-//     bobbyFlay.classList.add('hide')
-// }
-// if (bobbyLink) {
-//     bobbyLink.addEventListener('click', openCompetitions)
-// }
-// if (localStorage.getItem('hide_landing_popup') !== 'true' ) {
-//     bobbyFlay.classList.remove('hide')
-//     closingPopup.addEventListener('click', () => {
-//         localStorage.setItem('hide_landing_popup', 'true')
-//         bobbyFlay.classList.add('hide')
-//     })
-// } else {
-//     bobbyFlay.classList.add('hide')
-// }
+var bobbyLink = document.getElementById('clickToPics');
+var bobbyFlay = document.getElementById('bobbyFlay');
+var closingPopup = document.getElementById('closingPopup');
+var openCompetitions = function () {
+    window.location.href = './pages/services.html';
+    localStorage.setItem('loading_competions', 'true');
+    localStorage.setItem('hide_landing_popup', 'true');
+    bobbyFlay.classList.add('hide');
+};
+if (bobbyLink) {
+    bobbyLink.addEventListener('click', openCompetitions);
+}
+if (localStorage.getItem('hide_landing_popup') !== 'true') {
+    bobbyFlay.classList.remove('hide');
+    closingPopup.addEventListener('click', function () {
+        localStorage.setItem('hide_landing_popup', 'true');
+        bobbyFlay.classList.add('hide');
+    });
+}
+else {
+    bobbyFlay.classList.add('hide');
+}
 // Setting a cookie with SameSite=Lax
 document.cookie = "key=value; SameSite=Lax";
 /***************************************
@@ -211,7 +212,7 @@ var allEventsPast = [
         event_title: "Taste of Hope",
         event_date: "Nov 6, 2025",
         event_location: "Chicago, Navy Pier - AON Grand Ballroom",
-        event_time: "6:00 pm - 9:00 pm",
+        event_time: "6:30 pm - 7:45 pm",
         event_description: "This isn’t just a night out; it’s a movement toward a world without cancer. Join us as we celebrate over 35 amazing restaurants from the Chicagoland area, and let's make a difference together!",
         event_link: "www.chicagotasteofhope.com",
         event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340556/Niko/new_materials/taste_of_hope_chef_Kapernaros_2_ezmkfg.jpg",
@@ -264,25 +265,14 @@ var allEventsPast = [
 ];
 var allEventsCompetions = [
     {
-        event_id: "Good_Taste_Series_For_Hyatt_World_Midwest",
-        event_title: "Good Taste Series For Hyatt World Midwest",
-        event_date: "2018",
-        event_location: "Chicago, Hyatt McCormick",
+        event_id: "Chopped",
+        event_title: "Chopped",
+        event_date: "Nov, 2024",
+        event_location: "New York",
         event_time: "",
-        event_description: "Fine dining competition awarded for excellence. First place winner.",
+        event_description: "Season 60, Episode 2 - Big Fat Greek Kitchen - participant",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761874686/Niko/competitions/hyatt_world_midwest_eysuy8.jpg",
-        event_isMostRecent: true
-    },
-    {
-        event_id: "Good_Taste_Series_For_Hyatt_Americas_Final",
-        event_title: "Good Taste Series For Hyatt Americas Final",
-        event_date: "Sep, 2018",
-        event_location: "Bahamas, Grand Hyatt",
-        event_time: "",
-        event_description: "Fine dining competition awarded for excellence. Americas final finalist.",
-        event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035672/Niko/new_materials/Chrisa-kapernaros-hyatt-competition_vkbvwq.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880299/Niko/new_materials/chef-pic-5_mbrlln.jpg",
         event_isMostRecent: true
     },
     {
@@ -297,14 +287,25 @@ var allEventsCompetions = [
         event_isMostRecent: true
     },
     {
-        event_id: "Chopped",
-        event_title: "Chopped",
-        event_date: "Nov, 2024",
-        event_location: "New York",
+        event_id: "Good_Taste_Series_For_Hyatt_Americas_Final",
+        event_title: "Good Taste Series For Hyatt Americas Final",
+        event_date: "Sep, 2018",
+        event_location: "Bahamas, Grand Hyatt",
         event_time: "",
-        event_description: "Season 60, Episode 2 - Big Fat Greek Kitchen - participant",
+        event_description: "Fine dining competition awarded for excellence. Americas final finalist.",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880299/Niko/new_materials/chef-pic-5_mbrlln.jpg",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035672/Niko/new_materials/Chrisa-kapernaros-hyatt-competition_vkbvwq.jpg",
+        event_isMostRecent: true
+    },
+    {
+        event_id: "Good_Taste_Series_For_Hyatt_World_Midwest",
+        event_title: "Good Taste Series For Hyatt World Midwest",
+        event_date: "2018",
+        event_location: "Chicago, Hyatt McCormick",
+        event_time: "",
+        event_description: "Fine dining competition awarded for excellence. First place winner.",
+        event_link: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761874686/Niko/competitions/hyatt_world_midwest_eysuy8.jpg",
         event_isMostRecent: true
     },
 ];

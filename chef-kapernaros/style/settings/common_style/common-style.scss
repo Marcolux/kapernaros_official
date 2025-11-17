@@ -94,6 +94,10 @@ footer {
 		&::before{ font-size: 25px; }
 	}
 	img { height: 13vh; }
+	#logosFooter {
+		column-gap: 50px;
+		img { height: 80px;}
+	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 	footer {
@@ -123,9 +127,22 @@ footer {
 		#webcraftLink {
 			position: absolute;
 			bottom: 20px;
-			font-size: 14px !important;
+			font-size: 12px !important;
 			text-align: center;
 			justify-content: center;
+		}
+		#logosFooter {
+			column-gap: 10px !important;
+			img {
+				height: 50px !important;
+			}
+		}
+		#socialLinks {
+			width: 100% !important;
+			justify-content: center;
+		}
+		#webcraftLink-footer {
+			font-size: 12px !important;
 		}
 		
 	}

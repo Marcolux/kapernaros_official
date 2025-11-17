@@ -21,7 +21,7 @@
   /*==== BODY ====*/
   --body-App-fontFamily: "Inter";
   /*==== FOOTER ====*/
-  --footer-height: 60px;
+  --footer-height: 160px;
   --navBackGroundColor: #ffffff00;
   --navBarTextColor: #000;
   --navBtnBackGround: #C4B980;
@@ -443,7 +443,6 @@ p {
   width: 65%;
   max-width: 680px;
   max-height: 910px;
-  background-image: url("./../../images/niko_bobbyflay_pic.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -463,73 +462,27 @@ p {
 #bobbyFlay #bobbyFlayDiv #closingPopup:hover {
   scale: 1.1;
 }
-#bobbyFlay #bobbyFlayDiv #highlightsBob {
-  display: flex;
-  width: 70%;
-  align-items: center;
-  position: absolute;
-  bottom: 15px;
-  justify-content: center;
-  border-radius: 20px;
-  background-color: #2F2F2F;
-  color: #C3C3C3;
-  padding: 10px;
-  justify-self: center;
-}
-#bobbyFlay #bobbyFlayDiv #highlightsBob p {
-  color: #C3C3C3 !important;
-}
-#bobbyFlay #bobbyFlayDiv #highlightsBob i::before {
-  color: #bf1f2f;
-  font-size: 25px;
-}
-#bobbyFlay #bobbyFlayDiv #clickToPics {
-  background-color: #bf1f2f;
-  border: none;
-  color: #C3C3C3;
-  font-weight: bold;
-  padding: 5px;
-  font-size: 22px;
-  pointer-events: all !important;
-  cursor: pointer;
-}
-#bobbyFlay #bobbyFlayDiv #clickToPics:hover {
-  filter: brightness(0.9);
-  scale: 1.05;
-}
-#bobbyFlay #bobbyFlayDiv #logoCont {
+#bobbyFlay #bobbyFlayDiv #pop-up-img {
   width: 100%;
-  height: 50%;
-  position: absolute;
-  top: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#bobbyFlay #bobbyFlayDiv #logoCont #nikoForPopup {
-  background-image: url("./../../images/NikoPopUp2.png");
-  height: 35%;
-  width: 100%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  justify-self: center;
-}
-#bobbyFlay #bobbyFlayDiv #logoCont #bobbyFlayLogo {
-  background-image: url("./../../images/bfimagetrace.svg");
-  height: 60%;
-  width: 100%;
-  margin-top: 10px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  justify-self: center;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Mobile Small */
 @media only screen and (max-width: 1024px) {
   /* styles for small phones */
+  #bobbyFlayDiv {
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    width: 100% !important;
+  }
+  #pop-up-img {
+    width: 100% !important;
+    height: 100% !important;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
   #homePage #landingMenu {
     display: none;
   }
