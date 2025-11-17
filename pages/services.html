@@ -1,262 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Media page for Chef Kapernaros website. Collections of Chef Nikolaos Kapernaros pictures and videos.">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Media page for Chef Kapernaros website. Collections of Chef Nikolaos Kapernaros pictures and videos.">
 
-    <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/combined.min.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/settings/common_style/common-style.css" media="screen"/>
+        <!-- Style -->
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/combined.min.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/settings/common_style/common-style.css" media="screen"/>
 
-    <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/home_page/style.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/service_page/service_page.css" media="screen"/>
-   
-    <!-- Logo -->
-    <!-- Standard favicon -->
-    <link rel="icon" href="../images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/chef-kapernaros/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/chef-kapernaros/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/chef-kapernaros/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/chef-kapernaros/images/favicon/site.webmanifest">
-
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="all">
-
-    <!-- preload pics -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('preload-media-links.html')
-                .then(response => response.text())
-                .then(data => {
-                    const head = document.querySelector('head')
-                    head.insertAdjacentHTML('beforeend', data)
-                })
-            .catch(error => console.error('Error loading preload links:', error))
-        })
-    </script>
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/home_page/style.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/service_page/service_page.css" media="screen"/>
     
-    <!-- Title -->
-    <title>Chef Kapernaros</title>
+        <!-- Logo -->
+        <!-- Standard favicon -->
+        <link rel="icon" href="../chef-kapernaros/images/favicon/favicon.ico">
+        <link rel="apple-touch-icon" href="../chef-kapernaros/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../chef-kapernaros/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../chef-kapernaros/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="../chef-kapernaros/images/favicon/site.webmanifest">
 
-</head>
 
-<body id="servicesPage">
-    <nav class="navBar flex biggerScreen">
-        <div id="navBgScn">
-            <a href="../index.html" class="logoNav">
-                <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.png" alt="Chef Kapernaros Nav Logo">
-            </a>
-            <div class="flex flex-justifyContent-start linkContainer">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="all">
+        
+        <!-- Title -->
+        <title>Chef Kapernaros - Services</title>
+
+    </head>
+
+    <body id="servicesPage">
+        <nav class="navBar flex biggerScreen">
+            <div id="navBgScn">
+                <a href="../index.html" class="logoNav">
+                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.png" alt="Chef Kapernaros Nav Logo">
+                </a>
+                <div class="flex flex-justifyContent-start linkContainer">
+                    <a href="../pages/bio.html">Bio</a>
+                    <a href="../pages/services.html" class="currentTitle">Services</a>
+                    <a href="../pages/chef-table.html">The Chef's Table</a>
+                    <a href="../pages/events.html"><span>Events</span></a>
+                    <a href="../pages/contact-the-chef.html">Contact</a>
+                </div>
+                
+                <div id="socialMedia" class="flex flex-justifyContent-start flex-alignItems-center" >
+                    <div class="flex flex-alignItems-center flex-justifyContent-end">
+                        <a class="mr-20" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
+                            <i class="fa-brands fa-instagram noHighlight"></i>
+                        </a>
+                        <a class="mr-20" target="_blank" href="https://www.youtube.com/channel/UClMP5KSZc2fR8cqTkUV4CCw"  aria-label="Visit YouTube channel">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hambContainer">
+                <div class="hamburger-menu">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </div>
+            </div>
+        
+            <div id="navMenu" class="hide pl-15 pr-20">
+                <a href="../index.html" class="logoNav flex col-12 flex-justifyContent-center">
+                <img class="" src="../chef-kapernaros/images/new_golden_logo.svg" alt="Chef Kapernaros Nav Logo">
+                </a>
                 <a href="../pages/bio.html">Bio</a>
-                <a href="../pages/services.html" class="currentTitle">Services</a>
+                <a href="../pages/services.html">Services</a>
                 <a href="../pages/chef-table.html">The Chef's Table</a>
-                 <a href="../pages/events.html"><span>Events</span></a>
+                <a href="../pages/events.html"><span>Events</span></a>
                 <a href="../pages/contact-the-chef.html">Contact</a>
             </div>
             
-            <div id="socialMedia" class="flex flex-justifyContent-start flex-alignItems-center" >
-                <div class="flex flex-alignItems-center flex-justifyContent-end">
-                    <a class="mr-20" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
-                        <i class="fa-brands fa-instagram noHighlight"></i>
-                    </a>
-                    <a class="mr-20" target="_blank" href="https://www.youtube.com/channel/UClMP5KSZc2fR8cqTkUV4CCw"  aria-label="Visit YouTube channel">
-                        <i class="fa-brands fa-youtube"></i>
-                        <i class="fa-brands fa-square-youtube fa-lg noHighlight"></i>
-                    </a>
-                    <!-- <div id="landingAd">
-                        <div id="DuckImg"></div>
-                            <div id="eventTextBox" class="flex flex-column">
-                                <div class="flex mb-5">
-                                    <p class="my-0 shadowGold">Duck Sel x Chef Nikolaos Kapernaros</p>
-                                </div>
-                                <div class="flex flex-alignItems-center flex-justifyContent-center">
-                                    <a id="eventLink" href="https://www.exploretock.com/ducksel/event/502883/duck-sel-x-chef-nikolaos-kapernaros" target="_blank">Book Now</a>
-                                    <p class="my-0 ml-5">an exclusive dining experience</p>
-                                </div>
-                            </div>
-                        <div id="KaperImg"></div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
+        </nav>
         
-        <div class="hambContainer">
-            <div class="hamburger-menu">
-                <div class="bar" id="bar1"></div>
-                <div class="bar" id="bar2"></div>
-                <div class="bar" id="bar3"></div>
-            </div>
-        </div>
-    
-        <div id="navMenu" class="hide pl-15 pr-20">
-            <a href="../index.html" class="logoNav flex col-12 flex-justifyContent-center">
-               <img class="" src="../chef-kapernaros/images/new_golden_logo.svg" alt="Chef Kapernaros Nav Logo">
-            </a>
-            <a href="../pages/bio.html">Bio</a>
-            <a href="../pages/services.html">Services</a>
-            <a href="../pages/chef-table.html">The Chef's Table</a>
-             <a href="../pages/events.html"><span>Events</span></a>
-            <a href="../pages/contact-the-chef.html">Contact</a>
-            <!-- <div id="landingAd">
-                <div id="DuckImg"></div>
-                    <div id="eventTextBox" class="flex flex-column">
-                        <div class="flex mb-5">
-                            <p class="my-0 shadowGold">Duck Sel x Chef Nikolaos Kapernaros</p>
-                        </div>
-                        <div class="flex flex-alignItems-center">
-                            <a id="eventLink" href="https://www.exploretock.com/ducksel/event/502883/duck-sel-x-chef-nikolaos-kapernaros" target="_blank">Book Now</a>
-                            <p class="my-0 ml-5">an exclusive dining experience</p>
-                        </div>
-                    </div>
-                <div id="KaperImg"></div>
-            </div> -->
-        </div>
-        
-    </nav>
-    
-    <section class="font-ledger" id="sectionHero">
-        <div id="imgHero" style="background-image: url('https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1320,h_880,q_auto:best,y_420/v1762920590/Niko/new_materials/viber_image_2025-11-10_20-43-19-974_wjlizx.jpg')" alt="Kapernaros service hero"><div>
-        <!-- <div id="imgHero" style="background-image: url('https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best,y_100/v1759880305/Niko/new_materials/chef-pic-17_r7hu0d.jpg')" alt="Kapernaros service hero"><div> -->
-    </section>
-    <section id="allServices" class="">
-        <!-- <p class="titlesChef textWhite">Services</p> -->
-        <article class="singleService" id="service_cooking_classes" style="padding-right: 75px;">
-            <div class="singleServiceWrapper">
-
-                <div class="serviceVideoContainer">
-
-                    <video 
-                        autoplay
-                        muted
-                        playsinline
-                        webkit-playsinline
-                        loop
-                        preload="auto"
-                        class="slowmo"
-                        style="filter: grayscale(1) sepia(2)"
-                        src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1920,h_1080,q_auto:best,vc_h264,f_mp4/v1759964303/videos/cooking_classes_3_lkhxug.mp4"
-                        ></video>
-                        <div class="serviceVideoBG"></div>
-                        <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/e_accelerate:0.5/v1759939573/videos/video-service_e3uqiq.mp4" -->
-                        <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1920,h_1080,q_auto:best,vc_h264,y_200/br_4000k/v1759964302/videos/cooking_classes_2_hppl4n.mp4" -->
-                        <!-- src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1280,h_720,q_auto:best,vc_h264,y_300/br_4000k/v1759939575/videos/video-service-6_vvbcq7" -->
-                </div>
-                <div class="serviceTextBx">
-                    <h6 class="serviceBxTitle">Cooking Classes</h6>
-                    <p class="serviceBxDescription">
-                        Join me in the kitchen for a hands-on experience where we cook, learn, and share stories through food. My classes are designed for all levels, focused on technique, creativity, and the joy of bringing flavors to life.
-                    </p>
-                    <button class="serviceBxButton" value="Cooking Classes" id="service_cooking_classes_btn">Book it Now</button>
-                </div>
-            </div>
-            
-        </article>
-        
-        <article class="singleService" id="service_consulting"  style="padding-left: 75px;">
-            <div class="singleServiceWrapper reverse">
-                <div class="serviceVideoContainer">
-                        <!-- <img 
-                            class="defaultImg"
-                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1759880308/Niko/new_materials/chef-pic-19_upquxr.jpg" 
-                            style="object-position: top;"
-                        ></img> -->
-                        <img 
-                            class="hoverImg"
-                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1715129212/Niko/chef_table/viber_image_2024-01-11_23-53-34-678_ds7nbq.jpg" 
-                            ></img>
-                        <img 
-                            class="defaultImg"
-                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best,y_100/v1759880325/Niko/new_materials/pic_kap_2_fujbrc.jpg"
-                        ></img>
-                    <div class="serviceVideoBG"></div>
-                </div>
-                <div class="serviceTextBx">
-                    <h6 class="serviceBxTitle">Consulting</h6>
-                    <p class="serviceBxDescription">
-                       I work with restaurants and culinary teams to create menus and experiences rooted in real, made-from-scratch cooking. 
-                       Every project is guided by authenticity, creativity, and a shared respect for quality ingredients and genuine flavor.
-                    </p>
-                    <button class="serviceBxButton" value="Consulting" id="service_consulting_btn">Book it Now</button>
-                </div>
-            </div>
-            
-        </article>
-
-        <article class="singleService" id="service_chef_tbl_exp" style="padding-right: 75px;">
-            <div class="singleServiceWrapper">
-                <div class="serviceVideoContainer">
-                    <img 
-                        class="hoverImg"
-                        src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1715129209/Niko/chef_table/viber_image_2024-01-11_23-53-34-589_gfpojh.jpg" 
-                    ></img>
-                    <img 
-                        
-                        class="defaultImg"
-                        src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1715129205/Niko/chef_table/viber_image_2024-01-11_23-53-34-272_qko8t8.jpg"
-                    ></img>
-                    <div class="serviceVideoBG"></div>
-                </div>
-                <div class="serviceTextBx">
-                    <h6 class="serviceBxTitle">The Chef’s Table Experience</h6>
-                    <p class="serviceBxDescription">
-                        Experience dining up close and personal, a curated multi-course menu served right from my kitchen to yours. 
-                        It’s food, conversation, and creativity, all in one unforgettable night.
-                        Book your chef’s table experience today.
-                    </p>
-                    <button class="serviceBxButton" value="Chef's Table Experience" id="service_chef_tbl_exp_btn">Book it Now</button>
-                </div>
-            </div>
-            
-        </article>
-        
-        
-        <article class="singleService" id="service_collaborations" style="padding-left: 75px;">
-            <div class="singleServiceWrapper reverse">
-                <div class="serviceVideoContainer">
-                    <div class="serviceVideoContainer" >
+        <section class="font-ledger" id="sectionHero">
+            <div id="imgHero" style="background-image: url('https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1320,h_880,q_auto:best,y_420/v1762920590/Niko/new_materials/viber_image_2025-11-10_20-43-19-974_wjlizx.jpg')" alt="Kapernaros service hero"><div>
+        </section>
+        <section id="allServices" class="">
+            <article class="singleService" id="service_cooking_classes" style="padding-right: 75px;">
+                <div class="singleServiceWrapper">
+                    <div class="serviceVideoContainer">
                         <video 
                             autoplay
                             muted
                             playsinline
+                            webkit-playsinline
                             loop
                             preload="auto"
                             class="slowmo"
                             style="filter: grayscale(1) sepia(2)"
-                            src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1520,h_980,q_auto:best,vc_h264,f_mp4/v1759939573/videos/video-service_e3uqiq.mp4"
-                        ></video>
+                            src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1920,h_1080,q_auto:best,vc_h264,f_mp4/v1759964303/videos/cooking_classes_3_lkhxug.mp4"
+                            ></video>
+                            <div class="serviceVideoBG"></div>
+                    </div>
+                    <div class="serviceTextBx">
+                        <h6 class="serviceBxTitle">Cooking Classes</h6>
+                        <p class="serviceBxDescription">
+                            Join me in the kitchen for a hands-on experience where we cook, learn, and share stories through food. My classes are designed for all levels, focused on technique, creativity, and the joy of bringing flavors to life.
+                        </p>
+                        <button class="serviceBxButton" value="Cooking Classes" id="service_cooking_classes_btn">Book it Now</button>
+                    </div>
+                </div>
+                
+            </article>
+            
+            <article class="singleService" id="service_consulting"  style="padding-left: 75px;">
+                <div class="singleServiceWrapper reverse">
+                    <div class="serviceVideoContainer">
+                            <img 
+                                class="hoverImg"
+                                src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1715129212/Niko/chef_table/viber_image_2024-01-11_23-53-34-678_ds7nbq.jpg" 
+                                ></img>
+                            <img 
+                                class="defaultImg"
+                                src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best,y_100/v1759880325/Niko/new_materials/pic_kap_2_fujbrc.jpg"
+                            ></img>
                         <div class="serviceVideoBG"></div>
- 
-                        <!--<img 
-                            class="defaultImg"
-                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1759880300/Niko/new_materials/chef-pic-9_t5cz3c.jpg" 
-                            style="object-position: top;"
-                        ></img>
+                    </div>
+                    <div class="serviceTextBx">
+                        <h6 class="serviceBxTitle">Consulting</h6>
+                        <p class="serviceBxDescription">
+                        I work with restaurants and culinary teams to create menus and experiences rooted in real, made-from-scratch cooking. 
+                        Every project is guided by authenticity, creativity, and a shared respect for quality ingredients and genuine flavor.
+                        </p>
+                        <button class="serviceBxButton" value="Consulting" id="service_consulting_btn">Book it Now</button>
+                    </div>
+                </div>
+                
+            </article>
+
+            <article class="singleService" id="service_chef_tbl_exp" style="padding-right: 75px;">
+                <div class="singleServiceWrapper">
+                    <div class="serviceVideoContainer">
                         <img 
                             class="hoverImg"
-                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto:best/v1715129257/Niko/chef_table/viber_image_2024-01-11_23-56-08-596_blopq6.jpg"
+                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1715129209/Niko/chef_table/viber_image_2024-01-11_23-53-34-589_gfpojh.jpg" 
                         ></img>
-                        <div class="serviceVideoBG"></div> -->
+                        <img 
+                            
+                            class="defaultImg"
+                            src="https://res.cloudinary.com/drdrs6pdq/image/upload/c_crop,w_1920,h_1080,q_auto:best/v1715129205/Niko/chef_table/viber_image_2024-01-11_23-53-34-272_qko8t8.jpg"
+                        ></img>
+                        <div class="serviceVideoBG"></div>
                     </div>
-                    <div class="serviceVideoBG"></div>
+                    <div class="serviceTextBx">
+                        <h6 class="serviceBxTitle">The Chef’s Table Experience</h6>
+                        <p class="serviceBxDescription">
+                            Experience dining up close and personal, a curated multi-course menu served right from my kitchen to yours. 
+                            It’s food, conversation, and creativity, all in one unforgettable night.
+                            Book your chef’s table experience today.
+                        </p>
+                        <button class="serviceBxButton" value="Chef's Table Experience" id="service_chef_tbl_exp_btn">Book it Now</button>
+                    </div>
                 </div>
-                <div class="serviceTextBx">
-                    <h6 class="serviceBxTitle">Collaborations</h6>
-                    <p class="serviceBxDescription">
-                        I love connecting with fellow chefs, brands, and creatives to bring new ideas to life. 
-                        Whether it’s a culinary event, pop-up, or media appearance, 
-                        I value every opportunity to create something meaningful together.
-                    </p>
-                    <button class="serviceBxButton" value="Collaborations" id="service_collaborations_btn">Book it Now</button>
-                </div>
-            </div>
+                
+            </article>
             
-        </article>
-    </section>
+            
+            <article class="singleService" id="service_collaborations" style="padding-left: 75px;">
+                <div class="singleServiceWrapper reverse">
+                    <div class="serviceVideoContainer">
+                        <div class="serviceVideoContainer" >
+                            <video 
+                                autoplay
+                                muted
+                                playsinline
+                                loop
+                                preload="auto"
+                                class="slowmo"
+                                style="filter: grayscale(1) sepia(2)"
+                                src="https://res.cloudinary.com/drdrs6pdq/video/upload/c_crop,w_1520,h_980,q_auto:best,vc_h264,f_mp4/v1759939573/videos/video-service_e3uqiq.mp4"
+                            ></video>
+                            <div class="serviceVideoBG"></div>
+                        </div>
+                        <div class="serviceVideoBG"></div>
+                    </div>
+                    <div class="serviceTextBx">
+                        <h6 class="serviceBxTitle">Collaborations</h6>
+                        <p class="serviceBxDescription">
+                            I love connecting with fellow chefs, brands, and creatives to bring new ideas to life. 
+                            Whether it’s a culinary event, pop-up, or media appearance, 
+                            I value every opportunity to create something meaningful together.
+                        </p>
+                        <button class="serviceBxButton" value="Collaborations" id="service_collaborations_btn">Book it Now</button>
+                    </div>
+                </div>
+            </article>
+        </section>
 
-    
+        
         <footer class="col-12 flex flex-alignItems-end flex-justifyContent-spaceBetween px-40 py-20">
             <div class="flex mb-30" id="socialLinks">
                 <a class="mr-20" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
@@ -270,15 +207,15 @@
 
                 <div class="col-12 flex flex-justifyContent-center" id="logosFooter">
                     <a target="_blank" href="https://wck.org/chef-corps">
-                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1763347117/Niko/new_materials/viber_image_2025-11-16_20-00-03-244_r4sanz.png"/>
+                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1763347117/Niko/new_materials/viber_image_2025-11-16_20-00-03-244_r4sanz.png"  alt="Chef Kapernaros footer logo - Chef Corps - World Central kitchen"/>
                     </a>
-                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871516/Niko/new_materials/2024_chicago_innovation_award_winner_hra0dq.jpg"/>
+                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871516/Niko/new_materials/2024_chicago_innovation_award_winner_hra0dq.jpg"  alt="Chef Kapernaros footer logo - 2024 Chicago Innovation Awards - Winner"/>
                     
                     <a target="_blank" href="https://tohchicago.acsgala.org/">
-                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/chicago_chefs_cook_logo_t7by3n.jpg"/>
+                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/chicago_chefs_cook_logo_t7by3n.jpg"  alt="Chef Kapernaros footer logo - Chicago Chefs Cook"/>
                     </a>
                     <a target="_blank" href="https://www.chicagochefscook.org/">
-                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1763347065/Niko/new_materials/viber_image_2025-10-30_10-16-10-903_uncg5d.png"/>
+                        <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1763347065/Niko/new_materials/viber_image_2025-10-30_10-16-10-903_uncg5d.png"  alt="Chef Kapernaros footer logo - American Cancer Society - Taste of Hope"/>
                     </a>
                 </div>
 
@@ -288,14 +225,13 @@
             <div class="flex flex-column flex-justifyContent-center flex-alignItems-center p-20">
                 <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709722273/Niko/Chef_Kapernaros_logo_white_no_BG_xik49g.webp" alt="Chef Kapernaros logo white no BG">
             </div>
-      
+        
         </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script defer type="text/javascript " src=../chef-kapernaros/script/main.js></script>
-    <script src="../analytics.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script defer type="text/javascript " src="../chef-kapernaros/script/main.js"></script>
+        <script src="../analytics.js" defer></script>
 
-
-</body>
+    </body>
 
 </html>
