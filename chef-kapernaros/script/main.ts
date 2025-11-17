@@ -1,4 +1,4 @@
-console.log('hello world 4')
+console.log('%c Hello From Chef Kapernaros ', 'background: #ffffffff; color: #3c00ffff')
 
 const hambMenu = document.querySelector('.hamburger-menu') as HTMLElement
 const navMenu = document.getElementById('navMenu') as HTMLElement
@@ -124,27 +124,39 @@ document.querySelectorAll('.flip-card').forEach(card=>{
 
 // ******* Popup logic ******* \\
 
-const bobbyLink = document.getElementById('clickToPics') as HTMLElement
-const bobbyFlay = document.getElementById('bobbyFlay') as HTMLElement
-const closingPopup = document.getElementById('closingPopup') as HTMLElement
+// ******* Popup logic ******* \\
+
+const bobbyLink = document.getElementById('clickToPics')
+const bobbyFlay = document.getElementById('bobbyFlay')
+const closingPopup = document.getElementById('closingPopup')
+
 const openCompetitions = () => {
-    window.location.href = './pages/services.html';
+    // Only hide popup if it actually exists on this page
+    if (bobbyFlay) bobbyFlay.classList.add('hide')
     localStorage.setItem('loading_competions', 'true')
     localStorage.setItem('hide_landing_popup', 'true')
-    bobbyFlay.classList.add('hide')
+    // Go to services page
+    window.location.href = './pages/services.html'
 }
+
 if (bobbyLink) {
     bobbyLink.addEventListener('click', openCompetitions)
 }
-if (localStorage.getItem('hide_landing_popup') !== 'true' ) {
-    bobbyFlay.classList.remove('hide')
-    closingPopup.addEventListener('click', () => {
-        localStorage.setItem('hide_landing_popup', 'true')
+
+// Only run popup show/hide behavior if the popup exists on this page
+if (bobbyFlay && closingPopup) {
+    if (localStorage.getItem('hide_landing_popup') !== 'true') {
+        bobbyFlay.classList.remove('hide')
+
+        closingPopup.addEventListener('click', () => {
+            localStorage.setItem('hide_landing_popup', 'true')
+            bobbyFlay.classList.add('hide')
+        })
+    } else {
         bobbyFlay.classList.add('hide')
-    })
-} else {
-    if (bobbyFlay) bobbyFlay.classList.add('hide')
+    }
 }
+
 
 // Setting a cookie with SameSite=Lax
 document.cookie = "key=value; SameSite=Lax";

@@ -8,7 +8,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     return to.concat(ar || Array.prototype.slice.call(from));
 };
 var _a;
-console.log('hello world 4');
+console.log('%c Hello From Chef Kapernaros ', 'background: #ffffffff; color: #3c00ffff');
 var hambMenu = document.querySelector('.hamburger-menu');
 var navMenu = document.getElementById('navMenu');
 var navBar = document.querySelector('.navBar');
@@ -119,28 +119,34 @@ document.querySelectorAll('.flip-card').forEach(function (card) {
     }
 });
 // ******* Popup logic ******* \\
+// ******* Popup logic ******* \\
 var bobbyLink = document.getElementById('clickToPics');
 var bobbyFlay = document.getElementById('bobbyFlay');
 var closingPopup = document.getElementById('closingPopup');
 var openCompetitions = function () {
-    window.location.href = './pages/services.html';
+    // Only hide popup if it actually exists on this page
+    if (bobbyFlay)
+        bobbyFlay.classList.add('hide');
     localStorage.setItem('loading_competions', 'true');
     localStorage.setItem('hide_landing_popup', 'true');
-    bobbyFlay.classList.add('hide');
+    // Go to services page
+    window.location.href = './pages/services.html';
 };
 if (bobbyLink) {
     bobbyLink.addEventListener('click', openCompetitions);
 }
-if (localStorage.getItem('hide_landing_popup') !== 'true') {
-    bobbyFlay.classList.remove('hide');
-    closingPopup.addEventListener('click', function () {
-        localStorage.setItem('hide_landing_popup', 'true');
+// Only run popup show/hide behavior if the popup exists on this page
+if (bobbyFlay && closingPopup) {
+    if (localStorage.getItem('hide_landing_popup') !== 'true') {
+        bobbyFlay.classList.remove('hide');
+        closingPopup.addEventListener('click', function () {
+            localStorage.setItem('hide_landing_popup', 'true');
+            bobbyFlay.classList.add('hide');
+        });
+    }
+    else {
         bobbyFlay.classList.add('hide');
-    });
-}
-else {
-    if (bobbyFlay)
-        bobbyFlay.classList.add('hide');
+    }
 }
 // Setting a cookie with SameSite=Lax
 document.cookie = "key=value; SameSite=Lax";
