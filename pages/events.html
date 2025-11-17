@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Events page for Chef Kapernaros website. Collections of Chef Nikolaos Kapernaros upcoming, past events. It also include competitions.">
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/combined.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/settings/common_style/common-style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../chef-kapernaros/style/events_page/events_page.css" media="screen"/>
+   
+    <!-- Logo -->
+    <!-- Standard favicon -->
+    <link rel="icon" href="../chef-kapernaros/images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="../chef-kapernaros/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../chef-kapernaros/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../chef-kapernaros/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../chef-kapernaros/images/favicon/site.webmanifest">
+
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="all">
+    
+    <!-- Title -->
+    <title>Chef Kapernaros - Events</title>
+
+</head>
+
+<body id="eventsPage">
+    <nav class="navBar flex biggerScreen">
+        <div id="navBgScn">
+            <a href="../index.html" class="logoNav">
+                <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1709549295/Niko/chef-logo_umssco.webp" alt="Chef Kapernaros Nav Logo">
+            </a>
+            <div class="flex flex-justifyContent-start linkContainer">
+                <a href="../pages/bio.html">Bio</a>
+                <a href="../pages/services.html">Services</a>
+                <a href="../pages/chef-table.html">The Chef's Table</a>
+                <a href="../pages/events.html" class="currentTitle"><span>Events</span></a>
+                <a href="../pages/contact-the-chef.html">Contact</a>
+            </div>
+            
+            <div id="socialMedia" class="flex flex-justifyContent-start flex-alignItems-center" >
+                <div class="flex flex-alignItems-center flex-justifyContent-end">
+                    <a class="mr-20" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
+                        <i class="fa-brands fa-instagram noHighlight"></i>
+                    </a>
+                    <a class="mr-20" target="_blank" href="https://www.youtube.com/channel/UClMP5KSZc2fR8cqTkUV4CCw"  aria-label="Visit YouTube channel">
+                        <i class="fa-brands fa-youtube"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hambContainer">
+            <div class="hamburger-menu">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+            </div>
+        </div>
+    
+        <div id="navMenu" class="hide pl-15 pr-20">
+            <a href="../index.html" class="logoNav flex col-12 flex-justifyContent-center">
+                <img class="" src="../chef-kapernaros/images/new_golden_logo.svg" alt="Chef Kapernaros Nav Logo">
+            </a>
+            <a href="../pages/bio.html">Bio</a>
+            <a href="../pages/services.html">Services</a>
+            <a href="../pages/chef-table.html">The Chef's Table</a>
+            <a href="../pages/events.html"><span>Events</span></a>
+            <a href="../pages/contact-the-chef.html">Contact</a>
+        </div>
+        
+    </nav>
+    
+    <section class="font-ledger col-12" id="tabs-events">
+        <div id="all-tabs" class="col-10 flex">
+            <div class="flex">
+                <input 
+                    type="radio"
+                    name="tabsRadio"
+                    value="upcoming"
+                    class="single-tab readOnly activeTab"
+                    id="upcoming-tab"
+                    role="tab"
+                    aria-controls="upcoming-content"
+                    checked
+                >
+                <label for="upcoming-tab">Upcoming</label>
+            </div>
+
+            <div class="flex">
+                <input 
+                    type="radio"
+                    name="tabsRadio"
+                    value="past_events"
+                    class="single-tab readOnly"
+                    id="past_events-tab"
+                    role="tab"
+                    aria-controls="past_events-content"
+                >
+                <label for="past_events-tab">Past Events</label>
+            </div>
+
+            <div class="flex">
+                <input 
+                    type="radio"
+                    name="tabsRadio"
+                    value="competitions"
+                    class="single-tab readOnly"
+                    id="competitions-tab"
+                    role="tab"
+                    aria-controls="competitions-content"
+                >
+                <label for="competitions-tab">Competitions</label>
+            </div>
+        </div>
+    </section>
+    <section id="content-events" class="col-12">
+        <div 
+            class="tab-content p-50"
+            id="upcoming-content"
+            role="tabpanel"
+            aria-labelledby="upcoming-tab"
+        ></div>
+
+        <div 
+            class="tab-content p-50"
+            id="past_events-content"
+            role="tabpanel"
+            aria-labelledby="past_events-tab"
+            hidden
+        ></div>
+
+        <div 
+            class="tab-content p-50"
+            id="competitions-content"
+            role="tabpanel"
+            aria-labelledby="competitions-tab"
+            hidden
+        ></div>
+    </section>
+
+    
+    <footer class="col-12 flex flex-justifyContent-spaceBetween px-40 py-20">
+        <div class="flex mb-30" id="socialLinks">
+            <a class="mr-20" target="_blank" href="https://www.instagram.com/chefkapernaros/?hl=en" aria-label="Visit Instagram page">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="mr-20" target="_blank" href="https://www.youtube.com/channel/UClMP5KSZc2fR8cqTkUV4CCw"  aria-label="Visit YouTube channel">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+        <div class="flex flex-column flex-alignItems-center">
+
+            <div class="col-12 flex flex-justifyContent-center" id="logosFooter">
+                <a target="_blank" href="https://wck.org/chef-corps">
+                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_80,h_80/v1763347117/Niko/new_materials/viber_image_2025-11-16_20-00-03-244_r4sanz.webp"  alt="Chef Kapernaros footer logo - Chef Corps - World Central kitchen"/>
+                </a>
+                <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_64,h_80/v1761871516/Niko/new_materials/2024_chicago_innovation_award_winner_hra0dq.webp"  alt="Chef Kapernaros footer logo - 2024 Chicago Innovation Awards - Winner"/>
+                
+                <a target="_blank" href="https://tohchicago.acsgala.org/">
+                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_101,h_80/v1761871515/Niko/new_materials/chicago_chefs_cook_logo_t7by3n.webp"  alt="Chef Kapernaros footer logo - Chicago Chefs Cook"/>
+                </a>
+                <a target="_blank" href="https://www.chicagochefscook.org/">
+                    <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/v1763347065/Niko/new_materials/viber_image_2025-10-30_10-16-10-903_uncg5d.webp"  alt="Chef Kapernaros footer logo - American Cancer Society - Taste of Hope"/>
+                </a>
+            </div>
+
+            <a id="webcraftLink-footer" class="flex font-inter textWhite mt-30" href="https://marcolux.github.io/contact_form/" target="_blank" style="text-decoration: none;">Website designed and created by <span class="textGold">Webcraft</span></a>
+        </div>
+        
+        <div class="flex flex-column flex-justifyContent-center flex-alignItems-center p-20">
+            <img src="https://res.cloudinary.com/drdrs6pdq/image/upload/w_178,h_103/v1709722273/Niko/Chef_Kapernaros_logo_white_no_BG_xik49g.webp" alt="Chef Kapernaros logo white no BG">
+        </div>
+    
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer type="text/javascript" src="../chef-kapernaros/script/main.js"></script>
+    <script src="../analytics.js" defer></script>
+
+
+
+</body>
+
+</html>

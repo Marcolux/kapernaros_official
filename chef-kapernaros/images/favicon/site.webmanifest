@@ -1,1 +1,7 @@
-{"name":"Nikolaos Kapernaros Chef","short_name":"Chef Kapernaros","icons":[],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+    "name":"Nikolaos Kapernaros Chef",
+    "short_name":"Chef Kapernaros",
+    "icons":[],"theme_color":"#ffffff",
+    "background_color":"#ffffff",
+    "display":"standalone"
+}

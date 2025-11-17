@@ -340,9 +340,6 @@ $shadowInset: #949494;
     
 }
 @media only screen and (max-width: 700px) {
-    .mediaIntro{
-        text-align: justify;
-    }
     body{
         width: 100% !important;
         .maxWidth1500{
@@ -466,9 +463,6 @@ $shadowInset: #949494;
                                     right: 0% !important;
                                     width: 100%;
                                     background-color: #000000bb;
-                                    font-size: 17px !important;
-                                    padding-top: 3px;
-                                    padding-bottom: 3px;
                                 }
                             }
                             &.fullscreen-mode{

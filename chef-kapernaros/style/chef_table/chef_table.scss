@@ -1,150 +1,312 @@
 $primaryColor: #f8f8f5;
 $gold: #b59b07;
-#tablePicContainer{
-    background-color: #2F2F2F;
-
-    .singlePicTable{
-        position: relative; 
+$background: linear-gradient(180deg, var(--darkBlueColor), #000000);
+body#chefTablePage{
+    // background-color: #f8f8f8;
+    section#chefTableSec {
+        margin-top: 15vh;
+        padding-top: 40px;
+        background: $background;
+        width: 100%;
         display: flex;
-        width: 23%;
-        margin-right: 15px;
-        margin-top: 15px;
-        border: 1.5px solid $gold;
-        box-shadow: 5px 5px 5px #00000074;
-        transition: all 0.4s ease-in-out;
-        
-        &:hover{
-            scale: 1.05;
-            z-index: 5;
-            .noBG{
-                background-color: transparent !important;
-            }
-        }      
-        img{
-            width: 100%;
-            aspect-ratio: 1/0.8;
-            object-fit: cover;
-            object-position: center;
-        }
-        ul{
-            text-decoration: none !important;
-            list-style: none !important;
-        }
-        .picDescr:not(.noBG){
-            height: 0%;
-            width: 100%;
-            background-color: #000000b7;
-            color: #f8f8f5;
-            transition: all 0.4s ease-in-out;
-            position: absolute;
-            bottom: 0%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            h3{
-                display: flex;
-                margin:  0px 0px 0px 25px;
-                font-size: 15px;
-                // text-shadow:     
-                //     -1px -1px 1px #000000,
-                //     1px -1px 1px #000000,
-                //     -1px 1px 1px #000000,
-                //     1px 1px 1px #000000;
-                text-align: start;
-                background-color: #b59b07b7;
-                color: #000000 !important;
-                padding: 0px 5px !important;
-            }
-            ul{
-                font-size: 14px !important;
-                text-decoration: none;
-                list-style: none;
-                margin-left: 10px;
-                color: #fafafa;
-
-                li{ width: fit-content;
-                
-                    // background-color: #000000ab;
+        flex-direction: column;
+        align-items: center;
+        .chefTableIntro {
+            background-color: #F8F6F1;
+            border-radius: 4px;
+            box-shadow: 6px 6px 6px #000000ae;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.9;
+            max-width: 1000px;
+            padding: 30px 40px;
+            text-align: left;
+            z-index: 55;
+            .titlesChef {
+                font-size: clamp(22px, 2.6vw, 47px);
+                font-weight: 500; 
+                letter-spacing: .01em;
+                margin-bottom: 10px; 
+                position: relative;
+                width: fit-content;
+                &::before {
+                    content: "";
+                    background-color: var(--secondaryColor);
+                    bottom: 20px;
+                    height: calc(100% - 45px);
+                    left: -45px;
+                    opacity: 0.5;
+                    position: absolute;
+                    width: calc(100% + 15px);
+                    z-index: -1;
                 }
-
-                text-shadow:     
-                    -1px -1px 1px #000000,
-                    1px -1px 1px #000000,
-                    -1px 1px 1px #000000,
-                    1px 1px 1px #000000;
-            }
-            h3, ul{
-                padding: 0px;
-                scale: 0;
-                transition: all 0.4s ease-in-out;
-            }
+            }           
         }
-        &:hover{
-            .picDescr{
-                height: 100%;
-                width: 100%;
-                h3, ul{
-                    scale: 1;
-                    font-family: 'Ledger';
-                    font-size: 20px;
+        #tablePicContainer{
+                // background-color: #f8f8f8;
+                position: relative;
+                .cardContainer {
+                    display: flex;
+                    gap: 20px;
+                    flex: auto;
+                    justify-content: center;
+                    padding: 20px;
+                    width: 100%;
+                    .flip-card { 
+                        background-color: var(--secondaryColorTran);
+                        border: 2px solid var(--secondaryColor);
+                        border-radius: 8px;
+                        box-shadow: 6px 6px 6px #000000ae;
+                        max-height: 500px;
+                        max-width: 500px;
+                        outline: none; 
+                        perspective: 1000px;
+                        width: 31%;
+                        overflow: hidden;
+                        .flip-card-inner {
+                            aspect-ratio: 1.1/1.2;
+                            border-radius: 6px;
+                            box-shadow: 6px 6px 6px var(--secondaryColorTran);
+                            height: 100%;
+                            width: 100%;
+                            overflow: hidden;
+                            position: relative;
+                            transform-style: preserve-3d;
+                            -webkit-transform-style: preserve-3d;
+                            transition: transform 600ms cubic-bezier(.2,.7,.2,1);
+                            will-change: transform;
+                            .flip-card-front,
+                            .flip-card-back {
+                                backface-visibility: hidden;
+                                inset: 0;
+                                position: absolute;
+                                -webkit-backface-visibility: hidden;
+                            }
+                            .hoverWrapper {
+                                height: fit-content;
+                                width: 100%;
+                                bottom: 0px;
+                                transition: all 0.5s ease-in-out;
+                                position:absolute;
+                                .titlesChef{
+                                    margin-left: 0px !important;
+                                    font-family: 'Bodoni Libre' !important;
+                                    padding: 4px 0px 1px;
+                                }
+                            }
+                            &:hover, &:active, &:focus {
+                                .hoverWrapper {
+                                    align-items: center;
+                                    background-color: #0000008d;
+                                    display: flex;
+                                    height: 100%;
+                                    justify-content: center;
+                                    width: 100%;
+                                    .titlesChef {
+                                        bottom: auto !important;
+                                        color: #fff !important;
+                                        left: auto !important;
+                                        margin-left: 0px !important;
+                                        font-size: clamp(1.5rem, 2.2vw, 2rem) !important;
+                                        background-color: transparent !important;
+                                        &::before {
+                                            background-color: #ffffff !important;
+                                            height: 0% !important;
+                                            left: 0px;
+                                        }
+                                    }
+                                }
+                                .flip-toggle { 
+                                    display: flex; 
+                                    right: 2%;
+                                    .flip-icon {
+                                        transform: rotateY(180deg);
+                                        opacity: 0.9;
+                                    }
+                                }
+                            }
+                            .flip-card-front {
+                                transform: rotateY(0deg) translateZ(0);
+                                -webkit-transform: rotateY(0deg) translateZ(0);
+                                .imgCont {
+                                    display: flex;
+                                    height: 100%;
+                                    position: relative;
+                                    img {
+                                        width: 100%; 
+                                        height: 100%; 
+                                        object-fit: cover;
+                                    }  
+                                    .titlesChef {
+                                        color: var($background);
+                                        bottom: 20px;
+                                        padding-left: 10px;
+                                        font-size: clamp(1rem, 2.2vw, 1.5rem);
+                                        width: 100%;
+                                        text-align: left;
+                                        letter-spacing: 0em !important;
+                                        // background-color: var(--secondaryColor);
+                                        &::before {
+                                            content: '';
+                                            position: absolute;
+                                            bottom: -5px;
+                                            left: -30px;
+                                            width: calc(100% + 45px);
+                                            height: calc(100% + 10px);
+                                            background-color: #ffffffc5;
+                                            opacity: 0.9;
+                                            z-index: -1;
+                                        }
+                                    }
+                                }
+                            }
+                            .flip-card-back {
+                                background: linear-gradient(180deg,#2c4378,#1e293b);
+                                display: grid; 
+                                padding: 18px;
+                                place-content: center; 
+                                transform: rotateY(180deg) translateZ(1px);
+                                -webkit-transform: rotateY(180deg) translateZ(1px);
+                                .cardText {
+                                    font-size: 20px;
+                                    letter-spacing: 0.01em;
+                                    line-height: 30px;
+                                    text-align: left;
+                                    color: #fff !important;
+                                }
+                            }
+                            
+                            &:hover {color: var(--secondaryColor);}
+                            .flip-toggle { 
+                                display: none;
+                                position: absolute; 
+                                inset: auto 35px 20px auto; 
+                                background-color: transparent;
+                                border: 2px solid #fff;
+                                border-radius: 50%;
+                                width: 50px;
+                                height: 50px;
+                                right: 50%;
+                                transition: all 0.5s ease;
+                                align-items: center;
+                                justify-content: center;
+                                .flip-icon {
+                                    fill: #f1f1f1;
+                                    stroke-width: 2px;
+                                    transition: all 1s ease;
+                                    box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
+                                    background-color: rgba(255, 255, 255, 0);
+                                }
+                                cursor: pointer;
+                                &:hover .flip-icon {
+                                    fill: var(--secondaryColor);
+                                }
+                            }
+                        }
+                        &.is-flipped .flip-card-inner {
+                            transform: rotateY(180deg);
+                            .flip-toggle { 
+                                display: flex; 
+                                right: 2%;
+                                .flip-icon {
+                                    transform: rotateY(180deg);
+                                    opacity: 0.9;
+                                }
+                            }
+                            .flip-card-back { backface-visibility: visible;}
+                        }
+                    }
+                }
+        }
+    }
+}
+
+@media only screen and (min-width: 1301px) and (max-width: 1400px) {}
+@media only screen and (max-width: 1361px) {}
+@media only screen and (min-width: 701px) and (max-width: 930px) {}
+@media only screen and (min-width: 801px) and (max-width: 1050px) {
+    section#chefTableSec {
+        margin-top: 10vh !important;
+        .flip-card {
+            border: 1px solid var(--secondaryColor);
+            border-radius: 4px !important;
+        }
+    }
+}
+@media only screen and (max-width: 1050px) {
+    body#chefTablePage {
+        section#chefTableSec {
+            margin-top: 0px ;
+            .chefTableIntro {
+                box-shadow: none;
+                font-size: 16px;
+                line-height: 25px;
+                max-width: 90%;
+                padding: 20px 30px !important;
+                .titlesChef {
+                    &::before {
+                        bottom: 0px;
+                        height: calc(100% - 5px);
+                        left: -25px;
+                        width: calc(100% + 15px);
+                    }
+                }           
+            }
+            #tablePicContainer{
+                position: relative;
+                .cardContainer {
+                    display: flex;
+                    gap: 10px;
+                    flex: auto;
+                    justify-content: center;
+                    padding: 20px 10px !important;
+                    width: 100%;
+                    .flip-card {
+                        border: 1px solid var(--secondaryColor);
+                        border-radius: 0px;
+                        box-shadow: none;
+                        width: 46%;
+                        &.smallScreenCard {
+                            .titlesChef {
+                                padding: 0px 0px 0px 4px !important;
+                                font-size: 9.5pt !important;
+                            }
+                            &.clicked { 
+                                width: 100%;
+                            } 
+                            &:not(.clicked) {
+                                .flip-card-front {
+                                    transform: rotateY(0deg) translateZ(0);
+                                }
+                            }
+                            .flip-card-inner {
+                                border-radius: 0px !important;
+                                aspect-ratio: 1/1 !important;
+                            }
+                            .flip-card-back {
+                                background: linear-gradient(180deg,#2c4378,#1e293b);
+                                color: #fff;
+                                display: grid; 
+                                padding: 18px;
+                                place-content: center; 
+                                transform: rotateY(180deg) translateZ(1px);
+                                -webkit-transform: rotateY(180deg) translateZ(1px);
+                                .cardText {
+                                    font-size: 18px !important;
+                                    letter-spacing: 0.01em;
+                                    line-height: 25px !important;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                        .flip-toggle { 
+                            width: 35px !important;
+                            height: 35px !important;
+                        }
+                        
+                    }
                 }
             }
-        }
-    }
-}
-
-@media only screen and (min-width: 1301px) and (max-width: 1400px) {
-
-}
-@media only screen and (max-width: 1361px) {
- 
-}
-@media only screen and (min-width: 701px) and (max-width: 930px) {
-
-}
-@media only screen and (min-width: 701px) and (max-width: 1300px) {
-
-
-}
-@media only screen and (max-width: 700px) {
-    .fontSize18 {
-        font-size: 16px !important;
-    }
-    .chefTableIntro{
-        text-align: justify;
-    }
-    p.fontSize20.mb-0.font-ledger.textGold.text-bold{
-        margin-top: 0px !important;
-    }
-    .maxWidth1500{
-        padding: 60px 15px 30px 15px !important;
-    }
-    #chefTableSec{
-        margin-top: 0px !important;
-        padding-top: 0px !important;
-        .picDescr:hover{
-            display: none;
-        }
-    }
-    #tablePicContainer{
-        background-color: #2F2F2F;
-        >div{
-            padding: 30px 0px !important;
-        }
-    
-        .singlePicTable{
-            width: 45%;
-            margin-right: 5px;
-            margin-top: 5px;
-            .picDescr:not(.noBG){
-                display: none;
-            }
-            &:hover{
-                scale: 1;
-                z-index:1;
-            } 
-
         }
     }
 }

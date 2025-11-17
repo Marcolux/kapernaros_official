@@ -1,0 +1,316 @@
+#servicesPage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14vh;
+  background: var(--backgroundV1);
+}
+#servicesPage #sectionHero {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 86vh;
+  justify-content: center;
+  position: relative;
+  width: 100% !important;
+}
+#servicesPage #sectionHero #imgHero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0px;
+  height: 100vh;
+  height: 100dvh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 100%;
+  filter: grayscale(1);
+}
+#servicesPage #allServices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+#servicesPage #allServices article.singleService {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  width: 100%;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper {
+  float: left;
+  margin: 0 auto;
+  max-width: 85%;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  position: relative;
+  width: 100%;
+  margin-left: 150px;
+  margin-right: 0px;
+  transition: all 0.5s ease-in-out;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper.in-view {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper.reverse {
+  margin-left: 0px;
+  margin-right: -150px;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper.reverse.in-view {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper.reverse .serviceVideoContainer {
+  float: right;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper.reverse .serviceTextBx {
+  left: 0;
+  margin-left: -50px;
+  transition: all 0.5s ease-in-out;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper.reverse .serviceTextBx.in-view {
+  margin-left: 0px;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer {
+  position: relative;
+  width: 960px;
+  height: 540px;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer video {
+  border-radius: 4px;
+  height: 540px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 960px;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer img {
+  border-radius: 4px;
+  height: 540px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 960px;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer img.hoverImg {
+  display: none;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer:hover img.defaultImg {
+  display: none;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer:hover img.hoverImg {
+  display: block;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx {
+  border: 1px solid var(--secondaryColor);
+  border-radius: 8px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-right: 100px;
+  padding: 20px 30px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease-in-out;
+  width: 22.1875rem;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx.in-view {
+  margin-right: 0px;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx h6.serviceBxTitle {
+  font-size: 32px;
+  text-align: center;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx p.serviceBxDescription {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2%;
+  margin: 0px;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx button.serviceBxButton {
+  background-color: #b9af7f;
+  color: #ffffff !important;
+  border: 0px solid var(--secondaryColor);
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+#servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx button.serviceBxButton:hover {
+  border: 1px solid var(--secondaryColor);
+  box-shadow: inset 3px 3px 5px rgba(25, 25, 25, 0.15), inset -3px -3px 5px rgba(25, 25, 25, 0.15);
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1050px) {
+  #servicesPage {
+    padding-top: 14vh;
+  }
+  .singleServiceWrapper {
+    height: 75dvh !important;
+  }
+  .singleServiceWrapper .serviceVideoContainer {
+    position: relative;
+    width: 100% !important;
+    height: 50dvh !important;
+  }
+  .singleServiceWrapper .serviceVideoContainer video {
+    border-radius: 4px;
+    height: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100% !important;
+  }
+  .singleServiceWrapper .serviceVideoContainer img {
+    border-radius: 4px;
+    height: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100% !important;
+  }
+  .singleServiceWrapper .serviceVideoContainer img.hoverImg {
+    display: none;
+  }
+  .singleServiceWrapper .serviceVideoContainer:hover img.defaultImg {
+    display: flex;
+  }
+  .singleServiceWrapper .serviceVideoContainer:hover img.hoverImg {
+    display: none;
+  }
+  .singleServiceWrapper .serviceBxDescription {
+    font-size: 16px !important;
+  }
+  .singleServiceWrapper .serviceTextBx {
+    gap: 10px !important;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #servicesPage {
+    padding-top: 0vh;
+    background-position: center;
+  }
+  #servicesPage #sectionHero {
+    height: 0dvh !important;
+  }
+  #servicesPage #sectionHero #imgHero {
+    background-size: contain;
+    border-radius: 0px;
+  }
+  #servicesPage #allServices {
+    padding-top: 70px !important;
+    padding-bottom: 20px !important;
+    gap: 20px;
+    width: 100%;
+  }
+  #servicesPage #allServices article.singleService {
+    padding: 10px !important;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--secondaryColor);
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    float: none;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper.in-view {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper.reverse {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper.reverse.in-view {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper.reverse .serviceVideoContainer {
+    float: right;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper.reverse .serviceTextBx {
+    left: 0;
+    margin-left: 0px;
+    transition: all 0.5s ease-in-out;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper.reverse .serviceTextBx.in-view {
+    margin-left: 0px;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer {
+    position: relative;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer video {
+    border-radius: 4px;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100% !important;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer img {
+    border-radius: 4px;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100% !important;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer img.hoverImg {
+    display: none;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer:hover img.defaultImg {
+    display: flex;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceVideoContainer:hover img.hoverImg {
+    display: none;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx {
+    margin-right: 0px;
+    top: 0%;
+    width: 100%;
+    transform: translateY(0%);
+    border-radius: 0px;
+    border: 0px solid var(--secondaryColor);
+    right: 0;
+    position: relative;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx.in-view {
+    margin-right: 0px;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx h6.serviceBxTitle {
+    font-size: 32px;
+    text-align: center;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx p.serviceBxDescription {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 2%;
+    margin: 0px;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx button.serviceBxButton {
+    background-color: #D3C896;
+    border: 0px solid var(--secondaryColor);
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  #servicesPage #allServices article.singleService .singleServiceWrapper .serviceTextBx button.serviceBxButton:hover {
+    border: 1px solid var(--secondaryColor);
+    box-shadow: inset 3px 3px 5px rgba(25, 25, 25, 0.15), inset -3px -3px 5px rgba(25, 25, 25, 0.15);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  }
+}/*# sourceMappingURL=service_page.css.map */
