@@ -175,14 +175,14 @@ footer {
 @media only screen and (max-width: 1024px) {
   /* styles for laptops and standard desktops */
 	footer { 
+		align-items: center !important;
 		flex-direction: column-reverse;
+		gap: 20px;
 		height: fit-content !important;
 		position: relative;
 		padding-top: 25px !important;
 		padding-bottom: 60px !important;
 		width: 100%;
-		height: fit-content;
-		gap: 30px;
 		img {
 			width: 70%;
 			height: auto !important;
@@ -212,7 +212,7 @@ footer {
 		
 	}
 }
-@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+@media only screen and (min-width: 1025px) {
   /* styles for laptops and standard desktops */
 	footer {
 		align-items: end !important;
