@@ -139,7 +139,8 @@ if (localStorage.getItem('hide_landing_popup') !== 'true') {
     });
 }
 else {
-    bobbyFlay.classList.add('hide');
+    if (bobbyFlay)
+        bobbyFlay.classList.add('hide');
 }
 // Setting a cookie with SameSite=Lax
 document.cookie = "key=value; SameSite=Lax";
@@ -169,6 +170,7 @@ var eventSwitchTab = function () {
                 tab.tabIndex = 1;
             });
         };
+        showTab_1('upcoming');
         tabsWrapper.addEventListener('change', function (e) {
             var tabClicked = e.target;
             if (tabClicked)
@@ -204,7 +206,7 @@ var allEventsUpcoming = [
         event_link: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340325/Niko/new_materials/viber_image_2025-11-16_18-39-00-116_qscdyt.jpg",
         event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/cooking_classes_chef_kapernaros_vz0pbx.jpg",
         event_isMostRecent: true
-    },
+    }
 ];
 var allEventsPast = [
     {
@@ -379,13 +381,13 @@ var inputTextSelect = document.querySelectorAll('select');
 });
 // ******* Resizing logic ******* \\
 var textAreaAdjustToScreen = function () {
-    console.log('triggered');
-    if (window.innerHeight < 700 && window.innerWidth > 800) {
-        textArea.rows = 1;
-        console.log('here');
-    }
-    else {
-        textArea.rows = 3;
+    if (textArea) {
+        if (window.innerHeight < 700 && window.innerWidth > 800) {
+            textArea.rows = 1;
+        }
+        else {
+            textArea.rows = 3;
+        }
     }
 };
 textAreaAdjustToScreen();

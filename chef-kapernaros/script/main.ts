@@ -143,7 +143,7 @@ if (localStorage.getItem('hide_landing_popup') !== 'true' ) {
         bobbyFlay.classList.add('hide')
     })
 } else {
-    bobbyFlay.classList.add('hide')
+    if (bobbyFlay) bobbyFlay.classList.add('hide')
 }
 
 // Setting a cookie with SameSite=Lax
@@ -180,6 +180,7 @@ const eventSwitchTab = () => {
                 tab.tabIndex = 1
             })
         }
+        showTab('upcoming')
         tabsWrapper.addEventListener('change', (e) => {
             const tabClicked = e.target as HTMLInputElement
             if (tabClicked) showTab(tabClicked.value)
@@ -244,7 +245,6 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
 }
 
 const allEventsUpcoming: eventObj[] = [
-
     {
         event_id: "Harwood_Heights_Cooking_Class",
         event_title: "Harwood Heights Cooking Class",
@@ -255,7 +255,7 @@ const allEventsUpcoming: eventObj[] = [
         event_link: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340325/Niko/new_materials/viber_image_2025-11-16_18-39-00-116_qscdyt.jpg",
         event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1761871515/Niko/new_materials/cooking_classes_chef_kapernaros_vz0pbx.jpg",
         event_isMostRecent: true
-    },
+    }
 ]
 const allEventsPast: eventObj[] = [
         {
@@ -449,13 +449,12 @@ document.getElementById('myForm')?.addEventListener('submit', function(event) {
 // ******* Resizing logic ******* \\
 
 const textAreaAdjustToScreen = function () {
-    console.log('triggered')
-
-    if (window.innerHeight < 700 && window.innerWidth > 800) {
-        textArea.rows = 1
-        console.log('here')
-    } else {
-        textArea.rows = 3
+    if (textArea) {
+        if (window.innerHeight < 700 && window.innerWidth > 800) {
+            textArea.rows = 1
+        } else {
+            textArea.rows = 3
+        }
     }
 }
 textAreaAdjustToScreen()
