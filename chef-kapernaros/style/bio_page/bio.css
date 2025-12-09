@@ -16,7 +16,22 @@
   position: relative;
 }
 #bioPage #carouselSec #scrollForMore {
-  display: none;
+  display: flex;
+  width: 100%;
+}
+#bioPage #carouselSec #scrollForMore p {
+  background-color: #000;
+  padding: 5px 20px;
+  color: var(--secondaryColor) !important;
+  z-index: 11;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 14px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 #bioPage #carouselSec .carouselContainer {
   height: calc(100% - 20px);
@@ -706,16 +721,20 @@
   }
   #bioPage #carouselSec #scrollForMore {
     display: flex;
-    width: 100%;
   }
   #bioPage #carouselSec #scrollForMore p {
+    background-color: rgba(0, 0, 0, 0);
     padding: 5px 20px;
     color: var(--secondaryColor) !important;
     z-index: 11;
     position: absolute;
     bottom: 0px;
     right: 0px;
+    top: calc(100% - 30px);
     font-size: 14px;
+  }
+  #bioPage #carouselSec #scrollForMore p span {
+    display: none;
   }
   #bioPage #carouselSec > div {
     padding: 0px !important;
