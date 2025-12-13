@@ -126,6 +126,9 @@
   text-align: center;
   font-size: 22px;
 }
+#eventsPage .tab-content .event_wrapper .event_card#No_Events .eDescription {
+  text-align: center !important;
+}
 #eventsPage .tab-content .event_wrapper .event_card .eventInfo {
   display: flex;
   flex: auto;

@@ -146,7 +146,7 @@ if (bobbyLink) {
 // Only run popup show/hide behavior if the popup exists on this page
 if (bobbyFlay && closingPopup) {
     if (localStorage.getItem('hide_landing_popup') !== 'true') {
-        bobbyFlay.classList.remove('hide')
+        // bobbyFlay.classList.remove('hide')
 
         closingPopup.addEventListener('click', () => {
             localStorage.setItem('hide_landing_popup', 'true')
@@ -192,7 +192,7 @@ const eventSwitchTab = () => {
                 tab.tabIndex = 1
             })
         }
-        showTab('upcoming')
+        showTab('past_events')
         tabsWrapper.addEventListener('change', (e) => {
             const tabClicked = e.target as HTMLInputElement
             if (tabClicked) showTab(tabClicked.value)
@@ -248,7 +248,7 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
 
     const eTime =  cardElement.querySelector('.eTime') as HTMLElement
     const eLink =  cardElement.querySelector('.eLink') as HTMLElement
-    const eDescription =  cardElement.querySelector('.eDescription') as HTMLElement
+    // const eDescription =  cardElement.querySelector('.eDescription') as HTMLElement
     eTime.className = singleEvent.event_time === '' ? 'eTime flex' : 'eTime flex ml-50'
     eTime.classList.toggle('hide', !singleEvent.event_isMostRecent)
     eLink.classList.toggle('hide', singleEvent.event_isMostRecent)
@@ -258,18 +258,29 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
 
 const allEventsUpcoming: eventObj[] = [
     {
-        event_id: "Harwood_Heights_Cooking_Class",
-        event_title: "Harwood Heights Cooking Class",
-        event_date: "Dec 9, 2025",
-        event_location: "Harwood Heights, Recreation center",
-        event_time: "6:30 pm - 8:00 pm",
-        event_description: "Spend an unforgettable evening learning, tasting, and cooking with Chef Kapernaros. This hands-on class focuses on creating fresh, flavorful dishes using wholesome ingredients and classic Mediterranean techniques. Perfect for anyone who loves cooking, good company, and discovering the joy in every bite.",
-        event_link: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340325/Niko/new_materials/viber_image_2025-11-16_18-39-00-116_qscdyt.webp",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_631,h_709/v1761871515/Niko/new_materials/cooking_classes_chef_kapernaros_vz0pbx.webp",
+        event_id: "No_Events",
+        event_title: "",
+        event_date: "New events are in the works.",
+        event_location: "",
+        event_time: "",
+        event_description: "Dates and details coming soon.",
+        event_link: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
         event_isMostRecent: true
     }
 ]
 const allEventsPast: eventObj[] = [
+        {
+            event_id: "Harwood_Heights_Cooking_Class",
+            event_title: "Harwood Heights Cooking Class",
+            event_date: "Dec 9, 2025",
+            event_location: "Harwood Heights, Recreation center",
+            event_time: "6:30 pm - 8:00 pm",
+            event_description: "Spend an unforgettable evening learning, tasting, and cooking with Chef Kapernaros. This hands-on class focuses on creating fresh, flavorful dishes using wholesome ingredients and classic Mediterranean techniques. Perfect for anyone who loves cooking, good company, and discovering the joy in every bite.",
+            event_link: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340325/Niko/new_materials/viber_image_2025-11-16_18-39-00-116_qscdyt.webp",
+            event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_631,h_709/v1761871515/Niko/new_materials/cooking_classes_chef_kapernaros_vz0pbx.webp",
+            event_isMostRecent: true
+        },
         {
         event_id: "Taste_of_Hope",
         event_title: "Taste of Hope",
