@@ -176,7 +176,7 @@ var eventSwitchTab = function () {
                 tab.tabIndex = 1;
             });
         };
-        showTab_1('past_events');
+        showTab_1('upcoming');
         tabsWrapper.addEventListener('change', function (e) {
             var tabClicked = e.target;
             if (tabClicked)
@@ -196,21 +196,32 @@ var templateCard = function (singleEvent) {
     var eTime = cardElement.querySelector('.eTime');
     var eLink = cardElement.querySelector('.eLink');
     // const eDescription =  cardElement.querySelector('.eDescription') as HTMLElement
-    eTime.className = singleEvent.event_time === '' ? 'eTime flex' : 'eTime flex ml-50';
+    eTime.className = 'eTime flex';
     eTime.classList.toggle('hide', !singleEvent.event_isMostRecent);
     eLink.classList.toggle('hide', singleEvent.event_isMostRecent);
     return cardElementWrapper;
 };
 var allEventsUpcoming = [
+    // {
+    //     event_id: "No_Events",
+    //     event_title: "",
+    //     event_date: "New events are in the works.",
+    //     event_location: "",
+    //     event_time: "",
+    //     event_description: "Dates and details coming soon.",
+    //     event_link: "",
+    //     event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
+    //     event_isMostRecent: true
+    // }
     {
-        event_id: "No_Events",
-        event_title: "",
-        event_date: "New events are in the works.",
-        event_location: "",
-        event_time: "",
-        event_description: "Dates and details coming soon.",
+        event_id: "Banchet_Awards_After_Party",
+        event_title: "<div class='flex flex-column col-12 flex-justifyContent-center fontSize40'>2026 Banchet Awards <span class='fontSize25 mb-5'>- After Party -</span></div>",
+        event_date: "Jan 25, 2025",
+        event_location: "VenueSIX10",
+        event_time: "8 pm - 11:00 pm",
+        event_description: "<span class='fontSize18'>The Banchet Awards is a celebration of culinary excellence in Chicago, gathering more than 400 of Chicagoland’s foremost chefs, culinary professionals, and industry insiders. It is the sole Chicago-based awards ceremony honoring originality and talent across the region. Named after Chef Jean Banchet, who was inducted into the Chicago Chefs Hall of Fame in 2013, the organization pays homage to his legacy.</span>",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1766528092/Niko/new_materials/Banchets_award_stage_mq0an0.webp",
         event_isMostRecent: true
     }
 ];
@@ -230,7 +241,7 @@ var allEventsPast = [
         event_id: "Taste_of_Hope",
         event_title: "Taste of Hope",
         event_date: "Nov 6, 2025",
-        event_location: "Chicago, Navy Pier - AON Grand Ballroom",
+        event_location: "Navy Pier - AON Grand Ballroom",
         event_time: "6:00 pm",
         event_description: "This isn’t just a night out; it’s a movement toward a world without cancer. Join us as we celebrate over 35 amazing restaurants from the Chicagoland area, and let's make a difference together!",
         event_link: "www.chicagotasteofhope.com",

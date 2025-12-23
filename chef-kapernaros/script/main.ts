@@ -192,7 +192,7 @@ const eventSwitchTab = () => {
                 tab.tabIndex = 1
             })
         }
-        showTab('past_events')
+        showTab('upcoming')
         tabsWrapper.addEventListener('change', (e) => {
             const tabClicked = e.target as HTMLInputElement
             if (tabClicked) showTab(tabClicked.value)
@@ -249,7 +249,7 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
     const eTime =  cardElement.querySelector('.eTime') as HTMLElement
     const eLink =  cardElement.querySelector('.eLink') as HTMLElement
     // const eDescription =  cardElement.querySelector('.eDescription') as HTMLElement
-    eTime.className = singleEvent.event_time === '' ? 'eTime flex' : 'eTime flex ml-50'
+    eTime.className = 'eTime flex' 
     eTime.classList.toggle('hide', !singleEvent.event_isMostRecent)
     eLink.classList.toggle('hide', singleEvent.event_isMostRecent)
     
@@ -257,35 +257,46 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
 }
 
 const allEventsUpcoming: eventObj[] = [
+    // {
+    //     event_id: "No_Events",
+    //     event_title: "",
+    //     event_date: "New events are in the works.",
+    //     event_location: "",
+    //     event_time: "",
+    //     event_description: "Dates and details coming soon.",
+    //     event_link: "",
+    //     event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
+    //     event_isMostRecent: true
+    // }
     {
-        event_id: "No_Events",
-        event_title: "",
-        event_date: "New events are in the works.",
-        event_location: "",
-        event_time: "",
-        event_description: "Dates and details coming soon.",
+        event_id: "Banchet_Awards_After_Party",
+        event_title: "<div class='flex flex-column col-12 flex-justifyContent-center fontSize40'>2026 Banchet Awards <span class='fontSize25 mb-5'>- After Party -</span></div>",
+        event_date: "Jan 25, 2025",
+        event_location: "VenueSIX10",
+        event_time: "8 pm - 11:00 pm",
+        event_description: "<span class='fontSize18'>The Banchet Awards is a celebration of culinary excellence in Chicago, gathering more than 400 of Chicagoland’s foremost chefs, culinary professionals, and industry insiders. It is the sole Chicago-based awards ceremony honoring originality and talent across the region. Named after Chef Jean Banchet, who was inducted into the Chicago Chefs Hall of Fame in 2013, the organization pays homage to his legacy.</span>",
         event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1766528092/Niko/new_materials/Banchets_award_stage_mq0an0.webp",
         event_isMostRecent: true
     }
 ]
 const allEventsPast: eventObj[] = [
-        {
-            event_id: "Harwood_Heights_Cooking_Class",
-            event_title: "Harwood Heights Cooking Class",
-            event_date: "Dec 9, 2025",
-            event_location: "Harwood Heights, Recreation center",
-            event_time: "6:30 pm - 8:00 pm",
-            event_description: "Spend an unforgettable evening learning, tasting, and cooking with Chef Kapernaros. This hands-on class focuses on creating fresh, flavorful dishes using wholesome ingredients and classic Mediterranean techniques. Perfect for anyone who loves cooking, good company, and discovering the joy in every bite.",
-            event_link: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340325/Niko/new_materials/viber_image_2025-11-16_18-39-00-116_qscdyt.webp",
-            event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_631,h_709/v1761871515/Niko/new_materials/cooking_classes_chef_kapernaros_vz0pbx.webp",
-            event_isMostRecent: true
-        },
-        {
+    {
+        event_id: "Harwood_Heights_Cooking_Class",
+        event_title: "Harwood Heights Cooking Class",
+        event_date: "Dec 9, 2025",
+        event_location: "Harwood Heights, Recreation center",
+        event_time: "6:30 pm - 8:00 pm",
+        event_description: "Spend an unforgettable evening learning, tasting, and cooking with Chef Kapernaros. This hands-on class focuses on creating fresh, flavorful dishes using wholesome ingredients and classic Mediterranean techniques. Perfect for anyone who loves cooking, good company, and discovering the joy in every bite.",
+        event_link: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1763340325/Niko/new_materials/viber_image_2025-11-16_18-39-00-116_qscdyt.webp",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/w_631,h_709/v1761871515/Niko/new_materials/cooking_classes_chef_kapernaros_vz0pbx.webp",
+        event_isMostRecent: true
+    },
+    {
         event_id: "Taste_of_Hope",
         event_title: "Taste of Hope",
         event_date: "Nov 6, 2025",
-        event_location: "Chicago, Navy Pier - AON Grand Ballroom",
+        event_location: "Navy Pier - AON Grand Ballroom",
         event_time: "6:00 pm",
         event_description: "This isn’t just a night out; it’s a movement toward a world without cancer. Join us as we celebrate over 35 amazing restaurants from the Chicagoland area, and let's make a difference together!",
         event_link: "www.chicagotasteofhope.com",
