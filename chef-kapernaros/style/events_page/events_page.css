@@ -72,6 +72,7 @@
 #eventsPage .tab-content:not([hidden]) {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 #eventsPage .tab-content .event_wrapper {
   display: flex;
@@ -330,5 +331,10 @@
   }
   #eventsPage .tab-content .event_wrapper .event_card .eventPicWrapper {
     min-width: 100% !important;
+  }
+}
+@media only screen and (min-width: 1451px) {
+  #eventsPage .event_wrapper {
+    max-width: 85%;
   }
 }/*# sourceMappingURL=events_page.css.map */

@@ -268,19 +268,30 @@ const allEventsUpcoming: eventObj[] = [
     //     event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
     //     event_isMostRecent: true
     // }
+    { 
+        event_id: "Grand_Chef_Experience",
+        event_title: "Grand Chef Experience",
+        event_date: "March 7, 2026",
+        event_location: "Chicago, Field Museum",
+        event_time: "",
+        event_description: "For one more year It is a great honor for me and Pierless Hospitality team to support The Cystic Fibrosis Foundation, the world's leader in the search for a cure for CF.",
+        event_link: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035621/Niko/new_materials/grand-chef-experience_u2rqn2.webp",
+        event_isMostRecent: true
+    }
+]
+const allEventsPast: eventObj[] = [
     {
         event_id: "Banchet_Awards_After_Party",
         event_title: "<div class='flex flex-column col-12 flex-justifyContent-center fontSize40'>2026 Banchet Awards <span class='fontSize25 mb-5'>- After Party -</span></div>",
-        event_date: "Jan 25, 2025",
+        event_date: "Jan 25, 2026",
         event_location: "VenueSIX10",
         event_time: "8 pm - 11:00 pm",
         event_description: "<span class='fontSize18'>The Banchet Awards is a celebration of culinary excellence in Chicago, gathering more than 400 of Chicagoland’s foremost chefs, culinary professionals, and industry insiders. It is the sole Chicago-based awards ceremony honoring originality and talent across the region. Named after Chef Jean Banchet, who was inducted into the Chicago Chefs Hall of Fame in 2013, the organization pays homage to his legacy.</span>",
         event_link: "",
         event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1766528092/Niko/new_materials/Banchets_award_stage_mq0an0.webp",
         event_isMostRecent: true
-    }
-]
-const allEventsPast: eventObj[] = [
+    },
     {
         event_id: "Harwood_Heights_Cooking_Class",
         event_title: "Harwood Heights Cooking Class",
