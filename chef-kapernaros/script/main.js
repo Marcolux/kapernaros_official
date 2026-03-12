@@ -214,6 +214,19 @@ var allEventsUpcoming = [
     //     event_isMostRecent: true
     // }
     {
+        event_id: "Kids_cooking_class",
+        event_title: "Kids Cooking Class",
+        event_date: "March 20, 2026",
+        event_location: "Harwood Heights Recreation Center<br/> 7300 W. Wilson Ave, Harwood Heights, IL",
+        event_time: "6:00 PM",
+        event_description: "Little chefs will have a hands-on experience arranging and creating 3 dishes with the help of Celebrity Chef Nikolaos Kapernaros.",
+        event_link: "",
+        event_picture: "../chef-kapernaros/images/kids_cooking_class.jpg",
+        event_isMostRecent: true
+    }
+];
+var allEventsPast = [
+    {
         event_id: "Grand_Chef_Experience",
         event_title: "Grand Chef Experience",
         event_date: "March 7, 2026",
@@ -223,9 +236,7 @@ var allEventsUpcoming = [
         event_link: "",
         event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035621/Niko/new_materials/grand-chef-experience_u2rqn2.webp",
         event_isMostRecent: true
-    }
-];
-var allEventsPast = [
+    },
     {
         event_id: "Banchet_Awards_After_Party",
         event_title: "<div class='flex flex-column col-12 flex-justifyContent-center fontSize40'>2026 Banchet Awards <span class='fontSize25 mb-5'>- After Party -</span></div>",
