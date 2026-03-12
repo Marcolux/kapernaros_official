@@ -137,7 +137,6 @@
   gap: 10px;
   padding: 40px;
   width: 55%;
-  float: left;
 }
 #eventsPage .tab-content .event_wrapper .event_card .eventInfo .eTitle {
   font-size: 50px;
@@ -162,6 +161,9 @@
   text-align: end;
   text-decoration: none;
   color: var(--secondaryColor);
+}
+#eventsPage .tab-content .event_wrapper .event_card .eventInfo {
+  float: left;
 }
 #eventsPage .tab-content .event_wrapper .event_card .eventPicWrapper {
   display: none;

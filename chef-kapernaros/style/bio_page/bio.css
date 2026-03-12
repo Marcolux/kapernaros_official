@@ -100,10 +100,12 @@
   font-size: 20px !important;
   padding: 0px 10px;
   text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
-  transition: opacity 1s ease;
 }
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide .slidePic .picNote:not(.note_0) {
   opacity: 0;
+}
+#bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide .slidePic .picNote {
+  transition: opacity 1s ease;
 }
 #bioPage #carouselSec .carouselContainer #carousel .singleCarouselSlide .slidePic .picNote.darker {
   opacity: 1 !important;
@@ -349,7 +351,6 @@
   transition: all 0.5s ease;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle .flip-icon {
   fill: #f1f1f1;
@@ -357,6 +358,9 @@
   transition: all 1s ease;
   box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
   background-color: rgba(255, 255, 255, 0);
+}
+#bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle {
+  cursor: pointer;
 }
 #bioPage #valueSec .cardContainer .flip-card .flip-card-inner .flip-toggle:hover .flip-icon {
   fill: var(--secondaryColor);
@@ -390,7 +394,6 @@
   justify-content: center;
   padding: 120px 40px 0px 40px;
   box-shadow: inset 0px 0px 50px 0px #000000;
-  /* Mobile: stack */
 }
 #bioPage #careerHighlightsSec .careerHighlightsWrapper {
   align-items: center;
@@ -474,6 +477,9 @@
 #bioPage #careerHighlightsSec .careerHighlightsWrapper .timeline .timeline__events .event:hover {
   outline: none;
   text-shadow: 0.5px 0.5px 1.5px var(--secondaryColor);
+}
+#bioPage #careerHighlightsSec {
+  /* Mobile: stack */
 }
 @media (max-width: 720px) {
   #bioPage #careerHighlightsSec .timeline {

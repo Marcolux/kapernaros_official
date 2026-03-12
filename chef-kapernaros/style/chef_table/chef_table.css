@@ -190,7 +190,6 @@ body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-
   transition: all 0.5s ease;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-toggle .flip-icon {
   fill: #f1f1f1;
@@ -198,6 +197,9 @@ body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-
   transition: all 1s ease;
   box-shadow: 2px 2px 6px rgba(20, 20, 20, 0.2);
   background-color: rgba(255, 255, 255, 0);
+}
+body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-toggle {
+  cursor: pointer;
 }
 body#chefTablePage section#chefTableSec #tablePicContainer .cardContainer .flip-card .flip-card-inner .flip-toggle:hover .flip-icon {
   fill: var(--secondaryColor);

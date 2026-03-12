@@ -15,11 +15,11 @@
   --navbar-color: #ffffff;
   --navbar-fontsize: 22px;
   --navbar-fontsize-smMenu: 25px;
-  --navbar-fontFamily: "Merriweather";
+  --navbar-fontFamily: 'Merriweather';
   --navbar-fontWeight: 600;
   --navbar-before-color: #CDAA7F;
   /*==== BODY ====*/
-  --body-App-fontFamily: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --body-App-fontFamily: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   /*==== FOOTER ====*/
   --footer-height: 160px;
   --navBackGroundColor: #ffffff00;
@@ -387,19 +387,6 @@
   background-color: rgba(47, 47, 47, 0.7921568627);
   pointer-events: none;
 }
-#bobbyFlay #bobbyFlayDiv {
-  cursor: pointer;
-  border: 10px solid #ffffff;
-  height: 95%;
-  width: 65%;
-  max-width: 680px;
-  max-height: 910px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: grid;
-  position: relative;
-}
 #bobbyFlay #bobbyFlayDiv #closingPopup {
   pointer-events: all !important;
   position: absolute;
@@ -418,6 +405,19 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+#bobbyFlay #bobbyFlayDiv {
+  cursor: pointer;
+  border: 10px solid #ffffff;
+  height: 95%;
+  width: 65%;
+  max-width: 680px;
+  max-height: 910px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  position: relative;
 }
 
 /* Mobile Small */
