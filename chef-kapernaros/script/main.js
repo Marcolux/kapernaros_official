@@ -217,11 +217,22 @@ var allEventsUpcoming = [
         event_id: "Kids_cooking_class",
         event_title: "Kids Cooking Class",
         event_date: "March 20, 2026",
-        event_location: "Harwood Heights Recreation Center ",
+        event_location: "Harwood Heights Recreation Center",
         event_time: "6:00 PM",
         event_description: "Little chefs will have a hands-on experience arranging and creating 3 dishes with the help of Celebrity Chef Nikolaos Kapernaros.",
         event_link: "",
         event_picture: "../chef-kapernaros/images/kids_cooking_class.jpg",
+        event_isMostRecent: true
+    },
+    {
+        event_id: "I_Cook_For_Children_With_Cancer",
+        event_title: '"I Cook For"',
+        event_date: "March 26, 2026",
+        event_location: "Four Seasons Hotel Chicago",
+        event_time: "5:30 PM – 8:30 PM",
+        event_description: 'Chicago Chefs Cook presents the "I Cook For" event supporting children living with cancer. Celebrity chefs come together to raise funds and awareness, with Chef Nikolaos Kapernaros participating as a 2026 Cause Captain.',
+        event_link: "https://icookfor.chicagochefscook.org",
+        event_picture: "../chef-kapernaros/images/i_cook_for_event.jpg",
         event_isMostRecent: true
     }
 ];
@@ -292,28 +303,6 @@ var allEventsPast = [
         event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1759880299/Niko/new_materials/chef-pic-8_fehnzs.webp",
         event_isMostRecent: true
     },
-    {
-        event_id: "I_Cook_For_benefit",
-        event_title: "\"I Cook For\" benefit",
-        event_date: "March 20, 2025",
-        event_location: "Chicago, Four Seasons Hotel",
-        event_time: "",
-        event_description: "Pierless Hospitality team of Navy Pier Chicago at 'I Cook For' Benefit",
-        event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035490/Niko/new_materials/I-cook-for-benefit_ri4usq.webp",
-        event_isMostRecent: true
-    },
-    {
-        event_id: "Grand_Chef_Experience",
-        event_title: "Grand Chef Experience",
-        event_date: "March 2, 2025",
-        event_location: "Chicago, Field Museum",
-        event_time: "",
-        event_description: "For one more year It is a great honor for me and Pierless Hospitality team to support The Cystic Fibrosis Foundation, the world's leader in the search for a cure for CF.",
-        event_link: "",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1762035621/Niko/new_materials/grand-chef-experience_u2rqn2.webp",
-        event_isMostRecent: true
-    }
 ];
 var allEventsCompetions = [
     {
