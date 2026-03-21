@@ -268,17 +268,7 @@ const allEventsUpcoming: eventObj[] = [
     //     event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
     //     event_isMostRecent: true
     // }
-    { 
-        event_id: "Kids_cooking_class",
-        event_title: "Kids Cooking Class",
-        event_date: "March 20, 2026",
-        event_location: "Harwood Heights Recreation Center",
-        event_time: "6:00 PM",
-        event_description: "Little chefs will have a hands-on experience arranging and creating 3 dishes with the help of Celebrity Chef Nikolaos Kapernaros.",
-        event_link: "",
-        event_picture: "../chef-kapernaros/images/kids_cooking_class.jpg",
-        event_isMostRecent: true
-    },
+
     { 
         event_id: "I_Cook_For_Children_With_Cancer",
         event_title: '"I Cook For"',
@@ -292,6 +282,17 @@ const allEventsUpcoming: eventObj[] = [
     }
 ]
 const allEventsPast: eventObj[] = [
+    { 
+        event_id: "Kids_cooking_class",
+        event_title: "Kids Cooking Class",
+        event_date: "March 20, 2026",
+        event_location: "Harwood Heights Recreation Center",
+        event_time: "6:00 PM",
+        event_description: "Little chefs will have a hands-on experience arranging and creating 3 dishes with the help of Celebrity Chef Nikolaos Kapernaros.",
+        event_link: "",
+        event_picture: "../chef-kapernaros/images/kids_cooking_class.jpg",
+        event_isMostRecent: true
+    },
     { 
         event_id: "Grand_Chef_Experience",
         event_title: "Grand Chef Experience",

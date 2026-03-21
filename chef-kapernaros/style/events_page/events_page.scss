@@ -47,7 +47,7 @@ $shadowInset: #ffffff41;
             }
         }
         input.activeTab + label {
-            background-color: #000000;
+            // background-color: #000000;
             color: var(--secondaryColor);
             font-weight: 600 !important;
         }
@@ -85,7 +85,7 @@ $shadowInset: #ffffff41;
             display: flex;
             padding: 60px 10px 0px 10px;
             width: 100%;
-            height: 600px;
+            // height: 600px;
             &:nth-child(odd) {
                 .event_card {
                     flex-direction: row-reverse;
@@ -140,6 +140,7 @@ $shadowInset: #ffffff41;
                     display: flex;
                     flex: auto;
                     flex-direction: column;
+                    justify-content: center;
                     gap: 10px;
                     padding: 40px;
                     width: 55%;
@@ -157,7 +158,8 @@ $shadowInset: #ffffff41;
                     } 
                     .eDescription {
                         font-size: 20px;
-                        margin: auto;
+                        // margin: auto;
+                        margin-top: 30px;
                         text-align: start;
                     }
                     .eLink {
@@ -333,7 +335,7 @@ $shadowInset: #ffffff41;
 @media only screen and (min-width: 1451px) {
     #eventsPage {
         .event_wrapper {
-            max-width: 85%;
+            max-width: 1200px;
         }
     } 
 }
