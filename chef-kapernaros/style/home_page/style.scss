@@ -23,7 +23,7 @@
 
 			#heroLandingVideo {
 				position: absolute;
-				height: 85vh;
+				// height: 85vh;
 				aspect-ratio: 1 / 1.2;
 				-o-object-fit: contain;
 				object-fit: cover;
@@ -126,20 +126,27 @@
 		}
 	}
 
-	.middlePic{
+	.middlePic {
 		background-color: #000000;
+		width: 100%;
 		.middleImgWrapper {
+			box-sizing: border-box;
 			background-color: #ffffff;
 			border: 3px solid var(--secondaryColor);
-			gap: 15px;
 			width: 70%;
+			display: flex;
+			gap: 15px;
+			padding: 15px;
 			img {
-				aspect-ratio: 1/.9;
+				flex: 1;
+				min-width: 0;
+				aspect-ratio: 1 / 0.9;
 				object-fit: cover;
-				object-position: center center;
+				object-position: center;
 			}
 		}
 	}
+
 	.bioLandingPicContainer {
 		box-sizing: border-box;
 		display: flex;

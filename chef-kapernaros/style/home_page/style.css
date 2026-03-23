@@ -61,7 +61,6 @@
 }
 #homePage #landingSection #landingPicBox #heroLandingVideo {
   position: absolute;
-  height: 85vh;
   aspect-ratio: 1/1.2;
   -o-object-fit: contain;
   object-fit: cover;
@@ -176,19 +175,25 @@
 }
 #homePage .middlePic {
   background-color: #000000;
+  width: 100%;
 }
 #homePage .middlePic .middleImgWrapper {
+  box-sizing: border-box;
   background-color: #ffffff;
   border: 3px solid var(--secondaryColor);
-  gap: 15px;
   width: 70%;
+  display: flex;
+  gap: 15px;
+  padding: 15px;
 }
 #homePage .middlePic .middleImgWrapper img {
+  flex: 1;
+  min-width: 0;
   aspect-ratio: 1/0.9;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
+  -o-object-position: center;
+     object-position: center;
 }
 #homePage .bioLandingPicContainer {
   box-sizing: border-box;
