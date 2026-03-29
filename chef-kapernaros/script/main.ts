@@ -257,19 +257,32 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
 }
 
 const allEventsUpcoming: eventObj[] = [
-    // {
-    //     event_id: "No_Events",
-    //     event_title: "",
-    //     event_date: "New events are in the works.",
-    //     event_location: "",
-    //     event_time: "",
-    //     event_description: "Dates and details coming soon.",
-    //     event_link: "",
-    //     event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
+    {
+        event_id: "No_Events",
+        event_title: "",
+        event_date: "New events are in the works.",
+        event_location: "",
+        event_time: "",
+        event_description: "Dates and details coming soon.",
+        event_link: "",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
+        event_isMostRecent: true
+    }
+
+    // { 
+    //     event_id: "I_Cook_For_Children_With_Cancer",
+    //     event_title: '"I Cook For"',
+    //     event_date: "March 26, 2026",
+    //     event_location: "Four Seasons Hotel Chicago",
+    //     event_time: "5:30 PM – 8:30 PM",
+    //     event_description: 'Chicago Chefs Cook presents the "I Cook For" event supporting children living with cancer. Celebrity chefs come together to raise funds and awareness, with Chef Nikolaos Kapernaros participating as a 2026 Cause Captain.',
+    //     event_link: "https://icookfor.chicagochefscook.org",
+    //     event_picture: "../chef-kapernaros/images/i_cook_for_event.jpg",
     //     event_isMostRecent: true
     // }
-
-    { 
+]
+const allEventsPast: eventObj[] = [
+        { 
         event_id: "I_Cook_For_Children_With_Cancer",
         event_title: '"I Cook For"',
         event_date: "March 26, 2026",
@@ -279,9 +292,7 @@ const allEventsUpcoming: eventObj[] = [
         event_link: "https://icookfor.chicagochefscook.org",
         event_picture: "../chef-kapernaros/images/i_cook_for_event.jpg",
         event_isMostRecent: true
-    }
-]
-const allEventsPast: eventObj[] = [
+    },
     { 
         event_id: "Kids_cooking_class",
         event_title: "Kids Cooking Class",
