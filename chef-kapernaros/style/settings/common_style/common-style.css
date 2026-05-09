@@ -269,7 +269,7 @@ footer #logosFooter {
        column-gap: 50px;
 }
 footer #logosFooter img {
-  height: 80px;
+  height: 70px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -313,7 +313,7 @@ footer #logosFooter img {
          column-gap: 10px !important;
   }
   footer #logosFooter img {
-    height: 50px !important;
+    height: 45px !important;
     width: auto;
   }
   footer #socialLinks {
