@@ -165,10 +165,13 @@ footer {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 	footer {
 		flex-direction: row !important;
-		img { width: 30% !important; }
+		// img { width: 30% !important; }
 		#webcraftLink {
 			height: 13vh !important;
 			align-items: end;
+		}
+		#socialLinks {
+			width: fit-content !important;
 		}
 	}
 }
@@ -186,6 +189,9 @@ footer {
 		img {
 			width: 70%;
 			height: auto !important;
+			&.logoFooter {
+				width: 100%;
+			}
 		}
 		#webcraftLink {
 			position: absolute;
@@ -195,14 +201,15 @@ footer {
 			justify-content: center;
 		}
 		#logosFooter {
-			column-gap: 10px !important;
+			gap: 10px !important;
+			flex-wrap: wrap;
 			img {
 				height: 45px !important;
-				width: auto;
+				width: auto !important;
 			}
 		}
 		#socialLinks {
-			width: 100% !important;
+			width: 100%;
 			justify-content: center;
 			margin-bottom: 0px !important;
 		}

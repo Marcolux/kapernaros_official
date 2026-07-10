@@ -192,7 +192,7 @@ var templateCard = function (singleEvent) {
     cardElement.className = singleEvent.event_isMostRecent ? 'event_card mostRecentEvt' : 'event_card';
     cardElement.id = singleEvent.event_id;
     cardElementWrapper.append(cardElement);
-    cardElement.innerHTML = "\n        <div class=\"eventInfo\">\n            <div class=\"titlePicWrapper\">\n                <div class=\"flex flex-column flex-alignItems-center col-12\">\n                    <h5 class=\"col-12 eTitle\">".concat(singleEvent.event_title, "</h5>\n                    <h3 class=\"col-12 text-bold eDate\">").concat(singleEvent.event_date, "</h3>\n                </div>\n                <img class=\"eventPic\" src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n            </div>\n            <div class=\"col-12 flex flex-column flex-alignItems-center flex-justifyContent-spaceBetween placeTimeWrapper\">\n                <h6 class=\"eLocation flex\">").concat(singleEvent.event_location, "</h6>\n                <h6 class=\"eTime flex\">").concat(singleEvent.event_time, "</h6>\n            </div>\n            <p class=\"col-12 eDescription\">").concat(singleEvent.event_description, "</p>\n            <a class=\"col-12 eLink\" href=\"").concat(singleEvent.event_link, "\" target=\"_blank\">Event Link</a>\n        </div>\n        <div class=\"eventPicWrapper\">\n            <img src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n        </div>\n    ");
+    cardElement.innerHTML = "\n        <div class=\"eventInfo\">\n            <div class=\"titlePicWrapper\">\n                <div class=\"flex flex-column flex-alignItems-center col-12\">\n                    <h5 class=\"col-12 eTitle\">".concat(singleEvent.event_title, "</h5>\n                    <h3 class=\"col-12 text-bold eDate\">").concat(singleEvent.event_date, "</h3>\n                </div>\n                <img class=\"eventPic\" src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n            </div>\n            <div class=\"col-12 flex flex-column flex-alignItems-center flex-justifyContent-spaceBetween placeTimeWrapper\">\n                <h6 class=\"eLocation flex\">").concat(singleEvent.event_location, "</h6>\n                <h6 class=\"eTime flex\">").concat(singleEvent.event_time, "</h6>\n            </div>\n            <p class=\"col-12 eDescription\" lang=\"en\">").concat(singleEvent.event_description, "</p>\n            <a class=\"col-12 eLink\" href=\"").concat(singleEvent.event_link, "\" target=\"_blank\">Event Link</a>\n        </div>\n        <div class=\"eventPicWrapper\">\n            <img src=\"").concat(singleEvent.event_picture, "\" alt=\"\">\n        </div>\n    ");
     var eTime = cardElement.querySelector('.eTime');
     var eLink = cardElement.querySelector('.eLink');
     // const eDescription =  cardElement.querySelector('.eDescription') as HTMLElement
@@ -214,6 +214,19 @@ var allEventsUpcoming = [
     //     event_isMostRecent: true
     // }
     {
+        event_id: "Chicago_Gourment",
+        event_title: "Chicago Gourment",
+        event_date: "September 24th-27th",
+        event_location: "Harris Theater Rooftop in Millennium Park, Chicago",
+        event_time: "",
+        event_description: "Let Your Tastebuds Dance! This year, Chicago Gourmet celebrates the vibrant intersection of food & dance, where bold flavors meet live performances and every bite carries its own rhythm. Experience chef led tastings, immersive culinary moments, dynamic dance, and thoughtfully curated wine and spirits that keep every flavor in step.",
+        event_link: "https://www.chicagogourmet.org/",
+        event_picture: "../chef-kapernaros/images/chicago_gourmet.jpg",
+        event_isMostRecent: true
+    }
+];
+var allEventsPast = [
+    {
         event_id: "PanosPalooza",
         event_title: 'PanosPalooza 2026',
         event_date: "June 9, 2026",
@@ -223,9 +236,7 @@ var allEventsUpcoming = [
         event_link: "https://panosfoods.com/",
         event_picture: "../chef-kapernaros/images/panos_kapernaros.jpg",
         event_isMostRecent: true
-    }
-];
-var allEventsPast = [
+    },
     {
         event_id: "I_Cook_For_Children_With_Cancer",
         event_title: '"I Cook For"',

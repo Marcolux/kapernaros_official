@@ -356,7 +356,6 @@
 		background-position: center;
 		display: grid;
 		position: relative;
-
 	}
 }
 
@@ -401,9 +400,11 @@
 				z-index: 20;
 			}
 			img#signatureLanding {
-				width: 100vw;
-				bottom: 15%;
-				right: 0%;
+				width: 100vw !important;
+				bottom: 3% !important;
+				right: 0% !important;
+				background: linear-gradient(73deg, #000000cf, transparent);
+				padding: 10px 20px;
 			}
 		
 		}

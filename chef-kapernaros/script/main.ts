@@ -238,7 +238,7 @@ const templateCard = (singleEvent: eventObj): HTMLElement => {
                 <h6 class="eLocation flex">${singleEvent.event_location}</h6>
                 <h6 class="eTime flex">${singleEvent.event_time}</h6>
             </div>
-            <p class="col-12 eDescription">${singleEvent.event_description}</p>
+            <p class="col-12 eDescription" lang="en">${singleEvent.event_description}</p>
             <a class="col-12 eLink" href="${singleEvent.event_link}" target="_blank">Event Link</a>
         </div>
         <div class="eventPicWrapper">
@@ -268,7 +268,19 @@ const allEventsUpcoming: eventObj[] = [
     //     event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
     //     event_isMostRecent: true
     // }
-
+    {
+        event_id: "Chicago_Gourment",
+        event_title: "Chicago Gourment",
+        event_date: "September 24th-27th",
+        event_location: "Harris Theater Rooftop in Millennium Park, Chicago",
+        event_time: "",
+        event_description: "Let Your Tastebuds Dance! This year, Chicago Gourmet celebrates the vibrant intersection of food & dance, where bold flavors meet live performances and every bite carries its own rhythm. Experience chef led tastings, immersive culinary moments, dynamic dance, and thoughtfully curated wine and spirits that keep every flavor in step.",
+        event_link: "https://www.chicagogourmet.org/",
+        event_picture: "../chef-kapernaros/images/chicago_gourmet.jpg",
+        event_isMostRecent: true
+    }
+]
+const allEventsPast: eventObj[] = [
     { 
         event_id: "PanosPalooza",
         event_title: 'PanosPalooza 2026',
@@ -279,10 +291,8 @@ const allEventsUpcoming: eventObj[] = [
         event_link: "https://panosfoods.com/",
         event_picture: "../chef-kapernaros/images/panos_kapernaros.jpg",
         event_isMostRecent: true
-    }
-]
-const allEventsPast: eventObj[] = [
-        { 
+    },
+    { 
         event_id: "I_Cook_For_Children_With_Cancer",
         event_title: '"I Cook For"',
         event_date: "March 26, 2026",

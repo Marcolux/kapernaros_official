@@ -469,9 +469,11 @@
     z-index: 20;
   }
   #homePage #landingSection img#signatureLanding {
-    width: 100vw;
-    bottom: 15%;
-    right: 0%;
+    width: 100vw !important;
+    bottom: 3% !important;
+    right: 0% !important;
+    background: linear-gradient(73deg, rgba(0, 0, 0, 0.8117647059), transparent);
+    padding: 10px 20px;
   }
   #homePage .middlePic .middleImgWrapper {
     border: 1px solid var(--secondaryColor);

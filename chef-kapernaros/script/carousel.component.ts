@@ -85,7 +85,7 @@ function initCarousel() {
     const slide4 = {
         description: 'In 2018, my wife and I relocated to Chicago to be closer to her family. We continued building our life here, and in 2021, welcomed our son, completing our family of four.',
         leftBG: 'linear-gradient(180deg, var(--darkBlueColor), #000000)',
-        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/q_auto,f_auto/v1712186480/Niko/chef-kapernaros.family2_kxxwzi.webp',
+        rightBG: 'https://res.cloudinary.com/drdrs6pdq/image/upload/v1783645813/Niko/new_materials/new_family_pic_ugxpyb.jpg',
         picNote: ''
     }
     const slide5 = {
