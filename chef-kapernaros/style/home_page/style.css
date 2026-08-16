@@ -408,12 +408,12 @@
 #popupFlyer #popupFlyerDiv #closingPopup {
   pointer-events: all !important;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: -60px;
+  top: 0px;
 }
 #popupFlyer #popupFlyerDiv #closingPopup::before {
   font-size: 35px !important;
-  color: #2b2b2b;
+  color: #ffffff;
 }
 #popupFlyer #popupFlyerDiv #closingPopup:hover {
   scale: 1.1;
