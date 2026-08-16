@@ -435,10 +435,22 @@
     height: -moz-fit-content !important;
     height: fit-content !important;
     width: 100% !important;
+    aspect-ratio: 1.34/2;
+  }
+  #closingPopup {
+    background-color: black;
+    border-radius: 50%;
+    right: 10px;
+    top: 10px;
+  }
+  #closingPopup::before {
+    font-size: 35px !important;
+    color: #ffffff;
   }
   #pop-up-img {
     width: 100% !important;
     height: 100% !important;
+    aspect-ratio: 1.34/2;
     -o-object-fit: contain !important;
        object-fit: contain !important;
   }

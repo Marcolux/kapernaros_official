@@ -363,14 +363,26 @@
 // Break Points 
 /* Mobile Small */
 @media only screen and (max-width: 1024px) {
-  /* styles for small phones */
-  #popupFlyerDiv {
-	height:  fit-content !important;;
-	width: 100% !important;
-  }
+	/* styles for small phones */
+	#popupFlyerDiv {
+		height:  fit-content !important;;
+		width: 100% !important;
+		aspect-ratio: 1.34/2;
+	}
+	#closingPopup{
+		background-color: black;
+		border-radius: 50%;
+		right: 10px;
+		top: 10px;
+		&::before{
+			font-size: 35px !important;
+			color: #ffffff;
+		}
+	}
 	#pop-up-img {
 		width: 100% !important;
 		height: 100% !important;
+		aspect-ratio: 1.34/2;
 		object-fit: contain !important;
 	}
   	#homePage {
