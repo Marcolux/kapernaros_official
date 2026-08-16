@@ -432,15 +432,15 @@
 @media only screen and (max-width: 1024px) {
   /* styles for small phones */
   #popupFlyerDiv {
-    height: 100%;
+    height: 90dvh !important;
     width: auto;
-    aspect-ratio: 1.35/2 !important;
+    aspect-ratio: 1.12/2 !important;
   }
   #closingPopup {
     background-color: black;
     border-radius: 50%;
-    right: 10px !important;
-    top: 10px !important;
+    right: 0px !important;
+    top: 0px !important;
   }
   #closingPopup::before {
     font-size: 35px !important;
