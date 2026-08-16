@@ -119,33 +119,29 @@ document.querySelectorAll('.flip-card').forEach(function (card) {
     }
 });
 // ******* Popup logic ******* \\
-// ******* Popup logic ******* \\
-var bobbyLink = document.getElementById('clickToPics');
-var bobbyFlay = document.getElementById('bobbyFlay');
+var popupLink = document.getElementById('clickToPics');
+var popupFlyer = document.getElementById('popupFlyer');
 var closingPopup = document.getElementById('closingPopup');
 var openCompetitions = function () {
-    // Only hide popup if it actually exists on this page
-    if (bobbyFlay)
-        bobbyFlay.classList.add('hide');
-    localStorage.setItem('loading_competions', 'true');
-    localStorage.setItem('hide_landing_popup', 'true');
-    // Go to services page
+    if (popupFlyer)
+        popupFlyer.classList.add('hide');
+    sessionStorage.setItem('loading_competions', 'true');
+    sessionStorage.setItem('hide_landing_popup', 'true');
     window.location.href = './pages/services.html';
 };
-if (bobbyLink) {
-    bobbyLink.addEventListener('click', openCompetitions);
+if (popupLink) {
+    popupLink.addEventListener('click', openCompetitions);
 }
-// Only run popup show/hide behavior if the popup exists on this page
-if (bobbyFlay && closingPopup) {
-    if (localStorage.getItem('hide_landing_popup') !== 'true') {
-        // bobbyFlay.classList.remove('hide')
+if (popupFlyer && closingPopup) {
+    if (sessionStorage.getItem('hide_landing_popup') !== 'true') {
+        popupFlyer.classList.remove('hide');
         closingPopup.addEventListener('click', function () {
-            localStorage.setItem('hide_landing_popup', 'true');
-            bobbyFlay.classList.add('hide');
+            sessionStorage.setItem('hide_landing_popup', 'true');
+            popupFlyer.classList.add('hide');
         });
     }
     else {
-        bobbyFlay.classList.add('hide');
+        popupFlyer.classList.add('hide');
     }
 }
 // Setting a cookie with SameSite=Lax
@@ -214,8 +210,8 @@ var allEventsUpcoming = [
     //     event_isMostRecent: true,
     // }
     {
-        event_id: "Chicago_Gourment",
-        event_title: "Chicago Gourment",
+        event_id: "Chicago_Gourmet",
+        event_title: "Chicago Gourmet",
         event_date: "September 24th-27th",
         event_location: "Harris Theater Rooftop in Millennium Park, Chicago",
         event_time: "",

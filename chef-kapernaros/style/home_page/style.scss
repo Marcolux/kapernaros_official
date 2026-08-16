@@ -315,7 +315,7 @@
 	footer { background-color: transparent; }
 }
 
-#bobbyFlay{
+#popupFlyer{
 	position: fixed;
 	top: 0%;
 	height: 100%;
@@ -326,7 +326,18 @@
 	justify-content: center;
 	background-color: #2f2f2fca;
 	pointer-events: none;
-	#bobbyFlayDiv{
+	#popupFlyerDiv{
+		border: 10px solid #ffffff;
+		height: 100%;
+		width: auto;
+		aspect-ratio: 1.51/2;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
 		#closingPopup{
 			pointer-events: all !important;
 			position: absolute;
@@ -346,16 +357,6 @@
 			object-fit: cover;
 		}
 		cursor: pointer;
-		border: 10px solid #ffffff;
-		height: 95%;
-		width: 65%;
-		max-width: 680px;
-		max-height: 910px;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		display: grid;
-		position: relative;
 	}
 }
 
@@ -363,7 +364,7 @@
 /* Mobile Small */
 @media only screen and (max-width: 1024px) {
   /* styles for small phones */
-  #bobbyFlayDiv {
+  #popupFlyerDiv {
 	height:  fit-content !important;;
 	width: 100% !important;
   }

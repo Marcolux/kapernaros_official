@@ -124,36 +124,31 @@ document.querySelectorAll('.flip-card').forEach(card=>{
 
 // ******* Popup logic ******* \\
 
-// ******* Popup logic ******* \\
-
-const bobbyLink = document.getElementById('clickToPics')
-const bobbyFlay = document.getElementById('bobbyFlay')
+const popupLink = document.getElementById('clickToPics')
+const popupFlyer = document.getElementById('popupFlyer')
 const closingPopup = document.getElementById('closingPopup')
 
 const openCompetitions = () => {
-    // Only hide popup if it actually exists on this page
-    if (bobbyFlay) bobbyFlay.classList.add('hide')
-    localStorage.setItem('loading_competions', 'true')
-    localStorage.setItem('hide_landing_popup', 'true')
-    // Go to services page
+    if (popupFlyer) popupFlyer.classList.add('hide')
+    sessionStorage.setItem('loading_competions', 'true')
+    sessionStorage.setItem('hide_landing_popup', 'true')
     window.location.href = './pages/services.html'
 }
 
-if (bobbyLink) {
-    bobbyLink.addEventListener('click', openCompetitions)
+if (popupLink) {
+    popupLink.addEventListener('click', openCompetitions)
 }
 
-// Only run popup show/hide behavior if the popup exists on this page
-if (bobbyFlay && closingPopup) {
-    if (localStorage.getItem('hide_landing_popup') !== 'true') {
-        // bobbyFlay.classList.remove('hide')
+if (popupFlyer && closingPopup) {
+    if (sessionStorage.getItem('hide_landing_popup') !== 'true') {
+        popupFlyer.classList.remove('hide')
 
         closingPopup.addEventListener('click', () => {
-            localStorage.setItem('hide_landing_popup', 'true')
-            bobbyFlay.classList.add('hide')
+            sessionStorage.setItem('hide_landing_popup', 'true')
+            popupFlyer.classList.add('hide')
         })
     } else {
-        bobbyFlay.classList.add('hide')
+        popupFlyer.classList.add('hide')
     }
 }
 
@@ -270,8 +265,8 @@ const allEventsUpcoming: eventObj[] = [
     //     event_isMostRecent: true,
     // }
     {
-        event_id: "Chicago_Gourment",
-        event_title: "Chicago Gourment",
+        event_id: "Chicago_Gourmet",
+        event_title: "Chicago Gourmet",
         event_date: "September 24th-27th",
         event_location: "Harris Theater Rooftop in Millennium Park, Chicago",
         event_time: "",
