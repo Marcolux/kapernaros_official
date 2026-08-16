@@ -229,7 +229,7 @@ var allEventsPast = [
         event_date: "June 9, 2026",
         event_location: "Drury Lane, Oakbrook Terrace",
         event_time: "<div class='flex flex-column flex-alignItems-center'>Cooking Demos: <span> 10:30 AM, 12:00 PM, 1:30 PM</span></div>",
-        event_description: 'Back by popular demand, CHEF NIKOLAOS KAPERNAROS returns to PanosPalooza!',
+        event_description: 'Back by popular demand, Chef Nikolaos Kapernaros returns to PanosPalooza!',
         event_link: "https://panosfoods.com/",
         event_picture: "../chef-kapernaros/images/panos_kapernaros.jpg",
         event_isMostRecent: true,
