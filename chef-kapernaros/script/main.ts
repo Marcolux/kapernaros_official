@@ -272,7 +272,7 @@ const allEventsUpcoming: eventObj[] = [
         event_time: "",
         event_description: "Let Your Tastebuds Dance! This year, Chicago Gourmet celebrates the vibrant intersection of food & dance, where bold flavors meet live performances and every bite carries its own rhythm. Experience chef led tastings, immersive culinary moments, dynamic dance, and thoughtfully curated wine and spirits that keep every flavor in step.",
         event_link: "https://www.chicagogourmet.org/",
-        event_picture: "../chef-kapernaros/images/chicago_gourmet.jpg",
+        event_picture: "../chef-kapernaros/images/gourmet_2026.jpg",
         event_isMostRecent: true,
         event_show_link: true,
     }
