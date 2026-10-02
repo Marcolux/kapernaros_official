@@ -265,6 +265,20 @@ const allEventsUpcoming: eventObj[] = [
     //     event_isMostRecent: true,
     // }
     {
+        event_id: "Lynn_Sage_Fall_Benefit",
+        event_title: "Lynn Sage Fall Benefit",
+        event_date: "October 22, 2026",
+        event_location: "Theater on the Lake, Chicago",
+        event_time: "6:00 PM",
+        event_description: "Funding Science. Fueling What's Next. Join the Lynn Sage Breast Cancer Foundation for an evening honoring Rita Nanda, MD and supporting pioneering breast cancer research in Chicago.",
+        event_link: "https://lynnsage.org/event/fall-benefit/",
+        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
+        event_isMostRecent: true,
+        event_show_link: true,
+    }
+]
+const allEventsPast: eventObj[] = [
+    {
         event_id: "Chicago_Gourmet",
         event_title: "Chicago Gourmet",
         event_date: "September 24th-27th",
@@ -275,9 +289,7 @@ const allEventsUpcoming: eventObj[] = [
         event_picture: "../chef-kapernaros/images/gourmet_2026.jpg",
         event_isMostRecent: true,
         event_show_link: true,
-    }
-]
-const allEventsPast: eventObj[] = [
+    },
     { 
         event_id: "PanosPalooza",
         event_title: 'PanosPalooza 2026',
