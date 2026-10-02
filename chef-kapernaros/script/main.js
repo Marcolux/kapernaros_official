@@ -217,7 +217,7 @@ var allEventsUpcoming = [
         event_time: "6:00 PM",
         event_description: "Funding Science. Fueling What's Next. Join the Lynn Sage Breast Cancer Foundation for an evening honoring Rita Nanda, MD and supporting pioneering breast cancer research in Chicago.",
         event_link: "https://lynnsage.org/event/fall-benefit/",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
+        event_picture: "../chef-kapernaros/images/lynn_sage_fall_benefit.jpg",
         event_isMostRecent: true,
         event_show_link: true,
     }
@@ -424,25 +424,25 @@ var allCardsInChefTable = chefTableCardContainer === null || chefTableCardContai
 var cardsOnSmallScreen = function () {
     allCardsInChefTable === null || allCardsInChefTable === void 0 ? void 0 : allCardsInChefTable.forEach(function (card) {
         card.classList.toggle('smallScreenCard', window.innerWidth < 750);
-        if (card.classList.contains('smallScreenCard')) {
-            card.addEventListener('mouseover', function () {
-                allCardsInChefTable.forEach(function (card) { return card.classList.remove('clicked'); });
-                setTimeout(function () {
-                }, 0);
-                card.classList.add('clicked');
-                card.scrollIntoView({
-                    behavior: "smooth", // optional
-                });
-                allCardsInChefTable.forEach(function (card) {
-                    if (!card.classList.contains('clicked'))
-                        card.classList.remove('is-flipped');
-                });
-            });
-        }
     });
 };
 cardsOnSmallScreen();
 window.addEventListener('resize', cardsOnSmallScreen);
+chefTableCardContainer === null || chefTableCardContainer === void 0 ? void 0 : chefTableCardContainer.addEventListener('click', function (e) {
+    var card = e.target.closest('.flip-card');
+    if (!card || !card.classList.contains('smallScreenCard') || card.classList.contains('clicked'))
+        return;
+    allCardsInChefTable.forEach(function (otherCard) {
+        otherCard.classList.remove('clicked');
+        if (otherCard !== card)
+            otherCard.classList.remove('is-flipped');
+    });
+    card.classList.add('clicked');
+    card.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+    });
+});
 emailjs.init('0wA6kpUaumn2FNdbg');
 var messageSent = document.querySelector('#messageSent');
 var textArea = document.querySelector('textarea.inputText');

@@ -272,7 +272,7 @@ const allEventsUpcoming: eventObj[] = [
         event_time: "6:00 PM",
         event_description: "Funding Science. Fueling What's Next. Join the Lynn Sage Breast Cancer Foundation for an evening honoring Rita Nanda, MD and supporting pioneering breast cancer research in Chicago.",
         event_link: "https://lynnsage.org/event/fall-benefit/",
-        event_picture: "https://res.cloudinary.com/drdrs6pdq/image/upload/v1714163374/Niko/chef_logo-shadow_wc0sbh.webp",
+        event_picture: "../chef-kapernaros/images/lynn_sage_fall_benefit.jpg",
         event_isMostRecent: true,
         event_show_link: true,
     }
@@ -485,27 +485,27 @@ if (servicesSec) {
 const chefTableCardContainer = document.querySelector('#tablePicContainer') as HTMLDivElement
 const allCardsInChefTable = chefTableCardContainer?.querySelectorAll('article') as NodeListOf<HTMLElement>
 const cardsOnSmallScreen = () => {
-    allCardsInChefTable?.forEach(card => { 
-        card.classList.toggle('smallScreenCard',window.innerWidth < 750)
-        if (card.classList.contains('smallScreenCard')) {
-            card.addEventListener('mouseover', () => {
-                allCardsInChefTable.forEach(card => card.classList.remove('clicked'))
-                setTimeout(() => {
-                },0)
-                card.classList.add('clicked')
-                card.scrollIntoView({
-                    behavior: "smooth", // optional
-                })
-                allCardsInChefTable.forEach(card => {
-                    if (!card.classList.contains('clicked')) card.classList.remove('is-flipped')
-                })
-            })
-        }
+    allCardsInChefTable?.forEach(card => {
+        card.classList.toggle('smallScreenCard', window.innerWidth < 750)
     })
-    
 }
 cardsOnSmallScreen()
 window.addEventListener('resize', cardsOnSmallScreen)
+
+chefTableCardContainer?.addEventListener('click', (e) => {
+    const card = (e.target as HTMLElement).closest('.flip-card') as HTMLElement | null
+    if (!card || !card.classList.contains('smallScreenCard') || card.classList.contains('clicked')) return
+
+    allCardsInChefTable.forEach(otherCard => {
+        otherCard.classList.remove('clicked')
+        if (otherCard !== card) otherCard.classList.remove('is-flipped')
+    })
+    card.classList.add('clicked')
+    card.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+    })
+})
 
 /*************************************************
 *  ====     Contact the Chef PAGE LOGIC     ==== *
