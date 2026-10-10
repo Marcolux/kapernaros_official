@@ -2,7 +2,7 @@ $gold: var(--secondaryColor);
 $goldSoft: var(--secondaryColorTran);
 $ink: #1a1a1a;
 $muted: #6b6b6b;
-$cardRadius: 20px;
+$cardRadius: 0px;
 $cardRadiusSm: 14px;
 
 #eventsPage {
@@ -24,7 +24,7 @@ $cardRadiusSm: 14px;
             gap: 4px;
             background-color: #ffffff;
             border: 1px solid #ebe7da;
-            border-radius: 999px;
+            border-radius: 4px;
             padding: 5px;
             box-shadow: 0 4px 16px #00000010;
             overflow: visible;
@@ -42,8 +42,8 @@ $cardRadiusSm: 14px;
                 font-size: 16px;
                 font-weight: 500;
                 letter-spacing: 0.01em;
-                color: #555;
-                border-radius: 999px;
+                // color: #555;
+                border-radius: 4px;
                 transition: color 0.25s ease, background-color 0.25s ease;
                 &:hover {
                     cursor: pointer;
@@ -184,7 +184,7 @@ $cardRadiusSm: 14px;
                         color: #ffffff;
                         background-color: $gold;
                         padding: 12px 30px;
-                        border-radius: 999px;
+                        border-radius: 4px;
                         text-decoration: none;
                         text-align: center;
                         transition: background-color 0.25s ease, transform 0.25s ease;
